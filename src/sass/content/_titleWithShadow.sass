@@ -1,0 +1,23 @@
+.title--shadow
+  font-size: 60px
+  line-height: 1.47
+  color: transparent
+  span 
+    position: relative
+    color: #ffffff
+    text-transform: uppercase
+    &.accent
+      color: $accent
+    &:before
+      content: attr(data-text)
+      text-transform: uppercase
+      text-shadow: -20px -60px 5px #ffffff
+      color: transparent
+      font-size: 100px
+      position: absolute
+      display: inline-block
+      min-width: 400px
+    &.second:before
+      left: 100%
+    &.accent:before
+      text-shadow: -20px -60px 5px $accent
