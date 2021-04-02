@@ -11,13 +11,14 @@
     &:before
       content: attr(data-text)
       text-transform: uppercase
-      text-shadow: -20px -60px 5px #ffffff
+      text-shadow: -20px -60px 0px rgba(255,255,255, 0.1)
       color: transparent
       font-size: 100px
       position: absolute
       display: inline-block
-      min-width: 400px
+      white-space: nowrap
+      //min-width: 600px
     &.second:before
       left: 100%
     &.accent:before
-      text-shadow: -20px -60px 5px $accent
+      text-shadow: -20px -60px 0px rgba(187,161,130, 0.1)

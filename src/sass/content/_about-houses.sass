@@ -2,8 +2,103 @@
   background-color: #000
   min-height: 100vh
   padding-top: 105px
+  .title
+    margin-bottom: 80px
 
   .about-content
-    display: flex
-    .about-block
+    .tabs
+      position: relative
+      .tabs__items
+        display: inline-flex
+        flex-direction: column
+        position: absolute
+        left: 38%
+        top: 31%
+        z-index: 10
+        .tabs__item
+          display: inline-flex
+          justify-content: flex-start
+          align-items: center
+          text-transform: uppercase
+          text-decoration: none
+          color: #ffffff
+          font-size: 30px
+          margin-bottom: 50px
+          transition: color 800ms ease-out 0ms
+          &:last-child
+            margin-bottom: 0
+          &::before
+            opacity: 0
+            content: ''
+            display: inline-block
+            width: 40px
+            height: 2px
+            position: absolute
+            left: -50px
+            transition: opacity 800ms ease-out 0ms
+          &.active
+            color: $accent
+            position: relative
+            transition: color 1s ease-in 200ms
+            &::before
+              opacity: 1
+              background: radial-gradient(#BBA182, transparent)
+              transition: opacity 1s ease-in 200ms
+    .tabs__body
+      max-height: 66vh
+    .tabs__block
+      padding: 20px
+      position: relative
+      //display: none
+      opacity: 0
+      transition: opacity 800ms ease-out 0ms
+      &#tab_02
+        top: calc(-66vh - 2 * 20px) //двигаем блок вверх на высоту + паддинги 20px сверху и снизу
+      &#tab_03
+        top: calc(2 * (-66vh - 2 * 20px))
+      &.active
+        //display: block
+        opacity: 1
+        transition: opacity 1s ease-in 200ms
+    .house
+      display: flex
+      justify-content: space-between
+      .house__descr
+        padding: 60px 68px 60px 60px
+        width: 527px
+        background-color: $block-bg
+        border-radius: 20px
+        background:
+          image: url("../images/content/frame.png")
+          //size: 70%
+          position: left bottom
+          repeat: no-repeat
+        &--concrete
+          background-image: url("../images/content/concrete.png")
+        &--brick
+          background-image: url("../images/content/bricks.png")
+
+
+        h3
+          color: $accent
+          text-transform: uppercase
+          font-size: 35px
+          font-weight: normal
+          font-family: $ffNeumann
+          margin-bottom: 70px
+        .house__descr-text
+          font-size: 18px
+          font-family: $ffAvenirNextCyr
+
+      .house__img
+        width: 819px
+        height: 66vh
+        position: relative
+
+
+        img
+          width: 100%
+          height: auto
+
+
 
