@@ -1,0 +1,108 @@
+.top
+  background:
+    image: url("../images/content/banner-bg.jpg")
+    repeat: no-repeat
+    size: cover
+    position: center
+
+  &-in
+    display: flex
+    flex-direction: column
+    justify-content: center
+    height: 100vh
+
+
+.banner
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+  flex-grow: 1
+  .progress
+    display: flex
+    margin-bottom: 4.63vh
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-right: 20px
+      padding: 0 25px
+      &:last-child
+        margin-right: 0
+    &-count
+      text-transform: uppercase
+      color: $accent
+      font-family: $ffNeumann
+      font-size: 26px
+      line-height: 1.46
+    &-title, &-subtitle
+      font-size: 10px
+      line-height: 1.2
+    &-title
+      font-family: $ffAvenirNextCyrBold
+
+  .title
+    margin-bottom: 10px
+    margin-bottom: 0.92vh
+  .subtitle
+    width: 33.85vw
+    margin-bottom: 35px
+    margin-bottom: 3.24vh
+
+  &-main
+    width: 56.97vw
+
+  .btn-round
+    margin-right: 22px
+  .btn-play
+    display: flex
+    align-items: center
+    align-self: flex-end
+    bottom: -80px
+    bottom: -8.4%
+
+
+
+.laurel-ic
+  position: relative
+  &::before, &::after
+    content: ""
+    display: inline-block
+    top: 7px
+    left: 0
+    width: 52px
+    height: 72px
+    position: absolute
+    background:
+      color: transparent
+      repeat: no-repeat
+      size: cover
+      position: center
+      image: url("../images/icons/laurel.svg")
+  &::after
+    left: unset
+    right: 0
+    transform: scaleX(-1)
+
+.btn-play
+  font-family: $ffNeumann
+  font-size: 26px
+  line-height: 1.46
+  text-align: center
+  text-transform: uppercase
+  color: $accent
+
+.btn-round
+  display: inline-block
+  width: 98px
+  height: 98px
+  border-radius: 50%
+  box-shadow: 0px 0px 100px $accent
+  background:
+    color: $accent
+    image: url("../images/icons/play.svg")
+    repeat: no-repeat
+    size: 24%
+    position: center
+
+
