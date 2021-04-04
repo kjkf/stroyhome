@@ -160,12 +160,6 @@ task('watch', () => {
 
 });
 //================================================================================================
-task('build-copy:html', () => {
-    return src('src/index.html')
-        .pipe(rename("views/index.ejs"))
-        .pipe(dest('dist'))
-        .pipe(reload({ stream: true }));
-});
 
 task(
     "default",
@@ -176,6 +170,6 @@ task(
 
 task(
     "build",
-    series('clean', parallel('build-copy:html', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts')
+    series('clean', parallel('copy:html', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'copy:assets', 'styles', 'icons', 'scripts')
     )
 );
