@@ -29,8 +29,9 @@
       color: $fontColorMain
       display: inline-block
 
-    &-item
+    &__item
       padding: 50px 20px 50px 0
+      padding: 4.63vh 20px 4.63vh 0
 
   .logo-text
     display: inline-block
@@ -41,11 +42,18 @@
     display: inline-flex
 
   &-right
-    width: 470px
+    width: 480px
     display: inline-flex
-    justify-content: space-between
+    justify-content: flex-start
     align-items: center
 
+  .btn-menu
+    position: fixed
+    right: 150px
+    right: 7.81vw
+    top: 30px
+    top: 2.77vh
+    z-index: 1
 
 .btn-menu
   display: inline-flex
@@ -61,31 +69,75 @@
     position: center
 
 .whatsapp
-  display: inline-block
+  display: inline-flex
+  align-items: center
   font-size: 17px
   line-height: 1.4
   color: $fontColorMain
-  padding-left: 32px
-  &::before
-    top: -6px
-    left: -13px
+  padding-left: 55px
+  &-ic
+    display: inline-block
     width: 32px
     height: 32px
-    background:
-      image: url("../images/icons/whatsapp.svg")
+    margin-right: 15px
+  .svg-sym
+    fill: $accent
 
 .contact-phone
-  display: inline-block
+  display: inline-flex
+  align-items: center
   font-size: 17px
   line-height: 1.2
   color: $fontColorMain
   font-family: $ffAvenirNextCyrBold
-  padding-left: 22px
-  &::before
-    left: -7px
+  //padding-left: 22px
+  &-ic
+    display: inline-block
     width: 22px
     height: 22px
-    background:
-      image: url("../images/icons/phone-top.svg")
+    margin-right: 10px
+  .svg-sym
+    fill: $accent
 
+.menu-main-wrap
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0.7)
+  padding-top: 12.5vh
+  display: none
+  .title
+    margin-bottom: 4.62vh
 
+.menu-main
+  list-style: none
+  &__item
+    margin-bottom: 2.78vh
+    margin-left: 30px
+    &:last-child
+      margin-bottom: 0
+    a
+      color: $fontColorMain
+      font-size: 24px
+      line-height: 1.2
+      display: inline-flex
+      align-items: center
+      &::before
+        content: ""
+        display: inline-block
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background-color: $accent
+        box-shadow: 0px 0px 20px $accent
+        margin-right: -8px
+        opacity: 0
+        transition: all .5s ease-out
+  &__item
+    &:hover
+      a
+        &::before
+          opacity: 1
+          margin-right: 20px
