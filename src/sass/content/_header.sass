@@ -1,24 +1,91 @@
 .logo
+  display: flex
+  justify-content: center
+  align-items: center
   font-size: 26px
-  background-color: red
   font-family: $ffAvenirNextCyrBold
-  text-decoration: none
   color: $fontColorMain
+  text-transform: uppercase
   span
     color: $accent
 
   &-text
     font-size: 14px
     line-height: 1.2
+    display: inline-flex
+
 
 .header
   display: flex
+  justify-content: space-between
+  align-items: center
   .nav
     ul
       display: flex
       justify-content: space-between
+      align-items: center
       list-style: none
     a
       color: $fontColorMain
       display: inline-block
-      text-decoration: none
+
+    &-item
+      padding: 50px 20px 50px 0
+
+  .logo-text
+    display: inline-block
+    margin-left: 20px
+
+  &-left
+    width: 420px
+    display: inline-flex
+
+  &-right
+    width: 470px
+    display: inline-flex
+    justify-content: space-between
+    align-items: center
+
+
+.btn-menu
+  display: inline-flex
+  min-width: 60px
+  min-height: 60px
+  width: 60px
+  height: 60px
+  border-radius: 50%
+  background:
+    color: $fontColorMain
+    image: url("../images/icons/menu.svg")
+    repeat: no-repeat
+    position: center
+
+.whatsapp
+  display: inline-block
+  font-size: 17px
+  line-height: 1.4
+  color: $fontColorMain
+  padding-left: 32px
+  &::before
+    top: -6px
+    left: -13px
+    width: 32px
+    height: 32px
+    background:
+      image: url("../images/icons/whatsapp.svg")
+
+.contact-phone
+  display: inline-block
+  font-size: 17px
+  line-height: 1.2
+  color: $fontColorMain
+  font-family: $ffAvenirNextCyrBold
+  padding-left: 22px
+  &::before
+    left: -7px
+    width: 22px
+    height: 22px
+    background:
+      image: url("../images/icons/phone-top.svg")
+
+
