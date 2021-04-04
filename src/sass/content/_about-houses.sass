@@ -4,22 +4,21 @@
     image: url("../images/content/bg_block02.jpg")
     size: cover
     repeat: no-repeat
-  //min-height: 100vh
   position: relative
-  &::before, &::after
+  overflow: hidden
+  &::before
     content: ''
     display: inline-block
-    width: 574px
-    height: 574px
-    position: absolute
+    width: 326px
+    height: 458px
     background:
-      image: url("../images/icons/lines.svg")
-  &::before
-    top: -100px
-    left: -50px
-  &::after
-    bottom: -100px
-    right: -50px
+      image: url("../images/icons/laurel.svg")
+      repeat: no-repeat
+      size: contain
+    position: absolute
+    opacity: .1
+    right: -10%
+    top: 0
   .container
     padding-top: 105px
 
@@ -27,6 +26,22 @@
     margin-bottom: 80px
 
   .about-content
+    position: relative
+    &::before, &::after
+      content: ''
+      display: inline-block
+      width: 574px
+      height: 574px
+      position: absolute
+      background:
+        image: url("../images/icons/lines.svg")
+    &::before
+      top: -45%
+      left: -10%
+    &::after
+      bottom: -10%
+      right: -10%
+
     .tabs
       position: relative
       .tabs__items
@@ -72,15 +87,42 @@
       position: relative
       //display: none
       opacity: 0
-      transition: opacity 800ms ease-out 0ms
+      //transition: opacity 500ms ease-out 0ms
+      transition:
+        property: opacity, transform
+        duration: 500ms
+        delay: 0ms
+        timing-function: ease-in-out
+
+      &#tab_01
+        transform: translateY(100%)
+      &#tab_01.active
+        transform: translateY(0)
+      &#tab_01.prev
+        transform: translateY(-100%)
       &#tab_02
-        top: calc(-66vh - 2 * 20px) //двигаем блок вверх на высоту + паддинги 20px сверху и снизу
+        transform: translateY(0)
+      &#tab_02.active
+        transform: translateY(-100%)
+      &#tab_02.prev
+        transform: translateY(-200%)
+        //top: calc(-66vh - 2 * 20px) //двигаем блок вверх на высоту + паддинги 20px сверху и снизу
       &#tab_03
-        top: calc(2 * (-66vh - 2 * 20px))
+        transform: translateY(-100%)
+      &#tab_03.active
+        transform: translateY(-200%)
+      &#tab_03.prev
+        transform: translateY(-300%)
+        //top: calc(2 * (-66vh - 2 * 20px))
       &.active
         //display: block
+        //opacity 1s ease-in 200ms
         opacity: 1
-        transition: opacity 1s ease-in 200ms
+        transition:
+          property: opacity, transform
+          duration: 800ms
+          delay: 100ms
+          timing-function: ease-in-out
     .house
       display: flex
       justify-content: space-between
@@ -106,7 +148,7 @@
           font-size: 35px
           font-weight: normal
           font-family: $ffNeumann
-          margin-bottom: 70px
+          margin-bottom: 6.48vh //70px
         .house__descr-text
           font-size: 18px
           font-family: $ffAvenirNextCyr
