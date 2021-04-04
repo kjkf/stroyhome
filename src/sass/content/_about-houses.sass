@@ -1,7 +1,28 @@
 .about
-  background-color: #000
-  min-height: 100vh
-  padding-top: 105px
+  background:
+    color: #000
+    image: url("../images/content/bg_block02.jpg")
+    size: cover
+    repeat: no-repeat
+  //min-height: 100vh
+  position: relative
+  &::before, &::after
+    content: ''
+    display: inline-block
+    width: 574px
+    height: 574px
+    position: absolute
+    background:
+      image: url("../images/icons/lines.svg")
+  &::before
+    top: -100px
+    left: -50px
+  &::after
+    bottom: -100px
+    right: -50px
+  .container
+    padding-top: 105px
+
   .title
     margin-bottom: 80px
 
