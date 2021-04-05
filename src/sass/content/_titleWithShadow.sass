@@ -20,10 +20,14 @@
       display: inline-block
       white-space: nowrap
       //min-width: 600px
+      +phone-down
+        font-size: 35px
+        text-shadow: -10px -20px 0px rgba(255,255,255, 0.1)
     &.second:before
       left: 100%
+      +phone-down
+        left: 36%
     &.accent:before
       text-shadow: -20px -60px 0px rgba(187,161,130, 0.1)
-
-    +phone-down
-      font-size: 35px
+      +phone-down
+        text-shadow: -10px -20px 0px rgba(187,161,130, 0.1)

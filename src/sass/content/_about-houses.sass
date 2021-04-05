@@ -6,6 +6,8 @@
     repeat: no-repeat
   position: relative
   overflow: hidden
+  +phone-down
+    overflow-y: visible
   &::before
     content: ''
     display: inline-block
@@ -21,9 +23,13 @@
     top: 0
   .container
     padding-top: 10vh //105px
+    +phone-down
+      padding-top: 5vh
 
   .title
     margin-bottom: 7.5vh //80px
+    +phone-down
+      margin-bottom: 5vh //37px
 
   .about-content
     position: relative
@@ -35,6 +41,8 @@
       position: absolute
       background:
         image: url("../images/icons/lines.svg")
+      +phone-down
+        display: none
     &::before
       top: -45%
       left: -10%
@@ -144,9 +152,11 @@
     .house
       display: flex
       justify-content: space-between
+      +phone-down
+        flex-direction: column-reverse
       .house__descr
         padding: 60px 68px 60px 60px
-        width: 527px
+        width: 28vw //527px
         background-color: $block-bg
         border-radius: 20px
         background:
@@ -158,7 +168,13 @@
           background-image: url("../images/content/concrete.png")
         &--brick
           background-image: url("../images/content/bricks.png")
-
+        +phone-down
+          border-radius: 15px
+          width: 100%
+          background-size: 50%
+          background-position: center bottom
+          padding: 30px 42px 136px
+          text-align: center
 
         h3
           color: $accent
@@ -169,6 +185,7 @@
           margin-bottom: 6.48vh //70px
           +phone-down
             font-size: 23px
+            margin-bottom: 1.5vh //10px
         .house__descr-text
           font-size: 18px
           font-family: $ffAvenirNextCyr
@@ -179,7 +196,10 @@
         width: 42.65vw //819px
         height: 66vh
         position: relative
-
+        +phone-down
+          width: 150%
+          left: -25%
+          height: unset
 
         img
           width: 100%
