@@ -82,7 +82,7 @@
         </div>
     </div>
 </section>
-<section class="about fullscreen" style="background: url('assets/images/content/bg_block02.jpg')">
+<section class="about fullscreen" id="about" style="background: url('assets/images/content/bg_block02.jpg')">
     <div class="container">
         <h2 class="title title--shadow">
             <span class="white first" data-text="О наших">О наших</span>
@@ -110,7 +110,11 @@
                                 </p>
                             </div>
                             <div class="house__img" >
-                                <img src="assets/images/content/frame-house.png" alt="Каркасный дом">
+                                <picture>
+                                    <source srcset="assets/images/content/frame-house_mobile.png" media="(max-width: 576px)">
+                                    <img src="assets/images/content/frame-house.png" alt="Каркасный дом">
+                                </picture>
+
                             </div>
                         </div>
                     </div>
