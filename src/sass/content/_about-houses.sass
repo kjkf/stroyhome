@@ -6,7 +6,7 @@
     repeat: no-repeat
   position: relative
   overflow: hidden
-  +phone-down
+  //+ipad-down
     overflow-y: visible
   &::before
     content: ''
@@ -21,15 +21,21 @@
     opacity: .1
     right: -10%
     top: 0
+    +ipad-down
+      display: none
   .container
     padding-top: 10vh //105px
-    +phone-down
+    +ipad-down
       padding-top: 5vh
 
   .title
     margin-bottom: 7.5vh //80px
+    +laptop-down
+      margin-bottom: 4vh
+    +ipad-down
+      margin-bottom: 12vh
     +phone-down
-      margin-bottom: 5vh //37px
+      margin-bottom: 12vh //37px
 
   .about-content
     position: relative
@@ -41,7 +47,7 @@
       position: absolute
       background:
         image: url("../images/icons/lines.svg")
-      +phone-down
+      +ipad-down
         display: none
     &::before
       top: -45%
@@ -59,13 +65,17 @@
         left: 38%
         top: 31%
         z-index: 5
-        +phone-down
+        +ipad-down
           flex-direction: row
           align-items: center
           justify-content: space-between
           width: 100%
           left: 0
-          top: 0
+          top: -70px
+        +phone-down
+          top: -60px
+          //left: 0
+          //top: 0
 
         .tabs__item
           display: inline-flex
@@ -79,7 +89,9 @@
           transition: color 800ms ease-out 0ms
           &:last-child
             margin-bottom: 0
-          +phone-down
+          +laptop-down
+            font-size: 26px
+          +ipad-down
             margin-bottom: 0
           &::before
             opacity: 0
@@ -90,7 +102,7 @@
             position: absolute
             left: -2.6vw //-50px
             transition: opacity 800ms ease-out 0ms
-            +phone-down
+            +ipad-down
               left: calc(50% - 1px)
               top: calc(100% + 5px)
               width: 2px
@@ -108,6 +120,8 @@
 
     .tabs__body
       max-height: 66vh
+      +ipad-down
+        max-height: 100vh
     .tabs__block
       padding: 1.8vh 1vw //20px
       position: relative
@@ -152,10 +166,11 @@
     .house
       display: flex
       justify-content: space-between
-      +phone-down
+      +ipad-down
         flex-direction: column-reverse
       .house__descr
-        padding: 60px 68px 60px 60px
+        //padding: 60px 68px 60px 60px
+        padding: 5.5vh 3.5vw 5.5vh 3vw
         width: 28vw //527px
         background-color: $block-bg
         border-radius: 20px
@@ -168,7 +183,7 @@
           background-image: url("../images/content/concrete.png")
         &--brick
           background-image: url("../images/content/bricks.png")
-        +phone-down
+        +ipad-down
           border-radius: 15px
           width: 100%
           background-size: 50%
@@ -183,6 +198,8 @@
           font-weight: normal
           font-family: $ffNeumann
           margin-bottom: 6.48vh //70px
+          +laptop-down
+            margin-bottom: 2.48vh
           +phone-down
             font-size: 23px
             margin-bottom: 1.5vh //10px
@@ -196,9 +213,13 @@
         width: 42.65vw //819px
         height: 66vh
         position: relative
-        +phone-down
-          width: 150%
-          left: -25%
+        +ipad-down
+          margin-bottom: 2vh
+          width: 85%
+          height: unset
+          margin: 0 auto
+        //+phone-down
+          width: 100%
           height: unset
 
         img
