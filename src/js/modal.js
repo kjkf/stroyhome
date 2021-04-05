@@ -14,6 +14,8 @@ function createModal(template) {
     const phone = modalWrapper.querySelector('.phone-num');
     const agreeCheckbox = modalWrapper.querySelector('#agree_cond');
     const label = agreeCheckbox.closest('label');
+    const isDownload = modalWrapper.querySelector('#isDownload');
+
     submitBtn.addEventListener('click', function (evt) {
         if (!phone || !phone.value) {
             evt.preventDefault();
@@ -29,6 +31,11 @@ function createModal(template) {
             return;
         }
 
+        if (isDownload && isDownload.value === '1') {
+            const downloadLink = modalWrapper.querySelector('#downloadLink');
+            //console.log(downloadLink);
+            downloadLink.click();
+        };
         phone.classList.remove('error');
         label.classList.remove('error');
         phone.value = '';
@@ -61,7 +68,7 @@ function createModal(template) {
     return modalWrapper;
 }
 
-function showModal(modal) {
+function showModal(modal, isDownload) {
     document.body.append(modal);
     modal.classList.add('active');
 }
@@ -74,9 +81,19 @@ function closeModal(modal) {
 function initModal() {
     const templ = document.querySelector('#modalTemplate').innerHTML;
     const modal = createModal(templ);
+    const isDownload = modal.querySelector('#isDownload');
 
     const phoneBtn = document.querySelector('.phone-btn');
     phoneBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        isDownload.value = 0;
+        showModal(modal);
+    });
+
+    const downloadBtn = document.querySelector('.download-btn');
+    downloadBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        isDownload.value = 1;
         showModal(modal);
     });
 
