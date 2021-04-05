@@ -6,6 +6,8 @@
   font-family: $ffAvenirNextCyrBold
   color: $fontColorMain
   text-transform: uppercase
+  +tablet-down
+    font-size: calc(18em/12)
   span
     color: $accent
 
@@ -19,7 +21,15 @@
   display: flex
   justify-content: space-between
   align-items: center
+  +tablet-down
+    flex-direction: column
+    align-items: stretch
+  +phone-down
+    padding: calc(26em/12) 0 calc(40em/12)
+    //padding: 2.6vh 0 4vh
   .nav
+    +tablet-down
+      display: none
     ul
       display: flex
       justify-content: space-between
@@ -36,16 +46,24 @@
   .logo-text
     display: inline-block
     margin-left: calc(20em/14)
+    +tablet-down
+      display: none
 
   &-left
     width: 21.87vw
     display: inline-flex
+    +tablet-down
+      width: unset
+      margin-bottom: calc(50em/12)
 
   &-right
     width: 25vw
     display: inline-flex
     justify-content: flex-start
     align-items: center
+    +tablet-down
+      align-self: center
+      width: unset
 
   .btn-menu
     position: fixed
@@ -54,26 +72,38 @@
     top: 30px
     top: 2.77vh
     z-index: 6
+    +phone-down
+      right: $pd_cont
+      top: $pd_cont
 
   .contact-phone-ic
     margin-right: 10px
+
+  .whatsapp
+    +tablet-down
+      display: none
 
 .btn-menu
   display: inline-flex
   justify-content: center
   align-items: baseline
-  min-width: 60px
-  min-height: 60px
-  width: 60px
-  height: 60px
-  padding: 17px
+  min-width: calc(60em/18)
+  min-height: calc(60em/18)
+  width: calc(60em/18)
+  height: calc(60em/18)
+  padding: calc(17em/18)
   border-radius: 50%
   background-color: $fontColorMain
   fill: $accent
   cursor: pointer
+  +tablet-down
+    min-width: calc(44em/12)
+    min-height: calc(44em/12)
+    width: calc(44em/12)
+    height: calc(44em/12)
   &__burger
     display: inline-block
-    width: 26px
+    width: calc(26em/18)
     height: 3px
     background-color: $accent
     border-radius: 3px
@@ -85,29 +115,29 @@
       display: inline-block
       content: ""
       position: absolute
-      width: 26px
+      width: calc(26em/18)
       height: 3px
       background-color: $accent
       border-radius: 3px
       transition: all .5s ease-in-out
     &::before
-      transform: translateY(7px)
+      transform: translateY(calc(7em/18))
       right: 0
-      width: 18px
+      width: calc(18em/18)
     &::after
-      transform: translateY(14px)
+      transform: translateY(calc(14em/18))
 
   &.open
     .btn-menu__burger
-      transform: translateX(2px) translatey(8px)
+      transform: translateX(calc(2em/18)) translatey(calc(8em/18))
 
     .btn-menu__burger::before
-      transform: rotate(135deg) translate(9px, 14px)
+      transform: rotate(135deg) translate(calc(9em/18), calc(14em/18))
 
-      width: 12px
+      width: calc(12em/18)
     .btn-menu__burger::after
-      width: 12px
-      transform: rotate(-135deg) translate(0px, -4px)
+      width: calc(12em/18)
+      transform: rotate(-135deg) translate(0px, calc(-4em/18))
 
   //.menu-ic
     transition: all .5s ease-in-out
@@ -129,23 +159,25 @@
   font-size: calc(17em/18)
   line-height: 1.4
   color: $fontColorMain
-  padding-left: 55px
+  padding-left: 2.86vw
   &-ic
     display: inline-block
-    width: 32px
-    height: 32px
-    margin-right: 15px
+    width: calc(32em/17)
+    height: calc(32em/17)
+    margin-right: 0.78vw
   .svg-sym
     fill: $accent
 
 .contact-phone
   display: inline-flex
   align-items: center
-  font-size: calc(17em/18)
+  font-size: calc(17rem/18)
   line-height: 1.2
   color: $fontColorMain
   font-family: $ffAvenirNextCyrBold
   //padding-left: 22px
+  +tablet-down
+    //font-size: 1em
   &-ic
     display: inline-flex
     align-items: center
@@ -211,10 +243,10 @@
 
 .contact-phone-btn
   display: inline-block
-  width: 47px
-  height: 47px
-  min-width: 47px
-  min-height: 47px
+  width: calc(47em/17)
+  height: calc(47em/17)
+  min-width: calc(47em/17)
+  min-height: calc(47em/17)
 
 .contact-phone-ic
   background:
@@ -223,3 +255,5 @@
     repeat: no-repeat
     size: 45%
     position: center
+  +tablet-down
+    background-size: 50%
