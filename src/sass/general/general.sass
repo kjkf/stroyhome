@@ -20,6 +20,10 @@ body
 	height: 100vh
 	background-color: $bg-dark
 	font-family: $ffAvenirNextCyr
+	+laptop-down
+		font-size: 15px
+	+phone-down
+		font-size: 12px
 
 h1, h2, h3, h4, p, ul
 	margin: 0px
@@ -54,11 +58,14 @@ a
 	padding: 0 $pd_cont
 	margin: 0 auto
 	position: relative
-	//background-color: rgba(255,255,255,0.5)
+
 
 .fullscreen
 	.container
 		height: 100vh
+		+ipad-down
+			height: auto
+			padding-bottom: 3rem
 
 .title
 	color: $fontColorMain
