@@ -313,7 +313,7 @@ svg.svg-ic path
 	position: relative
 	+phone-down
 		width: calc(100% - #{$pd_cont*2})
-		//border-radius: calc(35em/12)
+		border-radius: calc(35em/12)
 	&__in
 		padding: calc(50em/18) 20%
 		display: flex
@@ -321,7 +321,7 @@ svg.svg-ic path
 		justify-content: center
 		flex-direction: column
 		+phone-down
-			padding: calc(50em/18) 8%
+			padding: 45px 8%
 
 	&__title
 		a
@@ -341,11 +341,20 @@ svg.svg-ic path
 		//margin-bottom: calc(10em/24)
 		+phone-down
 			font-size: calc(20em/12)
-			margin-bottom: 0
+			margin-bottom: 15px
+		&:last-child
+			+phone-down
+				margin-bottom: 0px
+		&.secd
+			+phone-down
+				margin-bottom: 0px
+
 	.btn-light
 		width: 100%
 	.form
 		margin-top: calc(20em/18)
+		+phone-down
+			margin-top: 50px
 
 	.contact-phone-btn
 		display: inline-block
@@ -355,7 +364,6 @@ svg.svg-ic path
 		min-height: calc(47em/28)
 		+phone-down
 			display: none
-
 .form
 	width: 100%
 
@@ -372,6 +380,8 @@ svg.svg-ic path
 	border: 1px solid $field-brd
 	&.error
 		border-color: red
+	+phone-down
+		padding: 22px
 
 
 .form-row
@@ -380,6 +390,8 @@ svg.svg-ic path
 .form-check-wrap
 	display: flex
 	justify-content: center
+	+phone-down
+		justify-content: flex-start
 
 .form-check
 	font-size: calc(12em/18)
@@ -387,6 +399,9 @@ svg.svg-ic path
 	display: flex
 	width: 67%
 	border: 1px solid transparent
+	+phone-down
+		font-size: 1em
+		width: 100%
 	&.error
 		border-color: red
 	&__btn
@@ -407,6 +422,11 @@ svg.svg-ic path
 				repeat: no-repeat
 				size: 0
 				position: center
+			+phone-down
+				min-width: calc(17.8em/12)
+				width: calc(17.8em/12)
+				min-height: calc(16em/12)
+				height: calc(16em/12)
 
 	input[type="checkbox"]
 		display: none
