@@ -84,13 +84,13 @@
           text-transform: uppercase
           text-decoration: none
           color: #ffffff
-          font-size: 30px
+          font-size: calc(30em/18)
           margin-bottom: 4.6vh //50px
           transition: color 800ms ease-out 0ms
           &:last-child
             margin-bottom: 0
           +laptop-down
-            font-size: 26px
+            font-size: calc(26em/15)
           +ipad-down
             margin-bottom: 0
           &::before
@@ -116,7 +116,7 @@
               background: radial-gradient(#BBA182, transparent)
               transition: opacity 1s ease-in 200ms
           +phone-down
-            font-size: 14px
+            font-size: calc(14em/12)
 
     .tabs__body
       max-height: 66vh
@@ -194,7 +194,7 @@
         h3
           color: $accent
           text-transform: uppercase
-          font-size: 35px
+          font-size: calc(35em/18)
           font-weight: normal
           font-family: $ffNeumann
           margin-bottom: 6.48vh //70px
@@ -204,10 +204,10 @@
             font-size: 23px
             margin-bottom: 1.5vh //10px
         .house__descr-text
-          font-size: 18px
+          font-size: 1em
           font-family: $ffAvenirNextCyr
           +phone-down
-            font-size: 12px
+            font-size: 1em
 
       .house__img
         width: 42.65vw //819px

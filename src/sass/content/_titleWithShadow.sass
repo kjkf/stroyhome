@@ -1,11 +1,11 @@
 .title--shadow
-  font-size: 60px
+  font-size: calc(60em/18)
   line-height: 1.47
   color: transparent
   +ipad-down
-    font-size: 38px
+    font-size: calc(38em/12)
   +phone-down
-    font-size: 28px
+    font-size: calc(28em/12)
   span 
     position: relative
     color: #ffffff
@@ -17,16 +17,16 @@
       text-transform: uppercase
       text-shadow: -20px -60px 0px rgba(255,255,255, 0.1)
       color: transparent
-      font-size: 100px
+      font-size: calc(100em/50)
       position: absolute
       display: inline-block
       white-space: nowrap
       //min-width: 600px
       +ipad-down
-        font-size: 45px
+        font-size: calc(45em/38)
         text-shadow: -10px -30px 0px rgba(255,255,255, 0.1)
       +phone-down
-        font-size: 35px
+        font-size: calc(35em/28)
         text-shadow: -10px -20px 0px rgba(255,255,255, 0.1)
     &.second:before
       left: 100%
