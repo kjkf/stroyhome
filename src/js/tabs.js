@@ -17,15 +17,9 @@ function initTabs() {
             const newActive = tabs.querySelector(newActiveSelector);
 
             activeTab.classList.remove('active');
-            activeTab.classList.add('prev');
-            setTimeout(function () {
-                //console.log(activeTab);
-                activeTab.classList.remove('prev');
 
-                activeTab = newActive;
-            }, 1000);
             newActive.classList.add('active');
-
+            activeTab = newActive;
 
 
         } )

@@ -129,29 +129,29 @@
       opacity: 0
       //transition: opacity 500ms ease-out 0ms
       transition:
-        property: opacity, transform
-        duration: 500ms
+        property: opacity
+        duration: 800ms
         delay: 0ms
         timing-function: ease-in-out
 
-      &#tab_01
+      //&#tab_01
         transform: translateY(100%)
-      &#tab_01.active
+      //&#tab_01.active
         transform: translateY(0)
-      &#tab_01.prev
+      //&#tab_01.prev
         transform: translateY(-100%)
+      //&#tab_02
+        transform: translateY(0)
       &#tab_02
-        transform: translateY(0)
-      &#tab_02.active
         transform: translateY(-100%)
-      &#tab_02.prev
+      //&#tab_02.prev
         transform: translateY(-200%)
         //top: calc(-66vh - 2 * 20px) //двигаем блок вверх на высоту + паддинги 20px сверху и снизу
-      &#tab_03
+      //&#tab_03
         transform: translateY(-100%)
-      &#tab_03.active
+      &#tab_03
         transform: translateY(-200%)
-      &#tab_03.prev
+      //&#tab_03.prev
         transform: translateY(-300%)
         //top: calc(2 * (-66vh - 2 * 20px))
       &.active
@@ -159,8 +159,8 @@
         //opacity 1s ease-in 200ms
         opacity: 1
         transition:
-          property: opacity, transform
-          duration: 800ms
+          property: opacity
+          duration: 1000ms
           delay: 100ms
           timing-function: ease-in-out
     .house
