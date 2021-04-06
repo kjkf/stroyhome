@@ -19,7 +19,7 @@ function initTabs() {
             activeTab.classList.remove('active');
             activeTab.classList.add('prev');
             setTimeout(function () {
-                console.log(activeTab);
+                //console.log(activeTab);
                 activeTab.classList.remove('prev');
 
                 activeTab = newActive;
