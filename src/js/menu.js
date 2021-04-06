@@ -17,7 +17,7 @@ function init_menu(){
            menuWrap.classList.toggle('active');
        });
     });
-    })
+
     setMenuBtnPosClass();
     window.addEventListener('scroll', function() {
         setMenuBtnPosClass();
