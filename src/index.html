@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../assets/css/styles.min.css">
 </head>
 <body>
-<section class="fullscreen top">
+<section class="fullscreen top  stroke-ic">
     <div class="container">
         <div class="top-in">
             <header class="header">
@@ -78,11 +78,21 @@
                     </span>
                     <span>Смотреть видео</span>
                 </a>
-            </div>
-        </div>
-        <span class="section-index-wrapper">
+                <a href="#" class="btn btn-btm">
+                    <span class="mouse-ic">
+                        <svg class="svg-wrap" viewBox="0 0 22 22" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <use class="svg-sym" xlink:href="#mouse-ic" x="0" y="0" />
+                            <use class="svg-sym mouse-ic-btn" xlink:href="#mouse-ic-btn" x="0" y="0" />
+                        </svg>
+                    </span>
+                    <span>Листайте вниз</span>
+                </a>
+                <span class="section-index-wrapper">
             <span class="section-index" data-index="01"></span>
         </span>
+            </div>
+
+        </div>
     </div>
 </section>
 <section class="about fullscreen" id="about" style="background: url('assets/images/content/bg_block02.jpg')">
@@ -216,14 +226,7 @@
         </a>
     </li>
 </ul>
-<a href="#" class="btn btn-btm">
-    <span class="mouse-ic">
-        <svg class="svg-wrap" viewBox="0 0 22 22" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <use class="svg-sym" xlink:href="#mouse-ic" x="0" y="0" />
-        </svg>
-    </span>
-    <span>Листайте вниз</span>
-</a>
+
 <template type="text/x-template" id="modalTemplate">
     <!--<div class="modal-wrap-fixed">-->
         <div class="modal-wrap">
@@ -232,12 +235,15 @@
                 <div class="modal__in">
                     <span class="modal__subtitle">Звоните</span>
                     <h4 class="title modal__title">
-                        <div class="contact-phone-ic">
-                            <svg class="svg-wrap" viewBox="0 0 28 28" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <use class="svg-sym" xlink:href="#phone-ic" x="0" y="0" />
-                            </svg>
-                        </div>
-                        <a href="tel:+7 (495) 921-30-01" class="contact-phone ic">+7 (495) 921-30-01</a>
+                        <a href="tel:+7 (495) 921-30-01" class="contact-phone">
+                            <span class="contact-phone-btn callbackkiller cbk-phone cbk-phone-waves">
+                                <div class="cbk-phone-bgr contact-phone-ic"></div>
+                                <div class="cbk-phone-circle"></div>
+                                <div class="cbk-phone-second_circle"></div>
+                                <div class="cbk-phone-third_circle"></div>
+                            </span>
+                            <span>+7 (495) 921-30-01</span>
+                        </a>
                     </h4>
                     <span class="modal__subtitle">или оставьте заявку, </span>
                     <span>и с вами свяжется наш менеджер</span>
@@ -285,6 +291,8 @@
     </symbol>
     <symbol class="" id="mouse-ic">
         <path d="M10.9829 0C7.41463 0 4.51172 2.90291 4.51172 6.47116V15.5288C4.51172 19.0971 7.41463 22 10.9829 22C14.5511 22 17.454 19.0971 17.454 15.5288V6.47116C17.454 2.90291 14.5511 0 10.9829 0ZM16.1341 15.5288C16.1341 18.3691 13.8232 20.6801 10.9829 20.6801C8.14258 20.6801 5.83167 18.3691 5.83167 15.5288V6.47116C5.83167 3.63086 8.14258 1.31995 10.9829 1.31995C13.8232 1.31995 16.1341 3.63086 16.1341 6.47116V15.5288Z"/>
+    </symbol>
+    <symbol class="" id="mouse-ic-btn">
         <path d="M10.983 4.37646C10.6185 4.37646 10.3231 4.67187 10.3231 5.03644V8.07413C10.3231 8.43852 10.6185 8.7341 10.983 8.7341C11.3474 8.7341 11.643 8.43852 11.643 8.07413V5.03644C11.643 4.67187 11.3476 4.37646 10.983 4.37646Z"/>
     </symbol>
 </svg>

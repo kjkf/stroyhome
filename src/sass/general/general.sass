@@ -212,7 +212,7 @@ a
 	&.callback
 		bottom: 9.26vh
 		right: 2.08vw
-		z-index: 6
+		z-index: 4
 
 .callback
 	list-style: none
@@ -304,7 +304,7 @@ svg.svg-ic path
 	display: block
 	background: $bg-white
 	box-shadow: 0px calc(15em/18) calc(50em/18) rgba(0, 0, 0, 0.1)
-	border-radius: calc(23em/18)
+	border-radius: calc(35em/18)
 	width: calc(736em/18)
 	font-family: $ffAvenirNextCyr
 	font-size: 1em
@@ -313,45 +313,63 @@ svg.svg-ic path
 	position: relative
 	+phone-down
 		width: calc(100% - #{$pd_cont*2})
+		//border-radius: calc(35em/12)
 	&__in
 		padding: calc(50em/18) 20%
 		display: flex
 		align-items: center
 		justify-content: center
 		flex-direction: column
+		+phone-down
+			padding: calc(50em/18) 8%
 
 	&__title
 		a
-			display: inline-block
+			display: inline-flex
 			font-family: $ffAvenirNextCyrHeavy
 			font-size: 1em
 			line-height: $lineHeight_h4
 			color: $dark
 			margin-bottom: calc(20em/36)
+			+phone-down
+				font-size: 28px
+				margin-bottom: 20px
 	&__subtitle
 		font-family: $ffAvenirNextCyrBold
 		font-size: calc(24em/18)
 		line-height: 1.4
-		margin-bottom: calc(10em/24)
+		//margin-bottom: calc(10em/24)
+		+phone-down
+			font-size: calc(20em/12)
+			margin-bottom: 0
 	.btn-light
 		width: 100%
 	.form
 		margin-top: calc(20em/18)
+
+	.contact-phone-btn
+		display: inline-block
+		width: calc(47em/28)
+		height: calc(47em/28)
+		min-width: calc(47em/28)
+		min-height: calc(47em/28)
+		+phone-down
+			display: none
 
 .form
 	width: 100%
 
 .form-field
 	width: 100%
-	background: $bg-white
-	box-shadow: 0px calc(15em/18) calc(50em/18) rgba(0, 0, 0, 0.1)
-	border-radius: calc(35em/18)
+	background: transparent
+	//box-shadow: 0px calc(15em/18) calc(50em/18) rgba(0, 0, 0, 0.1)
+	border-radius: calc(56em/18)
 	font-size: 1em
 	line-height: 1.2
 	text-transform: uppercase
 	text-align: center
 	padding: calc(24em/18)
-	border: 1px solid transparent
+	border: 1px solid $field-brd
 	&.error
 		border-color: red
 
@@ -416,15 +434,21 @@ svg.svg-ic path
 		repeat: no-repeat
 		size: cover
 		position: center
+	+phone-down
+		width: calc(16em/12)
+		min-width: calc(16em/12)
+		height: calc(16em/12)
+		min-height: calc(16em/12)
 
 .btn-btm
 	display: inline-flex
 	align-items: center
 	font-size: 1em
-	position: fixed
-	bottom: calc(80em/18)
-	left: calc(145em/18)
+	position: absolute
+	bottom: calc(67em/18)
+	left: 0
 	color: $fontColorMain
+	cursor: pointer
 	.svg-sym
 		fill: $fontColorMain
 
@@ -435,15 +459,16 @@ svg.svg-ic path
 	width: calc(22em/18)
 	height: calc(22em/18)
 	margin-right: calc(10em/18)
+
+.btn-btm
+	.mouse-ic-btn
+		transform: translateY(0)
+		transition: all .5s ease-out
 	&:hover
-		.mouse-ic .mouse-ic-btn
-			fill: red
+		.mouse-ic-btn
+			transform: translateY(calc(10em/18))
 
-//.mouse-ic>path
-	//transition: all .5s ease-out
-	fill: red
-
-.stroke-ic
+//.stroke-ic
 	position: relative
 	&::after
 		content: ""
@@ -461,3 +486,22 @@ svg.svg-ic path
 			repeat: no-repeat
 			size: contain
 			position: center
+
+
+//.stroke-ic
+	position: relative
+	&::after
+		content: ''
+		display: inline-block
+		width: 30vw //574px
+		height: 53vh //574px
+		position: absolute
+		background-color: red
+		background:
+			image: url("../images/icons/lines.svg")
+
+//.top
+	&.stroke-ic
+		&::after
+			bottom: 0
+			right: 0

@@ -77,13 +77,24 @@
       width: unset
 
   .btn-menu
-    position: fixed
-    right: 150px
+    position: absolute
     right: 7.81vw
-    top: 30px
+    margin-left: calc(20em/18)
+    opacity: 1
+    transition: all .5s ease-out
+    z-index: 7
+    +laptop-down
+      right: calc(45em/15)
+    +tablet-down
+      position: fixed
+      right: $pd_cont
+      top: $pd_cont
+  .btn-menu.fixed
+    position: fixed
     top: 2.77vh
     z-index: 6
-    +phone-down
+    opacity: 1
+    +tablet-down
       right: $pd_cont
       top: $pd_cont
 
@@ -91,8 +102,12 @@
     margin-right: 10px
 
   .whatsapp
+    margin-right: calc(70em/17)
     +tablet-down
       display: none
+
+.section-index-wrapper
+  //display: none
 
 .btn-menu
   display: inline-flex
