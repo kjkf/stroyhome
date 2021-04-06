@@ -21,14 +21,17 @@
   display: flex
   justify-content: space-between
   align-items: center
+  padding: calc(30em/18) 0
+  +large-down
+    padding-top: calc(50em/18)
   +tablet-down
     flex-direction: column
     align-items: stretch
-  +phone-down
+
     padding: calc(26em/12) 0 calc(40em/12)
     //padding: 2.6vh 0 4vh
   .nav
-    +tablet-down
+    +large-down
       display: none
     ul
       display: flex
@@ -36,12 +39,10 @@
       align-items: center
       list-style: none
 
-      li //&__item
-        padding: 50px 20px 50px 0
-        padding: 4.63vh 20px 4.63vh 0
     a
       color: $fontColorMain
       display: inline-block
+      padding: calc(20em/18) calc(20em/18) calc(20em/18) 0
 
 
 
@@ -54,6 +55,12 @@
   &-left
     width: 21.87vw
     display: inline-flex
+    +large-down
+      width: 33vw
+    +laptop-down
+      width: 38.6vw
+    +ipad-down
+      width: 46.7vw
     +tablet-down
       width: unset
       margin-bottom: calc(50em/12)
@@ -63,6 +70,8 @@
     display: inline-flex
     justify-content: flex-start
     align-items: center
+    +large-down
+      width: unset
     +tablet-down
       align-self: center
       width: unset

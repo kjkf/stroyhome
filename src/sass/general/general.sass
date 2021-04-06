@@ -23,12 +23,16 @@ body
 	+laptop-down
 		font-size: 15px
 	+ipad-down
-		font-size: 13px
+		font-size: 14px
 	+tablet-down
 		font-size: 12px
 	+phone-down
 		font-size: 12px
-
+	&.stroke-ic
+		overflow: hidden
+		&::after
+			bottom: calc(-100em/18)
+			right: -70px
 h1, h2, h3, h4, p, ul
 	margin: 0px
 	padding: 0px
@@ -96,7 +100,7 @@ a
 	border: 0
 	cursor: pointer
 
-	&:hover
+	//&:hover
 		color: inherit
 
 	&-light
@@ -247,9 +251,9 @@ a
 		color: $fontColorMain
 		width: calc(195em/14)
 		background: transparent
-		box-shadow: 0px 0px calc(30em/14) rgba(0, 0, 0, 0.15)
+		box-shadow: 0px 0px calc(30em/14) rgba(0, 0, 0, 0.35)
 		border-radius: calc(20em/14)
-		margin-right: calc(-#{$callback-btn-w} / 2)
+		margin-right: calc(#{$callback-btn-w} / (-2))
 		z-index: 1
 		opacity: 0
 		transition: all .8s ease-out
@@ -258,7 +262,7 @@ a
 		&:hover
 			.prompt
 				opacity: 1
-				background: $block-bg
+				background: $block-bg_prompt
 			.callback__btn
 				background: $accent
 				box-shadow: 0px 0px calc(17em/14) $accent
@@ -431,3 +435,29 @@ svg.svg-ic path
 	width: calc(22em/18)
 	height: calc(22em/18)
 	margin-right: calc(10em/18)
+	&:hover
+		.mouse-ic .mouse-ic-btn
+			fill: red
+
+//.mouse-ic>path
+	//transition: all .5s ease-out
+	fill: red
+
+.stroke-ic
+	position: relative
+	&::after
+		content: ""
+		display: inline-block
+		width: calc(574em/18)
+		height: calc(574em/18)
+		position: absolute
+		bottom: 0
+		right: 0
+		transform: rotate(-75deg)
+		z-index: 1
+		background:
+			color: rebeccapurple
+			image: url("../images/content/strokes.png")
+			repeat: no-repeat
+			size: contain
+			position: center

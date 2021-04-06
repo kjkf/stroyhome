@@ -11,6 +11,14 @@
     justify-content: center
     height: 100vh
 
+  &.stroke-ic
+    //overflow: hidden
+    &::after
+      display: none
+      bottom: calc(-100em/18)
+      right: -70px
+
+
 
 .banner
   display: flex
@@ -18,6 +26,9 @@
   align-items: flex-start
   justify-content: center
   flex-grow: 1
+  position: relative
+
+
   +phone-down
     justify-content: flex-start
   .progress
@@ -32,6 +43,7 @@
       align-items: center
       margin-right: calc(20em/18)
       padding: 0 calc(25em/18)
+      text-align: center
       &:last-child
         margin-right: 0
     &-count
@@ -62,6 +74,12 @@
     width: 33.85vw
     margin-bottom: 35px
     margin-bottom: 3.24vh
+    +large-down
+      width: 43.96vw
+    +laptop-down
+      width: 51.1vw
+    +ipad-down
+      width: 52.3vw
     +tablet-down
       text-align: center
       width: 100%
@@ -69,6 +87,15 @@
 
   &-main
     width: 56.97vw
+    margin-top: -10.4vh
+    @media screen and (max-width: 1808px) and (min-width: 1400px) and (max-height: 800px)
+      width: 86.4vw
+    +large-down
+      width: 74vw
+    +large-down
+      width: 86vw
+    +ipad-down
+      width: 88vw
     +tablet-down
       width: 100%
       display: flex
@@ -81,8 +108,10 @@
     display: flex
     align-items: center
     align-self: flex-end
-    bottom: -80px
-    bottom: -8.4%
+    //bottom: -80px
+    //bottom: -8.4%
+    position: absolute
+    bottom: 10.4vh
     +tablet-down
       display: none
 
