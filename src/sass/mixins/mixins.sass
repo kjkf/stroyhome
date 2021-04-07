@@ -22,6 +22,8 @@ $ipad-width: 992px
 $tablet-width: 768px
 $phone-width: 576px
 $phone-width-min: 320px
+$max-height: 600px
+$max-height700: 700px
 
 =laptop
 	@media screen and (min-width: $laptop-width)
@@ -57,7 +59,12 @@ $phone-width-min: 320px
 =phonemin-down
 	@media screen and (max-width: $phone-width-min)
 		@content
-
+=maxheight-down
+	@media screen and (max-height: $max-height)
+		@content
+=maxheight700-down
+	@media screen and (max-height: $max-height700)
+		@content
 
 =scrolled($height)
 	max-height: $height

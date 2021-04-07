@@ -79,6 +79,8 @@ a
 		+ipad-down
 			height: auto
 			padding-bottom: 3rem
+		+maxheight-down
+			height: auto
 
 .title
 	color: $fontColorMain
@@ -465,10 +467,21 @@ svg.svg-ic path
 	align-items: center
 	font-size: 1em
 	position: absolute
-	bottom: calc(67em/18)
+	bottom: 6.2vh
 	left: 0
 	color: $fontColorMain
 	cursor: pointer
+	+large-down
+		bottom: calc(4em/18)
+	+laptop-down
+		bottom: calc(18em/15)
+	+tablet-down
+		position: static
+	+phone-down
+		display: none
+	+maxheight700-down
+		position: static
+		margin-top: 2em
 	.svg-sym
 		fill: $fontColorMain
 
