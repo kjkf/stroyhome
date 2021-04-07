@@ -33,7 +33,7 @@ body
 		&::after
 			bottom: calc(-100em/18)
 			right: -70px
-h1, h2, h3, h4, p, ul
+h1, h2, h3, h4, h5, p, ul
 	margin: 0px
 	padding: 0px
 
@@ -56,6 +56,10 @@ h3
 h4
 	font-size: $fontSize_h4
 	line-height: $lineHeight_h4
+
+h5
+	font-size: $fontSize_h5
+	line-height: $lineHeight_h5
 
 a
 	text-decoration: none
@@ -87,7 +91,7 @@ a
 	font-family: $ffNeumann
 
 .text-bold
-	font-weight: bold
+	font-family: $ffAvenirNextCyrBold
 
 .text-upper
 	text-transform: uppercase
@@ -519,3 +523,23 @@ svg.svg-ic path
 			repeat: no-repeat
 			size: contain
 			position: center
+
+.br-btm
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+
+.contact
+	display: inline-flex
+	align-items: center
+	font-size: calc(17rem/18)
+	line-height: 1.2
+	color: $fontColorMain
+	font-family: $ffAvenirNextCyrBold
+	&-ic
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		width: 22px
+		height: 22px
+		margin-right: 10px
+		.svg-sym
+			fill: $accent
