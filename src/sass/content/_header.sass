@@ -27,18 +27,23 @@
       display: inline-block
 
 .header
-  display: flex
-  justify-content: space-between
-  align-items: center
-  padding: calc(30em/18) 0
-  +large-down
-    padding-top: calc(50em/18)
-  +tablet-down
-    flex-direction: column
-    align-items: stretch
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  &-in
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: calc(30em/18) 0
 
-    padding: calc(26em/12) 0 calc(40em/12)
-    //padding: 2.6vh 0 4vh
+    +large-down
+      padding-top: calc(50em/18)
+    +tablet-down
+      flex-direction: column
+      align-items: stretch
+      padding: calc(26em/12) 0 calc(40em/12)
+      //padding: 2.6vh 0 4vh
   .nav
     +large-down
       display: none
