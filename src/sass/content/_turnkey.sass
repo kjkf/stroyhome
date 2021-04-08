@@ -1,0 +1,46 @@
+.turnkey
+  h2.title
+    width: calc(389em/60)
+    margin-bottom: calc(80em/60)
+
+  .tabs
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-bottom: calc(135em/18)
+  .tabs__items
+    position: static
+    margin-left: calc(50em/18)
+
+  .tabs__item
+    font-family: $ffNeumann
+    margin-bottom: calc(60em/30)
+  .tabs__body
+    margin-top: calc(-215em/18)
+  .tabs__block
+    padding: 0
+    overflow: hidden
+  .tab__descr
+    width: 27.5vw
+    padding-top: calc(376em/18)
+    background-position: 125px -100px
+    &::before
+      content: ""
+      display: inline-block
+      background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
+      width: 614px
+      height: 614px
+      border-radius: 50%
+      position: absolute
+      top: -125px
+      right: -190px
+      //background: red
+    h3
+      margin-bottom: calc(10em/35)
+    &--arch
+      background-image: url(../images/content/turnkey-design.png)
+    &--design
+      background-image: url(../images/content/turnkey-design.png)
+    &--landsc
+      background-image: url(../images/content/turnkey-design.png)
+      //background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
