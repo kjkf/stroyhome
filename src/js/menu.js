@@ -30,4 +30,13 @@ function init_menu(){
             menuBtn.classList.remove('fixed');
         }
     }
+
+    setTopBlockPadding();
+    function setTopBlockPadding() {
+        const header = document.querySelector('header');
+        const rect = header.getBoundingClientRect();
+        const topBlock = document.querySelector('.top.fullscreen');
+        topBlock.style.paddingTop = `${rect.height}px`;
+
+    };
 }
