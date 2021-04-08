@@ -24,9 +24,9 @@ body
 	font-family: $ffAvenirNextCyr
 	//+laptop-down
 		font-size: 15px
-	+ipad-down
+	//+ipad-down
 		font-size: 14px
-	+tablet-down
+	//+tablet-down
 		font-size: 12px
 	//+phone-down
 		font-size: 12px
@@ -44,25 +44,34 @@ h1
 	line-height: $lineHeight_h1
 	font-weight: normal
 	text-transform: uppercase
+	+ipad-down
+		font-size: $fontSize_h1_ipad
 
 h2
 	font-size: $fontSize_h2
 	line-height: $lineHeight_h2
 	font-weight: 400
 	text-transform: uppercase
+	+ipad-down
+		font-size: $fontSize_h2_ipad
 
 h3
 	font-size: $fontSize_h3
 	line-height: $lineHeight_h3
+	+ipad-down
+		font-size: $fontSize_h3_ipad
 
 h4
 	font-size: $fontSize_h4
 	line-height: $lineHeight_h4
+	+ipad-down
+		font-size: $fontSize_h4_ipad
 
 h5
 	font-size: $fontSize_h5
 	line-height: $lineHeight_h5
-
+	+ipad-down
+		font-size: $fontSize_h5_ipad
 a
 	text-decoration: none
 
@@ -74,7 +83,7 @@ a
 	position: relative
 
 	//background-color: rgba(255,255,255,0.5)
-	+laptop-down
+	//+laptop-down
 		max-width: 95vw
 	+phone-down
 		max-width: 100vw
@@ -110,15 +119,17 @@ a
 	-webkit-appearance: none
 	border: 0
 	cursor: pointer
+	+ipad-down
+		font-size: 0.9rem
 
 	//&:hover
 		color: inherit
 
 	&-light
-		padding: 2.22vh 2.4vw //24 46
+		padding: 1.25vw 2.4vw //24 46
 		background: $accent
 		box-shadow: 0px 4px 0px #655747, 0px 0px 3.33vw rgba(187, 161, 130, 0.4)
-		border-radius: 5.2vw //100
+		border-radius: 10rem //5.2vw //100
 		color: $btn-col
 		transition: all .4s
 		overflow: hidden
@@ -128,9 +139,9 @@ a
 		&:active, &:focus
 			box-shadow: none
 		+phone-down
-			font-size: calc(16em/12)
-			padding-left: 3.6em
-			padding-right: 3.6em
+			font-size: 16px
+			padding-top: 20px
+			padding-bottom: 20px
 
 	&-dark
 		background-color: $block-bg
@@ -140,6 +151,7 @@ a
 
 
 .btn-anim
+	will-change: transform
 	&:not(:disabled):before
 		margin-left: calc(-30em/18)
 		content: " "
@@ -182,31 +194,31 @@ a
 
 .section-index
 	display: inline-block
-	width: 2px
+	width: 0.104vw
 	height: 20.92vh
 	background: linear-gradient(transparent, $accent)
 	position: relative
 	&::before
 		content: ''
 		display: inline-block
-		width: 6px
-		height: 6px
+		width: 0.3125vw //6px
+		height: 0.3125vw  //6px
 		border-radius: 50%
 		background-color: $accent
-		box-shadow: 0px 0px 17px $accent
+		box-shadow: 0px 0px 0.88vw $accent //17px
 		position: absolute
-		bottom: -6px
-		left: -2px
+		bottom: -0.555vh //-6px
+		left: -0.104vw //-2px
 	&::after
 		content: attr(data-index)
 		color: $accent
-		font-size: 14px
+		font-size: 0.729vw //14px
 		line-height: 1.225
 		text-align: center
 		font-family: $ffAvenirNextCyr
 		position: absolute
-		bottom: -25px
-		left: -5px
+		bottom: -2.31vh //-25px
+		left: -0.26vw //-5px
 
 .ic
 	position: relative
@@ -228,7 +240,7 @@ a
 .fixed
 	position: fixed
 	&.callback
-		bottom: 9.26vh
+		bottom: 10.65vh //115
 		right: 2.08vw
 		z-index: 4
 
@@ -239,7 +251,7 @@ a
 	&__item
 		display: inline-flex
 		align-items: center
-		margin-bottom: calc(30em/18)
+		margin-bottom: 0.96vh //calc(30em/18)  10
 	&__btn
 		display: inline-block
 		width: $callback-btn-w
@@ -258,23 +270,35 @@ a
 			box-shadow: 0px 0px 17px $accent
 			.svg-sym
 				fill: #fff
+		+phone-down
+			width: $callback-btn-w_ph
+			height: $callback-btn-w_ph
+			padding: 10px
 
 	.prompt
 		display: inline-block
-		padding: calc(23em/14) calc(60em/14) calc(23em/14) calc(20em/14)
+		//padding: calc(23em/14) calc(60em/14) calc(23em/14) calc(20em/14)
+		padding: 1.19vw 3.125vw 1.19vw 1.04vw
 		font-family: $ffMontserrat
-		font-size: calc(14em/18)
+		font-size: 0.729vw //calc(14em/18)
 		line-height: 1.2
 		text-transform: uppercase
 		color: $fontColorMain
 		width: calc(195em/14)
 		background: transparent
-		box-shadow: 0px 0px calc(30em/14) rgba(0, 0, 0, 0.35)
-		border-radius: calc(20em/14)
+		box-shadow: 0px 0px 1.56vw rgba(0, 0, 0, 0.35) //30
+		border-radius: 1.04vw //calc(20em/14)
 		margin-right: calc(#{$callback-btn-w} / (-2))
 		z-index: 1
 		opacity: 0
 		transition: all .8s ease-out
+		+ipad-down
+			font-size: 0.7rem
+		+phone-down
+			font-size: 1rem
+			padding: calc(23em/14) calc(60em/14) calc(23em/14) calc(20em/14)
+			border-radius: 20px
+			margin-right: calc(11.125vw / (-2))
 
 	&__item
 		&:hover
@@ -283,7 +307,7 @@ a
 				background: $block-bg_prompt
 			.callback__btn
 				background: $accent
-				box-shadow: 0px 0px calc(17em/14) $accent
+				box-shadow: 0px 0px 0.88vw $accent //17
 				.svg-sym
 					fill: #fff
 
@@ -321,44 +345,52 @@ svg.svg-ic path
 .modal
 	display: block
 	background: $bg-white
-	box-shadow: 0px calc(15em/18) calc(50em/18) rgba(0, 0, 0, 0.1)
+	box-shadow: 0px 0.78vw 2.6vw rgba(0, 0, 0, 0.1) //15 50
 	border-radius: calc(35em/18)
-	width: calc(736em/18)
+	width: 38.33vw //736
 	font-family: $ffAvenirNextCyr
-	font-size: 1em
+	font-size: 0.93vw //1em //18
 	line-height: 1.4
 	color: $dark
 	position: relative
+	+ipad-down
+		font-size: 0.9rem
+	+tablet-down
+		width: 53.33vw
 	+phone-down
 		width: calc(100% - #{$pd_cont*2})
-		border-radius: calc(35em/12)
+		border-radius: 35px
 	&__in
-		padding: calc(50em/18) 20%
+		padding: 2.6vw 7.66vw //20% //50 147
 		display: flex
 		align-items: center
 		justify-content: center
 		flex-direction: column
+
 		+phone-down
 			padding: 45px 8%
+			font-size: 14px
 
 	&__title
 		a
 			display: inline-flex
 			font-family: $ffAvenirNextCyrHeavy
-			font-size: 1em
+			font-size: $fontSize_h4 //36
 			line-height: $lineHeight_h4
 			color: $dark
-			margin-bottom: calc(20em/36)
+			margin-bottom: 1.85vh //20
+			+ipad-down
+				font-size: $fontSize_h4_ipad
 			+phone-down
 				font-size: 28px
 				margin-bottom: 20px
 	&__subtitle
 		font-family: $ffAvenirNextCyrBold
-		font-size: calc(24em/18)
+		font-size: 1.25vw //24
 		line-height: 1.4
 		//margin-bottom: calc(10em/24)
 		+phone-down
-			font-size: calc(20em/12)
+			font-size: 20px
 			margin-bottom: 15px
 		&:last-child
 			+phone-down
@@ -369,19 +401,22 @@ svg.svg-ic path
 
 	.btn-light
 		width: 100%
-	.form
-		margin-top: calc(20em/18)
+	.btn-close
 		+phone-down
+
+	.form
+		margin-top: 1.85vh //20
+		+phone-down
+			font-size: 16px
 			margin-top: 50px
 
 	.contact-phone-btn
-		display: inline-block
-		width: calc(47em/28)
-		height: calc(47em/28)
-		min-width: calc(47em/28)
-		min-height: calc(47em/28)
 		+phone-down
 			display: none
+
+	.form-row
+		+phone-down
+			margin-bottom: 10px
 .form
 	width: 100%
 
@@ -389,17 +424,19 @@ svg.svg-ic path
 	width: 100%
 	background: transparent
 	//box-shadow: 0px calc(15em/18) calc(50em/18) rgba(0, 0, 0, 0.1)
-	border-radius: calc(56em/18)
-	font-size: 1em
+	border-radius: 5.6rem //calc(56em/18)
+	font-size: 0.9375vw //18
 	line-height: 1.2
 	text-transform: uppercase
 	text-align: center
-	padding: calc(24em/18)
+	padding: 1.25vw //24
 	border: 1px solid $field-brd
+	+ipad-down
+		font-size: 16px
 	&.error
 		border-color: red
 	+phone-down
-		padding: 22px
+		padding: 19px
 
 
 .form-row
@@ -412,13 +449,15 @@ svg.svg-ic path
 		justify-content: flex-start
 
 .form-check
-	font-size: calc(12em/18)
+	font-size: 0.625vw  //calc(12em/18)
 	line-height: 1.225
 	display: flex
 	width: 67%
 	border: 1px solid transparent
+	+ipad-down
+		font-size: 0.6rem
 	+phone-down
-		font-size: 1em
+		font-size: 12px
 		width: 100%
 	&.error
 		border-color: red
@@ -428,11 +467,11 @@ svg.svg-ic path
 		&::before
 			content: ""
 			display: inline-block
-			min-width: calc(17.8em/12)
-			width: calc(17.8em/12)
-			min-height: calc(16em/12)
-			height: calc(16em/12)
-			border-radius: 3px
+			min-width: 0.93vw //calc(17.8em/12)
+			width: 0.93vw //calc(17.8em/12)
+			min-height: 0.83vw //calc(16em/12)
+			height: 0.83vw //calc(16em/12)
+			border-radius: 0.15vw //3px
 			transition: all .3s ease-in
 			background:
 				color: $accent
@@ -441,16 +480,21 @@ svg.svg-ic path
 				size: 0
 				position: center
 			+phone-down
-				min-width: calc(17.8em/12)
-				width: calc(17.8em/12)
-				min-height: calc(16em/12)
-				height: calc(16em/12)
+				min-width: 17.8px //calc(17.8em/12)
+				width: 17.8px //calc(17.8em/12)
+				min-height: 16px //calc(16em/12)
+				height: 16px //calc(16em/12)
+				border-radius: 3px
 
 	input[type="checkbox"]
 		display: none
 	input[type="checkbox"]:checked + .form-check__btn::before
 		background-image: url("../images/icons/check.svg")
-		background-size: 60%
+		background-size: 0.52vw 0.42vw
+		+ipad-down
+			background-size: 1.52vw 0.42vw
+		+phone-down
+			background-size: 50%
 
 
 .link
@@ -460,12 +504,12 @@ svg.svg-ic path
 .btn-close
 	display: inline-flex
 	position: absolute
-	right: calc(40em/18)
-	top: calc(30em/18)
-	width: calc(32em/18)
-	min-width: calc(32em/18)
-	height: calc(32em/18)
-	min-height: calc(32em/18)
+	right: 2.08vw //calc(40em/18)
+	top: 1.5625vw //calc(30em/18)
+	width: 1.66vw //calc(32em/18)
+	min-width: 1.66vw //calc(32em/18)
+	height: 1.66vw //calc(32em/18)
+	min-height: 1.66vw //calc(32em/18)
 	background:
 		color: transparent
 		image: url("../images/icons/close.svg")
@@ -473,29 +517,34 @@ svg.svg-ic path
 		size: cover
 		position: center
 	+phone-down
-		width: calc(16em/12)
-		min-width: calc(16em/12)
-		height: calc(16em/12)
-		min-height: calc(16em/12)
+		width: 16px
+		min-width: 16px
+		height: 16px
+		min-height: 16px
+		top: 30px
+		right: 30px
+
 
 .btn-btm
 	display: inline-flex
 	align-items: center
-	font-size: 1em
+	font-size: 0.9375vw  //1em
 	position: absolute
 	bottom: 13vh
 	left: 0
 	color: $fontColorMain
 	cursor: pointer
-	+large-down
+	+ipad-down
+		font-size: .9rem
+	//+large-down
 		bottom: calc(4em/18)
-	+laptop-down
+	//+laptop-down
 		bottom: calc(18em/15)
-	+tablet-down
+	//+tablet-down
 		position: static
 	+phone-down
 		display: none
-	+maxheight700-down
+	//+maxheight700-down
 		position: static
 		margin-top: 2em
 	.svg-sym
@@ -542,10 +591,14 @@ svg.svg-ic path
 .contact
 	display: inline-flex
 	align-items: center
-	font-size: calc(17rem/18)
+	font-size: 0.88vw //calc(17rem/18)
 	line-height: 1.2
 	color: $fontColorMain
 	font-family: $ffAvenirNextCyrBold
+	+ipad-down
+		font-size: 0.85rem
+	+phone-down
+		font-size: 17px
 	&-ic
 		display: inline-flex
 		align-items: center

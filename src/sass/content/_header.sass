@@ -43,10 +43,10 @@
 
     +large-down
       padding-top: calc(50em/18)
-    +tablet-down
+    +phone-down
       flex-direction: column
       align-items: stretch
-      padding: calc(26em/12) 0 calc(40em/12)
+      padding: 26px 0 40px //calc(26em/12) 0 calc(40em/12)
       //padding: 2.6vh 0 4vh
   .nav
     +large-down
@@ -58,7 +58,7 @@
   .logo-text
     display: inline-block
     margin-left: 1.04vw //20px
-    +tablet-down
+    +phone-down
       display: none
 
   &-left
@@ -70,9 +70,9 @@
       width: 38.6vw
     +ipad-down
       width: 46.7vw
-    +tablet-down
+    +phone-down
       width: unset
-      margin-bottom: calc(50em/12)
+      margin-bottom: 55px
 
   &-right
     width: 25vw
@@ -81,7 +81,7 @@
     align-items: center
     +large-down
       width: unset
-    +tablet-down
+    +phone-down
       align-self: center
       width: unset
 
@@ -94,7 +94,7 @@
     z-index: 7
     //+laptop-down
       right: calc(45em/15)
-    +tablet-down
+    +phone-down
       position: fixed
       right: $pd_cont
       top: $pd_cont
@@ -103,7 +103,7 @@
     top: 2.77vh
     z-index: 6
     opacity: 1
-    +tablet-down
+    +phone-down
       right: $pd_cont
       top: $pd_cont
 
@@ -112,7 +112,7 @@
 
   .whatsapp
     margin-right: 3.64vw //70
-    +tablet-down
+    +phone-down
       display: none
 
 .section-index-wrapper
@@ -131,11 +131,12 @@
   background-color: $fontColorMain
   fill: $accent
   cursor: pointer
-  +tablet-down
-    min-width: calc(44em/12)
-    min-height: calc(44em/12)
-    width: calc(44em/12)
-    height: calc(44em/12)
+  +phone-down
+    min-width: 4.88rem //calc(44em/12)
+    min-height: 4.88rem
+    width: 4.88rem
+    height: 4.88rem
+    padding: 8px
   &__burger
     display: inline-block
     width: 1.35vw //26
@@ -145,6 +146,10 @@
     transition: all .5s ease-in-out
     top: 0.2vw
     position: relative
+    +phone-down
+      width: 26px
+      height: 4px
+      top: 4px
 
     &::before, &::after
       display: inline-block
@@ -155,25 +160,42 @@
       background-color: $accent
       border-radius: 0.15vw
       transition: all .5s ease-in-out
+      +phone-down
+        width: 26px
+        height: 4px
+        border-radius: 3px
     &::before
       transform: translateY(0.36vw) //7
       right: 0
       width: 0.94vw //18
+      +phone-down
+        transform: translateY(7px)
+        width: 18px
     &::after
       transform: translateY(0.73vw) //14
+      +phone-down
+        transform: translateY(14px)
 
   &.open
     .btn-menu__burger
       transform: translateX(0.1vw) translatey(0.42vw) //2 8
+      +phone-down
+        transform: translateX(2px) translatey(8px)
+
 
     .btn-menu__burger::before
       transform: rotate(135deg) translate(0.46875vw, 0.729vw) //9 14
       //rotate(135deg) translate(4.5px, 6px)
-
       width: 0.625vw //12
+      +phone-down
+        transform: rotate(135deg) translate(9px, 14px) //9 14
+        width: 12px
     .btn-menu__burger::after
       width: 0.625vw //12
       transform: rotate(-135deg) translate(0px, -0.208vw) //-4
+      +phone-down
+        width: 12px //12
+        transform: rotate(-135deg) translate(0px, -4px) //-4
 
   //.menu-ic
     transition: all .5s ease-in-out
@@ -267,6 +289,11 @@
   height: 2.45vw //47
   min-width: 2.45vw //47
   min-height: 2.45vw //47
+  +phone-down
+    width: 47px //47
+    height: 47px //47
+    min-width: 47px //47
+    min-height: 47px //47
 
 .contact-phone-ic
   background:
@@ -275,7 +302,7 @@
     repeat: no-repeat
     size: 45%
     position: center
-  +tablet-down
+  +phone-down
     background-size: 50%
 
 .contact-email-ic
