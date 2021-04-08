@@ -8,6 +8,22 @@
     flex-direction: row
     justify-content: space-between
     margin-bottom: calc(135em/18)
+    &::before
+      content: ""
+      position: absolute
+      top: calc(-85em/18)
+      left: 51%
+      width: calc(590em/18)
+      height: calc(1043em/18)
+      display: inline-block
+      margin-left: calc((-590em/18)/2)
+      z-index: 1
+      background:
+        image: url(../images/content/turnkey-girl.png)
+        size: cover
+        repeat: no-repeat
+        position: center
+
   .tabs__items
     position: static
     margin-left: calc(50em/18)
@@ -23,18 +39,17 @@
   .tab__descr
     width: 27.5vw
     padding-top: calc(376em/18)
-    background-position: 125px -100px
+    background-position: calc(125em/18) calc(-100em/18)
     &::before
       content: ""
       display: inline-block
       background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
-      width: 614px
-      height: 614px
+      width: calc(614em/18)
+      height: calc(614em/18)
       border-radius: 50%
       position: absolute
-      top: -125px
-      right: -190px
-      //background: red
+      top: calc(-125em/18)
+      right: calc(-190em/18)
     h3
       margin-bottom: calc(10em/35)
     &--arch
@@ -44,3 +59,17 @@
     &--landsc
       background-image: url(../images/content/turnkey-design.png)
       //background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
+
+
+.post
+  font-size: calc(20em/18)
+  line-height: 1.2
+  display: inline-flex
+  flex-direction: column
+  align-items: flex-end
+  position: absolute
+  bottom: calc(-140em/20)
+  left: 17%
+  &__fio
+    font-family: $ffAvenirNextCyrBold
+    font-size: calc(26em/18)
