@@ -4,13 +4,15 @@
     repeat: no-repeat
     size: cover
     position: center
+  +phone-down
+    padding-top: 185px!important
 
   &-in
     display: flex
     flex-direction: column
     justify-content: center
     height: 100vh
-    +tablet-down
+    +phone-down
       height: unset
     //+maxheight-down
       height: auto
@@ -42,7 +44,7 @@
     display: flex
     margin-bottom: 4.63vh
     +phone-down
-      margin-bottom: calc(90em/12)
+      margin-bottom: 90px
       //margin-bottom: 9vh
     &-item
       display: flex
@@ -51,6 +53,8 @@
       margin-right: calc(20em/18)
       padding: 0 calc(25em/18)
       text-align: center
+      +phone-down
+        padding: 0 21px
       &:last-child
         margin-right: 0
     &-count
@@ -61,6 +65,8 @@
       line-height: 1.46
       +ipad-down
         font-size: 1.3rem
+      +phone-down
+        font-size: 17px
 
     &-title, &-subtitle
       font-size: 0.52vw //10
@@ -68,7 +74,7 @@
       +ipad-down
         font-size: 0.5rem
       +phone-down
-        font-size: calc(7em/12)
+        font-size: 7px //calc(7em/12)
         line-height: 1.28
 
     &-title
@@ -78,11 +84,10 @@
     margin-bottom: 10px
     margin-bottom: 0.92vh
 
-    +tablet-down
-      text-align: center
-      margin-bottom: calc(20em/28)
     +phone-down
-      font-size: calc(28em/12)
+      text-align: center
+      margin-bottom: 20px
+      font-size: 28px //calc(28em/12)
 
   .subtitle
     width: 33.85vw
@@ -94,10 +99,11 @@
       width: 51.1vw
     +ipad-down
       width: 52.3vw
-    +tablet-down
+    +phone-down
       text-align: center
       width: 100%
-      margin-bottom: calc(70em/12)
+      margin-bottom: 70px
+      font-size: 12px
 
   &-main
     width: 56.97vw
@@ -110,7 +116,7 @@
       width: 86vw
     +ipad-down
       width: 88vw
-    +tablet-down
+    +phone-down
       width: 100%
       display: flex
       flex-direction: column
@@ -127,10 +133,11 @@
     //bottom: -8.4%
     position: absolute
     bottom: 17.4vh
-    +tablet-down
+    +phone-down
       display: none
   .btn-light
-    will-change: transform
+    +phone-down
+      width: 80%
 
 .laurel-ic
   position: relative
@@ -149,9 +156,9 @@
       position: center
       image: url("../images/icons/laurel.svg")
     +phone-down
-      width: calc(38em/12)
-      height: calc(53em/12)
-      top: calc(7em/12)
+      width: 4.22rem //calc(38em/12)
+      height: 5.88rem //calc(53em/12)
+      top: 0.78rem //calc(7em/12)
   &::after
     left: unset
     right: 0
