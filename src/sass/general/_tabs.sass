@@ -1,0 +1,108 @@
+.tabs
+  position: relative
+  &__items
+    display: inline-flex
+    flex-direction: column
+    position: absolute
+    left: 38%
+    top: 31%
+    z-index: 5
+  &__item
+    display: inline-flex
+    justify-content: flex-start
+    align-items: center
+    text-transform: uppercase
+    text-decoration: none
+    color: #ffffff
+    font-size: calc(30em/18)
+    margin-bottom: 4.6vh //50px
+    transition: color 800ms ease-out 0ms
+    &:last-child
+      margin-bottom: 0
+    &::before
+      opacity: 0
+      content: ''
+      display: inline-block
+      width: 2vw //40px
+      height: 2px
+      position: absolute
+      left: -2.6vw //-50px
+      transition: opacity 800ms ease-out 0ms
+    &.active
+      color: $accent
+      position: relative
+      transition: color 1s ease-in 200ms
+      &::before
+        opacity: 1
+        background: radial-gradient(#BBA182, transparent)
+        transition: opacity 1s ease-in 200ms
+
+  &__body
+    max-height: 66vh
+
+.tabs__block
+  padding: 1.8vh 1vw //20px
+  position: relative
+  //display: none
+  opacity: 0
+  //transition: opacity 500ms ease-out 0ms
+  transition:
+    property: opacity
+    duration: 800ms
+    delay: 0ms
+    timing-function: ease-in-out
+  &.active
+    //display: block
+    //opacity 1s ease-in 200ms
+    opacity: 1
+    transition:
+      property: opacity
+      duration: 1000ms
+      delay: 100ms
+      timing-function: ease-in-out
+  &.tab_02
+    transform: translateY(-100%)
+  &.tab_03
+    transform: translateY(-200%)
+
+.tab
+  display: flex
+  justify-content: space-between
+
+.tab__descr
+  //padding: 60px 68px 60px 60px
+  padding: 5.5vh 3.5vw 5.5vh 3vw
+  width: 28vw //527px
+  background-color: $block-bg
+  border-radius: 20px
+  border: 1px solid rgba(255, 255, 255, 0.05)
+  background:
+    //image: url("../images/content/frame.png")
+    //size: 70%
+    position: left bottom
+    repeat: no-repeat
+  +ipad-down
+    border-radius: 15px
+    width: 100%
+    background-size: 20%
+    background-position: center bottom
+    padding: 30px 42px 136px
+    text-align: center
+  h3
+    color: $accent
+    text-transform: uppercase
+    font-size: calc(35em/18)
+    font-weight: normal
+    font-family: $ffNeumann
+    margin-bottom: 6.48vh //70px
+  .tab__descr-text
+    font-size: 1em
+    font-family: $ffAvenirNextCyr
+
+.tab__img
+  width: 42.65vw //819px
+  height: 66vh
+  position: relative
+  img
+    width: 100%
+    height: auto
