@@ -3,13 +3,19 @@
     padding-top: 8.5vh
     padding-bottom: 5.28vh
 
+  background:
+    image: url("../images/content/bg03_forest.png")
+    position: left bottom
+    repeat: no-repeat
+
+
   .title
     margin-bottom: 3.7vh
 
   .content
     display: flex
     justify-content: space-between
-    border-radius: 20px
+    border-radius: 1.04vw //20px
     overflow: hidden
 
   .quiz
@@ -34,7 +40,7 @@
     //margin-bottom: 7.5vh //81px
     h3
       font-weight: 400
-      font-size: 18px
+      font-size: 0.9375vw //18px
       line-height: 1.225
 
     .quiz-step
@@ -48,7 +54,8 @@
         margin-right: 0
       &.completed
         background-color: $accent
-        box-shadow: 0px 0px 17px $accent
+        //box-shadow: 0px 0px 17px $accent
+        box-shadow: 0px 0px 0.89vh $accent
 
   .quiz-item-title
     margin-bottom: 2.8vh
@@ -80,17 +87,19 @@
       background-color: $bg-white
       //padding: calc(24em/18) calc(46em/18)
       height: 6.5vh
-      border-radius: 35px
+      border-radius: 1.82vw //35px
       color: $dark2
       display: flex
       align-items: center
       justify-content: center
       font-family: $ffMontserrat
       font-weight: 700
+      padding: 15px
 
   .option-radio:checked+label
     background-color: $accent
-    box-shadow: 0px 4px 0px #655747, 0px 0px 64px rgba(187, 161, 130, 0.4)
+    //box-shadow: 0px 4px 0px #655747, 0px 0px 64px rgba(187, 161, 130, 0.4)
+    box-shadow: 0px 4px 0px #655747, 0px 0px 3.33vw rgba(187, 161, 130, 0.4)
 
   .option-radio
     display: none
@@ -121,18 +130,23 @@
 
   .img-wrapper
     display: inline-block
-    border-radius: 20px
+    border-radius: 1.04vw //20px
     overflow: hidden
     img
       width: 100%
       
   .descr
-    background-color: #fff
+    background:
+      color: #fff
+      image: url("../images/content/casa1.png")
+      position: 170% 118%
+      size: 80%
+      repeat: no-repeat
     color: $dark
     //padding: 70px 78px 70px 50px
     padding: 6.5vh 4.2vw 6.5vh 3vw
     width: 27.5vw
-    font-size: 20px
+    font-size: 1.04vw //20px
     line-height: 1.225
     position: relative
     &::before
@@ -156,14 +170,14 @@
     .btn
       padding: calc(24em/18) calc(97em/18)
       &:first-child
-        margin-right: 30px
+        margin-right: 1.5625vw //30px
 
 
 .hide
   display: none
 
 .quiz-row
-  margin: 0 auto 20px
+  margin: 0 auto 1.04vw
   text-align: center
   width: 20.8vw //400px
   display: flex

@@ -3,36 +3,39 @@ function initQuiz() {
 
     if (!quiz) return false;
     console.log('initQuiz');
-    const quizForm = document.forms.quizForm;
+
     const nextBtn = quiz.querySelector('#nextBtn');
     const prevBtn = quiz.querySelector('#prevBtn');
 
-    const formIterator = formIterate(quizForm);
+    const formIterator = formIterate(quiz);
     console.log(nextBtn);
 
-    nextBtn.addEventListener('click', (e, quizForm) => formIterator.next());
-    prevBtn.addEventListener('click', (e, quizForm) => formIterator.prev());
+    nextBtn.addEventListener('click', e => formIterator.next());
+    prevBtn.addEventListener('click', e => formIterator.prev());
 }
 
-function formIterate(form) {
+function formIterate(quiz) {
+    const quizForm = document.forms.quizForm;
     let currentStep = 0;
-    const stepDivs = form.querySelectorAll('.quiz-item');
-    const quizResult = form.querySelector('.quiz-result');
+    const stepDivs = quiz.querySelectorAll('.quiz-item');
+    const quizResult = document.querySelector('.quiz-result');
     const steps = document.querySelectorAll('.quiz-step');
     const current = document.querySelector('.quiz-current');
-    console.log(current);
+    let step = 1;
+    console.log(quizResult);
 
     return {
         next() {
             hideForm(stepDivs[currentStep++]);
-            console.log("currentStep = " + currentStep);
-            if (currentStep > stepDivs.length) {
-                showResult(quizResult);
+            console.log(currentStep, stepDivs.length);
+            if (currentStep >= stepDivs.length) {
+                showResult(quiz, quizResult);
                 return;
             }
             showForm(stepDivs[currentStep]);
-            current.textContent = currentStep;
-            console.log(current);
+            console.log("currentStep = " + currentStep);
+            current.textContent = ++step;
+            console.log(step);
             steps[currentStep].classList.add('completed');
             if (currentStep > 0) prevBtn.classList.remove('hide');
 
@@ -41,7 +44,7 @@ function formIterate(form) {
             steps[currentStep].classList.remove('completed');
             hideForm(stepDivs[currentStep--]);
             showForm(stepDivs[currentStep]);
-            current.innerHTML = currentStep;
+            current.textContent = --step;
             if (currentStep === 0) prevBtn.classList.add('hide');
         }
     }
@@ -55,6 +58,7 @@ function showForm(form) {
     form.classList.remove('hide');
 }
 
-function showResult(result) {
+function showResult(quiz, result) {
     result.classList.remove('hide');
+    quiz.classList.add('hide');
 }
