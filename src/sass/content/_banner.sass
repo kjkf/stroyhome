@@ -57,14 +57,20 @@
       text-transform: uppercase
       color: $accent
       font-family: $ffNeumann
-      font-size: calc(26em/18)
+      font-size: 1.35vw //26
       line-height: 1.46
+      +ipad-down
+        font-size: 1.3rem
+
     &-title, &-subtitle
-      font-size: calc(10em/18)
+      font-size: 0.52vw //10
       line-height: 1.2
+      +ipad-down
+        font-size: 0.5rem
       +phone-down
         font-size: calc(7em/12)
         line-height: 1.28
+
     &-title
       font-family: $ffAvenirNextCyrBold
 
@@ -77,6 +83,7 @@
       margin-bottom: calc(20em/28)
     +phone-down
       font-size: calc(28em/12)
+
   .subtitle
     width: 33.85vw
     margin-bottom: 35px
@@ -111,7 +118,7 @@
       margin-top: 0
 
   .btn-round
-    margin-right: calc(22em/26)
+    margin-right: 1.15vw //22
   .btn-play
     display: flex
     align-items: center
@@ -119,7 +126,7 @@
     //bottom: -80px
     //bottom: -8.4%
     position: absolute
-    bottom: 10.4vh
+    bottom: 17.4vh
     +tablet-down
       display: none
   .btn-light
@@ -130,10 +137,10 @@
   &::before, &::after
     content: ""
     display: inline-block
-    top: calc(7em/18)
+    top: 0.65vh //7
     left: 0
-    width: calc(52em/18)
-    height: calc(72em/18)
+    width: 2.7vw //52
+    height: 3.75vw //72
     position: absolute
     background:
       color: transparent
@@ -152,18 +159,20 @@
 
 .btn-play
   font-family: $ffNeumann
-  font-size: calc(26em/18)
+  font-size: 1.35vw //26
   line-height: 1.46
   text-align: center
   text-transform: uppercase
   color: $accent
+  +ipad-down
+    font-size: 1.3rem
 
 .btn-round
   display: inline-block
-  width: calc(98em/26)
-  height: calc(98em/26)
+  width: 5.1vw //98
+  height: 5.1vw //98
   border-radius: 50%
-  box-shadow: 0 0 calc(100em/26) $accent
+  box-shadow: 0 0 5.2vw $accent //100
   background-color: $accent
 
 .btn-play-ic
