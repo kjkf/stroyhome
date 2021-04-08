@@ -21,6 +21,8 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    &.tmp
+      display: none
 
   .quiz-items
     margin-bottom: 6.67vh
@@ -61,12 +63,35 @@
       justify-content: space-between
     &--block
       display: block
+    &--wrap
+      flex-wrap: wrap
+      padding: 0 4vw
+      justify-content: space-evenly
+      .options__label:nth-child(2)
+        margin-bottom: 2vh
+
 
   .options__label
     display: inline-block
     width: 15.625vw
     position: relative
     text-align: center
+    cursor: pointer
+    &--btn
+      background-color: $bg-white
+      //padding: calc(24em/18) calc(46em/18)
+      height: 6.5vh
+      border-radius: 35px
+      color: $dark2
+      display: flex
+      align-items: center
+      justify-content: center
+      font-family: $ffMontserrat
+      font-weight: 700
+
+  .option-radio:checked+label
+    background-color: $accent
+    box-shadow: 0px 4px 0px #655747, 0px 0px 64px rgba(187, 161, 130, 0.4)
 
   .option-radio
     display: none
@@ -137,3 +162,20 @@
 
 .tmp
   display: none
+
+.quiz-row
+  margin: 0 auto 20px
+  text-align: center
+  width: 20.8vw //400px
+  display: flex
+  justify-content: space-evenly
+  .callback
+    flex-direction: row
+    justify-content: center
+    &__item
+      margin-right: 1.2vw
+  .btn-submit
+    width: 100%
+  .form-field
+    text-transform: unset
+    color: #ffffff

@@ -71,6 +71,7 @@ function createModal(template) {
 function showModal(modal, isDownload) {
     document.body.append(modal);
     modal.classList.add('active');
+    console.log(modal);
 }
 
 function closeModal(modal) {
@@ -83,14 +84,17 @@ function initModal() {
     const modal = createModal(templ);
     const isDownload = modal.querySelector('#isDownload');
 
-    const phoneBtn = document.querySelector('.phone-btn');
+    const callback = document.querySelector('.callback.fixed');
+
+    const phoneBtn = callback.querySelector('.phone-btn');
+    console.log(phoneBtn);
     phoneBtn.addEventListener('click', function (evt) {
         evt.preventDefault();
         isDownload.value = 0;
         showModal(modal);
     });
 
-    const downloadBtn = document.querySelector('.download-btn');
+    const downloadBtn = callback.querySelector('.download-btn');
     downloadBtn.addEventListener('click', function (evt) {
         evt.preventDefault();
         isDownload.value = 1;
