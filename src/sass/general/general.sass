@@ -7,13 +7,15 @@
 	width: device-width
 
 html
-	//overflow: hidden
-	font-size: $fontSize_body
+	overflow: hidden
+	font-size: 10px
+	+tablet-down
+		font-size: 9px
 
 body
 	font:
 		family: $ffNeumann
-		size: 1rem
+		size: .9375vw
 		weight: 400
 	color: $fontColorMain
 	line-height: $lineHeight_body
@@ -23,18 +25,18 @@ body
 	height: 100vh
 	background-color: $bg-dark
 	font-family: $ffAvenirNextCyr
-	+laptop-down
+	//+laptop-down
 		font-size: 15px
 	+ipad-down
 		font-size: 14px
 	+tablet-down
 		font-size: 12px
-	+phone-down
+	//+phone-down
 		font-size: 12px
 	&.stroke-ic
 		overflow: hidden
 		&::after
-			bottom: calc(-100em/18)
+			bottom: -5.2vw
 			right: -70px
 h1, h2, h3, h4, h5, p, ul
 	margin: 0px
@@ -105,7 +107,7 @@ a
 .btn
 	position: relative
 	font-family: $ffAvenirNextCyr
-	font-size: 1em
+	font-size: 0.9375vw //18
 	line-height: $lineHeight_body
 	text-decoration: none
 	-webkit-appearance: none
@@ -116,10 +118,10 @@ a
 		color: inherit
 
 	&-light
-		padding: calc(24em/18) calc(46em/18)
+		padding: 2.22vh 2.4vw //24 46
 		background: $accent
-		box-shadow: 0px 4px 0px #655747, 0px 0px calc(64em/18) rgba(187, 161, 130, 0.4)
-		border-radius: calc(100em/18)
+		box-shadow: 0px 4px 0px #655747, 0px 0px 3.33vw rgba(187, 161, 130, 0.4)
+		border-radius: 5.2vw //100
 		color: $btn-col
 		transition: all .4s
 		overflow: hidden
@@ -429,10 +431,10 @@ svg.svg-ic path
 		&::before
 			content: ""
 			display: inline-block
-			min-width: calc(17.8em/18)
-			width: calc(17.8em/18)
-			min-height: calc(16em/18)
-			height: calc(16em/18)
+			min-width: calc(17.8em/12)
+			width: calc(17.8em/12)
+			min-height: calc(16em/12)
+			height: calc(16em/12)
 			border-radius: 3px
 			transition: all .3s ease-in
 			background:
@@ -484,7 +486,7 @@ svg.svg-ic path
 	align-items: center
 	font-size: 1em
 	position: absolute
-	bottom: 6.2vh
+	bottom: 13vh
 	left: 0
 	color: $fontColorMain
 	cursor: pointer

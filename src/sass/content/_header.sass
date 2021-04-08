@@ -2,19 +2,23 @@
   display: flex
   justify-content: center
   align-items: center
-  font-size: calc(26em/18)
+  font-size: 1.35vw //26px
   font-family: $ffAvenirNextCyrBold
   color: $fontColorMain
   text-transform: uppercase
-  +tablet-down
-    font-size: calc(18em/12)
+  +ipad-down
+    font-size: 1.3rem //13px
+  +phone-down
+    font-size: 2rem //18px
   span
     color: $accent
 
   &-text
-    font-size: calc(14em/18)
+    font-size: 0.73vw //14px
     line-height: 1.2
     display: inline-flex
+    +ipad-down
+      font-size: 0.7rem //7px
 
 .nav
   ul
@@ -35,7 +39,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding: calc(30em/18) 0
+    padding: 2.78vh 0 // 30
 
     +large-down
       padding-top: calc(50em/18)
@@ -48,12 +52,12 @@
     +large-down
       display: none
     a
-      padding: calc(20em/18) calc(20em/18) calc(20em/18) 0
+      padding: 1.85vh 1.04vw 1.85vh 0  //20 20 20 0
 
 
   .logo-text
     display: inline-block
-    margin-left: calc(20em/14)
+    margin-left: 1.04vw //20px
     +tablet-down
       display: none
 
@@ -84,7 +88,7 @@
   .btn-menu
     position: absolute
     right: 7.81vw
-    margin-left: calc(20em/18)
+    margin-left: 1.04vw //20
     opacity: 1
     transition: all .5s ease-out
     z-index: 7
@@ -104,10 +108,10 @@
       top: $pd_cont
 
   .contact-phone-ic
-    margin-right: 10px
+    margin-right: 0.52vw //10
 
   .whatsapp
-    margin-right: calc(70em/17)
+    margin-right: 3.64vw //70
     +tablet-down
       display: none
 
@@ -118,11 +122,11 @@
   display: inline-flex
   justify-content: center
   align-items: baseline
-  min-width: calc(60em/18)
-  min-height: calc(60em/18)
-  width: calc(60em/18)
-  height: calc(60em/18)
-  padding: calc(17em/18)
+  min-width: 3.13vw //60
+  min-height: 3.13vw //60
+  width: 3.13vw //60
+  height: 3.13vw //60
+  padding: 0.88vw 0.88vw //17 17
   border-radius: 50%
   background-color: $fontColorMain
   fill: $accent
@@ -134,7 +138,7 @@
     height: calc(44em/12)
   &__burger
     display: inline-block
-    width: calc(26em/18)
+    width: 1.35vw //26
     height: 3px
     background-color: $accent
     border-radius: 3px
@@ -146,29 +150,29 @@
       display: inline-block
       content: ""
       position: absolute
-      width: calc(26em/18)
+      width: 1.35vw //26
       height: 3px
       background-color: $accent
       border-radius: 3px
       transition: all .5s ease-in-out
     &::before
-      transform: translateY(calc(7em/18))
+      transform: translateY(0.64vh) //7
       right: 0
-      width: calc(18em/18)
+      width: 0.94vw //18
     &::after
-      transform: translateY(calc(14em/18))
+      transform: translateY(1.3vh) //14
 
   &.open
     .btn-menu__burger
-      transform: translateX(calc(2em/18)) translatey(calc(8em/18))
+      transform: translateX(0.1vw) translatey(0.74vh) //2 8
 
     .btn-menu__burger::before
-      transform: rotate(135deg) translate(calc(9em/18), calc(14em/18))
+      transform: rotate(135deg) translate(0.46vw, 1.29vh) //9 14
 
-      width: calc(12em/18)
+      width: 0.625vw //12
     .btn-menu__burger::after
-      width: calc(12em/18)
-      transform: rotate(-135deg) translate(0px, calc(-4em/18))
+      width: 0.625vw //12
+      transform: rotate(-135deg) translate(0px, -0.37vh) //-4
 
   //.menu-ic
     transition: all .5s ease-in-out
@@ -187,14 +191,16 @@
 .whatsapp
   display: inline-flex
   align-items: center
-  font-size: calc(17em/18)
+  font-size: 0.88vw //17
   line-height: 1.4
   color: $fontColorMain
   padding-left: 2.86vw
+  +ipad-down
+    font-size: 0.85rem //8.5px
   &-ic
     display: inline-block
-    width: calc(32em/17)
-    height: calc(32em/17)
+    width: 1.66vw //32
+    height: 1.66vw //32
     margin-right: 0.78vw
   .svg-sym
     fill: $accent
@@ -225,24 +231,26 @@
   list-style: none
   & li
     margin-bottom: 2.78vh
-    margin-left: 30px
+    margin-left: 1.56vw //30
     &:last-child
       margin-bottom: 0
     a
       color: $fontColorMain
-      font-size: calc(24em/18)
+      font-size: 1.25vw //24
       line-height: 1.2
       display: inline-flex
       align-items: center
+      +ipad-down
+        font-size: 1.2rem
       &::before
         content: ""
         display: inline-block
-        width: 8px
-        height: 8px
+        width: 0.42vw //8
+        height: 0.42vw //8
         border-radius: 50%
         background-color: $accent
-        box-shadow: 0px 0px 20px $accent
-        margin-right: -8px
+        box-shadow: 0px 0px 1.04vw $accent // 20
+        margin-right: -0.42vw //8
         opacity: 0
         transition: all .5s ease-out
   li
@@ -250,14 +258,14 @@
       a
         &::before
           opacity: 1
-          margin-right: 20px
+          margin-right: 1.04vw //20
 
 .contact-phone-btn
   display: inline-block
-  width: calc(47em/17)
-  height: calc(47em/17)
-  min-width: calc(47em/17)
-  min-height: calc(47em/17)
+  width: 2.45vw //47
+  height: 2.45vw //47
+  min-width: 2.45vw //47
+  min-height: 2.45vw //47
 
 .contact-phone-ic
   background:
@@ -271,13 +279,17 @@
 
 .contact-email-ic
   display: inline-block
-  width: calc(23em/18)
-  height: calc(16em/18)
-  min-width: calc(23em/18)
-  min-height: calc(16em/18)
+  width: 1.2vw //23
+  height: 1.2vw //16
+  min-width: 1.2vw //23
+  min-height: 1.2vw //16
   background:
     color: transparent
     image: url("../images/icons/mail.svg")
     repeat: no-repeat
     size: contain
     position: center
+
+
+.about, .calculate, .turnkey, .footer
+  display: none
