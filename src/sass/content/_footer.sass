@@ -1,0 +1,121 @@
+.footer
+  background-color: $dark
+  .container
+    +phone-down
+      padding: 0
+
+  &__in
+    display: flex
+    padding: calc(70em/18) 0 calc(50em/18)
+    +tablet-down
+      flex-direction: column
+      padding: calc(30em/12) 0
+
+  &-left
+    width: 30%
+    //background-color: aqua
+
+    display: flex
+    justify-content: flex-start
+    align-items: flex-start
+    +tablet-down
+      width: 100%
+      justify-content: center
+      margin-bottom: calc(30em/12)
+  &-ctr
+    flex-grow: 1
+    //background-color: green
+    +tablet-down
+      width: 100%
+      justify-content: center
+
+
+  &-right
+    width: 30%
+    //: violet
+
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-end
+    +tablet-down
+      width: 100%
+      justify-content: center
+      align-items: center
+      padding-top: calc(30em/12)
+
+  .nav
+    +tablet-down
+      padding-bottom: calc(20em/12)
+    ul
+      +tablet-down
+        flex-direction: column
+    li
+      padding: calc(30em/18) 0
+      +tablet-down
+        padding: calc(10em/16) 0
+        font-size: calc(16em/12)
+
+  .address
+    padding-top: calc(30em/18)
+    padding-bottom: calc(50em/18)
+    +tablet-down
+      text-align: center
+      font-size: calc(14em/12)
+      padding-top: calc(30em/14)
+      padding-bottom: calc(50em/14)
+
+  h5
+    font-family: $ffAvenirNextCyrBold
+    text-transform: uppercase
+    margin-bottom: calc(10em/18)
+    +tablet-down
+      margin-bottom: calc(15em/14)
+      font-size: calc(14em/12)
+
+  .contact-email-ic
+    margin-right: calc(10em/18)
+
+  .contacts
+    display: flex
+    padding: calc(30em/18) 0
+    +tablet-down
+      flex-direction: column
+      align-items: center
+      padding-bottom: calc(50em/12)
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+
+  .contact
+    +tablet-down
+      font-size: calc(18em/12)
+
+  .contact-phone
+    margin-right: 2.6vw
+    +tablet-down
+      margin-bottom: calc(15em/18)
+      margin-right: 0
+
+    &-ic
+      display: inline-block
+      width: calc(16em/18)
+      height: calc(16em/18)
+      min-width: calc(16em/18)
+      min-height: calc(16em/18)
+      background-size: contain
+
+.develop-name
+  font-size: calc(22em/18)
+  line-height: 1.2
+  +tablet-down
+    font-size: calc(22em/12)
+  span
+    font-family: $ffAvenirNextCyrBold
+    text-transform: uppercase
+
+
+.footer-link
+  color: $fontColorMain
+  text-decoration: underline
+  +tablet-down
+    font-size: calc(18em/12)
+    margin-bottom: calc(50em/18)
