@@ -87,12 +87,12 @@
 
   .btn-menu
     position: absolute
-    right: 7.81vw
+    right: 0.81vw
     margin-left: 1.04vw //20
     opacity: 1
     transition: all .5s ease-out
     z-index: 7
-    +laptop-down
+    //+laptop-down
       right: calc(45em/15)
     +tablet-down
       position: fixed
@@ -139,11 +139,11 @@
   &__burger
     display: inline-block
     width: 1.35vw //26
-    height: 3px
+    height: 0.2vw
     background-color: $accent
     border-radius: 3px
     transition: all .5s ease-in-out
-    top: 4px
+    top: 0.2vw
     position: relative
 
     &::before, &::after
@@ -151,28 +151,29 @@
       content: ""
       position: absolute
       width: 1.35vw //26
-      height: 3px
+      height: 0.2vw
       background-color: $accent
-      border-radius: 3px
+      border-radius: 0.15vw
       transition: all .5s ease-in-out
     &::before
-      transform: translateY(0.64vh) //7
+      transform: translateY(0.36vw) //7
       right: 0
       width: 0.94vw //18
     &::after
-      transform: translateY(1.3vh) //14
+      transform: translateY(0.73vw) //14
 
   &.open
     .btn-menu__burger
-      transform: translateX(0.1vw) translatey(0.74vh) //2 8
+      transform: translateX(0.1vw) translatey(0.42vw) //2 8
 
     .btn-menu__burger::before
-      transform: rotate(135deg) translate(0.46vw, 1.29vh) //9 14
+      transform: rotate(135deg) translate(0.46875vw, 0.729vw) //9 14
+      //rotate(135deg) translate(4.5px, 6px)
 
       width: 0.625vw //12
     .btn-menu__burger::after
       width: 0.625vw //12
-      transform: rotate(-135deg) translate(0px, -0.37vh) //-4
+      transform: rotate(-135deg) translate(0px, -0.208vw) //-4
 
   //.menu-ic
     transition: all .5s ease-in-out
