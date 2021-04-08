@@ -183,8 +183,101 @@
 
     </div>
 </section>
-<section class=" fullscreen" style="background: url('assets/images/content/bg_block02.jpg')">
-    <div class="container"></div>
+<section class="calculate bg-white">
+    <div class="container container-calculate">
+        <h2 class="title title--shadow  title-anim">
+            <span class="dark first" data-text="Рассчитайте стоимость">Рассчитайте стоимость</span>
+        </h2>
+        <div class="content">
+            <div class="quiz">
+                <div class="quiz__header">
+                    <h3>Вопрос <span class="quiz-current">1</span> из <span class="quiz-all">6</span></h3>
+                    <span class="quiz-step completed"></span>
+                    <span class="quiz-step"></span>
+                    <span class="quiz-step"></span>
+                    <span class="quiz-step"></span>
+                    <span class="quiz-step"></span>
+                    <span class="quiz-step"></span>
+                </div>
+                <form action="" class="form">
+                    <div class="quiz-items">
+                        <div class="quiz-item tmp">
+                            <h4 class="quiz-item-title">Какой дом Вы хотите построить?</h4>
+                            <div class="quiz-item-options options options--flex">
+                                <div class="quiz-item-option">
+                                    <label for="karkas" class="form-label options__label">
+                                        <span class="img-wrapper">
+                                            <img src="./assets/images/content/frame-house--option.jpg" alt="Каркасный">
+                                        </span>
+                                        <input type="radio" name="house-projects" class="option-radio" id="karkas" value="Каркасный">
+                                        <label for="karkas">
+                                            <span class="option-icon"></span>
+                                            <span>Каркасный</span>
+                                        </label>
+                                    </label>
+                                </div>
+                                <div class="quiz-item-option">
+                                    <label for="aerated" class="form-label options__label">
+                                        <span class="img-wrapper">
+                                            <img src="./assets/images/content/aerated-concrete--option.jpg" alt="Газобетонный">
+                                        </span>
+                                        <input type="radio" name="house-projects" class="option-radio" id="aerated" value="Газобетонный">
+                                        <label for="aerated">
+                                            <span class="option-icon"></span>
+                                            <span>Газобетонный</span>
+                                        </label>
+                                    </label>
+                                </div>
+                                <div class="quiz-item-option">
+                                    <label for="brick" class="form-label options__label">
+                                        <span class="img-wrapper">
+                                            <img src="./assets/images/content/brick-house--option.jpg" alt="Кирпичный">
+                                        </span>
+                                        <input type="radio" name="house-projects" class="option-radio" id="brick" value="Кирпичный">
+                                        <label for="brick">
+                                            <span class="option-icon"></span>
+                                            <span>Газобетонный</span>
+                                        </label>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quiz-item">
+                            <h4 class="quiz-item-title mb130">Какая площадь Вам необходима?</h4>
+                            <div class="quiz-item-options options options--block">
+                                <div class="quiz-item-option">
+                                    <div class="rangecontainer">
+                                        <input type="range" min="0" max="1000" value="300" class="range" id="area">
+                                        <output class="bubble">
+                                            <span id="rangeValue"></span>
+                                            м<sup>2</sup>
+                                        </output>
+                                        <span class="rangeLabel rangeLabel--min">
+                                            0 м<sup>2</sup>
+                                        </span>
+                                        <span class="rangeLabel rangeLabel--max">
+                                            1000 м<sup>2</sup>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <div class="quiz-item-footer">
+                    <button type="button" class="btn btn-dark">Назад</button>
+                    <button type="button" class="btn btn-light btn-anim">Далее</button>
+                </div>
+            </div>
+            <div class="descr">Мы – профессиональная строительная компания, предоставляющая услуги
+                по строительству каркасных и брусчатых домов, возведению фундамента,
+                а так же внутренней отделке. Мы – профессиональная строительная компания, предоставляющая услуги
+                по строительству каркасных и брусчатых домов, возведению фундамента,
+                а так же внутренней отделке.</div>
+        </div>
+    </div>
 </section>
 
 <div class="menu-main-wrap">

@@ -12,12 +12,14 @@
     text-transform: uppercase
     &.accent
       color: $accent
+    &.dark
+      color: $dark
     &:before
       content: attr(data-text)
       text-transform: uppercase
       text-shadow: -20px -60px 0px rgba(255,255,255, 0.1)
       color: transparent
-      font-size: calc(100em/50)
+      font-size: calc(100em/60)
       position: absolute
       display: inline-block
       white-space: nowrap
@@ -29,7 +31,7 @@
         font-size: calc(35em/28)
         text-shadow: -10px -20px 0px rgba(255,255,255, 0.1)
     &.second:before
-      left: 140%
+      left: 100%
       +ipad-down
         left: 40%
       +phone-down
@@ -40,3 +42,9 @@
         text-shadow: -10px -30px 0px rgba(187,161,130, 0.1)
       +phone-down
         text-shadow: -10px -20px 0px rgba(187,161,130, 0.1)
+    &.dark:before
+      text-shadow: -20px -60px 0px rgba(26,24,33, 0.1)
+      +ipad-down
+        text-shadow: -10px -30px 0px rgba(26,24,33, 0.1)
+      +phone-down
+        text-shadow: -10px -20px 0px rgba(26,24,33, 0.1)

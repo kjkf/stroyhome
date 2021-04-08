@@ -1,0 +1,139 @@
+.calculate
+  .container-calculate
+    padding-top: 8.5vh
+    padding-bottom: 5.28vh
+
+  .title
+    margin-bottom: 3.7vh
+
+  .content
+    display: flex
+    justify-content: space-between
+    border-radius: 20px
+    overflow: hidden
+
+  .quiz
+    background-color: $block-bg
+    //padding: 80px 73px 50px 80px
+    padding: 8vh 3.8vw 5vh 4.5vw
+    flex-grow: 1
+    height: 66.2vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+  .quiz-items
+    margin-bottom: 6.67vh
+
+  .quiz__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    //margin-bottom: 7.5vh //81px
+    h3
+      font-weight: 400
+      font-size: 18px
+      line-height: 1.225
+
+    .quiz-step
+      display: inline-block
+      width: 4vw
+      height: 4px
+      background-color: $greey
+      border-radius: 3px
+      margin-right: 1.08vw //20px
+      &:last-child
+        margin-right: 0
+      &.completed
+        background-color: $accent
+        box-shadow: 0px 0px 17px $accent
+
+  .quiz-item-title
+    margin-bottom: 2.8vh
+
+  .mb130
+    margin-bottom: 12.5vh //130px
+
+  .options
+    &--flex
+      display: flex
+      flex: 0 1 33.333%
+      justify-content: space-between
+    &--block
+      display: block
+
+  .options__label
+    display: inline-block
+    width: 15.625vw
+    position: relative
+    text-align: center
+
+  .option-radio
+    display: none
+  .option-radio:checked+label span
+    font-weight: bold
+  .option-radio:checked+label .option-icon::before
+    background-color: $accent
+
+  .option-icon
+    display: inline-block
+    width: 2.2vw
+    height: 2.2vw
+    background-color: $dark
+    border-radius: 50%
+    position: absolute
+    top: calc(-2.2vw / 2)
+    left: calc(50% - 2.2vw / 2)
+    &::before
+      content: ''
+      display: inline-block
+      width: 1.35vw
+      height: 1.35vw
+      background-color: #ffffff
+      border-radius: 50%
+      position: absolute
+      top: calc(50% - 1.35vw / 2)
+      left: calc(50% - 1.35vw / 2)
+
+  .img-wrapper
+    display: inline-block
+    border-radius: 20px
+    overflow: hidden
+    img
+      width: 100%
+      
+  .descr
+    background-color: #fff
+    color: $dark
+    //padding: 70px 78px 70px 50px
+    padding: 6.5vh 4.2vw 6.5vh 3vw
+    width: 27.5vw
+    font-size: 20px
+    line-height: 1.225
+    position: relative
+    &::before
+      content: ''
+      display: inline-block
+      width: 9.2vw //176px
+      height: 14vh //149px
+      background:
+        image: url("../images/icons/quote.svg")
+        size: contain
+        repeat: no-repeat
+        position: center center
+      position: absolute
+      right: 1.4vw
+      top: 2.5vh
+
+
+  .quiz-item-footer
+    display: flex
+    justify-content: flex-end
+    .btn
+      padding: calc(24em/18) calc(97em/18)
+      &:first-child
+        margin-right: 30px
+
+
+.tmp
+  display: none

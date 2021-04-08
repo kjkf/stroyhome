@@ -1,0 +1,99 @@
+$rangeHeight: 4px
+$rangeBorderRadius: 7px
+$rangeThumbRadius: 1.6vw
+
+.rangecontainer
+  position: relative
+input[type=range]
+  -webkit-appearance: none
+  width: 100%
+  background-color: transparent
+
+input[type=range]:focus 
+  outline: none
+
+input[type=range]::-webkit-slider-runnable-track 
+  width: 100%
+  height: $rangeHeight
+  cursor: pointer
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+  background: $range-bg
+  border-radius: $rangeBorderRadius
+  border: 0px solid #000101
+
+input[type=range]::-webkit-slider-thumb 
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+  border: 0px solid #000000
+  height: $rangeThumbRadius
+  width: $rangeThumbRadius
+  border-radius: 50%
+  background: $accent
+  cursor: pointer
+  -webkit-appearance: none
+  margin-top: -0.8vw
+
+input[type=range]:focus::-webkit-slider-runnable-track 
+  background: $range-bg
+
+input[type=range]::-moz-range-track 
+  width: 100%
+  height: $rangeHeight
+  cursor: pointer
+  animate: 0.2s
+  background: $range-bg
+  border-radius: $rangeBorderRadius
+
+input[type=range]::-moz-range-thumb
+  height: $rangeThumbRadius
+  width: $rangeThumbRadius
+  border-radius: 50%
+  background: $accent
+  cursor: pointer
+
+input[type=range]::-ms-track 
+  width: 100%
+  height: $rangeHeight
+  cursor: pointer
+  animate: 0.2s
+  background: transparent
+  border-color: transparent
+  border-width: 39px 0
+  color: transparent
+
+input[type=range]::-ms-fill-lower 
+  background: $range-bg
+  border-radius: $rangeBorderRadius
+
+input[type=range]::-ms-fill-upper
+  border-radius: $rangeBorderRadius
+
+input[type=range]::-ms-thumb
+  height: $rangeThumbRadius
+  width: $rangeThumbRadius
+  border-radius: 50%
+  background: $accent
+  cursor: pointer
+
+input[type=range]:focus::-ms-fill-lower 
+  background: $range-bg
+
+input[type=range]:focus::-ms-fill-upper 
+  background: $range-bg
+
+.rangeLabel
+  position: absolute
+  top: -1.85vh //-20px
+  &--min
+    left: calc(-#{$rangeThumbRadius} / 2)
+  &--max
+    right: -30px
+  &--val
+    left: 300px
+
+.bubble 
+  background: transparent
+  position: absolute
+  top: -3.24vh //-35px
+  left: 50%
+  transform: translateX(-50%)
+
