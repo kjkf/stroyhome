@@ -4,4 +4,5 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     initTabs();
     initModal();
     init_titles_anim();
+    initQuiz();
 });

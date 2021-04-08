@@ -87,7 +87,7 @@ function initModal() {
     const callback = document.querySelector('.callback.fixed');
 
     const phoneBtn = callback.querySelector('.phone-btn');
-    console.log(phoneBtn);
+    //console.log(phoneBtn);
     phoneBtn.addEventListener('click', function (evt) {
         evt.preventDefault();
         isDownload.value = 0;
