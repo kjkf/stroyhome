@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stroyhome</title>
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
@@ -196,7 +196,7 @@
             <span class="dark first" data-text="Рассчитайте стоимость">Рассчитайте стоимость</span>
         </h2>
         <div class="content">
-            <div class="quiz tmp">
+            <div class="quiz ">
                 <div class="quiz__header">
                     <h3>Вопрос <span class="quiz-current">1</span> из <span class="quiz-all">6</span></h3>
                     <span class="quiz-step completed"></span>
@@ -206,9 +206,9 @@
                     <span class="quiz-step"></span>
                     <span class="quiz-step"></span>
                 </div>
-                <form action="" class="form">
+                <form action="" class="form" name="quizForm">
                     <div class="quiz-items">
-                        <div class="quiz-item tmp">
+                        <div class="quiz-item">
                             <h4 class="quiz-item-title">Какой дом Вы хотите построить?</h4>
                             <div class="quiz-item-options options options--flex">
                                 <div class="quiz-item-option">
@@ -250,7 +250,7 @@
                             </div>
                         </div>
 
-                        <div class="quiz-item tmp">
+                        <div class="quiz-item hide">
                             <h4 class="quiz-item-title mb130">Какая площадь Вам необходима?</h4>
                             <div class="quiz-item-options options options--block">
                                 <div class="quiz-item-option">
@@ -271,7 +271,7 @@
                             </div>
                         </div>
 
-                        <div class="quiz-item tmp">
+                        <div class="quiz-item hide">
                             <h4 class="quiz-item-title mb130">Есть ли у Вас уже участок в собственности?</h4>
                             <div class="quiz-item-options options options--flex">
                                 <div class="quiz-item-option">
@@ -295,7 +295,7 @@
                             </div>
                         </div>
 
-                        <div class="quiz-item tmp">
+                        <div class="quiz-item hide">
                             <h4 class="quiz-item-title mb130">Есть ли у Вас проект дома?</h4>
                             <div class="quiz-item-options options options--flex">
                                 <div class="quiz-item-option">
@@ -319,7 +319,7 @@
                             </div>
                         </div>
 
-                        <div class="quiz-item tmp">
+                        <div class="quiz-item hide">
                             <h4 class="quiz-item-title mb130">Какой бюджет вы планируете для постройки?</h4>
                             <div class="quiz-item-options options options--flex options--wrap">
                                 <div class="quiz-item-option">
@@ -350,7 +350,7 @@
                             </div>
                         </div>
 
-                        <div class="quiz-item ">
+                        <div class="quiz-item hide">
                             <h4 class="quiz-item-title mb130">Когда Вы хотели бы начать работы?</h4>
                             <div class="quiz-item-options options options--flex">
                                 <div class="quiz-item-option">
@@ -381,11 +381,11 @@
                     <button type="button" class="btn btn-light btn-anim">Далее</button>
                 </div>
             </div>
-            <div class="quiz quiz-result">
+            <div class="quiz quiz-result hide">
                 <div class="quiz__header">
                     <span id="quizResult">Результат</span>
                 </div>
-                <form action="" class="form form-result">
+                <form action="" class="form quiz-result">
                     <h4 class="quiz-item-title">Куда направить Вам расчет?</h4>
                     <div class="quiz-row icons">
                         <ul class="callback">
