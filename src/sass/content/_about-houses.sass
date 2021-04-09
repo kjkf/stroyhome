@@ -19,7 +19,7 @@
       size: contain
     position: absolute
     opacity: .1
-    right: -9%
+    right: -8%
     top: -3.43vh
     +ipad-down
       display: none
@@ -27,6 +27,7 @@
     padding-top: 8.4vh //105px
     +ipad-down
       padding-top: 5vh
+      padding-bottom: 3vh
 
   .title
     margin-bottom: 7vh //80px
@@ -35,7 +36,7 @@
     +ipad-down
       margin-bottom: 12vh
     +phone-down
-      margin-bottom: 10.8vh //37px
+      margin-bottom: 4.2vh //37px
 
   .section-index-wrapper
     right: -0.24vw
@@ -71,7 +72,7 @@
         display: inline-flex
         flex-direction: column
         position: absolute
-        left: 37%
+        left: 31vw
         top: 34%
         font-family: $ffNeumann
         z-index: 5
@@ -83,7 +84,7 @@
           left: 0
           top: -6.48vh //-70px
         +phone-down
-          position: relative
+          position: unset
           justify-content: space-evenly
           margin-bottom: 4vh
           //top: -5.56vh //-60px
@@ -105,7 +106,7 @@
           +laptop-down
             font-size: 1.35vw //calc(26em/15)
           +ipad-down
-            font-size: 3.35vw
+            font-size: 3.6vw
             margin-bottom: 0
           &::before
             opacity: 0
@@ -148,10 +149,16 @@
         duration: 800ms
         delay: 0ms
         timing-function: ease-in-out
+      +ipad-down
+        display: none
       &#tab_02
         transform: translateY(-100%)
+        +ipad-down
+          transform: translateY(0)
       &#tab_03
         transform: translateY(-200%)
+        +ipad-down
+          transform: translateY(0)
       &.active
         opacity: 1
         transition:
@@ -159,6 +166,8 @@
           duration: 1000ms
           delay: 100ms
           timing-function: ease-in-out
+        +ipad-down
+          display: block
     .house
       display: flex
       //justify-content: space-between
@@ -167,20 +176,24 @@
       .house__descr
         //padding: 60px 68px 60px 60px
         margin-right: 11.61vw
-        padding: 5.5vh 3.5vw 5.5vh 3vw
+        padding: 6vh 3.5vw 5.5vh 3vw
         width: 27vw //527px
         background-color: $block-bg
         border-radius: 1.04vw //20px
         background:
           image: url("../images/content/frame.png")
           //size: 70%     background-size: 72% 20%
-          size: 72% 20%
+          size: 68% 36%
           position: left bottom
           repeat: no-repeat
         &--concrete
-          background-image: url("../images/content/concrete.png")
+          background:
+            image: url("../images/content/concrete.png")
+            size: 75% 24%
         &--brick
-          background-image: url("../images/content/bricks.png")
+          background:
+            image: url("../images/content/bricks.png")
+            size: 72% 24%
         +laptop-down
           padding: 3.5vh 2.5vw 5.5vh 2vw
         +ipad-down
@@ -192,8 +205,8 @@
           text-align: center
         +phone-down
           border-radius: 10px
-          background-size: 50%
-          padding: 3.78vh 9.1875vw 12.59vh
+          background-size: 76% 30%
+          padding: 3.78vh 9.1875vw 18.59vh
 
         h3
           color: $accent
@@ -221,7 +234,7 @@
 
       .house__img
         width: 42.65vw //819px
-        height: 63vh
+        height: 66vh
         position: relative
         //background:
           image: url("../images/content/brick-house.png")
@@ -237,7 +250,7 @@
           margin: 0 auto
         +phone-down
           width: 100%
-          margin-bottom: 6vh
+          margin-bottom: 5.5vh
         //&:after
           content: ''
           display: inline-block
@@ -251,6 +264,8 @@
         img
           width: 115%
           //height: 100%
+          +ipad-down
+            width: 100%
 
 
 
