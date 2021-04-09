@@ -1,4 +1,5 @@
 .top
+  height: 100vh
   background:
     image: url("../images/content/banner-bg.jpg")
     repeat: no-repeat
@@ -6,12 +7,13 @@
     position: center
   +phone-down
     padding-top: 185px!important
+    height: unset
 
   &-in
     display: flex
     flex-direction: column
     justify-content: center
-    height: 100vh
+    height: 100% //100vh
     +phone-down
       height: unset
     //+maxheight-down
