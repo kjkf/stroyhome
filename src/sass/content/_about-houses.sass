@@ -24,18 +24,27 @@
     +ipad-down
       display: none
   .container
-    padding-top: 9.4vh //105px
+    padding-top: 8.4vh //105px
     +ipad-down
       padding-top: 5vh
 
   .title
-    margin-bottom: 5.5vh //80px
+    margin-bottom: 7vh //80px
     +laptop-down
-      margin-bottom: 4vh
+      margin-bottom: 1vh
     +ipad-down
       margin-bottom: 12vh
     +phone-down
-      margin-bottom: 12vh //37px
+      margin-bottom: 10.8vh //37px
+
+  .section-index-wrapper
+    right: -0.24vw
+    top: 49% //calc(50% - 20.92vh / 2)
+
+  .section-index
+    &::after
+      bottom: -2.8vh //-25px
+      left: -0.26vw //-5px
 
   .about-content
     position: relative
@@ -62,8 +71,8 @@
         display: inline-flex
         flex-direction: column
         position: absolute
-        left: 38%
-        top: 36%
+        left: 37%
+        top: 34%
         font-family: $ffNeumann
         z-index: 5
         +ipad-down
@@ -74,7 +83,10 @@
           left: 0
           top: -6.48vh //-70px
         +phone-down
-          top: -5.56vh //-60px
+          position: relative
+          justify-content: space-evenly
+          margin-bottom: 4vh
+          //top: -5.56vh //-60px
           //left: 0
           //top: 0
 
@@ -93,6 +105,7 @@
           +laptop-down
             font-size: 1.35vw //calc(26em/15)
           +ipad-down
+            font-size: 3.35vw
             margin-bottom: 0
           &::before
             opacity: 0
@@ -102,6 +115,7 @@
             height: 2px
             position: absolute
             left: -2.6vw //-50px
+            top: 42%
             transition: opacity 800ms ease-out 0ms
             +ipad-down
               left: calc(50% - 1px)
@@ -121,12 +135,12 @@
 
     .tabs__body
       max-height: 70vh
+      +laptop-down
+        max-height: 46vh
       +ipad-down
-        max-height: 100vh
+        max-height: unset
     .tabs__block
-      padding: 1.8vh 1vw //20px
       position: relative
-      //display: none
       opacity: 0
       //transition: opacity 500ms ease-out 0ms
       transition:
@@ -134,30 +148,11 @@
         duration: 800ms
         delay: 0ms
         timing-function: ease-in-out
-
-      //&#tab_01
-        transform: translateY(100%)
-      //&#tab_01.active
-        transform: translateY(0)
-      //&#tab_01.prev
-        transform: translateY(-100%)
-      //&#tab_02
-        transform: translateY(0)
       &#tab_02
-        transform: translateY(-100%)
-      //&#tab_02.prev
-        transform: translateY(-200%)
-        //top: calc(-66vh - 2 * 20px) //двигаем блок вверх на высоту + паддинги 20px сверху и снизу
-      //&#tab_03
         transform: translateY(-100%)
       &#tab_03
         transform: translateY(-200%)
-      //&#tab_03.prev
-        transform: translateY(-300%)
-        //top: calc(2 * (-66vh - 2 * 20px))
       &.active
-        //display: block
-        //opacity 1s ease-in 200ms
         opacity: 1
         transition:
           property: opacity
@@ -166,11 +161,12 @@
           timing-function: ease-in-out
     .house
       display: flex
-      justify-content: space-between
+      //justify-content: space-between
       +ipad-down
         flex-direction: column-reverse
       .house__descr
         //padding: 60px 68px 60px 60px
+        margin-right: 11.61vw
         padding: 5.5vh 3.5vw 5.5vh 3vw
         width: 27vw //527px
         background-color: $block-bg
@@ -185,15 +181,19 @@
           background-image: url("../images/content/concrete.png")
         &--brick
           background-image: url("../images/content/bricks.png")
+        +laptop-down
+          padding: 3.5vh 2.5vw 5.5vh 2vw
         +ipad-down
-          border-radius: 0.78125vw //15px
+          border-radius: 15px //15px
           width: 100%
-          background-size: 20%
+          background-size: 27%
           background-position: center bottom
           padding: 2.78vh 2.1875vw 12.59vh //30px 42px 136px
           text-align: center
         +phone-down
+          border-radius: 10px
           background-size: 50%
+          padding: 3.78vh 9.1875vw 12.59vh
 
         h3
           color: $accent
@@ -204,12 +204,18 @@
           margin-bottom: 6.8vh //70px
           +laptop-down
             margin-bottom: 2.48vh
+          +ipad-down
+            font-size: 2.82vw
           +phone-down
             font-size: 6.2vw //23px
             margin-bottom: 1.5vh //10px
         .house__descr-text
           font-size: 0.9375vw
           font-family: $ffAvenirNextCyr
+          +laptop-down
+            font-size: 1.5vw
+          +ipad-down
+            font-size: 2vw
           +phone-down
             font-size: 1.3rem
 
@@ -217,19 +223,35 @@
         width: 42.65vw //819px
         height: 63vh
         position: relative
+        //background:
+          image: url("../images/content/brick-house.png")
+          size: cover
+          repeat: no-repeat
+        +laptop-down
+          height: 42vh
 
         +ipad-down
           margin-bottom: 2vh
           width: 85%
           height: unset
           margin: 0 auto
-        //+phone-down
+        +phone-down
           width: 100%
-          height: unset
-
+          margin-bottom: 6vh
+        //&:after
+          content: ''
+          display: inline-block
+          width: 44.58vw
+          height: 44.58vw
+          border-radius: 50%
+          background: yellow
+          position: absolute
+          top: 0
+          left: 0
         img
-          //width: 100%
-          height: 100%
+          width: 115%
+          //height: 100%
+
 
 
 
