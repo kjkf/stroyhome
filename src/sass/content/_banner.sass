@@ -7,7 +7,8 @@
   +phone-down
     padding-top: 185px!important
     background-position: 85%
-
+  &.fullscreen
+    overflow: hidden
   &-in
     display: flex
     flex-direction: column
@@ -41,6 +42,22 @@
 
   +phone-down
     justify-content: flex-start
+
+  position: relative
+  &::after
+    content: ''
+    display: inline-block
+    width: 30vw //574px
+    height: 53vh //574px
+    position: absolute
+    background:
+      image: url("../images/icons/lines.svg")
+    +ipad-down
+      display: none
+  &::after
+    bottom: -10%
+    right: -18%
+
   .progress
     display: flex
     //margin-bottom: 4.63vh
