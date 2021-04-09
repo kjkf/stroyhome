@@ -160,7 +160,7 @@ a
 		content: " "
 		width: calc(30em/18)
 		height: calc(300em/18)
-		background: #fff
+		background: rgba(255, 255, 255, 0.3)
 		position: absolute
 		left: calc(-40em/18)
 		top: calc(-150em/18)
@@ -169,14 +169,14 @@ a
 		animation-name: slideme
 		animation-duration: 3.5s
 		animation-iteration-count: infinite
-		transform: rotate(45deg)
+		transform: rotate(30deg)
 
 	&:after
 		margin-left: calc(-30em/18)
 		content: " "
 		width: calc(30em/18)
 		height: calc(300em/18)
-		background: #fff
+		background: rgba(255, 255, 255, 0.3)
 		animation-delay: .05s
 		position: absolute
 		left: calc(-90em/18)
@@ -186,7 +186,7 @@ a
 		animation-name: slideme
 		animation-duration: 3.5s
 		animation-iteration-count: infinite
-		transform: rotate(45deg)
+		transform: rotate(30deg)
 
 .section-index-wrapper
 	position: absolute
@@ -311,6 +311,7 @@ a
 			.prompt
 				opacity: 1
 				background: $block-bg_prompt
+				z-index: -1
 			.callback__btn
 				background: $accent
 				box-shadow: 0px 0px 0.88vw $accent //17

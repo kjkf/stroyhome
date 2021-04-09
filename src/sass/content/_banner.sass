@@ -42,7 +42,8 @@
     justify-content: flex-start
   .progress
     display: flex
-    margin-bottom: 4.63vh
+    //margin-bottom: 4.63vh
+    margin-bottom: 4.9vh //53px
     +phone-down
       margin-bottom: 90px
       //margin-bottom: 9vh
@@ -82,7 +83,7 @@
 
   .title
     margin-bottom: 10px
-    margin-bottom: 0.92vh
+    margin-bottom: 0.925vh
 
     +phone-down
       text-align: center
@@ -92,12 +93,12 @@
   .subtitle
     width: 33.85vw
     margin-bottom: 35px
-    margin-bottom: 3.24vh
-    +large-down
+    margin-bottom: 2.78vh //30
+    //+large-down
       width: 43.96vw
-    +laptop-down
+    //+laptop-down
       width: 51.1vw
-    +ipad-down
+    //+ipad-down
       width: 52.3vw
     +phone-down
       text-align: center
@@ -107,14 +108,14 @@
 
   &-main
     width: 56.97vw
-    margin-top: -10.4vh
-    @media screen and (max-width: 1808px) and (min-width: 1400px) and (max-height: 800px)
+    margin-top: -9.4vh
+    //@media screen and (max-width: 1808px) and (min-width: 1400px) and (max-height: 800px)
       width: 86.4vw
-    +large-down
+    //+large-down
       width: 74vw
-    +large-down
+    //+large-down
       width: 86vw
-    +ipad-down
+    //+ipad-down
       width: 88vw
     +phone-down
       width: 100%
@@ -132,12 +133,14 @@
     //bottom: -80px
     //bottom: -8.4%
     position: absolute
-    bottom: 17.4vh
+    bottom: 11vh
     +phone-down
       display: none
   .btn-light
     +phone-down
       width: 80%
+  .btn-btm
+    bottom: 6.48vh
 
 .laurel-ic
   position: relative
