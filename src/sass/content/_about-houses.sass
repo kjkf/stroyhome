@@ -36,7 +36,7 @@
     +ipad-down
       margin-bottom: 12vh
     +phone-down
-      margin-bottom: 4.2vh //37px
+      margin-bottom: 10.2vh //37px
 
   .section-index-wrapper
     right: -0.24vw
@@ -84,9 +84,9 @@
           left: 0
           top: -6.48vh //-70px
         +phone-down
-          position: unset
           justify-content: space-evenly
           margin-bottom: 4vh
+          top: -6vh
           //top: -5.56vh //-60px
           //left: 0
           //top: 0
@@ -123,6 +123,11 @@
               top: calc(100% + 5px)
               width: 2px
               height: 2vw
+            +phone-down
+              left: calc(50% - 3px)
+              top: calc(100% + 2px)
+              width: 2px
+              height: 4vw
           &.active
             color: $accent
             position: relative
@@ -206,7 +211,7 @@
         +phone-down
           border-radius: 10px
           background-size: 76% 30%
-          padding: 3.78vh 9.1875vw 18.59vh
+          padding: 3.78vh 9.1875vw 18.5vh
 
         h3
           color: $accent
@@ -221,7 +226,7 @@
             font-size: 2.82vw
           +phone-down
             font-size: 6.2vw //23px
-            margin-bottom: 1.5vh //10px
+            margin-bottom: 1vh //10px
         .house__descr-text
           font-size: 0.9375vw
           font-family: $ffAvenirNextCyr
