@@ -223,6 +223,27 @@
         width: 42.65vw //819px
         height: 63vh
         position: relative
+        &::after
+          content: ""
+          display: inline-block
+          position: absolute
+          top: -7.8125vw
+          left: 3.646vw
+          background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
+          width: 130%
+          height: 130%
+          z-index: -1
+        &::before
+          content: ""
+          display: inline-block
+          position: absolute
+          top: -11.46vw
+          left: -3.9vw
+          background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 55%, rgba(187, 161, 130, 0) 100%)
+          width: 130%
+          height: 130%
+          z-index: -1
+
         //background:
           image: url("../images/content/brick-house.png")
           size: cover
