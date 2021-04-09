@@ -368,14 +368,14 @@ svg.svg-ic path
 		width: calc(100% - #{$pd_cont*2})
 		border-radius: 35px
 	&__in
-		padding: 2.6vw 7.66vw //20% //50 147
+		padding: 2.6vw 7.29vw //20% //50 147
 		display: flex
 		align-items: center
 		justify-content: center
 		flex-direction: column
 
 		+phone-down
-			padding: 45px 8%
+			padding: 45px 8% 50px
 			font-size: 14px
 
 	&__title
@@ -395,7 +395,7 @@ svg.svg-ic path
 		font-family: $ffAvenirNextCyrBold
 		font-size: 1.25vw //24
 		line-height: 1.4
-		//margin-bottom: calc(10em/24)
+		margin-bottom: 0.926vh //10
 		+phone-down
 			font-size: 20px
 			margin-bottom: 15px
@@ -403,6 +403,7 @@ svg.svg-ic path
 			+phone-down
 				margin-bottom: 0px
 		&.secd
+			margin-bottom: 3px
 			+phone-down
 				margin-bottom: 0px
 
@@ -413,9 +414,10 @@ svg.svg-ic path
 
 	.form
 		margin-top: 1.85vh //20
+		padding: 0 1.56vw
 		+phone-down
 			font-size: 16px
-			margin-top: 50px
+			margin-top: 45px
 
 	.contact-phone-btn
 		+phone-down
@@ -424,6 +426,11 @@ svg.svg-ic path
 	.form-row
 		+phone-down
 			margin-bottom: 10px
+	.form-check-wrap
+		margin-bottom: 0
+		+phone-down
+			padding-left: 5px
+
 .form
 	width: 100%
 
@@ -447,7 +454,9 @@ svg.svg-ic path
 
 
 .form-row
-	margin-bottom: calc(20em/18)
+	margin-bottom: 1.85vh  //calc(20em/18)
+	&:last-child
+		margin-bottom: 0
 
 .form-check-wrap
 	display: flex
@@ -602,6 +611,7 @@ svg.svg-ic path
 	line-height: 1.2
 	color: $fontColorMain
 	font-family: $ffAvenirNextCyrBold
+	position: relative
 	+ipad-down
 		font-size: 0.85rem
 	+phone-down
@@ -615,3 +625,15 @@ svg.svg-ic path
 		margin-right: 10px
 		.svg-sym
 			fill: $accent
+	&__text
+		position: absolute
+		top: -3px
+		left: 50%
+		font-family: $ffAvenirNextCyr
+		font-size: 0.625vw //12
+		line-height: 1.25
+		+ipad-down
+			font-size: .6rem
+		+phone-down
+			font-size: 12px
+			top: -5px
