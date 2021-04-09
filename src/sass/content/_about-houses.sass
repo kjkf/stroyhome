@@ -25,6 +25,7 @@
       display: none
   .container
     padding-top: 7.4vh //105px
+    padding-bottom: 7.4vh
     +phone-down
       padding-bottom: 50px
     //+ipad-down
@@ -79,6 +80,7 @@
         top: 23.54vh //13.54vh
         font-family: $ffNeumann
         z-index: 5
+
         //+ipad-down
           flex-direction: row
           align-items: center
@@ -194,6 +196,7 @@
         width: 27vw //527px
         background-color: $block-bg
         border-radius: 1.04vw //20px
+        height: 68.52vh
         background:
           image: url("../images/content/frame.png")
           //size: 70%     background-size: 72% 20%
@@ -220,6 +223,7 @@
           background-position: center bottom
           padding: 2.78vh 2.1875vw 12.59vh //30px 42px 136px
           text-align: center
+          height: auto
         +phone-down
           border-radius: 10px
           background-size: 76% 30%
