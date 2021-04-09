@@ -36,7 +36,9 @@ function init_menu(){
         const header = document.querySelector('header');
         const rect = header.getBoundingClientRect();
         const topBlock = document.querySelector('.top.fullscreen');
+        const topIn = document.querySelector('.top.fullscreen .top-in');
         topBlock.style.paddingTop = `${rect.height}px`;
-
+        //100vh - header.height
+        topIn.style.height = `calc(100vh - ${rect.height}px)`;
     };
 }
