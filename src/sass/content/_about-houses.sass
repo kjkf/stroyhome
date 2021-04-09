@@ -25,18 +25,20 @@
       display: none
   .container
     padding-top: 8.4vh //105px
-    +ipad-down
+    +phone-down
+      padding-bottom: 50px
+    //+ipad-down
       padding-top: 5vh
       padding-bottom: 3vh
 
   .title
     margin-bottom: 7vh //80px
-    +laptop-down
+    //+laptop-down
       margin-bottom: 1vh
-    +ipad-down
+    //+ipad-down
       margin-bottom: 12vh
     +phone-down
-      margin-bottom: 10.2vh //37px
+      margin-bottom: 37px //37px
 
   .section-index-wrapper
     right: -0.24vw
@@ -73,10 +75,11 @@
         flex-direction: column
         position: absolute
         left: 31vw
-        top: 34%
+        //top: 34%
+        top: 13.54vh
         font-family: $ffNeumann
         z-index: 5
-        +ipad-down
+        //+ipad-down
           flex-direction: row
           align-items: center
           justify-content: space-between
@@ -84,9 +87,13 @@
           left: 0
           top: -6.48vh //-70px
         +phone-down
+          flex-direction: row
+          align-items: center
+          width: 100%
+          left: 0
           justify-content: space-evenly
           margin-bottom: 4vh
-          top: -6vh
+          top: -5px
           //top: -5.56vh //-60px
           //left: 0
           //top: 0
@@ -103,10 +110,13 @@
           transition: color 800ms ease-out 0ms
           &:last-child
             margin-bottom: 0
-          +laptop-down
+          //+laptop-down
             font-size: 1.35vw //calc(26em/15)
           +ipad-down
-            font-size: 3.6vw
+            font-size: 1.5rem //3.6vw
+
+          +phone-down
+            font-size: 14px //3.73vw //calc(14em/12)
             margin-bottom: 0
           &::before
             opacity: 0
@@ -118,11 +128,11 @@
             left: -2.6vw //-50px
             top: 42%
             transition: opacity 800ms ease-out 0ms
-            +ipad-down
-              left: calc(50% - 1px)
-              top: calc(100% + 5px)
-              width: 2px
-              height: 2vw
+            //+ipad-down
+              //left: calc(50% - 1px)
+              //top: calc(100% + 5px)
+              //width: 2px
+              //height: 2vw
             +phone-down
               left: calc(50% - 3px)
               top: calc(100% + 2px)
@@ -136,14 +146,13 @@
               opacity: 1
               background: radial-gradient(#BBA182, transparent)
               transition: opacity 1s ease-in 200ms
-          +phone-down
-            font-size: 3.73vw //calc(14em/12)
+
 
     .tabs__body
       max-height: 70vh
-      +laptop-down
+      //+laptop-down
         max-height: 46vh
-      +ipad-down
+      +phone-down
         max-height: unset
     .tabs__block
       position: relative
@@ -154,15 +163,15 @@
         duration: 800ms
         delay: 0ms
         timing-function: ease-in-out
-      +ipad-down
+      +phone-down
         display: none
       &#tab_02
         transform: translateY(-100%)
-        +ipad-down
+        +phone-down
           transform: translateY(0)
       &#tab_03
         transform: translateY(-200%)
-        +ipad-down
+        +phone-down
           transform: translateY(0)
       &.active
         opacity: 1
@@ -171,12 +180,12 @@
           duration: 1000ms
           delay: 100ms
           timing-function: ease-in-out
-        +ipad-down
+        +phone-down
           display: block
     .house
       display: flex
       //justify-content: space-between
-      +ipad-down
+      +phone-down
         flex-direction: column-reverse
       .house__descr
         //padding: 60px 68px 60px 60px
@@ -188,23 +197,26 @@
         background:
           image: url("../images/content/frame.png")
           //size: 70%     background-size: 72% 20%
-          size: 68% 36%
+          //size: 68% 36%
+          size: 18.489vw 26.39vh //355px 285px
           position: left bottom
           repeat: no-repeat
         &--concrete
           background:
             image: url("../images/content/concrete.png")
-            size: 75% 24%
+            //size: 75% 24%
+            size: 20.3125vw 18.518vh //10.416vw
         &--brick
           background:
             image: url("../images/content/bricks.png")
-            size: 72% 24%
-        +laptop-down
+            //size: 72% 24% //375px 195px
+            size: 19.53vw 18.05vh //10.156vw
+        //+laptop-down
           padding: 3.5vh 2.5vw 5.5vh 2vw
-        +ipad-down
-          border-radius: 15px //15px
+        +phone-down
+          //border-radius: 15px //15px
           width: 100%
-          background-size: 27%
+          //background-size: 27%
           background-position: center bottom
           padding: 2.78vh 2.1875vw 12.59vh //30px 42px 136px
           text-align: center
@@ -216,26 +228,26 @@
         h3
           color: $accent
           text-transform: uppercase
-          font-size: 1.82vw //calc(35em/18)
+          //font-size: 1.82vw //calc(35em/18)
           font-weight: normal
           font-family: $ffNeumann
           margin-bottom: 6.8vh //70px
-          +laptop-down
+          //+laptop-down
             margin-bottom: 2.48vh
           +ipad-down
-            font-size: 2.82vw
+            font-size: 1.75rem
           +phone-down
-            font-size: 6.2vw //23px
-            margin-bottom: 1vh //10px
+            font-size: 23px //6.2vw //23px
+            margin-bottom: 10px //1vh //10px
         .house__descr-text
-          font-size: 0.9375vw
+          font-size: 0.9375vw //18px
           font-family: $ffAvenirNextCyr
-          +laptop-down
+          //+laptop-down
             font-size: 1.5vw
           +ipad-down
-            font-size: 2vw
+            font-size: 0.9rem
           +phone-down
-            font-size: 1.3rem
+            font-size: 12px
 
       .house__img
         width: 42.65vw //819px
@@ -266,17 +278,20 @@
           image: url("../images/content/brick-house.png")
           size: cover
           repeat: no-repeat
-        +laptop-down
+        //+laptop-down
           height: 42vh
 
-        +ipad-down
+        //+ipad-down
           margin-bottom: 2vh
           width: 85%
           height: unset
           margin: 0 auto
         +phone-down
           width: 100%
-          margin-bottom: 5.5vh
+          margin-bottom: 18px
+          height: unset
+          margin-top: 45px
+          margin-left: -25px
         //&:after
           content: ''
           display: inline-block
@@ -290,8 +305,8 @@
         img
           width: 115%
           //height: 100%
-          +ipad-down
-            width: 100%
+          +phone-down
+            width: 110%
 
 
 
