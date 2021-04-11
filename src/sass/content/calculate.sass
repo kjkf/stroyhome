@@ -21,12 +21,13 @@
   .quiz
     background-color: $block-bg
     //padding: 80px 73px 50px 80px
-    padding: 8vh 3.8vw 5vh 4.5vw
+    padding: 7.5vh 3.8vw 5vh 4vw
     flex-grow: 1
     height: 66.2vh
     display: flex
     flex-direction: column
     justify-content: space-between
+    //max-width: 58vw
     &.hide
       display: none
 
@@ -35,13 +36,14 @@
 
   .quiz__header
     display: flex
-    justify-content: space-between
+    //justify-content: space-between
     align-items: center
     //margin-bottom: 7.5vh //81px
     h3
       font-weight: 400
       font-size: 0.9375vw //18px
       line-height: 1.225
+      margin-right: 1.5625vw
 
     .quiz-step
       display: inline-block
@@ -49,7 +51,7 @@
       height: 4px
       background-color: $greey
       border-radius: 3px
-      margin-right: 1.08vw //20px
+      margin-right: .99vw //20px
       &:last-child
         margin-right: 0
       &.completed
@@ -57,8 +59,10 @@
         //box-shadow: 0px 0px 17px $accent
         box-shadow: 0px 0px 0.89vh $accent
 
+  .quiz-item
+    padding-top: 7vh
   .quiz-item-title
-    margin-bottom: 2.8vh
+    margin-bottom: 4.8vh
 
   .mb130
     margin-bottom: 12.5vh //130px
@@ -95,6 +99,9 @@
       font-family: $ffMontserrat
       font-weight: 700
       padding: 15px
+    label
+      font-size: 20px
+      line-height: 1.25
 
   .option-radio:checked+label.options__label--btn
     background-color: $accent
@@ -132,6 +139,7 @@
     display: inline-block
     border-radius: 1.04vw //20px
     overflow: hidden
+    margin-bottom: 1.56vh
     img
       width: 100%
       
@@ -139,12 +147,12 @@
     background:
       color: #fff
       image: url("../images/content/casa1.png")
-      position: 170% 118%
-      size: 80%
+      position: 2.4vw 28vh
+      size: 30.58vw 44.72vh
       repeat: no-repeat
     color: $dark
     //padding: 70px 78px 70px 50px
-    padding: 6.5vh 4.2vw 6.5vh 3vw
+    padding: 6.5vh 5.4vw 6.5vh 2.5vw
     width: 27.5vw
     font-size: 1.04vw //20px
     line-height: 1.225
