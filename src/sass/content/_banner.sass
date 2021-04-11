@@ -41,7 +41,14 @@
   +phone-down
     justify-content: flex-start
 
-  &::after
+  &.lines-ic
+    &::after
+      bottom: -10%
+      right: -18%
+      +ipad-down
+        display: none
+
+  //&::after
     content: ''
     display: inline-block
     width: 30vw //574px
@@ -51,7 +58,7 @@
       image: url("../images/icons/lines.svg")
     +ipad-down
       display: none
-  &::after
+  //&::after
     bottom: -10%
     right: -18%
 
