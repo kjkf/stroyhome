@@ -15,7 +15,7 @@
     justify-content: center
     //height: calc(100vh - 103.438px)
     +phone-down
-      height: unset
+      height: auto !important
     //+maxheight-down
       height: auto
 
@@ -38,12 +38,9 @@
   justify-content: center
   flex-grow: 1
   position: relative
-
-
   +phone-down
     justify-content: flex-start
 
-  position: relative
   &::after
     content: ''
     display: inline-block
@@ -157,6 +154,7 @@
   .btn-light
     +phone-down
       width: 80%
+      margin-bottom: 5px
   .btn-btm
     bottom: 6.48vh
 
