@@ -1,9 +1,13 @@
 .principle
-  //background:
+  background:
     image: url("../images/content/jan-jakub.jpg")
     repeat: no-repeat
     size: cover
     position: center
+  +phone-down
+    background-image: none
+    overflow: hidden
+
   //&::before
     content: ""
     position: absolute
@@ -160,8 +164,8 @@
       margin-bottom: 3.06vh //33px
       +phone-down
         display: inline-flex
-        width: 165px
-        height: 165px
+        //width: 165px
+        //height: 165px
         margin-bottom: 10px
 
       img
@@ -170,6 +174,12 @@
 
     &::before
       display: none
+    &.laurel-right-ic::after
+      display: none
+      +phone-down
+        display: inline-block
+
+
 
 .clip-circle
   clip-path: circle(13.75vw at center) //circle(264px at center)
