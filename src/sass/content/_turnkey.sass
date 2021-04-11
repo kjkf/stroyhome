@@ -1,117 +1,270 @@
 .turnkey
   &-in
-    padding-bottom: 320px
-    background-color: blue
+    padding-bottom: 29.629vh
+    +phone-down
+      position: relative
+
   h2.title
-    width: calc(389em/60)
-    margin-bottom: calc(80em/60)
+    margin-bottom: 7.407vh //calc(80em/60)
+    display: flex
+    flex-direction: column
+    +phone-down
+      margin-bottom: 30px
 
   .tabs
     display: flex
     flex-direction: row
     justify-content: space-between
-    margin-bottom: calc(135em/18)
+    margin-bottom: 12.5vh //calc(135em/18)
+    +phone-down
+      flex-direction: column-reverse
+      margin-bottom: 0
+
+
+
     &::before
       content: ""
       position: absolute
-      top: calc(-85em/18)
-      left: 51%
-      width: calc(590em/18)
-      height: calc(1043em/18)
+      top: -7.407vh //calc(-85em/18)
+      left: 42.97vw
+      width: 30.729vw //calc(590em/18)
+      height: 96.574vh //calc(1043em/18)
       display: inline-block
-      margin-left: calc((-590em/18)/2)
+      margin-left: -15.364583vw //calc((-590em/18)/2)
       z-index: 1
       background:
         image: url(../images/content/turnkey-girl.png)
-        size: cover
+        size: contain
         repeat: no-repeat
         position: center
 
+      +phone-down
+        width: 185px
+        height: 328px
+        transform: scaleX(-1)
+        bottom: -35px
+        top: unset
+        left: unset
+        right: 0
+
   .tabs__items
     position: static
-    margin-left: calc(50em/18)
+    margin-left: 2.60416vw //calc(50em/18)
+    +phone-down
+      display: flex
+      margin-left: 0
+      flex-direction: row
+      margin-bottom: 345px
+      justify-content: center
 
   .tabs__item
     font-family: $ffNeumann
-    margin-bottom: calc(60em/30)
+    margin-bottom: 5.56vh //calc(60em/30)
+    +phone-down
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      text-align: center
+      font-size: 10px
+      line-height: 1.2
+      font-family: $ffMontserrat
+      text-transform: unset
+      background: $block-bg
+      border-radius: 10px
+      margin-right: 7px
+      margin-bottom: 0
+      padding: 17px 15px 15px
+
+    &::before
+      +phone-down
+        display: none
+    &:last-child
+      +phone-down
+        margin-right: 0
+
   .tabs__body
-    margin-top: calc(-215em/18)
+    margin-top: -19.9074vh //calc(-215em/18)
+    +phone-down
+      margin-top: 0
+      margin-bottom: 30px
+
   .tabs__block
     padding: 0
     overflow: hidden
+    +phone-down
+      display: none
+      overflow: unset
+
+    &.active
+      +phone-down
+        display: block
+
+
+    &.tab_02
+      +phone-down
+        transform: translateY(0)
+    &.tab_03
+      +phone-down
+        transform: translateY(0)
+
+  .tab
+    justify-content: flex-end
+  .tab__img
+    width: 26.0416vw //500px
+    height: 5.48vh //440px
+
+    position: absolute
+    top: -8.33vh //-90px
+    right: -5.2083vw //-100px
+    +phone-down
+      top: unset
+      bottom: -390px
+      left: -50px
+      right: unset
+      width: 290px
+      height: 290px
+
   .tab__descr
     width: 27.5vw
-    padding-top: calc(376em/18)
-    background-position: calc(125em/18) calc(-100em/18)
+    padding-top: 34.814vh //calc(376em/18)
+    +phone-down
+      width: 100%
+      padding: 0
+      background-color: transparent
+      border-color: transparent
     &::before
       content: ""
       display: inline-block
       background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
-      width: calc(614em/18)
-      height: calc(614em/18)
+      width: 31.98vw //calc(614em/18)
+      height: 31.98vw //calc(614em/18)
       border-radius: 50%
       position: absolute
-      top: calc(-125em/18)
-      right: calc(-190em/18)
+      top: -11.574vh //calc(-125em/18)
+      right: -9.895vw //calc(-190em/18)
+      +phone-down
+        display: none
+        
     h3
-      margin-bottom: calc(10em/35)
+      margin-bottom: 0.926vh //calc(10em/35)
+      +phone-down
+        display: none
     &--arch
-      background-image: url(../images/content/turnkey-design.png)
+      //background-image: url(../images/content/turnkey-design.png)
     &--design
-      background-image: url(../images/content/turnkey-design.png)
+      //background-image: url(../images/content/turnkey-design.png)
     &--landsc
-      background-image: url(../images/content/turnkey-design.png)
+      //background-image: url(../images/content/turnkey-design.png)
       //background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
 
+  .tab__descr-text
+    +phone-down
+      font-size: 12px
+      line-height: 1.25
+
   .application
-    bottom: -40px
+    bottom: -4.16vh //-45px
     position: absolute
     z-index: 2
+    +phone-down
+      width: 100%
+      bottom: -155px
 
+  .section-index-wrapper
+    right: -0.3125vw
+    top: calc(50% - 28.92vh)
+
+  .form-check-wrap
+    +phone-down
+      margin-top: 15px
+      margin-left: 18px
+
+  .post
+    +phone-down
+      display: none
 
 .post
-  font-size: calc(20em/18)
+  font-size: 1.042vw //calc(20em/18)
   line-height: 1.2
   display: inline-flex
   flex-direction: column
   align-items: flex-end
   position: absolute
-  bottom: calc(-140em/20)
-  left: 17%
+  bottom: 29.17vh
+  left: 15.885vw
+
+  +ipad-down
+    font-size: 1rem
   &__fio
     font-family: $ffAvenirNextCyrBold
-    font-size: calc(26em/18)
+    font-size: 1.35416vw //calc(26em/18)
+    +ipad-down
+      font-size: 1.3rem
 
 .application
   background: $bg-white
-  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.25)
-  border-radius: 20px
-  width: 84.4vw
-  padding: calc(30em/18) 15% calc(20em/18)
+  box-shadow: 0px 0px 5.2083vw rgba(0, 0, 0, 0.25) //100
+  border-radius: 1.0416vw //20px
+  width: calc(100% - #{$pd_cont*2}) //84.4vw
+  padding: 3.24074vh 12.865vw 1.851vh //calc(35em/18) 15% calc(20em/18)
+  +phone-down
+    border-radius: 20px
+    padding: 31px 21px
+
   h3.title
-    font-size: calc(48em/18)
+    font-size: 2.5vw //calc(48em/18)
     font-weight: 400
     color: $dark
-    padding: 0 calc(50em/48)
-    margin-bottom: calc(20em/48)
+    margin-bottom: 1.851vh //calc(20em/48)
+    display: flex
+    flex-direction: column
+    align-items: center
+    +ipad-down
+      font-size: 2.4rem
+    +phone-down
+      font-size: 14px
+      line-height: 1.2
+      font-family: $ffAvenirNextCyrBold
+      color: $dark
+      text-align: center
+
 
 .form--column
   .form-in
     display: flex
     justify-content: space-between
+    +phone-down
+      flex-direction: column
 
   .form-field
     text-transform: unset
   .form-col
-    margin-right: 20px
+    margin-right: 1.0416vw //20px
     flex-grow: 1
+    +phone-down
+      margin-right: 0
+      margin-bottom: 10px
     &:last-child
       margin-right: 0
-      width: 280px
-      color: red
+      width: 14.583vw //280px
       flex-grow: unset
+      +phone-down
+        width: 100%
+
+  .form-col
+    &:first-child
+      +phone-down
+        order: 2
+    &:nth-child(2)
+      +phone-down
+        order: 1
+    &:last-child
+      +phone-down
+        order: 3
+
+
   .btn
-    margin-bottom: 10px
+    margin-bottom: 0.925vh //10px
     width: 100%
   .form-check
     width: unset

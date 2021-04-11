@@ -14,9 +14,11 @@
     text-transform: uppercase
     text-decoration: none
     color: #ffffff
-    font-size: calc(30em/18)
+    font-size: 1.5625vw //calc(30em/18)
     margin-bottom: 4.6vh //50px
     transition: color 800ms ease-out 0ms
+    +ipad-down
+      font-size: 1.5rem
     &:last-child
       margin-bottom: 0
     &::before
@@ -74,14 +76,14 @@
   padding: 5.5vh 3.5vw 5.5vh 3vw
   width: 28vw //527px
   background-color: $block-bg
-  border-radius: 20px
+  border-radius: 1.0416vw //20px
   border: 1px solid rgba(255, 255, 255, 0.05)
   background:
     //image: url("../images/content/frame.png")
     //size: 70%
     position: left bottom
     repeat: no-repeat
-  +ipad-down
+  //+ipad-down
     border-radius: 15px
     width: 100%
     background-size: 20%
@@ -91,13 +93,17 @@
   h3
     color: $accent
     text-transform: uppercase
-    font-size: calc(35em/18)
+    font-size: 1.823vw //calc(35em/18)
     font-weight: normal
     font-family: $ffNeumann
     margin-bottom: 6.48vh //70px
+    +ipad-down
+      font-size: 1.75rem
   .tab__descr-text
-    font-size: 1em
+    font-size: 0.9375vw //18px
     font-family: $ffAvenirNextCyr
+    +ipad-down
+      font-size: .9rem
 
 .tab__img
   width: 42.65vw //819px
