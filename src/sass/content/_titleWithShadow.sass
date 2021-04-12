@@ -14,7 +14,7 @@
       color: $accent
     &.dark
       color: $dark
-    &:before
+    &::before
       content: attr(data-text)
       text-transform: uppercase
       //text-shadow: -20px -60px 0px rgba(255,255,255, 0.1)
@@ -33,13 +33,13 @@
         font-size: 9.33vw //calc(35em/28)
         //text-shadow: -10px -20px 0px rgba(255,255,255, 0.1)
         text-shadow: -2.52vw -5.04vw 0px rgba(255, 255, 255, 0.1)
-    &.second:before
+    &.second::before
       left: 94%
       +ipad-down
         left: 40%
       +phone-down
         left: 36%
-    &.accent:before
+    &.accent::before
       //text-shadow: -20px -60px 0px rgba(187,161,130, 0.1)
       text-shadow: -1.4vw -3.125vw 0px rgba(187,161,130, 0.1)
       +ipad-down
@@ -48,7 +48,7 @@
       +phone-down
         //text-shadow: -10px -20px 0px rgba(187,161,130, 0.1)
         text-shadow: -2.52vw -5.04vw 0px rgba(187,161,130, 0.1)
-    &.dark:before
+    &.dark::before
       //text-shadow: -20px -60px 0px rgba(26,24,33, 0.1)
       text-shadow: -1.04vw -3.125vw 0px rgba(26,24,33, 0.1)
       +ipad-down
@@ -57,3 +57,14 @@
       +phone-down
         //text-shadow: -10px -20px 0px rgba(26,24,33, 0.1)
         text-shadow: -2.52vw -5.04vw 0px rgba(26,24,33, 0.1)
+
+  &.title--long
+    span
+      &.second::before
+        left: 80%
+        +phone-down
+          //position: absolute
+          left: -50px
+      &.accent::before
+        +phone-down
+          text-shadow: -195px 26px 0px rgba(187,161,130, 0.1)

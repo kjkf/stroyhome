@@ -1,18 +1,28 @@
 $rangeHeight: 4px
 $rangeBorderRadius: 7px
 $rangeThumbRadius: 1.6vw
+$rangeMobileHeight: 318px
+$rangeThumbRadiusMobile: 31px
 
 .rangecontainer
   position: relative
+  font-family: $ffAvenirNextCyr
+  +phone-down
+    display: flex
+    justify-content: center
+    min-height: 330px
+
 input[type=range]
   -webkit-appearance: none
   width: 100%
   background-color: transparent
+  +phone-down
+    transform: rotate(90deg)
 
-input[type=range]:focus 
+input[type=range]:focus
   outline: none
 
-input[type=range]::-webkit-slider-runnable-track 
+input[type=range]::-webkit-slider-runnable-track
   width: 100%
   height: $rangeHeight
   cursor: pointer
@@ -20,8 +30,11 @@ input[type=range]::-webkit-slider-runnable-track
   background: $range-bg
   border-radius: $rangeBorderRadius
   border: 0px solid #000101
+  //+phone-down
+    width: $rangeHeight
+    height: $rangeMobileHeight
 
-input[type=range]::-webkit-slider-thumb 
+input[type=range]::-webkit-slider-thumb
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
   border: 0px solid #000000
   height: $rangeThumbRadius
@@ -31,17 +44,24 @@ input[type=range]::-webkit-slider-thumb
   cursor: pointer
   -webkit-appearance: none
   margin-top: -0.8vw
+  +phone-down
+    width: $rangeThumbRadiusMobile
+    height: $rangeThumbRadiusMobile
+    margin-top: calc(-31px / 2)
 
-input[type=range]:focus::-webkit-slider-runnable-track 
+input[type=range]:focus::-webkit-slider-runnable-track
   background: $range-bg
 
-input[type=range]::-moz-range-track 
+input[type=range]::-moz-range-track
   width: 100%
   height: $rangeHeight
   cursor: pointer
   animate: 0.2s
   background: $range-bg
   border-radius: $rangeBorderRadius
+  //+phone-down
+    width: $rangeHeight
+    height: $rangeMobileHeight
 
 input[type=range]::-moz-range-thumb
   height: $rangeThumbRadius
@@ -49,8 +69,11 @@ input[type=range]::-moz-range-thumb
   border-radius: 50%
   background: $accent
   cursor: pointer
+  +phone-down
+    width: $rangeThumbRadiusMobile
+    height: $rangeThumbRadiusMobile
 
-input[type=range]::-ms-track 
+input[type=range]::-ms-track
   width: 100%
   height: $rangeHeight
   cursor: pointer
@@ -60,8 +83,11 @@ input[type=range]::-ms-track
   //border-width: 39px 0
   border-width: 2.03vw 0
   color: transparent
+  //+phone-down
+    width: $rangeHeight
+    height: $rangeMobileHeight
 
-input[type=range]::-ms-fill-lower 
+input[type=range]::-ms-fill-lower
   background: $range-bg
   border-radius: $rangeBorderRadius
 
@@ -74,27 +100,47 @@ input[type=range]::-ms-thumb
   border-radius: 50%
   background: $accent
   cursor: pointer
+  +phone-down
+    width: $rangeThumbRadiusMobile
+    height: $rangeThumbRadiusMobile
 
-input[type=range]:focus::-ms-fill-lower 
+input[type=range]:focus::-ms-fill-lower
   background: $range-bg
 
-input[type=range]:focus::-ms-fill-upper 
+input[type=range]:focus::-ms-fill-upper
   background: $range-bg
 
 .rangeLabel
   position: absolute
-  top: -1.85vh //-20px
+  top: -2.8vh //-20px
+  +phone-down
+    font-size: 18px
+    top: 7px
   &--min
     left: calc(-#{$rangeThumbRadius} / 2)
+    +phone-down
+      left: calc(50% - 50px)
   &--max
-    right: -1.5625vw //-30px
+    right: -0.4375vw //-30px
+    +phone-down
+      right: unset
+      left: calc(50% - 79px)
+      bottom: -14px
+      top: unset
   &--val
-    left: 15.625vw //300px
+    //left: 15.625vw //300px
 
-.bubble 
+
+.bubble
   background: transparent
   position: absolute
-  top: -3.24vh //-35px
+  top: -5.24vh //-35px
   left: 50%
+  font-size: 1.458vw
+  line-height: 1.21
   transform: translateX(-50%)
+  +phone-down
+    font-size: 28px
+    left: 74%
+    top: 30%
 

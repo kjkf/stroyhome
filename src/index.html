@@ -195,29 +195,36 @@
 </section>
 <section class="calculate bg-white">
     <div class="container container-calculate">
-        <h2 class="title title--shadow  title-anim">
-            <span class="dark first" data-text="Рассчитайте стоимость">Рассчитайте стоимость</span>
+        <h2 class="title title--shadow  title-anim title--long">
+            <span class="dark first" data-text="Рассчитайте">Рассчитайте</span>
+            <span class="accent second" data-text="стоимость">стоимость</span>
         </h2>
         <div class="content">
             <div class="quiz ">
                 <div class="quiz__header">
                     <h3>Вопрос <span class="quiz-current">1</span> из <span class="quiz-all">6</span></h3>
-                    <span class="quiz-step completed"></span>
-                    <span class="quiz-step"></span>
-                    <span class="quiz-step"></span>
-                    <span class="quiz-step"></span>
-                    <span class="quiz-step"></span>
-                    <span class="quiz-step"></span>
+                    <div class="steps">
+                        <span class="quiz-step completed"></span>
+                        <span class="quiz-step"></span>
+                        <span class="quiz-step"></span>
+                        <span class="quiz-step"></span>
+                        <span class="quiz-step"></span>
+                        <span class="quiz-step"></span>
+                    </div>
                 </div>
                 <form action="" class="form" name="quizForm">
                     <div class="quiz-items">
                         <div class="quiz-item">
                             <h4 class="quiz-item-title">Какой дом Вы хотите построить?</h4>
                             <div class="quiz-item-options options options--flex">
-                                <div class="quiz-item-option">
+                                <div class="quiz-item-option mr20">
                                     <label for="karkas" class="form-label options__label">
                                         <span class="img-wrapper">
-                                            <img src="./assets/images/content/frame-house--option.jpg" alt="Каркасный">
+                                            <!--<img src="./assets/images/content/frame-house&#45;&#45;option.jpg" alt="Каркасный">-->
+                                            <picture>
+                                                <source srcset="./assets/images/content/frame-house--option--mobile.jpg" media="(max-width: 768px)">
+                                                <img src="./assets/images/content/frame-house--option.jpg" alt="Каркасный">
+                                            </picture>
                                         </span>
                                         <input type="radio" name="house-projects" class="option-radio" id="karkas" value="Каркасный">
                                         <label for="karkas">
@@ -229,7 +236,11 @@
                                 <div class="quiz-item-option">
                                     <label for="aerated" class="form-label options__label">
                                         <span class="img-wrapper">
-                                            <img src="./assets/images/content/aerated-concrete--option.jpg" alt="Газобетонный">
+                                            <!--<img src="./assets/images/content/aerated-concrete&#45;&#45;option.jpg" alt="Газобетонный">-->
+                                            <picture>
+                                                <source srcset="./assets/images/content/aerated-concrete--option--mobile.jpg" media="(max-width: 768px)">
+                                                <img src="./assets/images/content/aerated-concrete--option.jpg" alt="Газобетонный">
+                                            </picture>
                                         </span>
                                         <input type="radio" name="house-projects" class="option-radio" id="aerated" value="Газобетонный">
                                         <label for="aerated">
@@ -241,12 +252,16 @@
                                 <div class="quiz-item-option">
                                     <label for="brick" class="form-label options__label">
                                         <span class="img-wrapper">
-                                            <img src="./assets/images/content/brick-house--option.jpg" alt="Кирпичный">
+                                            <!--<img src="./assets/images/content/brick-house&#45;&#45;option.jpg" alt="Кирпичный">-->
+                                            <picture>
+                                                <source srcset="./assets/images/content/brick-house--option--mobile.jpg" media="(max-width: 768px)">
+                                                <img src="./assets/images/content/brick-house--option.jpg" alt="Кирпичный">
+                                            </picture>
                                         </span>
                                         <input type="radio" name="house-projects" class="option-radio" id="brick" value="Кирпичный">
                                         <label for="brick">
                                             <span class="option-icon"></span>
-                                            <span>Газобетонный</span>
+                                            <span>Кирпичный</span>
                                         </label>
                                     </label>
                                 </div>
@@ -258,7 +273,7 @@
                             <div class="quiz-item-options options options--block">
                                 <div class="quiz-item-option">
                                     <div class="rangecontainer">
-                                        <input type="range" min="0" max="1000" value="300" class="range" id="area">
+                                        <input type="range" min="0" max="1000" value="300" class="range" id="area" >
                                         <output class="bubble">
                                             <span id="rangeValue"></span>
                                             м<sup>2</sup>
@@ -275,8 +290,8 @@
                         </div>
 
                         <div class="quiz-item hide">
-                            <h4 class="quiz-item-title mb130">Есть ли у Вас уже участок в собственности?</h4>
-                            <div class="quiz-item-options options options--flex">
+                            <h4 class="quiz-item-title mb90">Есть ли у Вас уже участок в собственности?</h4>
+                            <div class="quiz-item-options options options--flex fd-column">
                                 <div class="quiz-item-option">
                                     <input type="radio" name="house-land" class="option-radio" id="land_yes" value="Есть участок">
                                     <label for="land_yes" class="form-label options__label options__label--btn">
@@ -299,8 +314,8 @@
                         </div>
 
                         <div class="quiz-item hide">
-                            <h4 class="quiz-item-title mb130">Есть ли у Вас проект дома?</h4>
-                            <div class="quiz-item-options options options--flex">
+                            <h4 class="quiz-item-title mb90">Есть ли у Вас проект дома?</h4>
+                            <div class="quiz-item-options options options--flex fd-column">
                                 <div class="quiz-item-option">
                                     <input type="radio" name="has-project" class="option-radio" id="project_yes" value="Есть проект">
                                     <label for="project_yes" class="form-label options__label options__label--btn">
@@ -322,9 +337,9 @@
                             </div>
                         </div>
 
-                        <div class="quiz-item hide">
-                            <h4 class="quiz-item-title mb130">Какой бюджет вы планируете для постройки?</h4>
-                            <div class="quiz-item-options options options--flex options--wrap">
+                        <div class="quiz-item hide max-w942">
+                            <h4 class="quiz-item-title mb50">Какой бюджет вы планируете для постройки?</h4>
+                            <div class="quiz-item-options options options--flex options--wrap fd-column">
                                 <div class="quiz-item-option">
                                     <input type="radio" name="project-money" class="option-radio" id="money_to15mln" value="5 - 15 млн руб.">
                                     <label for="money_to15mln" class="form-label options__label options__label--btn">
@@ -354,22 +369,22 @@
                         </div>
 
                         <div class="quiz-item hide">
-                            <h4 class="quiz-item-title mb130">Когда Вы хотели бы начать работы?</h4>
-                            <div class="quiz-item-options options options--flex">
+                            <h4 class="quiz-item-title mb90">Когда Вы хотели бы начать работы?</h4>
+                            <div class="quiz-item-options options options--flex fd-column">
                                 <div class="quiz-item-option">
-                                    <input type="radio" name="has-project" class="option-radio" id="project_start1" value="В течение месяца">
+                                    <input type="radio" name="start-project" class="option-radio" id="project_start1" value="В течение месяца">
                                     <label for="project_start1" class="form-label options__label options__label--btn">
                                         В течение месяца
                                     </label>
                                 </div>
                                 <div class="quiz-item-option">
-                                    <input type="radio" name="has-project" class="option-radio" id="project_start3_6" value="В течение 3-6 месяцев">
-                                    <label for="project_start3_6" class="form-label options__label options__label--btn">
+                                    <input type="radio" name="start-project" class="option-radio" id="project_start3_6" value="В течение 3-6 месяцев">
+                                    <label for="project_start3_6" class="form-label options__label options__label--padding-small options__label--btn">
                                         В течение 3-6 месяцев
                                     </label>
                                 </div>
                                 <div class="quiz-item-option">
-                                    <input type="radio" name="has-project" class="option-radio" id="project_start_more6" value="> 6 месяцев">
+                                    <input type="radio" name="start-project" class="option-radio" id="project_start_more6" value="> 6 месяцев">
                                     <label for="project_start_more6" class="form-label options__label options__label--btn">
                                         > 6 месяцев
                                     </label>
@@ -378,6 +393,13 @@
                         </div>
 
                     </div>
+                    <input type="hidden" class="" id="answer" value="">
+                    <input type="hidden" class="quiz-step-result" id="step01" value="">
+                    <input type="hidden" class="quiz-step-result" id="step02" value="">
+                    <input type="hidden" class="quiz-step-result" id="step03" value="">
+                    <input type="hidden" class="quiz-step-result" id="step04" value="">
+                    <input type="hidden" class="quiz-step-result" id="step05" value="">
+                    <input type="hidden" class="quiz-step-result" id="step06" value="">
                 </form>
                 <div class="quiz-item-footer">
                     <button type="button" class="btn btn-dark hide" id="prevBtn">Назад</button>
@@ -386,59 +408,61 @@
             </div>
             <div class="quiz quiz-result hide">
                 <div class="quiz__header">
-                    <span id="quizResult">Результат</span>
+                    <span id="quizResult">Расчет</span>
                 </div>
                 <form action="" class="form quiz-result">
-                    <h4 class="quiz-item-title">Куда направить Вам расчет?</h4>
-                    <div class="quiz-row icons">
-                        <ul class="callback">
-                            <li class="callback__item phone-btn">
-                                <a href="#" class="btn callback__btn">
-                                    <svg class="svg-wrap" viewBox="0 0 28 28" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use class="svg-sym" xlink:href="#phone-ic" x="0" y="0"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="callback__item telegram-btn">
-                                <a href="#" class="btn callback__btn ">
-                                    <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use class="svg-sym" xlink:href="#telegram-ic" x="0" y="0"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="callback__item viber-btn">
-                                <a href="#" class="btn callback__btn">
-                                    <svg width="29" height="32" viewBox="0 0 29 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <use class="svg-sym" xlink:href="#viber-ic" x="0" y="0"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="callback__item whatsapp-btn">
-                                <a href="#" class="btn callback__btn ">
-                                    <svg class="svg-wrap" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use class="svg-sym" xlink:href="#wa-ic" x="0" y="0"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="quiz-row">
-                        <input type="text" class="form-field name" placeholder="Ваше имя" required>
-                    </div>
+                    <div class="quiz-item">
+                        <h4 class="quiz-item-title">Куда направить Вам расчет?</h4>
+                        <div class="quiz-row icons">
+                            <ul class="callback">
+                                <li class="callback__item phone-btn">
+                                    <a href="#" class="btn callback__btn">
+                                        <svg class="svg-wrap" viewBox="0 0 28 28" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <use class="svg-sym" xlink:href="#phone-ic" x="0" y="0"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="callback__item telegram-btn">
+                                    <a href="#" class="btn callback__btn ">
+                                        <svg class="svg-wrap" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use class="svg-sym" xlink:href="#telegram-ic" x="0" y="0"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="callback__item viber-btn">
+                                    <a href="#" class="btn callback__btn">
+                                        <svg class="svg-wrap" width="29" height="32" viewBox="0 0 29 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <use class="svg-sym" xlink:href="#viber-ic" x="0" y="0"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="callback__item whatsapp-btn">
+                                    <a href="#" class="btn callback__btn ">
+                                        <svg class="svg-wrap" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <use class="svg-sym" xlink:href="#wa-ic" x="0" y="0"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="quiz-row">
+                            <input type="text" class="form-field name" placeholder="Ваше имя" required>
+                        </div>
 
-                    <div class="quiz-row">
-                        <input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>
-                    </div>
+                        <div class="quiz-row">
+                            <input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>
+                        </div>
 
-                    <div class="quiz-row">
-                        <button type="submit" class="btn btn-light btn-submit btn-anim">Отправить расчет</button>
-                    </div>
-                    <div class="quiz-row form-check-wrap">
-                        <label for="agreed" class="form-check">
-                            <input type="checkbox" id="agreed" required>
-                            <span class="form-check__btn"></span>
-                            <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
-                        </label>
+                        <div class="quiz-row">
+                            <button type="submit" class="btn btn-light btn-submit btn-anim">Отправить расчет</button>
+                        </div>
+                        <div class="quiz-row form-check-wrap">
+                            <label for="agreed" class="form-check">
+                                <input type="checkbox" id="agreed" required>
+                                <span class="form-check__btn"></span>
+                                <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
+                            </label>
+                        </div>
                     </div>
                 </form>
             </div>

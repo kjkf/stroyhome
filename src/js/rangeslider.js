@@ -1,4 +1,6 @@
 const allRanges = document.querySelectorAll(".rangecontainer");
+const windowInnerWidth = window.innerWidth;
+console.log(windowInnerWidth);
 allRanges.forEach(wrap => {
     const range = wrap.querySelector(".range");
     const bubble = wrap.querySelector(".bubble");
@@ -19,5 +21,10 @@ function setBubble(range, bubble, rangeValue) {
     rangeValue.innerHTML = val;
 
     // Sorta magic numbers based on size of the native UI thumb
-    bubble.style.left = `calc(${newVal}% + (${18 - newVal * 0.15}px))`;
+    if (windowInnerWidth > 576) {
+        bubble.style.left = `calc(${newVal}% + (${10 - newVal * 0.15}px))`;
+    } else {
+        bubble.style.top = `calc(${newVal}% + (${5 - newVal * 0.5}px))`;
+    }
+
 }
