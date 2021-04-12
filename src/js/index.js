@@ -5,4 +5,5 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     initModal();
     init_titles_anim();
     initQuiz();
+    initSchemasDescr();
 });

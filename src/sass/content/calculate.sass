@@ -10,6 +10,7 @@
     padding-bottom: 5.28vh
     +phone-down
       padding-top: 3.5vh
+      padding-bottom: 6.28vh
 
   .section-index-wrapper
     right: -0.2vw
@@ -113,6 +114,14 @@
       max-width: 49vw
       +phone-down
         max-width: 100%
+    &.item6.mb90
+      +phone-down
+        margin-bottom: 65px
+
+    &.item6 + .calculate .options--flex.fd-column
+      +phone-down
+        margin-bottom: 75px
+
   .quiz-item-title
     margin-bottom: 4.8vh
     +ipad-down
@@ -130,9 +139,9 @@
   .mb90
     margin-bottom: 9vh
     +phone-down
-      margin-bottom: 65px
+      margin-bottom: 95px
   .mt64
-    &.quiz-item-footer
+    //&.quiz-item-footer
       +phone-down
         margin-top: 64px
   .mb50
@@ -158,7 +167,7 @@
         +phone-down
           flex-direction: column
           align-items: center
-          margin-bottom: 62px
+          //margin-bottom: 62px
         .quiz-item-option
           +phone-down
             margin-bottom: 20px
@@ -173,9 +182,16 @@
             font-size: 16px
             padding: 10px 66px
             min-height: 60px
-      &.options--wrap .options__label
+      &.options--wrap
         +phone-down
-          padding: 10px 45px
+          padding: 0
+          margin-bottom: 0px
+        .quiz-item-option
+          +phone-down
+            margin-bottom: 4px
+        .options__label
+          +phone-down
+            padding: 10px 45px
 
     &--block
       display: block
@@ -306,7 +322,7 @@
     display: flex
     justify-content: flex-end
     +phone-down
-      margin-top: 30px
+      //margin-top: 20px //30px
       justify-content: center
     .btn
       padding: calc(24em/18) calc(97em/18)
@@ -336,6 +352,40 @@
     .callback__item
       margin-bottom: 0
 
+  .quiz
+    &.step-1
+      .quiz-item-title
+        +phone-down
+          margin-bottom: 33px
+      .form
+        +phone-down
+          margin-bottom: 26px
+    &.step-2
+      .form
+        +phone-down
+          margin-bottom: 61px
+    &.step-3
+      .quiz-item-title
+        +phone-down
+          margin-bottom: 66px
+      .form
+        +phone-down
+          margin-bottom: 91px
+    &.step-4
+      .form
+        +phone-down
+          margin-bottom: 91px
+    &.step-5
+      .quiz-item-title
+        +phone-down
+          margin-bottom: 40px
+      .form
+        +phone-down
+          margin-bottom: 20px
+    &.step-6
+      .form
+        +phone-down
+          margin-bottom: 93px
 
 .hide
   display: none
@@ -374,3 +424,4 @@
 
 #project_need+label.options__label--btn
   padding: 10px 45px
+

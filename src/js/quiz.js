@@ -18,7 +18,7 @@ function initQuiz() {
 
 function formIterate(quiz) {
     const quizForm = document.forms.quizForm;
-    let currentStep = 0;
+    let currentStep = 0, currentClass = 'step-';
     const stepDivs = quiz.querySelectorAll('.quiz-item');
     const quizResult = document.querySelector('.quiz-result');
     const steps = document.querySelectorAll('.quiz-step');
@@ -29,7 +29,6 @@ function formIterate(quiz) {
     const answers = quiz.querySelectorAll('.quiz-step-result');
 
     let step = 1;
-    console.log(quizResult);
 
     return {
         next() {
@@ -38,16 +37,15 @@ function formIterate(quiz) {
             if (answers[currentStep].value === "") return false;
 
             hideForm(stepDivs[currentStep++]);
-            console.log(currentStep, stepDivs.length);
 
             if (currentStep >= stepDivs.length) {
                 showResult(quiz, quizResult);
                 return;
             }
             showForm(stepDivs[currentStep]);
-            console.log("currentStep = " + currentStep);
+            quiz.classList.remove(`step-${step}`);
             current.textContent = ++step;
-            console.log(step);
+            quiz.classList.add(`step-${step}`);
             steps[currentStep].classList.add('completed');
             if (currentStep > 0) {
                 prevBtn.classList.remove('hide');
@@ -66,7 +64,9 @@ function formIterate(quiz) {
             answers[currentStep].value = "";
             hideForm(stepDivs[currentStep--]);
             showForm(stepDivs[currentStep]);
+            quiz.classList.remove(`step-${step}`);
             current.textContent = --step;
+            quiz.classList.add(`step-${step}`);
             if (currentStep === 0) {
                 prevBtn.classList.add('hide');
                 footer.classList.remove('w50p')
