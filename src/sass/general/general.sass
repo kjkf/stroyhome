@@ -637,3 +637,53 @@ svg.svg-ic path
 		+phone-down
 			font-size: 12px
 			top: -5px
+
+.lines-ic
+	position: relative
+	&::before, &::after
+		content: ''
+		display: inline-block
+		width: 30vw //574px
+		height: 53vh //574px
+		position: absolute
+		background:
+			image: url("../images/icons/lines.svg")
+			size: contain
+			repeat: no-repeat
+			position: center
+		+ipad-down
+			display: none
+	&::before
+		top: -45%
+		left: -10%
+	&::after
+		bottom: -10%
+		right: -10%
+
+.laurel-right-ic
+	position: relative
+	&::after
+		content: ""
+		position: absolute
+		bottom: -30px
+		right: -20px
+		width: 75px
+		height: 145px
+		display: inline-block
+		background:
+			color: transparent
+			image: url("../images/icons/laurel-right.svg")
+			repeat: no-repeat
+			size: contain
+			position: center
+
+.mask-wrap
+	width: 27.39vw //530
+	height: 34.375vw //660
+	svg
+		width: 27.39vw
+		height: 34.375vw
+
+.masked_img
+	width: 27.39vw
+	height: 34.375vw //33.125vw

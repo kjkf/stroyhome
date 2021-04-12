@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stroyhome</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="stylesheet" href="../assets/css/styles.min.css">
 </head>
@@ -51,11 +53,11 @@
     </div>
 </header>
 
-<section class="fullscreen top  stroke-ic" style="padding-top: 6.29vh">
+<section class="fullscreen top" style="padding-top: 6.29vh">
     <div class="container">
         <div class="top-in">
 
-            <div class="banner">
+            <div class="banner lines-ic">
                 <div class="banner-main">
                     <div class="progress">
                         <div class="progress-item laurel-ic">
@@ -110,7 +112,7 @@
             <span class="white first" data-text="О наших">О наших</span>
             <span class="accent second" data-text="домах">домах</span>
         </h2>
-        <div class="content about-content">
+        <div class="content about-content lines-ic">
             <div class="about-tabs tabs">
 
                 <nav class="tabs__items">
@@ -475,10 +477,79 @@
     </div>
 </section>
 
+<section class="principle">
+    <div class="container">
+        <div class="principle-in">
+            <h2 class="title title--shadow title-anim">
+                <span class="white first">Наши</span>
+                <span class="accent second">принципы</span>
+            </h2>
+            <div class="principles">
+                <div class="principle-item" data-num="01">
+                    <h5 class="principle-item__title">Фиксация цен</h5>
+                    <p class="principle-item__descr">В работе применяем производительные
+                        и надежные пневнонагнетатели, специализированные шпатели
+                        из нержавеющей стали и лазерные нивелиры</p>
+                </div>
+                <div class="principle-item principle-item--cntr laurel-right-ic">
+                    <div class="principle-item__img">
+                        <div class="mask-wrap">
+                            <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMinYMin slice" >
+                                <defs>
+                                    <clipPath id="cut-off-bottom">
+                                        <rect x="0" y="17.6vw" width="27.6vw" height="13.8vw"></rect>
+                                    </clipPath>
+                                </defs>
+
+
+                                <defs>
+                                    <mask id="mask_img">
+                                        <!--<circle cx="25" cy="265" r="265" fill="white" transform="rotate(0) translate(240 240)"/>-->
+                                        <circle cx="13.6979vw" cy="17.6vw" r="13.5417vw" fill="white" clip-path="url(#cut-off-bottom)"></circle>
+                                        <rect x="0" y="0" width="27.604vw" height="20.83vw" fill="white"></rect>
+                                    </mask>
+                                </defs>
+                                <image x="-10" y="-18" mask="url(#mask_img)" fill="blue" class="masked_img" xlink:href="assets/images/content/handsome-businessman.png" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
+                            </svg>
+
+
+                            </svg>
+                        </div>
+                    </div>
+                    <h5 class="principle-item__title">Андрей Гущин</h5>
+                    <div class="principle-item__descr">Генеральный директор</div>
+                </div>
+                <div class="principle-item" data-num="03">
+                    <h5 class="principle-item__title">Фиксация цен</h5>
+                    <p class="principle-item__descr">В работе применяем производительные
+                        и надежные пневнонагнетатели, специализированные шпатели
+                        из нержавеющей стали и лазерные нивелиры</p>
+                </div>
+                <div class="principle-item" data-num="02">
+                    <h5 class="principle-item__title">Фиксация цен</h5>
+                    <p class="principle-item__descr">В работе применяем производительные
+                        и надежные пневнонагнетатели, специализированные шпатели
+                        из нержавеющей стали и лазерные нивелиры</p>
+                </div>
+                <div class="principle-item" data-num="04">
+                    <h5 class="principle-item__title">Фиксация цен</h5>
+                    <p class="principle-item__descr">В работе применяем производительные
+                        и надежные пневнонагнетатели, специализированные шпатели
+                        из нержавеющей стали и лазерные нивелиры</p>
+                </div>
+            </div>
+            <div class="btn-wrap"><button type="submit" class="btn btn-light btn-submit btn-anim">Оставить заявку</button></div>
+            <span class="section-index-wrapper">
+                <span class="section-index" data-index="04"></span>
+            </span>
+        </div>
+    </div>
+</section>
+
 <section class="turnkey ">
     <div class="container">
         <div class="turnkey-in">
-            <h2 class="title title-anim">
+            <h2 class="title title--shadow title-anim">
                 <span class="white first">выполняем</span>
                 <span class="accent second">под ключ</span>
             </h2>
@@ -581,6 +652,8 @@
     </div>
 </section>
 
+
+
 <section class="info">
     <div class="container">
         <div class="info-in">
@@ -596,8 +669,10 @@
                     </div>
                     <div class="info-item-descr">
                         <h5 class="title info-item-descr__title">Название новости название новости в 2 строчки</h5>
-                        <a href="#" class="info-item-descr__more">Подробнее <span>-></span></a>
-                        <span class="info-item-descr__date">26.11.2020</span>
+                        <div class="info-item-descr-btm">
+                            <a href="#" class="info-item-descr__more">Подробнее</a>
+                            <span class="info-item-descr__date">26.11.2020</span>
+                        </div>
                     </div>
                 </div>
             </div>
