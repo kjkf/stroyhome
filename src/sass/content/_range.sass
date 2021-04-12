@@ -44,6 +44,16 @@ input[type=range]::-webkit-slider-thumb
   cursor: pointer
   -webkit-appearance: none
   margin-top: -0.8vw
+  &::before
+    content: ''
+    display: inline-block
+    width: 30px
+    height: 30px
+    background-color: greenyellow
+    border-radius: 50%
+    position: absolute
+    left: 0
+    top: 0
   +phone-down
     width: $rangeThumbRadiusMobile
     height: $rangeThumbRadiusMobile
@@ -59,9 +69,6 @@ input[type=range]::-moz-range-track
   animate: 0.2s
   background: $range-bg
   border-radius: $rangeBorderRadius
-  //+phone-down
-    width: $rangeHeight
-    height: $rangeMobileHeight
 
 input[type=range]::-moz-range-thumb
   height: $rangeThumbRadius
@@ -83,9 +90,6 @@ input[type=range]::-ms-track
   //border-width: 39px 0
   border-width: 2.03vw 0
   color: transparent
-  //+phone-down
-    width: $rangeHeight
-    height: $rangeMobileHeight
 
 input[type=range]::-ms-fill-lower
   background: $range-bg
@@ -128,7 +132,6 @@ input[type=range]:focus::-ms-fill-upper
       bottom: -14px
       top: unset
   &--val
-    //left: 15.625vw //300px
 
 
 .bubble

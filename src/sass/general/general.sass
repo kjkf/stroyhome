@@ -223,6 +223,13 @@ a
 		position: absolute
 		bottom: -3.4vh //-25px
 		left: -0.35vw //-5px
+	&--dark
+		background: linear-gradient(transparent, $dark)
+		&::before
+			background-color: $dark
+			box-shadow: 0px 0px 0.88vw $dark //17px
+		&::after
+			color: $dark
 
 .ic
 	position: relative
