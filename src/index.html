@@ -473,22 +473,17 @@
                             <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMinYMin slice" >
                                 <defs>
                                     <clipPath id="cut-off-bottom">
-                                        <rect x="0" y="17.6vw" width="27.6vw" height="13.8vw"></rect>
+                                        <rect class="clip_path_rect"></rect>
                                     </clipPath>
                                 </defs>
-
-
                                 <defs>
                                     <mask id="mask_img">
-                                        <!--<circle cx="25" cy="265" r="265" fill="white" transform="rotate(0) translate(240 240)"/>-->
-                                        <circle cx="13.6979vw" cy="17.6vw" r="13.5417vw" fill="white" clip-path="url(#cut-off-bottom)"></circle>
-                                        <rect x="0" y="0" width="27.604vw" height="20.83vw" fill="white"></rect>
+                                        <circle  fill="white" clip-path="url(#cut-off-bottom)" class="mask_circle"></circle>
+                                        <rect fill="white" class="mask_rect"></rect>
                                     </mask>
                                 </defs>
-                                <image x="-10" y="-18" mask="url(#mask_img)" fill="blue" class="masked_img" xlink:href="assets/images/content/handsome-businessman.png" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
+                                <image mask="url(#mask_img)" fill="blue" class="masked_img" xlink:href="assets/images/content/handsome-businessman.png" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
                             </svg>
-
-
                             </svg>
                         </div>
                     </div>
