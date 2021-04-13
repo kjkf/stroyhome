@@ -71,7 +71,7 @@ function createModal(template) {
 function showModal(modal, isDownload) {
     document.body.append(modal);
     modal.classList.add('active');
-    console.log(modal);
+    //console.log(modal);
 }
 
 function closeModal(modal) {
@@ -98,6 +98,21 @@ function initModal() {
     downloadBtn.addEventListener('click', function (evt) {
         evt.preventDefault();
         isDownload.value = 1;
+        showModal(modal);
+    });
+
+    const calcBlock = document.getElementById('calculate');
+    const calcBtn = callback.querySelector('.calc-btn');
+    calcBtn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        calcBlock.scrollIntoView();
+    });
+
+    //=============================================================
+    const principlesModalBtn = document.querySelector('.principle .btn-submit');
+    principlesModalBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        isDownload.value = 0;
         showModal(modal);
     });
 

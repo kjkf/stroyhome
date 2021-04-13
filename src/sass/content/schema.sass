@@ -4,6 +4,8 @@
     image: url("../images/content/bg03_forest.png")
     position: left bottom
     repeat: no-repeat
+  +tablet-down
+    display: none
   +phone-down
     display: none
 
@@ -19,8 +21,11 @@
     .img-wrap
       //width: 62.5vw
       //height: 67.5vh
+      position: relative
       margin-top: -22vh
       margin-left: -1.5625vw
+      +large-down
+        margin-top: -15vw
 
       img
         width: 100%
@@ -39,6 +44,8 @@
     text-align: center
     //padding: 61px 38px 32px 38px
     padding: 5.65vh 1.979vw 2.96vh
+    +ipad-down
+      padding: 2vh 2vw
     &.hide
       display: none
 
@@ -59,6 +66,12 @@
     position: absolute
     left: calc(50% - (1.6vw / 2))
     top: calc(-1.6vw / 2)
+    +ipad-down
+      width: 2.5vw
+      height: 2.5vw
+      background-size: 70%
+      left: calc(50% - (2.5vw / 2))
+      top: calc(-2.5vw / 2)
 
   .schema-collapse__title
     font-family: $ffNeumann

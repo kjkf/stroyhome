@@ -24,8 +24,11 @@ function setBubble(range, bubble, rangeValue, rangeThumbAnim) {
     // Sorta magic numbers based on size of the native UI thumb
     if (windowInnerWidth > 576) {
         bubble.style.left = `calc(${newVal}% + (${10 - newVal * 0.15}px))`;
-        console.log(newVal);
-        rangeThumbAnim.style.left = `calc(${newVal}% - (${newVal - 5}px))`;
+        //console.log(newVal);
+        if (rangeThumbAnim) {
+            rangeThumbAnim.style.left = `calc(${newVal}% - (${newVal - 5}px))`;
+        }
+
     } else {
         bubble.style.top = `calc(${newVal}% + (${5 - newVal * 0.5}px))`;
     }

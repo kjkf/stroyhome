@@ -41,4 +41,10 @@ function init_menu(){
         //100vh - header.height
         topIn.style.height = `calc(100vh - ${rect.height}px)`;
     };
+
+    const showCalc = document.getElementById('showCalc');
+    const calcBlock = document.getElementById('calculate');
+    showCalc.addEventListener('click', function (ev) {
+        calcBlock.scrollIntoView();
+    });
 }

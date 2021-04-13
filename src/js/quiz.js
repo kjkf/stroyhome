@@ -2,13 +2,13 @@ function initQuiz() {
     const quiz = document.querySelector('.quiz');
 
     if (!quiz) return false;
-    console.log('initQuiz');
+    //console.log('initQuiz');
 
     const nextBtn = quiz.querySelector('#nextBtn');
     const prevBtn = quiz.querySelector('#prevBtn');
 
     const formIterator = formIterate(quiz);
-    console.log(nextBtn);
+    //console.log(nextBtn);
 
     nextBtn.addEventListener('click', e => formIterator.next());
     prevBtn.addEventListener('click', e => formIterator.prev());
