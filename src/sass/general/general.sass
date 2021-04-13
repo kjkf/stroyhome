@@ -25,6 +25,7 @@ body
 	height: 100vh
 	background-color: $bg-dark
 	font-family: $ffAvenirNextCyr
+	position: relative
 	//+laptop-down
 		font-size: 15px
 	//+ipad-down
@@ -646,7 +647,6 @@ svg.svg-ic path
 			top: -5px
 
 .lines-ic
-	position: relative
 	&::before, &::after
 		content: ''
 		display: inline-block
@@ -654,21 +654,39 @@ svg.svg-ic path
 		height: 53vh //574px
 		position: absolute
 		background:
+			//color: cadetblue
 			image: url("../images/icons/lines.svg")
-			size: contain
+			size: cover
 			repeat: no-repeat
 			position: center
-		+ipad-down
+		z-index: 1
+		+phone-down
 			display: none
-	&::before
+	&::after
+		background-image: url("../images/icons/lines_right.svg")
+	//&::before
 		top: -45%
 		left: -10%
-	&::after
+	//&::after
 		bottom: -10%
 		right: -10%
 
+	&--banner::before
+		left: -8.33vw
+		top: -1.39vh
+	&--banner::after
+		top: 63vh
+		right: 0
+
+	&--principle::before
+		left: 0
+		top: 280vh
+
+	&--principle::after
+		right: 0
+		top: 357vh
+
 .laurel-right-ic
-	position: relative
 	&::after
 		content: ""
 		position: absolute
@@ -683,5 +701,15 @@ svg.svg-ic path
 			repeat: no-repeat
 			size: contain
 			position: center
+		z-index: 1
+	&--banner::after
+		bottom: unset
+		top: 92vh
+		right: 0
+		width: 9.375vw
+		height: 24.29vw
 
 
+
+.schema
+	display: none
