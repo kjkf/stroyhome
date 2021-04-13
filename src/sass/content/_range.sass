@@ -44,16 +44,6 @@ input[type=range]::-webkit-slider-thumb
   cursor: pointer
   -webkit-appearance: none
   margin-top: -0.8vw
-  &::before
-    content: ''
-    display: inline-block
-    width: 30px
-    height: 30px
-    background-color: greenyellow
-    border-radius: 50%
-    position: absolute
-    left: 0
-    top: 0
   +phone-down
     width: $rangeThumbRadiusMobile
     height: $rangeThumbRadiusMobile
@@ -147,3 +137,12 @@ input[type=range]:focus::-ms-fill-upper
     left: 74%
     top: 30%
 
+.range-thumb--anim
+  display: inline-block
+  width: 1.6vw
+  height: 1.6vw
+  background-color: greenyellow
+  border-radius: 50%
+  position: absolute
+  left: 14vw
+  top: -0.2vh

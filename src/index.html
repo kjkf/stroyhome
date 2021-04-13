@@ -216,7 +216,7 @@
                 </div>
                 <form action="" class="form" name="quizForm">
                     <div class="quiz-items">
-                        <div class="quiz-item">
+                        <div class="quiz-item hide">
                             <h4 class="quiz-item-title">Какой дом Вы хотите построить?</h4>
                             <div class="quiz-item-options options options--flex">
                                 <div class="quiz-item-option mr20">
@@ -270,12 +270,17 @@
                             </div>
                         </div>
 
-                        <div class="quiz-item hide">
+                        <div class="quiz-item ">
                             <h4 class="quiz-item-title mb130">Какая площадь Вам необходима?</h4>
                             <div class="quiz-item-options options options--block">
                                 <div class="quiz-item-option">
                                     <div class="rangecontainer">
                                         <input type="range" min="0" max="1000" value="300" class="range" id="area" >
+                                        <span class="range-thumb--anim cbk-phone-waves callbackkiller cbk-phone">
+                                            <div class="cbk-phone-circle"></div>
+                                            <div class="cbk-phone-second_circle"></div>
+                                            <div class="cbk-phone-third_circle"></div>
+                                        </span>
                                         <output class="bubble">
                                             <span id="rangeValue"></span>
                                             м<sup>2</sup>
