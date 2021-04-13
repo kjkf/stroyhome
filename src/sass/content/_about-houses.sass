@@ -248,17 +248,18 @@
           background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
           width: 130%
           height: 130%
-          z-index: -1
+          z-index: 0
         &::before
           content: ""
           display: inline-block
           position: absolute
           top: -11.46vw
           left: -3.9vw
-          background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 55%, rgba(187, 161, 130, 0) 100%)
+          //background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 55%, rgba(187, 161, 130, 0) 100%)
+          background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%);
           width: 130%
           height: 130%
-          z-index: -1
+          z-index: 0
 
         //background:
           image: url("../images/content/brick-house.png")
@@ -291,6 +292,10 @@
         img
           width: 115%
           //height: 100%
+          z-index: 5
+          position: absolute
+          top: 1.5625vw
+          left: 0
           +phone-down
             width: 110%
 
