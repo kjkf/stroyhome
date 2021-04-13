@@ -23,9 +23,11 @@
 .nav
   ul
     display: flex
-    justify-content: space-between
+    justify-content: flex-start
     align-items: center
     list-style: none
+    +laptop-down
+      display: none
     a
       color: $fontColorMain
       display: inline-block
@@ -41,7 +43,7 @@
     align-items: center
     padding: 2.78vh 0 // 30
 
-    +large-down
+    //+large-down
       padding-top: calc(50em/18)
     +phone-down
       flex-direction: column
@@ -49,10 +51,10 @@
       padding: 26px 0 40px //calc(26em/12) 0 calc(40em/12)
       //padding: 2.6vh 0 4vh
   .nav
-    +large-down
-      display: none
+    margin-left: 3.125vw
+    flex-grow: 1
     a
-      padding: 1.85vh 1.04vw 1.85vh 0  //20 20 20 0
+      padding: 1.85vh 0.729vw 1.85vh 0  //20 20 20 0
 
 
   .logo-text
@@ -64,22 +66,24 @@
   &-left
     width: 21.87vw
     display: inline-flex
-    +large-down
+    //+large-down
       width: 33vw
-    +laptop-down
+    //+laptop-down
       width: 38.6vw
     +ipad-down
-      width: 46.7vw
+      width: 23rem //46.7vw
     +phone-down
       width: unset
       margin-bottom: 55px
 
   &-right
-    width: 25.9vw
+    width: 23.4375vw //450px //25.9vw
     display: inline-flex
     justify-content: flex-start
     align-items: center
-    +large-down
+    +tablet-down
+      width: unset
+    //large-down
       width: unset
     +phone-down
       align-self: center
@@ -111,14 +115,14 @@
     margin-right: 0.52vw //10
 
   .contact-phone-btn
-    margin-left: -47px
+    margin-left: -1.35vw //26
 
   .contact__text
-    margin-left: calc(-47px/2)
+    margin-left: calc(-2.45vw/2)
 
   .whatsapp
     margin-right: 3.64vw //70
-    padding-left: 2.86vw //55
+    padding-left: 2.86vw //55 103
     +phone-down
       display: none
 
@@ -292,10 +296,10 @@
 
 .contact-phone-btn
   display: inline-block
-  width: 2.45vw //47
-  height: 2.45vw //47
-  min-width: 2.45vw //47
-  min-height: 2.45vw //47
+  width: 1.35vw //26
+  height: 1.35vw //26
+  min-width: 1.35vw //26
+  min-height: 1.35vw //26
   +phone-down
     width: 47px //47
     height: 47px //47
@@ -305,9 +309,9 @@
 .contact-phone-ic
   background:
     color: transparent
-    image: url("../images/icons/phone.svg")
+    image: url("../images/icons/phone-transp.png")
     repeat: no-repeat
-    size: 45%
+    size: contain
     position: center
   +phone-down
     background-size: 50%
@@ -324,7 +328,3 @@
     repeat: no-repeat
     size: contain
     position: center
-
-
-.calculate
-//  display: none
