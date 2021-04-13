@@ -25,7 +25,7 @@ function setBubble(range, bubble, rangeValue, rangeThumbAnim) {
     if (windowInnerWidth > 576) {
         bubble.style.left = `calc(${newVal}% + (${10 - newVal * 0.15}px))`;
         console.log(newVal);
-        rangeThumbAnim.style.left = `calc(${newVal}% + (${newVal - newVal}px))`;
+        rangeThumbAnim.style.left = `calc(${newVal}% - (${newVal - 5}px))`;
     } else {
         bubble.style.top = `calc(${newVal}% + (${5 - newVal * 0.5}px))`;
     }

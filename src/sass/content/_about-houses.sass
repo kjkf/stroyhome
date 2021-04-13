@@ -53,6 +53,7 @@
   .about-content
     .tabs
       position: relative
+      z-index: 2
       .tabs__items
         display: inline-flex
         flex-direction: column
@@ -179,6 +180,9 @@
         background-color: $block-bg
         border-radius: 1.04vw //20px
         height: 68.52vh
+        overflow: hidden
+        position: relative
+        z-index: 2
         background:
           image: url("../images/content/frame.png")
           //size: 70%     background-size: 72% 20%
@@ -198,6 +202,16 @@
             size: 19.53vw 18.05vh //10.156vw
         //+laptop-down
           padding: 3.5vh 2.5vw 5.5vh 2vw
+        &::before
+          content: ''
+          display: inline-block
+          width: 31.98vw
+          height: 31.98vw
+          background: radial-gradient(50% 50% at 50% 50%, rgba(187, 161, 130, 0.1) 0%, rgba(187, 161, 130, 0) 100%)
+          position: absolute
+          z-index: 1
+          top: -12vh
+          right: -13vw
         +phone-down
           //border-radius: 15px //15px
           width: 100%
@@ -295,7 +309,7 @@
           z-index: 5
           position: absolute
           top: 1.5625vw
-          left: 0
+          left: 5px
           +phone-down
             width: 110%
 
