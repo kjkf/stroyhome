@@ -77,7 +77,7 @@ task('styles', () => {
             cascade: false
         }))
         .pipe(gulpif(env === 'prod', gcmq()))
-        .pipe(gulpif(env === 'prod', cleanCSS()))
+        //.pipe(gulpif(env === 'prod', cleanCSS()))
         .pipe(gulpif(env === 'dev', sourcemaps.write()))
         .pipe(dest('dist/assets/css'))
         .pipe(reload({stream: true}));

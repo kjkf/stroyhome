@@ -43,6 +43,7 @@ input[type=range]::-webkit-slider-thumb
   background: $accent
   cursor: pointer
   -webkit-appearance: none
+  z-index: 2
   margin-top: -0.8vw
   +phone-down
     width: $rangeThumbRadiusMobile
@@ -65,6 +66,7 @@ input[type=range]::-moz-range-thumb
   width: $rangeThumbRadius
   border-radius: 50%
   background: $accent
+  z-index: 2
   cursor: pointer
   +phone-down
     width: $rangeThumbRadiusMobile
@@ -93,6 +95,7 @@ input[type=range]::-ms-thumb
   width: $rangeThumbRadius
   border-radius: 50%
   background: $accent
+  z-index: 2
   cursor: pointer
   +phone-down
     width: $rangeThumbRadiusMobile
@@ -146,3 +149,5 @@ input[type=range]:focus::-ms-fill-upper
   position: absolute
   left: 14vw
   top: -0.2vh
+  pointer-events: none
+  +phone-down
