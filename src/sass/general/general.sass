@@ -434,10 +434,23 @@ svg.svg-ic path
 	.form-row
 		+phone-down
 			margin-bottom: 10px
+
 	.form-check-wrap
 		margin-bottom: 0
 		+phone-down
 			padding-left: 5px
+
+	.contact-phone
+		position: relative
+
+	.contact-phone-btn
+		min-width: 2.447vw
+		min-height: 2.447vw
+		position: absolute
+		left: -2.6vw
+		top: -1px
+	.contact-phone-ic
+		background-size: 50%
 
 .form
 	width: 100%
@@ -635,7 +648,7 @@ svg.svg-ic path
 			fill: $accent
 	&__text
 		position: absolute
-		top: -3px
+		top: -1.38vh
 		left: 50%
 		font-family: $ffAvenirNextCyr
 		font-size: 0.625vw //12
