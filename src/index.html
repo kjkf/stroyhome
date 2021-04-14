@@ -220,7 +220,7 @@
                 </div>
                 <form action="" class="form" name="quizForm">
                     <div class="quiz-items">
-                        <div class="quiz-item hide">
+                        <div class="quiz-item">
                             <h4 class="quiz-item-title">Какой дом Вы хотите построить?</h4>
                             <div class="quiz-item-options options options--flex">
                                 <div class="quiz-item-option mr20">
@@ -274,17 +274,17 @@
                             </div>
                         </div>
 
-                        <div class="quiz-item ">
+                        <div class="quiz-item hide">
                             <h4 class="quiz-item-title mb130">Какая площадь Вам необходима?</h4>
                             <div class="quiz-item-options options options--block">
                                 <div class="quiz-item-option">
                                     <div class="rangecontainer">
 
-                                        <span class="range-thumb--anim cbk-phone-waves callbackkiller cbk-phone">
+                                        <!--<span class="range-thumb&#45;&#45;anim cbk-phone-waves callbackkiller cbk-phone">
                                             <div class="cbk-phone-circle"></div>
                                             <div class="cbk-phone-second_circle"></div>
                                             <div class="cbk-phone-third_circle"></div>
-                                        </span>
+                                        </span>-->
                                         <input type="range" min="0" max="1000" value="300" class="range" id="area" >
                                         <output class="bubble">
                                             <span id="rangeValue"></span>
@@ -664,6 +664,210 @@
         <span class="section-index-wrapper">
             <span class="section-index" data-index="05"></span>
         </span>
+    </div>
+</section>
+
+<section class="types bg-white">
+    <div class="container">
+        <div class="types-in">
+            <div class="types-wrap">
+                <div class="types-item">
+                    <h2 class="title title--shadow title-anim fade_in">
+                        <span class="accent first" data-text="топ 6">топ 6</span>
+                        <span class="second dark">типовых проектов</span>
+                    </h2>
+                    <button type="submit" class="btn btn-light btn-anim"><span class="ic-download"></span><span>Скачать каталог</span></button>
+                </div>
+                <div class="types-item types-item--big">
+                    <div class="types-item__in">
+                        <div class="types-item__img">
+                            <!--<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMinYMin slice" >
+                                <defs>
+                                    <linearGradient id="gradient">
+                                        <stop offset="0" stop-color="#2B2A31" stop-opacity="21.7" />
+                                        <stop offset="1" stop-color="rgba(43, 42, 49, 0)" stop-opacity="72.4" />
+                                    </linearGradient>
+
+                                    <linearGradient id="grad" x1="0" y1="0%" gradientUnits="userSpaceOnUse" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#2B2A31" class="stop-1"></stop>
+                                        <stop offset="100%" stop-color="#2B2A31" class="stop-3"></stop>
+                                    </linearGradient>
+
+                                    <mask id="gradient-mask">
+                                        <rect x="0" y="0" fill="url(#grad)"  class="gradient-mask"/>
+                                    </mask>
+                                </defs>
+                                <image mask="url(#gradient-mask)" fill="blue"  xlink:href="assets/images/content/types_img.jpg" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
+                            </svg>-->
+                            <img src="assets/images/content/types_img.jpg" alt="Топ типовых проектов">
+                        </div>
+                        <div class="types-item__descr">
+                            <div class="types-item__col">
+                                <h4 class="title types-item__title">Амаранта</h4>
+                                <div class="project-size">
+                                    <span class="project-size__ic area-ic">920 м2</span>
+                                    <span class="project-size__ic bed-ic">4 спальни</span>
+                                </div>
+                            </div>
+                            <div class="types-item__price">
+                                <span class="price-sm">от</span>
+                                <span>50 000</span>
+                                <span class="price-md">р.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="types-item">
+                    <div class="types-item__in">
+                        <div class="types-item__img">
+                            <img src="assets/images/content/frame-house--option.jpg" alt="Топ типовых проектов">
+                        </div>
+                        <div class="types-item__descr">
+                            <div class="types-item-top">
+                                <h4 class="title types-item__title">Амаранта</h4>
+                                <div class="project-size">
+                                    <span class="project-size__ic area-ic">920 м2</span>
+                                    <span class="project-size__ic bed-ic">4 спальни</span>
+                                </div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Материал для стен:</div>
+                                <div class="types-item__right">Дерево</div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Срок строительства:</div>
+                                <div class="types-item__right">6 мес.</div>
+                            </div>
+                            <div class="types-item__price">
+                                <span class="price-sm">от</span>
+                                <span>50 000</span>
+                                <span class="price-md">р.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="types-item">
+                    <div class="types-item__in">
+                        <div class="types-item__img">
+                            <img src="assets/images/content/frame-house--option.jpg" alt="Топ типовых проектов">
+                        </div>
+                        <div class="types-item__descr">
+                            <div class="types-item-top">
+                                <h4 class="title types-item__title">Амаранта</h4>
+                                <div class="project-size">
+                                    <span class="project-size__ic area-ic">920 м2</span>
+                                    <span class="project-size__ic bed-ic">4 спальни</span>
+                                </div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Материал для стен:</div>
+                                <div class="types-item__right">Дерево</div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Срок строительства:</div>
+                                <div class="types-item__right">6 мес.</div>
+                            </div>
+                            <div class="types-item__price">
+                                <span class="price-sm">от</span>
+                                <span>50 000</span>
+                                <span class="price-md">р.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="types-item">
+                    <div class="types-item__in">
+                        <div class="types-item__img">
+                            <img src="assets/images/content/frame-house--option.jpg" alt="Топ типовых проектов">
+                        </div>
+                        <div class="types-item__descr">
+                            <div class="types-item-top">
+                                <h4 class="title types-item__title">Амаранта</h4>
+                                <div class="project-size">
+                                    <span class="project-size__ic area-ic">920 м2</span>
+                                    <span class="project-size__ic bed-ic">4 спальни</span>
+                                </div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Материал для стен:</div>
+                                <div class="types-item__right">Дерево</div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Срок строительства:</div>
+                                <div class="types-item__right">6 мес.</div>
+                            </div>
+                            <div class="types-item__price">
+                                <span class="price-sm">от</span>
+                                <span>50 000</span>
+                                <span class="price-md">р.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="types-item">
+                    <div class="types-item__in">
+                        <div class="types-item__img">
+                            <img src="assets/images/content/frame-house--option.jpg" alt="Топ типовых проектов">
+                        </div>
+                        <div class="types-item__descr">
+                            <div class="types-item-top">
+                                <h4 class="title types-item__title">Амаранта</h4>
+                                <div class="project-size">
+                                    <span class="project-size__ic area-ic">920 м2</span>
+                                    <span class="project-size__ic bed-ic">4 спальни</span>
+                                </div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Материал для стен:</div>
+                                <div class="types-item__right">Дерево</div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Срок строительства:</div>
+                                <div class="types-item__right">6 мес.</div>
+                            </div>
+                            <div class="types-item__price">
+                                <span class="price-sm">от</span>
+                                <span>50 000</span>
+                                <span class="price-md">р.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="types-item">
+                    <div class="types-item__in">
+                        <div class="types-item__img">
+                            <img src="assets/images/content/frame-house--option.jpg" alt="Топ типовых проектов">
+                        </div>
+                        <div class="types-item__descr">
+                            <div class="types-item-top">
+                                <h4 class="title types-item__title">Амаранта</h4>
+                                <div class="project-size">
+                                    <span class="project-size__ic area-ic">920 м2</span>
+                                    <span class="project-size__ic bed-ic">4 спальни</span>
+                                </div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Материал для стен:</div>
+                                <div class="types-item__right">Дерево</div>
+                            </div>
+                            <div class="types-item__row">
+                                <div class="types-item__left">Срок строительства:</div>
+                                <div class="types-item__right">6 мес.</div>
+                            </div>
+                            <div class="types-item__price">
+                                <span class="price-sm">от</span>
+                                <span>50 000</span>
+                                <span class="price-md">р.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--        <span class="section-index-wrapper">
+            <span class="section-index section-index&#45;&#45;dark" data-index="03"></span>
+        </span>-->
+        </div>
     </div>
 </section>
 

@@ -1,0 +1,330 @@
+.types
+  &-in
+    padding: 9.259vh 0 //100px 0
+    +phone-down
+      padding: 50px 0
+
+  .btn
+    display: flex
+    align-items: center
+    padding: 2.22vh 2.8125vw //24px 54px
+    +phone-down
+      position: absolute
+      bottom: 0
+      left: 50%
+      padding: 23px 55px 23px 53px
+      font-size: 18px
+      line-height: 1.22
+      margin-left: calc(-280px/2)
+
+  .ic-download
+    display: flex
+    align-items: center
+    margin-right: 0.52083vw //10px
+    +phone-down
+      margin-right: 10px
+
+  h2.title
+    margin-bottom: 6.2037vh //67px
+    margin-left: 1.822917vw //35px
+    +phone-down
+      font-size: 25px
+      margin-bottom: 0
+      margin-left: 0
+      line-height: 1.5
+    .first
+      font-size: 4.17vw //80px
+      line-height: 1.44
+      +ipad-down
+        font-size: 4rem
+      +phone-down
+        font-size: 30px
+
+.types-wrap
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 2.08vw 1.042vw //20px 40px
+  grid-auto-rows: minmax(5.2vw, auto) //245
+  grid-template-rows: repeat(2, 1fr)
+  +phone-down
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(4, 1fr) 90px
+    grid-gap: 20px
+    position: relative
+
+.types-item
+  display: flex
+  flex-direction: column
+  align-items: center
+  background: #2B2A31
+  border-radius: 1.0417vw
+  overflow: hidden
+  +phone-down
+    border-radius: 10px
+
+  &:first-child
+    background-color: transparent
+    justify-content: center
+
+  &:nth-child(2) //types-item--big
+    grid-column: 2/4
+    +phone-down
+      grid-column: 1/3
+      grid-row: 2
+
+
+  &:nth-child(3)
+    +phone-down
+      grid-column: 2/3
+      grid-row: 1
+
+  &__in
+    display: flex
+    flex-direction: column
+    width: 100%
+
+  //&__item
+    height: 270px
+    width: 100%
+
+
+  &__img
+    width: 100%
+    height: 25vh //270px
+    +phone-down
+      height: 100px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__descr
+    padding: 1.851vh 1.5625vw 2.3148vh //20px 30px 25px
+    +phone-down
+      padding: 9px 10px
+
+  &__title
+    font-size: 1.368vw //26px
+    font-weight: normal
+    line-height: 1.46
+    color: $accent
+    +ipad-down
+      font-size: 1.3rem
+    +phone-down
+      font-size: 16px
+      line-height: 1.5
+
+  &__row
+    display: flex
+    font-size: 0.83vw //16px
+    line-height: 1.25
+    margin-bottom: 1.38vh //15px
+    +ipad-down
+      font-size: .8rem
+    +phone-down
+      font-size: 8px
+      line-height: 1.5
+      margin-bottom: 0
+
+  &__left
+    width: 8.33vw //160px
+    margin-right: 0.78125vw //15px
+    color: $grey_mid
+    +phone-down
+      width: unset
+      margin-right: 10px
+
+  &__price
+    margin-top: 1.851vh //20px
+    font-size: 1.875vw //36px
+    line-height: 1.2
+    font-family: $ffAvenirNextCyrBold
+    +ipad-down
+      font-size: 1.8rem
+    +phone-down
+      font-size: 16px
+      line-height: 1.25
+      margin-top: 5px
+      text-align: center
+
+
+
+
+.price-sm
+  font-size: 0.9375vw //18px
+  line-height: 1.2
+  font-family: $ffAvenirNextCyr
+  +ipad-down
+    font-size: .9rem
+  +phone-down
+    font-size: 8px
+    line-height: 1.25
+
+.price-md
+  font-size: 1.25vw //24px
+  line-height: 1.2
+  font-family: $ffAvenirNextCyr
+  +ipad-down
+    font-size: 1.2rem
+  +phone-down
+    font-size: 8px
+    line-height: 1.25
+
+.project-size
+  display: flex
+  justify-content: flex-end
+  color: $grey_mid
+  font-size: 0.625vw //12px
+  line-height: 1.25
+  font-family: $ffAvenirNextCyr
+  margin-top: 0.925vw //10px
+  +ipad-down
+    font-size: .6rem
+  +phone-down
+    font-size: 10px
+    line-height: 1.2
+    margin-top: 5px
+
+  &__ic
+    margin-right: 0.52083vw //10px
+    display: flex
+    align-items: center
+    +phone-down
+      margin-right: 15px
+
+    &:last-child
+      margin-right: 0
+    &::before
+      margin-right: 0.52083vw //10px
+
+
+.area-ic
+  position: relative
+  &::before
+    content: ""
+    display: inline-block
+    width: 0.9375vw //18px
+    height: 1.66vh //18px
+    background:
+      color: transparent
+      image: url("../images/icons/area.svg")
+      repeat: no-repeat
+      size: contain
+    +phone-down
+      width: 7.48px
+      height: 7.48px
+
+.bed-ic
+  position: relative
+  &::before
+    content: ""
+    display: inline-block
+    width: 0.9375vw //18px
+    height: 1.0185vh //11px
+    background:
+      color: transparent
+      image: url("../images/icons/bed.svg")
+      repeat: no-repeat
+      size: contain
+    +phone-down
+      width: 7.48px
+      height: 4.55px
+
+.types-item-top
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 2.77vh //30px
+  +phone-down
+    flex-direction: column
+    margin-bottom: 11px
+
+.types-item--big
+
+  .types-item__in
+    position: relative
+  .types-item__img
+    height: 46.2962vh //500px
+    +phone-down
+      height: 220px
+
+  .types-item__descr
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    padding: 0 2.083vw 2.962vh //0 40px 32px
+    display: flex
+    justify-content: space-between
+    +phone-down
+      padding: 0px 20px 9px 19px
+  .types-item__title
+    font-size: 2.5vw //48px
+    line-height: 1.5
+    margin-bottom: 1.481vh //16px
+    +ipad-down
+      font-size: 2.4rem
+    +phone-down
+      font-size: 24px
+      line-height: 1.4583
+
+  .types-item__price
+    font-size: 2.39583vw //46px
+    line-height: 1.2
+    margin-top: 0
+    align-self: flex-end
+    +ipad-down
+      font-size: 2.3rem
+    +phone-down
+      font-size: 19.86px
+      line-height: 1.2
+
+  .types-item__col
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+  .project-size
+    margin-top: 0
+  .price-sm
+    font-size: 1.4583vw //28px
+    line-height: 1.2
+    +ipad-down
+      font-size: 1.4rem
+    +phone-down
+      font-size: 12px
+      line-height: 1.25
+
+  .price-md
+    font-size: 1.77083vw //34px
+    line-height: 1.2
+    +ipad-down
+      font-size: 1.7rem
+    +phone-down
+      font-size: 14.68px
+      line-height: 1.23
+
+
+.ic-download
+  position: relative
+  &::before
+    content: ""
+    display: inline-block
+    width: 1.25vw //24px
+    height: 2.22vh //24px
+    background:
+      color: transparent
+      repeat: no-repeat
+      size: contain
+      position: center
+      image: url("../images/icons/cloud-computing.svg")
+
+    +phone-down
+      width: 24px
+      height: 24px
+
+.gradient-mask
+  width: 100%
+  height: 100%
+
+#gradient
+  background: linear-gradient(360deg, #2B2A31 21.7%, rgba(43, 42, 49, 0) 72.4%)
