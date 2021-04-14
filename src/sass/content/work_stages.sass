@@ -1,30 +1,71 @@
-$slideWidth: 230px
+$slideWidth: 12vw //230px
 $slidesInView: 4
 $slidesCount: 6
-$controlsWidth: 200px
+$controlsWidth: 6vw //116px
+$marginLeft: 1.93vw //37px
 
 .work_stages
+
+  .work_stages-in
 
   .content
     display: flex
     justify-content: space-between
+    +phone-down
+      flex-direction: column
 
+  .title--shadow span::before
+    text-shadow: -1.4vw -4.125vw 0px rgba(255,255,255, 0.1)
+
+  .title--shadow span.second::before
+    left: 62%
+
+  .title
+    margin-bottom: 5px
+    +phone-down
+      margin-bottom: 1px
+
+  .subtitle
+    font-size: 1.1458vw
+    line-height: 1.225
+    padding: 0 7px
+    margin-bottom: 5.648vh
+    +phone-down
+      font-size: 14px
+      padding: 0
+      margin-bottom: 40px
 
   .slider-container
-    width: calc(#{$slidesInView} * #{$slideWidth} + #{$controlsWidth}) //55.89vw
+    width: calc(#{$slidesInView} * #{$slideWidth} + #{$controlsWidth} + #{$marginLeft}) //55.89vw
     overflow: hidden
     display: flex
     background-color: $block-bg
     border-radius: 20px
+    max-height: 37.03vh //400px
+    +phone-down
+      width: 100%
+      flex-direction: column
+      border-radius: 10px
+      margin-bottom: 40px
+      max-height: unset
 
   .slider
-    width: calc(#{$slidesInView} * #{$slideWidth})
-    padding: 50px 0 58px
+    width: calc(#{$slidesInView} * #{$slideWidth} + #{$marginLeft})
+    //padding: 63px 0 58px
+    padding: 5.83vh 0 5.37vh
+    +phone-down
+      width: 100%
+      padding: 40px 0 0
 
     &-controls
       background-color: $accent
       width: #{$controlsWidth}
       position: relative
+      +phone-down
+        width: 100%
+        height: 70px
+        display: flex
+        flex-direction: row-reverse
       .btn-control
         display: inline-flex
         width: 100%
@@ -32,6 +73,21 @@ $controlsWidth: 200px
         justify-content: center
         align-items: center
         cursor: pointer
+        opacity: .3
+        +phone-down
+          width: 49%
+          height: 100%
+        background:
+          image: url("../images/icons/arrow-right.svg")
+          position: center
+          repeat: no-repeat
+          size: 18px 18px
+        &.btn--prev
+          transform: rotate(180deg)
+
+        &:hover
+          opacity: 1
+          //cursor: pointer
 
     &-items
       display: flex
@@ -39,6 +95,18 @@ $controlsWidth: 200px
       align-items: stretch
       flex-wrap: nowrap
       width: calc(#{$slidesCount} * #{$slideWidth})
+      padding-left: 0.78125vw //15px
+      position: relative
+      border-top: 4px solid $bg-dark
+      right: 0
+      transition:
+        property: right
+        timing-function: ease-in-out
+        duration: 500ms
+      +phone-down
+        width: calc(#{$slidesCount} * 175px)
+        padding-left: 2px
+        margin-bottom: 38px
 
     &-item
       width: #{$slideWidth}
@@ -46,22 +114,42 @@ $controlsWidth: 200px
       justify-content: flex-start
       align-items: center
       flex-direction: column
-      padding-top: 68px
-      border-top: 4px solid $bg-dark
+      padding-top: 7.5vh //81px
+      +phone-down
+        width: 175px
+        padding-top: 62px
+
       position: relative
       &::before
         content: attr(data-num)
         display: inline-flex
-        width: 30px
-        height: 30px
+        width: 30px //1.5625vw
+        height: 30px //1.5625vw
         border-radius: 50%
         background-color: $bg-dark
         justify-content: center
         align-items: center
         position: absolute
-        top: -15px
+        top: -15px //-0.78125vw
         color: $greey
         font-family: $ffAvenirNextCyrBold
+        +phone-down
+          font-size: 18px
+          left: 41%
+          top: -17px
+
+      &[data-num="2"]
+        padding-left: 0.677vw //13px
+
+      &[data-num="3"]
+        padding-left: 2.1458vw //22px
+
+      &[data-num="4"]
+        padding-left: 1.1458vw //22px
+        &::before
+          left: 57%
+        .slider-title
+          padding-left: 80px
 
       //&:nth-child(2n)
         background-color: lightcoral
@@ -69,16 +157,25 @@ $controlsWidth: 200px
         background-color: lightblue
 
       .slider-title
-        padding: 0 35px
+        padding: 0 1.823vw //0 35px
         text-align: center
         font-family: $ffAvenirNextCyrBold
         font-weight: bold
-        font-size: 18px
+        font-size: 0.9375vw //18px
+        +phone-down
+          font-size: 14px
+          font-family: $ffAvenirNextCyr
+          font-weight: normal
+          padding: 0 30px
 
     &-img
-      width: 130px
-      height: 130px
+      width: 6.77vw //130px
+      height: 6.77vw //130px
       margin-bottom: 20px
+      +phone-down
+        width: 100px
+        height: 100px
+        margin-bottom: 12px
       img
         width: 100%
         height: 100%
@@ -86,3 +183,56 @@ $controlsWidth: 200px
 
   .form-wrapper
     width: 20.8vw
+    text-align: center
+    +phone-down
+      width: 100%
+
+    .modal__title
+      margin-bottom: 0
+      position: relative
+      a
+        color: #ffffff
+        margin-bottom: 2.3vh
+        +phone-down
+          font-size: 30px
+      .contact-phone-btn
+        position: absolute
+        left: -17px
+        top: 14px
+        +phone-down
+          display: none
+
+    .modal__subtitle
+      +phone-down
+        display: inline-block
+        margin-bottom: 10px
+
+    .secd
+      display: inline-block
+      width: 100%
+      text-align: center
+      margin-bottom: 7px
+      +phone-down
+        margin-bottom: 0
+      & + span
+        display: inline-block
+        margin-bottom: 1.22vw //24px
+        width: 100%
+        +phone-down
+          font-size: 14px
+          margin-bottom: 47px
+
+    .form-field
+      background: #ffffff
+
+    .form-row--submit
+      +phone-down
+        margin-bottom: 10px
+
+    .form-check
+      +phone-down
+        text-align: left
+        padding-left: 40px
+
+    .btn
+      width: 100%

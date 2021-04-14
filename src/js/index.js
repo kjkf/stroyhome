@@ -6,4 +6,5 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     init_titles_anim();
     initQuiz();
     initSchemasDescr();
+    init_slider();
 });
