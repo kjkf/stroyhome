@@ -116,4 +116,12 @@ function initModal() {
         showModal(modal);
     });
 
+    //============================================
+    const typesDownloadBtn = document.getElementById('typesDownload');
+    typesDownloadBtn.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        isDownload.value = 1;
+        showModal(modal);
+    });
+
 }
