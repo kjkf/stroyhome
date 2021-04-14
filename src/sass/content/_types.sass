@@ -40,6 +40,10 @@
       +phone-down
         font-size: 30px
 
+  .title--shadow span.accent::before
+    +phone-down
+      display: none
+
 .types-wrap
   display: grid
   grid-template-columns: repeat(4, 1fr)
@@ -118,7 +122,9 @@
     display: flex
     font-size: 0.83vw //16px
     line-height: 1.25
-    margin-bottom: 1.38vh //15px
+    //margin-bottom: 1.38vh //15px
+    margin-left: 3px
+    margin-bottom: 1.38vh
     +ipad-down
       font-size: .8rem
     +phone-down
@@ -177,7 +183,7 @@
   font-size: 0.625vw //12px
   line-height: 1.25
   font-family: $ffAvenirNextCyr
-  margin-top: 0.925vw //10px
+  margin-top: 1.11vh //10px
   +ipad-down
     font-size: .6rem
   +phone-down
@@ -230,7 +236,7 @@
       width: 7.48px
       height: 4.55px
 
-.types-item-top
+.types-item__col
   display: flex
   align-items: center
   justify-content: space-between
@@ -245,6 +251,17 @@
     position: relative
   .types-item__img
     height: 46.2962vh //500px
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      display: inline-block
+      background: linear-gradient(360deg, $block-bg 21.7%, rgba(43, 42, 49, 0) 72.4%)
+
     +phone-down
       height: 220px
 
@@ -267,6 +284,7 @@
     +phone-down
       font-size: 24px
       line-height: 1.4583
+      margin-bottom: 10px
 
   .types-item__price
     font-size: 2.39583vw //46px
@@ -283,6 +301,7 @@
     display: flex
     flex-direction: column
     align-items: flex-start
+    margin-bottom: 0
   .project-size
     margin-top: 0
   .price-sm
@@ -322,9 +341,14 @@
       width: 24px
       height: 24px
 
-.gradient-mask
-  width: 100%
-  height: 100%
+.show-mob //title--shadow span.accent::before
+  display: none
+  +phone-down
+    display: block
 
-#gradient
-  background: linear-gradient(360deg, #2B2A31 21.7%, rgba(43, 42, 49, 0) 72.4%)
+  &.title--shadow span.accent
+    &::before
+      display: block
+      top: 34px
+      left: 14px
+      font-size: 50px
