@@ -1,6 +1,7 @@
 function init_slider() {
     const windowInnerWidth = window.innerWidth;
     const slider = document.querySelector('.slider-container');
+    if (!slider) return;
     const nextBtn = slider.querySelector('.btn--next');
     const prevBtn = slider.querySelector('.btn--prev');
 
