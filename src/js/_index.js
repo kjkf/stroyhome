@@ -13,5 +13,12 @@ document.addEventListener('DOMContentLoaded', function (evt) {
 
     btnMore.addEventListener('click', function (e) {
         text.classList.toggle('excerpt');
-    })
+    });
+
+
 });
+
+function calcBgWrapperHeight() {
+    const bgWrapper = document.querySelector('.background-outer-wrapper');
+
+}

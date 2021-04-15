@@ -3,6 +3,7 @@
   width: 100vw
   position: relative
   z-index: 0
+  //background: rgba(32, 31, 36, .9)
 
   .wrapper
     z-index: 1
@@ -11,14 +12,28 @@
     top: 0
     right: 0
     bottom: 0
-    background: $bg-dark
-    opacity: .5
+    background: rgba(32, 31, 36, .95)
 
-.ymaps-layers-pane
-  filter: grayscale(1)
-  -webkit-filter: grayscale(1)
-  -moz-filter: grayscale(1)
-  -o-filter: grayscale(1)
+    pointer-events: none
+
+  .map-in
+    padding-top: 100px
+
+  .content
+    position: relative
+    //&::before
+      content: ''
+      display: inline-block
+      width: 547px
+      height: 547px
+      background-image: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))
+
+
+//.ymaps-2-1-78-map
+  filter: brightness(90%)
+  -webkit-filter: brightness(90%)
+  -moz-filter: brightness(90%)
+  -o-filter: brightness(90%)
 
 .ymaps-2-1-78-map
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale")

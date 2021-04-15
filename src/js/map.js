@@ -11,7 +11,7 @@ function init(){
             searchControlProvider: 'yandex#search'
         }),
 
-        myPlacemark = new ymaps.Placemark([59.913622729598686,30.279367467945075], {
+        myPlacemark = new ymaps.Placemark([59.913668523561235,30.27648677546307], {
             hintContent: '',
             balloonContent: ''
         }, {
@@ -20,8 +20,9 @@ function init(){
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
             iconImageHref: 'assets/images/icons/baloon.svg',
+            //iconImageHref: 'https://sandbox.api.maps.yandex.net/examples/ru/2.1/icon_customImage/images/myIcon.gif',
             // Размеры метки.
-            iconImageSize: [30, 42],
+            iconImageSize: [92, 133],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
             iconImageOffset: [-5, -38]
@@ -40,7 +41,7 @@ function init(){
     // Отключаем часть включенных по умолчанию поведений:
     //  - drag - перемещение карты при нажатой левой кнопки мыши;
     //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
-        .disable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom', 'ruler'])
+        .disable(['', 'rightMouseButtonMagnifier', 'scrollZoom', 'ruler'])
         // Включаем линейку.
         .enable('');
 
