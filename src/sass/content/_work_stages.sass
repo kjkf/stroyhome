@@ -5,13 +5,13 @@ $controlsWidth: 6vw //116px
 $marginLeft: 1.93vw //37px
 
 .work_stages
-  margin-bottom: 9.26vh
+  margin-bottom: 8.33vh
   +phone-down
-    margin-bottom: 6.26vh
+    margin-bottom: 52px //6.26vh
   .work_stages-in
     padding-top: 10.94vh
     +phone-down
-      padding-top: 6.94vh
+      padding-top: 50px //6.94vh
 
   .content
     display: flex
@@ -200,6 +200,7 @@ $marginLeft: 1.93vw //37px
         margin-bottom: 1.95vh
         +phone-down
           font-size: 30px
+          margin-bottom: 20px
       .contact-phone-btn
         position: absolute
         left: -17px
@@ -233,6 +234,7 @@ $marginLeft: 1.93vw //37px
     .form-row--submit
       +phone-down
         margin-bottom: 10px
+        margin-top: -3px
 
     .form-check
       +phone-down
@@ -248,16 +250,52 @@ $marginLeft: 1.93vw //37px
 
 .background-wrapper
   position: relative
-  overflow: hidden
+  mix-blend-mode: multiply
   background:
-    color: $bg-dark
-    image: url("../images/content/bg_block7_8.jpg")
-    size: cover
+    color: transparent
+    image: url("../images/content/etaps_bg.jpg")
     repeat: no-repeat
+    size: cover
+    position: center
+  +phone-down
+    background-image: none
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(32, 31, 36, 0.975)
 
-  &.laurel-right-ic::after
+
+  //&.laurel-right-ic::after
     bottom: unset
     top: -170px
     width: 328px
     height: 457px
     right: -73px
+
+.background-outer-wrapper
+  //background-color: red
+  height: calc(2010px + 60px)
+  overflow: hidden
+  position: relative
+  &.laurel-right-ic::after
+    transform: rotate(-38deg)
+    top: -4.16vh //-45px
+    right: -6.25vw //-120px
+    width: 17.03125vw //327px
+    height: 39.4vh //426px
+    +phone-down
+      transform: rotate(-5deg)
+      top: 44%
+      right: -22px
+      width: 109px
+      height: 152px
+
+  &.lines-ic::before
+    bottom: 23.61vh //255px
+    left: 1.5625vw //30px
+    +phone-down
+      display: none

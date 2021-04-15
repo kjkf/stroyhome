@@ -1,6 +1,7 @@
 .footer
-  //display: none
   background-color: $dark
+  position: relative
+  overflow: hidden
   .container
     +phone-down
       padding: 0
@@ -11,7 +12,7 @@
     padding: 6.94vh 0 4.63vh //calc(75em/18) 0 calc(50em/18)
     +phone-down
       flex-direction: column
-      padding: 30px 0 35px //calc(30em/12) 0
+      padding: 32px 0 35px //calc(30em/12) 0
 
   &-left
     width: 25.5%
@@ -21,11 +22,11 @@
     +phone-down
       width: 100%
       justify-content: center
-      margin-bottom: 44px //calc(30em/12)
+      margin-bottom: 55px //calc(30em/12)
   &-ctr
     flex-grow: 1
     margin-top: -2.77vh
-    padding-bottom: 2.78vh //30px;
+    padding-bottom: 2.78vh //30px
     +phone-down
       width: 100%
       justify-content: center
@@ -41,20 +42,24 @@
       width: 100%
       justify-content: center
       align-items: center
-      padding-top: 5px //calc(30em/12)
+      padding-top: 0px //calc(30em/12)
 
 
   .nav
-    padding-right: 1.5625vw
+    padding-right: 1.71875vw //1.5625vw 30px
+    font-size: 0.83vw //16px
     +phone-down
-      padding-bottom: 22px //calc(20em/12)
+      padding-bottom: 19px //calc(20em/12)
     ul
+      display: flex
+      justify-content: space-between
+      flex-grow: 1
       +phone-down
         flex-direction: column
     li
-      padding: 2.77vh 0 2.407vh //26px 0 30px
+      padding: 2.77vh 0 2.6851vh //26px 0 29px
       +phone-down
-        padding: 10px //calc(10em/16) 0
+        padding: 11px 10px 9px  //calc(10em/16) 0
         font-size: 16px //calc(16em/12)
 
   .address
@@ -65,7 +70,7 @@
       text-align: center
       font-size: 14px //calc(14em/12)
       padding-top: 30px //calc(30em/14)
-      padding-bottom: 47px //calc(50em/14)
+      padding-bottom: 44px //calc(50em/14)
 
   .address__text
     display: flex
@@ -78,7 +83,7 @@
     text-transform: uppercase
     margin-bottom: 0.926vh //calc(10em/18)
     +phone-down
-      margin-bottom: 15px //calc(15em/14)
+      margin-bottom: 18px //calc(15em/14)
       font-size: 14px //calc(14em/12)
 
   .contact-email-ic
@@ -109,7 +114,7 @@
   .contact-phone
     margin-right: 3.125vw
     +phone-down
-      margin-bottom: 18px //calc(15em/18)
+      margin-bottom: 16px //calc(15em/18)
       margin-right: 0
 
     &-btn
@@ -128,13 +133,30 @@
       background-size: contain
       width: 0.83vw //calc(16em/18)
       height: 0.83vw //calc(16em/18)
+      background-image: url("../images/icons/phone.svg")
       +phone-down
         width: 16px
         height: 16px
 
+
+  &.laurel-right-ic::after
+    left: 6.14583vw
+    width: 13.5416vw
+    height: 37.037vh
+    bottom: -7.037vh
+    transform: rotate(310deg) scalex(-1)
+    +phone-down
+      width: 163px
+      height: 227px
+      left: unset
+      right: 37px
+      bottom: -53px
+      transform: rotate(283deg) scalex(-1)
+
 .develop-name
   font-size: 1.146vw //calc(22em/18)
   line-height: 1.2
+  margin-right: 0.52083vw
   +phone-down
     font-size: 22px //calc(22em/12)
   span
