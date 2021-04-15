@@ -12,6 +12,11 @@
     +phone-down
       margin-bottom: 28px
 
+  .title--shadow span::before
+    display: none
+    //+phone-down
+      display: inline-block
+
   .tabs
     display: flex
     flex-direction: row
@@ -170,7 +175,7 @@
   .application
     bottom: -4.16vh //-45px
     position: absolute
-    z-index: 2
+    z-index: 2000
     +phone-down
       width: 100%
       bottom: -160px
@@ -185,6 +190,12 @@
       margin-left: 18px
 
   .post
+    +phone-down
+      display: none
+
+  &.lines-ic::before
+    bottom: 17.59vh //190px
+    left: 6.51vw //125px
     +phone-down
       display: none
 
