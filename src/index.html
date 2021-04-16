@@ -208,7 +208,7 @@
             <span class="accent second" data-text="стоимость">стоимость</span>
         </h2>
         <div class="content">
-            <div class="quiz step-1">
+            <div class="quiz step-1 hide">
                 <div class="quiz__header">
                     <h3>Вопрос <span class="quiz-current">1</span> из <span class="quiz-all">6</span></h3>
                     <div class="steps">
@@ -420,7 +420,7 @@
                     <button type="button" class="btn btn-light btn-anim" id="nextBtn">Далее</button>
                 </div>
             </div>
-            <div class="quiz quiz-result hide">
+            <div class="quiz quiz-result ">
                 <div class="quiz__header">
                     <span id="quizResult">Расчет</span>
                 </div>
@@ -430,32 +430,36 @@
                         <div class="quiz-row icons">
                             <ul class="callback">
                                 <li class="callback__item phone-btn">
-                                    <a href="#" class="btn callback__btn">
+                                    <input type="radio" name="sendTo" class="option-radio" id="sendToPhone" value="Есть участок">
+                                    <label for="sendToPhone" class="btn callback__btn">
                                         <svg class="svg-wrap" viewBox="0 0 28 28" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <use class="svg-sym" xlink:href="#phone-ic" x="0" y="0"></use>
                                         </svg>
-                                    </a>
+                                    </label>
                                 </li>
                                 <li class="callback__item telegram-btn">
-                                    <a href="#" class="btn callback__btn ">
+                                    <input type="radio" name="sendTo" class="option-radio" id="sendToTelegram" value="Есть участок">
+                                    <label for="sendToTelegram" class="btn callback__btn">
                                         <svg class="svg-wrap" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <use class="svg-sym" xlink:href="#telegram-ic" x="0" y="0"></use>
                                         </svg>
-                                    </a>
+                                    </label>
                                 </li>
                                 <li class="callback__item viber-btn">
-                                    <a href="#" class="btn callback__btn">
+                                    <input type="radio" name="sendTo" class="option-radio" id="sendToViber" value="Есть участок">
+                                    <label for="sendToViber" class="btn callback__btn">
                                         <svg class="svg-wrap" width="29" height="32" viewBox="0 0 29 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <use class="svg-sym" xlink:href="#viber-ic" x="0" y="0"></use>
                                         </svg>
-                                    </a>
+                                    </label>
                                 </li>
                                 <li class="callback__item whatsapp-btn">
-                                    <a href="#" class="btn callback__btn ">
+                                    <input type="radio" name="sendTo" class="option-radio" id="sendToWhatsapp" value="Есть участок">
+                                    <label for="sendToWhatsapp" class="btn callback__btn">
                                         <svg class="svg-wrap" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <use class="svg-sym" xlink:href="#wa-ic" x="0" y="0"></use>
                                         </svg>
-                                    </a>
+                                    </label>
                                 </li>
                             </ul>
                         </div>
@@ -464,7 +468,8 @@
                         </div>
 
                         <div class="quiz-row">
-                            <input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>
+                            <!--<input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>-->
+                            <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                         </div>
 
                         <div class="quiz-row">
@@ -935,7 +940,8 @@
                         <span>и с вами свяжется наш менеджер</span>
                         <form action="#" class="form">
                             <div class="form-row">
-                                <input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>
+                                <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
+                                <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                             </div>
                             <div class="form-row form-row--submit">
                                 <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
@@ -1041,7 +1047,8 @@
                     <form action="#" class="form form--column">
                         <div class="form-in">
                             <div class="form-col">
-                                <input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>
+                                <!--<input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>-->
+                                <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                             </div>
                             <div class="form-col">
                                 <input type="text" class="form-field" placeholder="Ваше имя" required>
@@ -1119,8 +1126,29 @@
                     <span class="white second" data-text="с нами"> с нами</span>
                 </h2>
                 <div class="content">
+                    <div class="text-wrapper">
+                        <h5>Свяжитесь с нами
+                            прямо сейчас...
+                        </h5>
+                        <div class="contact-wrapper">
+                            <p class="contact adress">Санкт-Петербург, Рижский проспект, 37</p>
+                            <a href="tel:+7 (981) 185-04-95" class="contact phone">+7 (981) 185-04-95</a>
+                            <a href="instagram.com/saint_detailing" class="contact instagram">instagram.com/saint_detailing</a>
+                            <a href="t.me/saint_detailing" class="contact telegram">t.me/saint_detailing</a>
+                        </div>
 
+
+                        <h5>
+                            ...или оставьте заявку и мы
+                            Вам перезвоним
+                        </h5>
+                        <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
+                    </div>
+                    <a href="tel:+7 (981) 185-04-95" class="contact phone--big">+7 (981) 185-04-95</a>
                 </div>
+                <span class="section-index-wrapper">
+                    <span class="section-index" data-index="11"></span>
+                </span>
             </div>
         </div>
     </div>
@@ -1241,7 +1269,8 @@
                     <span>и с вами свяжется наш менеджер</span>
                     <form action="#" class="form">
                         <div class="form-row">
-                            <input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>
+                            <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
+                            <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                         </div>
                         <div class="form-row">
                             <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
