@@ -1,16 +1,18 @@
 $btnWidth: 4.17vw //80px
 .build
   .build-in
-    padding-top:  7.22vh //78px
-    padding-bottom: 100px
+    padding-top:  5.37vh //58px
+    padding-bottom: 11.574vh //125px
     +phone-down
-      padding-top: 55px
+      padding-top: 47px
+      padding-bottom: 53px
 
   .title
-    margin-bottom: 28px
+    margin-bottom: 2.592vh //28px
+    margin-left: -0.26vw //-5px
     +phone-down
-      font-size: 32px
-      margin-bottom: 14px
+      //font-size: 32px
+      margin-bottom: 8px
   .title--shadow span.dark::before
     text-shadow: 2.96vw -3.125vw 0px rgba(26,24,33, 0.1)
     +phone-down
@@ -54,7 +56,10 @@ $btnWidth: 4.17vw //80px
         bottom: 0
       & + .btn--more
         display: block
-        bottom: 6.48vh //70px
+        bottom: 9.259vh //100px
+        +phone-down
+          bottom: 40px
+          left: calc(50% - 11.17vw / 2)
         &::before
           transform: rotate(90deg)
 
@@ -91,4 +96,4 @@ $btnWidth: 4.17vw //80px
 
   .section-index-wrapper
     right: -0.5vw
-    top: calc(50% - 8.92vh)
+    top: calc(50% - 10.92vh)

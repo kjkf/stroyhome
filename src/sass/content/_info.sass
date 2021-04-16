@@ -1,14 +1,17 @@
 .info
   +phone-down
     background-color: $bg-dark
+    overflow: hidden
   &-in
     padding-top: 13.2407vh //143px
     padding-bottom: 2.037vh //22px
     +phone-down
-      padding-bottom: 10px
+      padding-bottom: 0
       padding-top: 207px
   h2.title
     margin-bottom: 4.629vh //50px
+    +phone-down
+      margin-bottom: 36px
 
   .btn
     padding: 1.25vw 4.21875vw //81px
@@ -22,7 +25,15 @@
       color: $fontColorMain
   .title--shadow span.dark::before
     +phone-down
-      display: none
+      text-shadow: -2.52vw -5.04vw 0px rgba(187,161,130, 0.1)
+  .title--shadow span.second::before
+    left: 50%
+    +phone-down
+      left: 80%
+  .section-index-wrapper
+    right: -0.364583vw //-7px
+    top: calc(50% - 7.2vh) //calc(50% - 78px)
+
 
 .info-wrap
   display: grid
