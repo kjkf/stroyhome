@@ -37,6 +37,20 @@
   top: 0
   left: 0
   width: 100%
+
+  &--sm
+    .header-left
+      +phone-down
+        margin-bottom: 0
+    .contact
+      +phone-down
+        display: none
+
+
+    .header-right
+      //+phone-down
+        display: none
+
   &-in
     display: flex
     justify-content: space-between
