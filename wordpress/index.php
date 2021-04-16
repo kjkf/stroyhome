@@ -930,17 +930,20 @@ if ( !$isBlock09Hidden ):?>
                 <div class="info-wrap">
                     <?php
                     // параметры по умолчанию
-                    $posts = get_posts( array(
-                        'numberposts' => 5,
+                    $args = array(
+                        'numberposts' => 0,
                         'category'    => 7,
                         'orderby'     => 'date',
                         'order'       => 'DESC',
                         'post_type'   => 'post',
-                        'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-                    ) );
+                        //'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                    );
 
-                    foreach( $posts as $post ){
-                        setup_postdata($post);
+                    // ваш запрос и код вывода с пагинацией
+                    $wp_query = new WP_Query( $args );
+                    while ( $wp_query->have_posts() ) {
+                        $wp_query->the_post();
+
                         ?>
                         <div class="info-item">
                             <div class="info-item__img">
@@ -957,8 +960,21 @@ if ( !$isBlock09Hidden ):?>
                         </div>
                         <?php
                     }
+                    if (  $wp_query->max_num_pages > 1 ) : ?>
+                    <script>
+                        var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+                        var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
+                        var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+                        var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
+                    </script>
+                    <div id="true_loadmore" class="btn btn-light btn-submit">Загрузить ещё</div>
+                    <?php endif;
 
-                    wp_reset_postdata(); // сброс?>
+                    // пагинация
+
+                    // вернем global $wp_query
+                    wp_reset_postdata();
+                    ?>
 
                 </div>
                 <div class="form-row">
@@ -984,7 +1000,7 @@ if ( !$isBlock10Hidden ):?>
                     <span class="<?php echo $block10_title['second_color']?> second" data-text="<?php echo $block10_title['second']?>"><?php echo $block10_title['second']?></span>
                 </h2>
                 <p class="build-text excerpt">
-                    <?php the_field('text');?>
+                    <?php the_field('block10_text');?>
                 </p>
                 <button class="btn btn--more"></button>
             </div>

@@ -15,7 +15,10 @@ function style_theme() {
 }
 
 function script_theme() {
+    wp_enqueue_script('jquery'); // скорее всего он уже будет подключен, это на всякий случай
+    wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/loadmore.js', array('jquery') );
     wp_enqueue_script('map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOfbRY8MVrXteqJG_O8wijRsIi95akeg&map_ids=4bdebe2aef94632b&callback=initMap&libraries=&v=weekly&language=ru&region=RU');
+
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/main.min.js' );
 }
 
@@ -156,3 +159,39 @@ function register_keyproject_type() {
         'query_var'           => true,
     ] );
 }
+
+function true_load_posts(){
+
+    $args = unserialize( stripslashes( $_POST['query'] ) );
+    $args['paged'] = $_POST['page'] + 1; // следующая страница
+    $args['post_status'] = 'publish';
+    $args['category'] = 7;
+
+    /*$arg = array(
+        'numberposts' => 0,
+        'category'    => 7,
+        'orderby'     => 'date',
+        'order'       => 'DESC',
+        'post_type'   => 'post',
+        //'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+    );*/
+    // обычно лучше использовать WP_Query, но не здесь
+    query_posts( $args );
+    // если посты есть
+    if( have_posts() ) :
+
+        // запускаем цикл
+        while( have_posts() ): the_post();
+
+            get_template_part( 'templates/post', get_post_format() );
+
+
+        endwhile;
+
+    endif;
+    die();
+}
+
+
+add_action('wp_ajax_loadmore', 'true_load_posts');
+add_action('wp_ajax_nopriv_loadmore', 'true_load_posts');
