@@ -11,14 +11,10 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     const btnMore = document.querySelector('.btn--more');
     const text = document.querySelector('.build .build-text');
 
+    if (!btnMore) return;
     btnMore.addEventListener('click', function (e) {
         text.classList.toggle('excerpt');
     });
 
 
 });
-
-function calcBgWrapperHeight() {
-    const bgWrapper = document.querySelector('.background-outer-wrapper');
-
-}

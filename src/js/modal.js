@@ -81,6 +81,7 @@ function closeModal(modal) {
 
 function initModal() {
     const templ = document.querySelector('#modalTemplate').innerHTML;
+    if (!templ) return false;
     const modal = createModal(templ);
     const isDownload = modal.querySelector('#isDownload');
 
@@ -110,6 +111,7 @@ function initModal() {
 
     //=============================================================
     const principlesModalBtn = document.querySelector('.principle .btn-submit');
+    if (!principlesModalBtn) return false;
     principlesModalBtn.addEventListener('click', function (evt) {
         evt.preventDefault();
         isDownload.value = 0;

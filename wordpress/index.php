@@ -965,8 +965,8 @@ if ( !$isBlock09Hidden ):?>
                     <button type="submit" class="btn btn-light btn-submit">Показать еще</button>
                 </div>
                 <span class="section-index-wrapper">
-            <span class="section-index section-index--dark" data-index="09"></span>
-        </span>
+                    <span class="section-index section-index--dark" data-index="09"></span>
+                </span>
             </div>
         </div>
     </section>
@@ -979,7 +979,7 @@ if ( !$isBlock10Hidden ):?>
         <div class="container">
             <div class="build-in">
                 <?php $block10_title = get_field('block10_title');?>
-                <h2 class="title title--shadow title-anim title--long">
+                <h2 class="title title--shadow title-anim title--long fade_in">
                     <span class="<?php echo $block10_title['first_color']?> first" data-text="<?php echo $block10_title['first']?>"><?php echo $block10_title['first']?></span>
                     <span class="<?php echo $block10_title['second_color']?> second" data-text="<?php echo $block10_title['second']?>"><?php echo $block10_title['second']?></span>
                 </h2>
@@ -991,6 +991,53 @@ if ( !$isBlock10Hidden ):?>
             <span class="section-index-wrapper">
             <span class="section-index section-index--dark" data-index="10"></span>
         </span>
+        </div>
+    </section>
+<?php endif;?>
+
+<?php
+$isBlock11Hidden = get_field('isBlock11Hidden');
+if ( !$isBlock10Hidden ):?>
+    <section class="contacts-block">
+        <div class="map" id="map">
+
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="map-in">
+                    <?php $block11_title = get_field('block11_title');?>
+                    <h2 class="title title--shadow title-anim fade_in">
+                        <span class="<?php echo $block11_title['first_color']?> first" data-text="<?php echo $block11_title['first']?>"><?php echo $block11_title['first']?></span>
+                        <span class="<?php echo $block11_title['second_color']?> second" data-text="<?php echo $block11_title['second']?>"><?php echo $block11_title['second']?></span>
+                    </h2>
+
+                    <div class="content">
+                        <div class="text-wrapper">
+                            <h5>Свяжитесь с нами
+                                прямо сейчас...
+                            </h5>
+                            <div class="contact-wrapper">
+                                <?php $adress = get_field('adress');?>
+                                <p class="contact adress"><?php echo $adress['city'];?>, <?php echo $adress['street'];?></p>
+                                <a href="<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact phone"><?php the_field('phone_num');?></a>
+                                <a href="<?php the_field('insta');?>" class="<?php the_field('insta');?></a>
+                                <a href="<?php the_field('telegram');?>" class="contact telegram"><?php the_field('telegram');?></a>
+                            </div>
+
+
+                            <h5>
+                                ...или оставьте заявку и мы
+                                Вам перезвоним
+                            </h5>
+                            <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
+                        </div>
+                        <a href="<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact phone--big"><?php the_field('phone_num');?></a>
+                    </div>
+                    <span class="section-index-wrapper">
+                    <span class="section-index" data-index="11"></span>
+                </span>
+                </div>
+            </div>
         </div>
     </section>
 <?php endif;?>

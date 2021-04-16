@@ -1,6 +1,7 @@
 
 function init_titles_anim() {
    const titles = document.querySelectorAll('.title-anim');
+    if (!titles) return;
     let bannerTitle = document.querySelector('.banner .title-anim');
 
     titles.forEach(function (title) {

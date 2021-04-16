@@ -2,8 +2,10 @@ function init_menu(){
     const menuWrap = document.querySelector('.menu-main-wrap');
     const menuBtn = document.querySelector('.btn-menu');
     const header = document.querySelector('.header');
+    if (!menuWrap || !menuBtn || !header) return false;
     const rect = header.getBoundingClientRect();
     const menuLinks = menuWrap.querySelectorAll('.menu-main a');
+
 
     menuBtn.addEventListener('click', function (evt) {
         evt.preventDefault();

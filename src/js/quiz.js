@@ -1,5 +1,6 @@
 function initQuiz() {
     const quiz = document.querySelector('.quiz');
+    if (!quiz) return false;
 
     if (!quiz) return false;
     //console.log('initQuiz');
