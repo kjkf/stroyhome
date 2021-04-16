@@ -732,6 +732,21 @@ svg.svg-ic path
 		height: 24.29vw
 
 
+ul.breadcrumb
+	font-family: $ffAvenirNextCyr
+	list-style: none
+	li
+		display: inline-block
+		font-family: $ffAvenirNextCyrBold
+		font-size: 0.83vw //16px
+		line-height: 1.25
+		color: $fontColorMain
+		+ipad-down
+			font-size: .8rem
 
-.schema
-	//display: none
+		&+li::before
+			content: "/\00a0"
+
+		a
+			font-family: $ffAvenirNextCyr
+			color: $fontColorMain
