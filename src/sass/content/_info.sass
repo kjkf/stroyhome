@@ -1,4 +1,6 @@
 .info
+  +phone-down
+    background-color: $bg-dark
   &-in
     padding-top: 13.2407vh //143px
     padding-bottom: 2.037vh //22px
@@ -112,3 +114,7 @@
           repeat: no-repeat
           size: contain
           position: center
+
+.title--shadow span.dark::before
+  +phone-down
+    display: none
