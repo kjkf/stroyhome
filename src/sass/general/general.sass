@@ -40,7 +40,8 @@ body
 		&::after
 			bottom: -5.2vw
 			right: -70px
-h1, h2, h3, h4, h5, h6, p, ul
+
+h1, h2, h3, h4, h5, h6, p, ul, ol
 	margin: 0px
 	padding: 0px
 
@@ -335,123 +336,6 @@ svg.svg-wrap
 svg.svg-ic path
 	fill: inherit
 
-.modal-wrap-fixed
-	position: fixed
-	z-index: -12
-	top: 0
-	left: 0
-	width: 100vw
-	height: 100vh
-	opacity: 0
-	&.active
-		opacity: 1
-		z-index: 12
-		transition:
-			property: all
-			duration: 1s
-			timing-function: ease-in-out
-
-.modal-wrap
-	display: flex
-	align-items: center
-	justify-content: center
-	width: 100vw
-	height: 100vh
-
-.modal
-	display: block
-	background: $bg-white
-	box-shadow: 0px 0.78vw 2.6vw rgba(0, 0, 0, 0.1) //15 50
-	border-radius: calc(35em/18)
-	width: 38.33vw //736
-	font-family: $ffAvenirNextCyr
-	font-size: 0.93vw //1em //18
-	line-height: 1.4
-	color: $dark
-	position: relative
-	+ipad-down
-		font-size: 0.9rem
-	+tablet-down
-		width: 53.33vw
-	+phone-down
-		width: calc(100% - #{$pd_cont*2})
-		border-radius: 35px
-	&__in
-		padding: 2.6vw 7.29vw //20% //50 147
-		display: flex
-		align-items: center
-		justify-content: center
-		flex-direction: column
-
-		+phone-down
-			padding: 45px 8% 50px
-			font-size: 14px
-
-	&__title
-		a
-			display: inline-flex
-			font-family: $ffAvenirNextCyrHeavy
-			font-size: $fontSize_h4 //36
-			line-height: $lineHeight_h4
-			color: $dark
-			margin-bottom: 1.85vh //20
-			+ipad-down
-				font-size: $fontSize_h4_ipad
-			+phone-down
-				font-size: 28px
-				margin-bottom: 20px
-	&__subtitle
-		font-family: $ffAvenirNextCyrBold
-		font-size: 1.25vw //24
-		line-height: 1.4
-		margin-bottom: 0.926vh //10
-		+phone-down
-			font-size: 20px
-			margin-bottom: 15px
-		&:last-child
-			+phone-down
-				margin-bottom: 0px
-		&.secd
-			margin-bottom: 3px
-			+phone-down
-				margin-bottom: 0px
-
-	.btn-light
-		width: 100%
-	.btn-close
-		+phone-down
-
-	.form
-		margin-top: 1.85vh //20
-		padding: 0 1.56vw
-		+phone-down
-			font-size: 16px
-			margin-top: 45px
-
-	.contact-phone-btn
-		+phone-down
-			display: none
-
-	.form-row
-		+phone-down
-			margin-bottom: 10px
-
-	.form-check-wrap
-		margin-bottom: 0
-		+phone-down
-			padding-left: 5px
-
-	.contact-phone
-		position: relative
-
-	.contact-phone-btn
-		min-width: 2.447vw
-		min-height: 2.447vw
-		position: absolute
-		left: -2.6vw
-		top: -1px
-	.contact-phone-ic
-		background-size: 50%
 
 .form
 	width: 100%
