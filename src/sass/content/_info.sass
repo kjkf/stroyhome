@@ -17,6 +17,13 @@
     +phone-down
       display: none
 
+  .title--shadow span.dark
+    +phone-down
+      color: $fontColorMain
+  .title--shadow span.dark::before
+    +phone-down
+      display: none
+
 .info-wrap
   display: grid
   grid-template-columns: repeat(3, 1fr)
@@ -114,7 +121,3 @@
           repeat: no-repeat
           size: contain
           position: center
-
-.title--shadow span.dark::before
-  +phone-down
-    display: none
