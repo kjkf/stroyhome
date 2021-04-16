@@ -18,7 +18,8 @@ function initMap() {
     };
     new google.maps.Marker({
         position: { lat: 59.9138880551601,  lng: 30.276488114225632 },
-        icon: svgMarker,
+        icon: new google.maps.MarkerImage('assets/images/icon/baloon.svg',
+            null, null, null, new google.maps.Size(64,64)),
         map: map
     });
 

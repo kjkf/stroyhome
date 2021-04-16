@@ -13,8 +13,12 @@
                 <?php the_post_thumbnail()?>
             </div>
             <div class="article__info">
-                <?php the_title(); ?>
- <!--               --><?php /*echo "1234";
+                <?$postId = get_the_ID();
+                $post_id = get_post( $postId );
+                $content = $post_id->post_content;
+                ?>
+                <?php echo $content; ?>
+                <!--               --><?php /*echo "1234";
 $value = get_field( 'calcBtn_title', 5 );
 echo "===============".$value;
 */?>

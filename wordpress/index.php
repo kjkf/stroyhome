@@ -722,7 +722,7 @@ if ( !$isBlock06Hidden ):?>
     </section>
 <?php endif;?>
 
-<div class="background-wrapper laurel-right-ic">
+    <div class="background-wrapper laurel-right-ic">
         <?php
         $isBlock07Hidden = get_field('isBlock07Hidden');
         if ( !$isBlock07Hidden ):?>
@@ -960,13 +960,13 @@ if ( !$isBlock09Hidden ):?>
 
                     wp_reset_postdata(); // сброс?>
 
-                    </div>
+                </div>
                 <div class="form-row">
                     <button type="submit" class="btn btn-light btn-submit">Показать еще</button>
                 </div>
                 <span class="section-index-wrapper">
-                    <span class="section-index section-index--dark" data-index="09"></span>
-                </span>
+            <span class="section-index section-index--dark" data-index="09"></span>
+        </span>
             </div>
         </div>
     </section>
@@ -1020,8 +1020,8 @@ if ( !$isBlock10Hidden ):?>
                                 <?php $adress = get_field('adress');?>
                                 <p class="contact adress"><?php echo $adress['city'];?>, <?php echo $adress['street'];?></p>
                                 <a href="<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact phone"><?php the_field('phone_num');?></a>
-                                <a href="<?php the_field('insta');?>" class="<?php the_field('insta');?></a>
-                                <a href="<?php the_field('telegram');?>" class="contact telegram"><?php the_field('telegram');?></a>
+                                <a href="<?php the_field('insta');?>" class="contact instagram"><?php the_field('insta');?></a>
+                                <a href="t.me/saint_detailing" class="contact telegram">t.me/saint_detailing</a>
                             </div>
 
 
