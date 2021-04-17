@@ -1,13 +1,17 @@
 
-<?php get_header();?>
+<?php get_header('single');
+$mainId = get_option( 'page_on_front' );
+?>
 
 <section class="article">
     <div class="container">
         <div class="article-in">
-            <ul class="breadcrumb">
-                <li><a href="#">Главная</a></li>
-                <li>Статья на тему: Ремонт ПК и Ноутбуков</li>
-            </ul>
+            <div class="breadcrumb">
+                <?php
+                the_breadcrumb ();
+                ?>
+            </div>
+
             <h2 class="title article__title"><?php the_title(); ?></h2>
             <div class="article__img">
                 <?php the_post_thumbnail()?>
@@ -29,7 +33,7 @@ echo "===============".$value;
 <section class="info bg-white infoInArticle">
     <div class="container">
         <div class="info-in">
-            <?php $block09_title = get_field('block09_title');?>
+            <?php $block09_title = get_field('block09_title', $mainId);?>
             <h2 class="title title--shadow title-anim title--long">
                 <span class="<?php echo $block09_title['first_color']?> first" data-text="<?php echo $block09_title['first']?>"><?php echo $block09_title['first']?></span>
                 <span class="<?php echo $block09_title['second_color']?> second" data-text="<?php echo $block09_title['second']?>"><?php echo $block09_title['second']?></span>

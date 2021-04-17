@@ -126,11 +126,10 @@
                 <span class="modal__subtitle">Звоните</span>
                 <h4 class="title modal__title">
                     <a href="tel:<?php the_field('phone_num', $mainId);?>" class="contact-phone">
-                            <span class="contact-phone-btn callbackkiller cbk-phone cbk-phone-waves">
-                                <div class="cbk-phone-bgr contact-phone-ic"></div>
-                                <div class="cbk-phone-circle"></div>
-                                <div class="cbk-phone-second_circle"></div>
-                                <div class="cbk-phone-third_circle"></div>
+                            <span class="contact-phone-btn btn-waves ">
+                                <span class="contact-phone-ic"></span>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
                             </span>
                         <span><?php the_field('phone_num', $mainId);?></span>
                     </a>

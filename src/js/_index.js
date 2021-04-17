@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     const text = document.querySelector('.build .build-text');
 
     if (!btnMore) return;
+
     btnMore.addEventListener('click', function (e) {
         text.classList.toggle('excerpt');
     });

@@ -32,11 +32,10 @@ if ( !$isBannerHidden) : ?>
                         <button class="btn btn-light btn-anim" id="showCalc"><?php the_field('calcBtn_title'); ?></button>
                     </div>
                     <a href="#" class="btn btn-play ">
-                    <span class="btn-round callbackkiller cbk-phone cbk-phone-waves">
-                        <div class="cbk-phone-bgr btn-play-ic"></div>
-                        <div class="cbk-phone-circle"></div>
-                        <div class="cbk-phone-second_circle"></div>
-                        <div class="cbk-phone-third_circle"></div>
+                     <span class="btn-round btn-waves ">
+                        <span class="btn-play-ic"></span>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
                     </span>
                         <span>Смотреть видео</span>
                     </a>

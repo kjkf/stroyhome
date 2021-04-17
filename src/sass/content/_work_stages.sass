@@ -20,10 +20,14 @@ $marginLeft: 1.93vw //37px
       flex-direction: column
 
   .title--shadow span::before
-    text-shadow: -1.4vw -4.125vw 0px rgba(255,255,255, 0.1)
+    text-shadow: -2.4vw -5.125vw 0px rgba(255,255,255, 0.1) //-2.4vw -5.125vw
 
   .title--shadow span.second::before
     left: 62%
+
+  .title--shadow span.accent::before
+    +phone-down
+      text-shadow: -13.52vw -5.04vw 0px rgba(187,161,130, 0.1)
 
   .title
     margin-bottom: 5px
@@ -34,7 +38,7 @@ $marginLeft: 1.93vw //37px
     font-size: 1.1458vw
     line-height: 1.225
     padding: 0 7px
-    margin-bottom: 5.648vh
+    margin-bottom: 5.648vh //5.648vh
     +phone-down
       font-size: 14px
       padding: 0
@@ -89,6 +93,7 @@ $marginLeft: 1.93vw //37px
           size: 18px 18px
         &.btn--prev
           transform: rotate(180deg)
+          z-index: 2
 
         &:hover
           opacity: 1

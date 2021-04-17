@@ -31,6 +31,29 @@ function theme_register_nav_menu() {
 
 }
 
+function the_breadcrumb() {
+    if (!is_front_page()) {
+
+        echo '<a class="breadcrumb" href="';
+        echo get_option('home');
+        echo '"> Главная';
+        echo '</a>';
+        echo " / ";
+        if (is_category() || is_single()) {
+            //the_category(' ');
+            if (is_single()) {
+                //echo " / ";
+                the_title();
+            }
+        } elseif (is_page()) {
+            echo the_title();
+        }
+    }
+    else {
+        echo 'Home';
+    }
+}
+
 function register_post_types(){
     register_project_type();
     register_stages_type();
@@ -161,28 +184,8 @@ function register_keyproject_type() {
 }
 
 function true_load_posts(){
+
     get_template_part( 'templates/post', get_post_format() );
-/*    $args = unserialize( stripslashes( $_POST['query'] ) );
-    $args['paged'] = $_POST['page'] + 1; // следующая страница
-    $args['post_status'] = 'publish';
-    $args['category'] = 7;
-
-
-    // обычно лучше использовать WP_Query, но не здесь
-    query_posts( $args );
-    // если посты есть
-    if( have_posts() ) :
-
-        // запускаем цикл
-        while( have_posts() ): the_post();
-
-            get_template_part( 'templates/post', get_post_format() );
-
-
-        endwhile;
-
-    endif;
-    die();*/
 }
 
 

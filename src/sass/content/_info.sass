@@ -25,12 +25,18 @@
       color: $fontColorMain
   .title--shadow span.dark::before
     +phone-down
-      text-shadow: -2.52vw -5.04vw 0px rgba(187,161,130, 0.1)
+      text-shadow: -28.52vw 7.96vw 0px rgba(187,161,130, 0.1)
+      //text-shadow: -2.52vw -5.04vw 0px rgba(187,161,130, 0.1)  -28.52vw ​7.96vw 0px rgb(187 161 130 / 10%
       //text-shadow: -61.52vw 7.96vw 0px rgba(187,161,130, 0.1)
   .title--shadow span.second::before
     left: 50%
     +phone-down
       left: 80%
+
+  .title--shadow.title--long span.accent::before
+    +phone-down
+      text-shadow: -10px -17px 0px rgba(187,161,130, 0.1)
+
   .section-index-wrapper
     right: -0.364583vw //-7px
     top: calc(50% - 7.2vh) //calc(50% - 78px)
