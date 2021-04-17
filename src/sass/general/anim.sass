@@ -63,3 +63,45 @@
 
   100%
     transform: translateY(calc(10em/18))
+
+
+@keyframes animate-circle
+  from
+    transform: scale(1.5)
+    opacity: 1
+  to
+    transform: scale(3)
+    opacity: 0
+
+@keyframes animate-circle-mob
+  from
+    transform: scale(1)
+    opacity: 1
+  to
+    transform: scale(2)
+    opacity: 0
+
+
+
+.btn-waves
+  //width: 5.1vw //98
+  //height: 5.1vw //98
+  display: flex
+  align-items: center
+  justify-content: center
+  & > .circle
+    --duration: 2s
+    position: absolute
+    border: 1px solid $accent
+    border-radius: 50%
+    animation: animate-circle var(--duration) ease-in-out infinite
+    width: inherit
+    height: inherit
+    +phone-down
+      animation: animate-circle-mob var(--duration) ease-in-out infinite
+
+
+    &:nth-of-type(1)
+      animation-delay: 0s
+    &:nth-of-type(2)
+      animation-delay: calc(var(--duration) / -3)
