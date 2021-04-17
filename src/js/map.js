@@ -16,10 +16,10 @@ function initMap() {
         scale: 1,
         anchor: new google.maps.Point(15, 30)
     };
+
     new google.maps.Marker({
         position: { lat: 59.9138880551601,  lng: 30.276488114225632 },
-        icon: new google.maps.MarkerImage('assets/images/icon/baloon.svg',
-            null, null, null, new google.maps.Size(64,64)),
+        icon: svgMarker,
         map: map
     });
 

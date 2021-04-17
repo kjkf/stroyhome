@@ -14,7 +14,15 @@ function initQuiz() {
     nextBtn.addEventListener('click', e => formIterator.next());
     prevBtn.addEventListener('click', e => formIterator.prev());
 
-    setQuizAnswersEventHandlers()
+    const sendCalcBtn = document.querySelector('#sendCalc');
+
+    sendCalcBtn.addEventListener('click', function (e) {
+       e.preventDefault();
+        console.log('sendCalcBtn 1');
+        prepareData();
+    });
+
+    setQuizAnswersEventHandlers();
 }
 
 function formIterate(quiz) {
@@ -117,6 +125,11 @@ function setQuizAnswersEventHandlers() {
     const quest6Answ = document.querySelectorAll("input[name=start-project]");
     setEventHandler(quest6Answ, answer);
 
+    const sendTo = document.querySelectorAll("input[name=sendTo]");
+    setEventHandler(sendTo, answer);
+
+
+
 }
 
 function setEventHandler(elems, answer) {
@@ -124,5 +137,58 @@ function setEventHandler(elems, answer) {
         item.addEventListener('click', function (e) {
             answer.value = this.value;
         });
-});
+    });
 }
+
+function prepareData() {
+    console.log('prepareData 2');
+    const currentAnswer = document.querySelector('#answer');
+    const sendResultsAns = document.getElementById('sendResults');
+
+
+    const cnameAns = document.getElementById('cnameAns');
+    const cphoneAns = document.getElementById('cphoneAns');
+
+    const cname = document.getElementById('cname');
+    const cphone = document.getElementById('cphone');
+
+    sendResultsAns.value = currentAnswer.value;
+
+    if (isValidForm()) {
+        console.log('no errors!');
+    }
+}
+
+function isValidForm() {
+    console.log('isValidForm 3');
+    const cnameAns = document.getElementById('cnameAns');
+    const cphoneAns = document.getElementById('cphoneAns');
+
+    const cname = document.getElementById('cname');
+    const cphone = document.getElementById('cphone');
+    console.log("cname.value = ", cname.value);
+    console.log("cnameAns.value = ", cnameAns.value);
+    if (!cnameAns.value) {
+        cnameAns.style.borderColor = 'red';
+        return false;
+    } else {
+        cnameAns.style.borderColor = '#C9C9C9';
+        cname.value = cnameAns.value;
+        return true;
+    }
+
+    if (!cnameAns.value) {
+        cphoneAns.style.borderColor = 'red';
+        return false;
+    } else {
+        cphoneAns.style.borderColor = '#C9C9C9';
+        cphone.value = cphoneAns.value;
+        return true;
+    }
+
+    if (!sendResultsAns) {
+        return false;
+    }
+}
+
+

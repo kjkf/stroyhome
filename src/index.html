@@ -403,14 +403,21 @@
                         </div>
 
                     </div>
-                    <input type="hidden" class="" id="answer" value="">
-                    <input type="hidden" class="quiz-step-result" id="step01" value="">
-                    <input type="hidden" class="quiz-step-result" id="step02" value="">
-                    <input type="hidden" class="quiz-step-result" id="step03" value="">
-                    <input type="hidden" class="quiz-step-result" id="step04" value="">
-                    <input type="hidden" class="quiz-step-result" id="step05" value="">
-                    <input type="hidden" class="quiz-step-result" id="step06" value="">
+
                 </form>
+                <form action="" id="quiz-form">
+                    <input type="hidden" class="" id="answer" value="">
+                    <input type="hidden" name="Какой дом Вы хотите построить?" class="quiz-step-result" id="step01" value="">
+                    <input type="hidden" name="Какая площадь Вам необходима?" class="quiz-step-result" id="step02" value="">
+                    <input type="hidden" name="Есть ли у Вас уже участок в собственности?" class="quiz-step-result" id="step03" value="">
+                    <input type="hidden" name="Есть ли у Вас проект дома?" class="quiz-step-result" id="step04" value="">
+                    <input type="hidden" name="Какой бюджет вы планируете для постройки?" class="quiz-step-result" id="step05" value="">
+                    <input type="hidden" name="Когда Вы хотели бы начать работы?" class="quiz-step-result" id="step06" value="">
+                    <input type="hidden" name="Куда направить Вам расчет?" class="quiz-step-result" id="sendResults" value="">
+                    <input type="hidden" name="Имя" class="quiz-step-result" id="cname" value="">
+                    <input type="hidden" name="Телефон" class="quiz-step-result" id="cphone" value="">
+                </form>
+
                 <div class="quiz-item-footer">
                     <button type="button" class="btn btn-dark hide" id="prevBtn">Назад</button>
                     <button type="button" class="btn btn-light btn-anim" id="nextBtn">Далее</button>
@@ -426,7 +433,7 @@
                         <div class="quiz-row icons">
                             <ul class="callback">
                                 <li class="callback__item phone-btn">
-                                    <input type="radio" name="sendTo" class="option-radio" id="sendToPhone" value="Есть участок">
+                                    <input type="radio" name="sendTo" class="option-radio" id="sendToPhone" value="Позвонить по телефону">
                                     <label for="sendToPhone" class="btn callback__btn">
                                         <svg class="svg-wrap" viewBox="0 0 28 28" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <use class="svg-sym" xlink:href="#phone-ic" x="0" y="0"></use>
@@ -434,7 +441,7 @@
                                     </label>
                                 </li>
                                 <li class="callback__item telegram-btn">
-                                    <input type="radio" name="sendTo" class="option-radio" id="sendToTelegram" value="Есть участок">
+                                    <input type="radio" name="sendTo" class="option-radio" id="sendToTelegram" value="Отправить в telegram">
                                     <label for="sendToTelegram" class="btn callback__btn">
                                         <svg class="svg-wrap" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <use class="svg-sym" xlink:href="#telegram-ic" x="0" y="0"></use>
@@ -442,7 +449,7 @@
                                     </label>
                                 </li>
                                 <li class="callback__item viber-btn">
-                                    <input type="radio" name="sendTo" class="option-radio" id="sendToViber" value="Есть участок">
+                                    <input type="radio" name="sendTo" class="option-radio" id="sendToViber" value="Отправить в viber">
                                     <label for="sendToViber" class="btn callback__btn">
                                         <svg class="svg-wrap" width="29" height="32" viewBox="0 0 29 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <use class="svg-sym" xlink:href="#viber-ic" x="0" y="0"></use>
@@ -450,7 +457,7 @@
                                     </label>
                                 </li>
                                 <li class="callback__item whatsapp-btn">
-                                    <input type="radio" name="sendTo" class="option-radio" id="sendToWhatsapp" value="Есть участок">
+                                    <input type="radio" name="sendTo" class="option-radio" id="sendToWhatsapp" value="Отправить в whatsapp">
                                     <label for="sendToWhatsapp" class="btn callback__btn">
                                         <svg class="svg-wrap" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
                                             <use class="svg-sym" xlink:href="#wa-ic" x="0" y="0"></use>
@@ -460,16 +467,16 @@
                             </ul>
                         </div>
                         <div class="quiz-row">
-                            <input type="text" class="form-field name" placeholder="Ваше имя" required>
+                            <input type="text" id="cnameAns" class="form-field name" placeholder="Ваше имя" required>
                         </div>
 
                         <div class="quiz-row">
                             <!--<input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>-->
-                            <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                            <input type="tel" id="cphoneAns" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                         </div>
 
                         <div class="quiz-row">
-                            <button type="submit" class="btn btn-light btn-submit btn-anim">Отправить расчет</button>
+                            <button type="submit" id="sendCalc" class="btn btn-light btn-submit btn-anim">Отправить расчет</button>
                         </div>
                         <!--<div class="quiz-row form-check-wrap">
                             <label for="agreed" class="form-check">
