@@ -769,14 +769,14 @@ if ( !$isBlock06Hidden ):?>
                             <div class="form-wrapper">
                                 <span class="modal__subtitle">Звоните</span>
                                 <h4 class="title modal__title">
-                                    <a href="tel:+7 (495) 921-30-01" class="contact-phone">
+                                    <a href="tel:<?php the_field('phone_num', $mainId);?>" class="contact-phone">
                             <span class="contact-phone-btn callbackkiller cbk-phone cbk-phone-waves">
                                 <div class="cbk-phone-bgr contact-phone-ic"></div>
                                 <div class="cbk-phone-circle"></div>
                                 <div class="cbk-phone-second_circle"></div>
                                 <div class="cbk-phone-third_circle"></div>
                             </span>
-                                        <span>+7 (495) 921-30-01</span>
+                                        <span><?php the_field('phone_num', $mainId);?></span>
                                     </a>
                                 </h4>
                                 <span class="modal__subtitle secd">или оставьте заявку, </span>
