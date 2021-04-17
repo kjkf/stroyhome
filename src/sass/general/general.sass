@@ -482,11 +482,8 @@ svg.svg-ic path
 
 .btn-btm
 	.mouse-ic-btn
-		transform: translateY(0)
-		transition: all .5s ease-out
-	&:hover
-		.mouse-ic-btn
-			transform: translateY(calc(10em/18))
+		animation: mouse .7s ease-in-out infinite
+
 
 //.stroke-ic
 	position: relative
@@ -634,3 +631,6 @@ ul.breadcrumb
 		a
 			font-family: $ffAvenirNextCyr
 			color: $fontColorMain
+
+//.about, .calculate, .principle, .schema, .types, .background-wrapper, .info, .build, .contacts-block
+	display: none

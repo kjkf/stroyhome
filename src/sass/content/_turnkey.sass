@@ -1,7 +1,7 @@
 .turnkey
   //display: none
   &-in
-    padding-bottom: 29.629vh
+    padding-bottom: 29.537037vh //29.629vh
     +phone-down
       position: relative
 
@@ -93,10 +93,25 @@
         margin-right: 0
 
   .tabs__body
+    position: relative
     margin-top: -20.278vh //calc(-215em/18) -219px
+    z-index: 0
     +phone-down
       margin-top: 0
       margin-bottom: 30px
+    &::after
+      content: ""
+      width: 40.10416vw //770px
+      height: 40.10416vw //770px
+      display: inline-block
+      position: absolute
+      left: -15.625vw //-300px
+      top: -15.625vw  //-300px
+      background: radial-gradient(50% 50% at 50% 50%, #BBA182 0%, rgba(187, 161, 130, 0) 100%)
+      opacity: 0.1
+      z-index: -1
+      +phone-down
+        display: none
 
   .tabs__block
     padding: 0
@@ -178,7 +193,7 @@
     z-index: 2000
     +phone-down
       width: 100%
-      bottom: -155px
+      bottom: -160px
 
   .section-index-wrapper
     right: -0.3125vw
