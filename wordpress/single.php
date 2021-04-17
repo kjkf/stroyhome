@@ -38,17 +38,20 @@ echo "===============".$value;
             <div class="info-wrap">
                 <?php
                 // параметры по умолчанию
-                $posts = get_posts( array(
-                    'numberposts' => 5,
+                $args = array(
+                    'numberposts' => 0,
                     'category'    => 7,
                     'orderby'     => 'date',
                     'order'       => 'DESC',
                     'post_type'   => 'post',
-                    'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-                ) );
+                    //'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+                );
 
-                foreach( $posts as $post ){
-                    setup_postdata($post);
+                // ваш запрос и код вывода с пагинацией
+                $wp_query = new WP_Query( $args );
+                while ( $wp_query->have_posts() ) {
+                    $wp_query->the_post();
+
                     ?>
                     <div class="info-item">
                         <div class="info-item__img">
@@ -66,16 +69,36 @@ echo "===============".$value;
                     <?php
                 }
 
-                wp_reset_postdata(); // сброс?>
-
+                // вернем global $wp_query
+                wp_reset_postdata();
+                ?>
             </div>
-            <div class="form-row">
-                <button type="submit" class="btn btn-light btn-submit">Показать еще</button>
-            </div>
+            <?php if (  $wp_query->max_num_pages > 1 ) : ?>
+                <script>
+                    var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
+                    var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
+                    var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
+                    var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
+                </script>
+                <div class="form-row">
+                    <button type="submit"id="true_loadmore"  class="btn btn-light btn-submit">Показать ещё</button>
+                </div>
+            <?php endif;?>
         </div>
     </div>
 </section>
 
+<div class="menu-main-wrap">
+    <div class="container">
+        <h2 class="title accent">Меню</h2>
+        <ul class="menu-main">
+            <li class="menu-main__item"><a href="#">Главная</a></li>
+            <li class="menu-main__item"><a href="#about">Проекты</a></li>
+            <li class="menu-main__item"><a href="#">Расчет стоимости</a></li>
+            <li class="menu-main__item"><a href="#">Наши преимущества</a></li>
+            <li class="menu-main__item"><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+</div>
 
-
-<?php get_footer();?>
+<?php get_footer('single');?>

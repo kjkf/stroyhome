@@ -21,6 +21,22 @@
     +phone-down
       margin-bottom: 20px
 
+  .title--shadow
+    span
+      &::before
+        text-shadow: -1.4vw -4.125vw 0px rgba(255,255,255, 0.1)
+        +phone-down
+          text-shadow: -5.4vw -5.125vw 0px rgba(255,255,255, 0.1)
+      &.accent::before
+        text-shadow: -1.4vw -4.125vw 0px rgba(187,161,130, 0.1)
+        +phone-down
+          text-shadow: -5.4vw -5.125vw 0px rgba(187,161,130, 0.1)
+      &.second::before
+        left: 40%
+        +phone-down
+          left: 20%
+
+
   &-in
     padding-top: 7.592vh
     padding-bottom: 5.56vh //60px

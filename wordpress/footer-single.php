@@ -1,179 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stroyhome Статья</title>
-    <link rel="stylesheet" href="../assets/css/normalize.css">
-    <link rel="stylesheet" href="../assets/css/styles.min.css">
-</head>
-<body>
+<?php $mainId = 5;
 
-<header class="header header--sm">
-    <div class="container">
-        <div class="header-in">
-            <div class="header-left">
-                <a href="#" class="logo">Stroy<span>Home</span></a>
-                <span class="logo-text">Проектирование и строительство домов в Санкт-Петеррбурге и ЛО</span>
-            </div>
-            <nav class="nav">
-                <ul>
-                    <li class="nav__item"><a href="#">Проекты</a></li>
-                    <li class="nav__item"><a href="#">Расчет стоимости</a></li>
-                    <li class="nav__item"><a href="#">Наши преимущества</a></li>
-                    <li class="nav__item"><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="header-right">
-                <a href="tel:+7 (495) 921-30-01" class="contact contact-phone">
-                                <span class="contact__text">Звоните</span>
-                                <span class="contact-phone-btn callbackkiller cbk-phone cbk-phone-waves">
-                                    <div class="cbk-phone-bgr contact-phone-ic"></div>
-                                    <div class="cbk-phone-circle"></div>
-                                    <div class="cbk-phone-second_circle"></div>
-                                    <div class="cbk-phone-third_circle"></div>
-                                </span>
-                    <span>+7 (495) 921-30-01</span>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=+7(495)9213001" class="whatsapp">
-                                <span class="whatsapp-ic">
-                                    <svg class="svg-wrap" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use class="svg-sym" xlink:href="#wa-ic" x="0" y="0" />
-                                    </svg>
-                                </span>
-                    <span>WhatsApp</span>
-                </a>
-                <a href="#" class="btn-menu">
-                    <span class="btn-menu__burger "></span>
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
+?>
 
-<section class="article">
-    <div class="container">
-        <div class="article-in">
-            <ul class="breadcrumb">
-                <li><a href="#">Главная</a></li>
-                <li>Статья на тему: Ремонт ПК и Ноутбуков</li>
-            </ul>
-            <h2 class="title article__title">Статья на тему: Стройка домов и облицовка фасада</h2>
-            <div class="article__img">
-                <img src="assets/images/content/article.jpg" alt="Стройка домов и облицовка фасада">
-            </div>
-            <div class="article__info">
-                <h3 class="title title--md">Политика в отношении обработки персональных данных</h3>
-                <h4 class="title title--sm">1. Общие положения</h4>
-                <p class="article__text">Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Михайловым Иваном Сергеевичем (далее – Оператор).</p>
-                <p class="article__text">1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
-                <p>1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта httpsː//thismywebsite·com.</p>
-
-                <h4 class="title title--sm">2. Основные понятия, используемые в Политике</h4>
-                <p class="article__text">2.1. Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;</p>
-                <p class="article__text">2.2. Блокирование персональных данных – временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных);</p>
-                <p class="article__text">2.3. Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу httpsː//thismywebsite·com;</p>
-                <p class="article__text">2.4. Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных, и обеспечивающих их обработку информационных технологий и технических средств;</p>
-                <p class="article__text">2.3. Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу httpsː//thismywebsite·com;</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="info bg-white infoInArticle">
-    <div class="container">
-        <div class="info-in">
-            <h2 class="title title--shadow title-anim">
-                <span class="accent first" data-text="полезная">полезная </span>
-                <span class="second dark" data-text="информация">информация</span>
-            </h2>
-
-            <div class="info-wrap">
-                <div class="info-item">
-                    <div class="info-item__img">
-                        <img src="assets/images/content/info_img.jpg" alt="Полезная информация">
-                    </div>
-                    <div class="info-item-descr">
-                        <h5 class="title info-item-descr__title">Название новости название новости в 2 строчки</h5>
-                        <div class="info-item-descr-btm">
-                            <a href="#" class="info-item-descr__more">Подробнее</a>
-                            <span class="info-item-descr__date">26.11.2020</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <div class="info-item__img">
-                        <img src="assets/images/content/info_img.jpg" alt="Полезная информация">
-                    </div>
-                    <div class="info-item-descr">
-                        <h5 class="title info-item-descr__title">Название новости название новости в 2 строчки</h5>
-                        <div class="info-item-descr-btm">
-                            <a href="#" class="info-item-descr__more">Подробнее</a>
-                            <span class="info-item-descr__date">26.11.2020</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <div class="info-item__img">
-                        <img src="assets/images/content/info_img.jpg" alt="Полезная информация">
-                    </div>
-                    <div class="info-item-descr">
-                        <h5 class="title info-item-descr__title">Название новости название новости в 2 строчки</h5>
-                        <div class="info-item-descr-btm">
-                            <a href="#" class="info-item-descr__more">Подробнее</a>
-                            <span class="info-item-descr__date">26.11.2020</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--
-                        <div class="info-wrap">
-                            <div class="info-item">
-                                <div class="info-item__img">
-                                    <img src="assets/images/content/info_img.jpg" alt="Полезная информация">
-                                </div>
-                                <div class="info-item-descr">
-                                    <h5 class="title info-item-descr__title">Название новости название новости в 2 строчки</h5>
-                                    <div class="info-item-descr-btm">
-                                        <a href="#" class="info-item-descr__more">Подробнее</a>
-                                        <span class="info-item-descr__date">26.11.2020</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-item__img">
-                                    <img src="assets/images/content/info_img.jpg" alt="Полезная информация">
-                                </div>
-                                <div class="info-item-descr">
-                                    <h5 class="title info-item-descr__title">Название новости название новости в 2 строчки</h5>
-                                    <div class="info-item-descr-btm">
-                                        <a href="#" class="info-item-descr__more">Подробнее</a>
-                                        <span class="info-item-descr__date">26.11.2020</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="info-item">
-                                <div class="info-item__img">
-                                    <img src="assets/images/content/info_img.jpg" alt="Полезная информация">
-                                </div>
-                                <div class="info-item-descr">
-                                    <h5 class="title info-item-descr__title">Название новости название новости в 2 строчки</h5>
-                                    <div class="info-item-descr-btm">
-                                        <a href="#" class="info-item-descr__more">Подробнее</a>
-                                        <span class="info-item-descr__date">26.11.2020</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        -->
-            <div class="form-row">
-                <button type="submit" class="btn btn-light btn-submit">Показать еще</button>
-            </div>
-            <span class="section-index-wrapper">
-            <span class="section-index section-index--dark" data-index="09"></span>
-        </span>
-        </div>
-    </div>
-</section>
 <footer class="footer footer--exd laurel-right-ic">
     <div class="container">
         <div class="footer__in">
@@ -182,13 +10,19 @@
             </div>
             <div class="footer-ctr">
                 <nav class="nav br-btm">
-                    <ul>
+                    <!--<ul>
                         <li><a href="#">Главная</a></li>
                         <li><a href="#">Услуги</a></li>
                         <li><a href="#">Прайс лист</a></li>
                         <li><a href="#">Преимущества</a></li>
                         <li><a href="#">Контакты</a></li>
-                    </ul>
+                    </ul>-->
+                    <? wp_nav_menu(array(
+                        'theme_locathion' => 'menu-footer',
+                        'menu' => 'menu-footer',
+                        'container' => 'nav',
+                        'container_class' => 'nav br-btm'
+                    )); ?>
                 </nav>
                 <div class="address br-btm">
                     <h5>Сервисный центр:</h5>
@@ -212,7 +46,7 @@
             </div>
             <div class="footer-right">
                 <a href="mailto:info@stroyhome.pro" class="contact">
-                    <span>info@stroyhome.pro</span>
+                    <span><?php the_field('email', $mainId);?></span>
                 </a>
                 <a href="#" class="footer-link">ФЗ о персональных данных</a>
                 <div class="callback-wrap">
@@ -248,18 +82,6 @@
     </div>
 </footer>
 
-<div class="menu-main-wrap">
-    <div class="container">
-        <h2 class="title accent">Меню</h2>
-        <ul class="menu-main">
-            <li class="menu-main__item"><a href="#">Главная</a></li>
-            <li class="menu-main__item"><a href="#about">Проекты</a></li>
-            <li class="menu-main__item"><a href="#">Расчет стоимости</a></li>
-            <li class="menu-main__item"><a href="#">Наши преимущества</a></li>
-            <li class="menu-main__item"><a href="#">Контакты</a></li>
-        </ul>
-    </div>
-</div>
 <ul class="callback fixed">
     <li class="callback__item phone-btn">
         <span class="prompt">Заказать звонок</span>
@@ -271,7 +93,7 @@
     </li>
     <li class="callback__item whatsapp-btn">
         <span class="prompt">написать в watsapp</span>
-        <a href="#" class="btn callback__btn ">
+        <a href="#" class="btn callback__btn">
             <svg class="svg-wrap" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <use class="svg-sym" xlink:href="#wa-ic" x="0" y="0" />
             </svg>
@@ -295,46 +117,47 @@
     </li>
 </ul>
 
-<template type="text/x-template" id="modalTemplate">
+<template id="modalTemplate">
     <!--<div class="modal-wrap-fixed">-->
-        <div class="modal-wrap">
-            <div class="modal modal--callback">
-                <button class="btn btn-close" type="button"></button>
-                <div class="modal__in">
-                    <span class="modal__subtitle">Звоните</span>
-                    <h4 class="title modal__title">
-                        <a href="tel:+7 (495) 921-30-01" class="contact-phone">
+    <div class="modal-wrap">
+        <div class="modal modal--callback">
+            <button class="btn btn-close" type="button"></button>
+            <div class="modal__in">
+                <span class="modal__subtitle">Звоните</span>
+                <h4 class="title modal__title">
+                    <a href="tel:<?php the_field('phone_num', $mainId);?>" class="contact-phone">
                             <span class="contact-phone-btn callbackkiller cbk-phone cbk-phone-waves">
                                 <div class="cbk-phone-bgr contact-phone-ic"></div>
                                 <div class="cbk-phone-circle"></div>
                                 <div class="cbk-phone-second_circle"></div>
                                 <div class="cbk-phone-third_circle"></div>
                             </span>
-                            <span>+7 (495) 921-30-01</span>
-                        </a>
-                    </h4>
-                    <span class="modal__subtitle secd">или оставьте заявку, </span>
-                    <span>и с вами свяжется наш менеджер</span>
-                    <form action="#" class="form">
-                        <div class="form-row">
-                            <input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>
-                        </div>
-                        <div class="form-row">
-                            <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
-                        </div>
-                        <div class="form-row form-check-wrap">
-                            <label for="agree_cond" class="form-check">
-                                <input type="checkbox" id="agree_cond">
-                                <span class="form-check__btn"></span>
-                                <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
-                            </label>
-                        </div>
-                        <input type="hidden" id="isDownload">
-                        <a href="assets/images/content/frame.png" id="downloadLink" download style="display: none">Download</a>
-                    </form>
-                </div>
+                        <span><?php the_field('phone_num', $mainId);?></span>
+                    </a>
+                </h4>
+                <span class="modal__subtitle secd">или оставьте заявку, </span>
+                <span>и с вами свяжется наш менеджер</span>
+                <form action="#" class="form">
+                    <div class="form-row">
+                        <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
+                        <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
+                    </div>
+                    <div class="form-row form-check-wrap">
+                        <label for="agree_cond" class="form-check">
+                            <input type="checkbox" id="agree_cond">
+                            <span class="form-check__btn"></span>
+                            <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
+                        </label>
+                    </div>
+                    <input type="hidden" id="isDownload">
+                    <a href="<?php the_field('pricelist', $mainId);?>" id="downloadLink" download style="display: none">Download</a>
+                </form>
             </div>
         </div>
+    </div>
     <!--</div>-->
 </template>
 
@@ -375,13 +198,9 @@
         <path d="M18.7465 16.7315C18.102 16.3583 17.4457 16.5906 17.1743 16.9572L16.6068 17.6918C16.3184 18.0649 15.7796 18.0153 15.7796 18.0153C11.8472 16.9755 10.7956 12.8604 10.7956 12.8604C10.7956 12.8604 10.7473 12.3032 11.1074 12.0045L11.8172 11.4173C12.172 11.1355 12.3965 10.4571 12.035 9.79035C11.0695 8.04594 10.4211 7.44446 10.091 6.98259C9.74395 6.54811 9.22206 6.45026 8.67929 6.74382H8.66755C7.53897 7.40401 6.30339 8.63959 6.69872 9.91169C7.37327 11.2529 8.61275 15.5285 12.5635 18.759C14.4201 20.2869 17.3583 21.8525 18.6056 22.2139L18.6174 22.2322C19.8464 22.6419 21.0415 21.358 21.6796 20.1955V20.1864C21.9627 19.6241 21.8687 19.0917 21.4551 18.7434C20.7219 18.0284 19.6155 17.239 18.7465 16.7315Z" fill="#1A1821"/>
         <path d="M15.6778 10.6383C16.9316 10.7114 17.5396 11.3664 17.6048 12.7115C17.6283 13.2373 18.3916 13.2008 18.3681 12.675C18.2846 10.9189 17.3687 9.94031 15.7195 9.84898C15.2172 9.81897 15.1702 10.6083 15.6778 10.6383Z" fill="#1A1821"/>
     </symbol>
-    <symbol class="" id="inst-ic">
-        <path d="M23.1685 0H9.83027C4.4095 0 -0.000610352 4.41011 -0.000610352 9.83088V23.1691C-0.000610352 28.5899 4.4095 33 9.83027 33H23.1685C28.5893 33 32.9994 28.5899 32.9994 23.1691V9.83088C32.9993 4.41011 28.5892 0 23.1685 0ZM29.6796 23.1691C29.6796 26.7651 26.7645 29.6802 23.1685 29.6802H9.83027C6.23433 29.6802 3.31919 26.7651 3.31919 23.1691V9.83088C3.31919 6.23488 6.23433 3.3198 9.83027 3.3198H23.1685C26.7645 3.3198 29.6796 6.23488 29.6796 9.83088V23.1691Z" />
-        <path d="M16.4993 7.96509C11.7931 7.96509 7.96436 11.7939 7.96436 16.5C7.96436 21.2061 11.7931 25.035 16.4993 25.035C21.2055 25.035 25.0343 21.2062 25.0343 16.5C25.0343 11.7938 21.2055 7.96509 16.4993 7.96509ZM16.4993 21.7152C13.619 21.7152 11.2842 19.3803 11.2842 16.5001C11.2842 13.6198 13.6191 11.2849 16.4993 11.2849C19.3796 11.2849 21.7145 13.6198 21.7145 16.5001C21.7145 19.3803 19.3796 21.7152 16.4993 21.7152Z" />
-        <path d="M25.0508 10.0742C26.1803 10.0742 27.096 9.15855 27.096 8.02904C27.096 6.89953 26.1803 5.98389 25.0508 5.98389C23.9213 5.98389 23.0057 6.89953 23.0057 8.02904C23.0057 9.15855 23.9213 10.0742 25.0508 10.0742Z" />
-    </symbol>
 </svg>
 
-<script src="../assets/main.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOfbRY8MVrXteqJG_O8wijRsIi95akeg&map_ids=4bdebe2aef94632b&callback=initMap&libraries=&v=weekly&language=ru&region=RU" async defer></script>
+<?php wp_footer();?>
 </body>
 </html>

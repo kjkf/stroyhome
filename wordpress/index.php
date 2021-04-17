@@ -730,7 +730,7 @@ if ( !$isBlock06Hidden ):?>
                 <div class="container">
                     <div class="work_stages-in">
                         <?php $block07_title = get_field('block07_title');?>
-                        <h2 class="title title--shadow title-anim title--long">
+                        <h2 class="title title--shadow title-anim">
                             <span class="<?php echo $block07_title['first_color']?> first" data-text="<?php echo $block07_title['first']?>"><?php echo $block07_title['first']?></span>
                             <span class="<?php echo $block07_title['second_color']?> second" data-text="<?php echo $block07_title['second']?>"><?php echo $block07_title['second']?></span>
                         </h2>
@@ -922,7 +922,7 @@ if ( !$isBlock09Hidden ):?>
         <div class="container">
             <div class="info-in">
                 <?php $block09_title = get_field('block09_title');?>
-                <h2 class="title title--shadow title-anim title--long">
+                <h2 class="title title--shadow title-anim">
                     <span class="<?php echo $block09_title['first_color']?> first" data-text="<?php echo $block09_title['first']?>"><?php echo $block09_title['first']?></span>
                     <span class="<?php echo $block09_title['second_color']?> second" data-text="<?php echo $block09_title['second']?>"><?php echo $block09_title['second']?></span>
                 </h2>
@@ -973,7 +973,7 @@ if ( !$isBlock09Hidden ):?>
                         var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
                         var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
                     </script>
-                    <div class="info-wrap">
+                    <div class="form-row">
                         <button type="submit"id="true_loadmore"  class="btn btn-light btn-submit">Показать ещё</button>
                     </div>
                 <?php endif;?>
@@ -993,7 +993,7 @@ if ( !$isBlock10Hidden ):?>
         <div class="container">
             <div class="build-in">
                 <?php $block10_title = get_field('block10_title', $mainId);?>
-                <h2 class="title title--shadow title-anim title--long fade_in">
+                <h2 class="title title--shadow title-anim fade_in">
                     <span class="<?php echo $block10_title['first_color']?> first" data-text="<?php echo $block10_title['first']?>"><?php echo $block10_title['first']?></span>
                     <span class="<?php echo $block10_title['second_color']?> second" data-text="<?php echo $block10_title['second']?>"><?php echo $block10_title['second']?></span>
                 </h2>
@@ -1011,7 +1011,7 @@ if ( !$isBlock10Hidden ):?>
 
 <?php
 $isBlock11Hidden = get_field('isBlock11Hidden', $mainId);
-if ( !$isBlock10Hidden ):?>
+if ( !$isBlock11Hidden ):?>
     <section class="contacts-block">
         <div class="map" id="map">
 
