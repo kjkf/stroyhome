@@ -1,11 +1,11 @@
 .modal-wrap-fixed
   position: fixed
-  z-index: -12
+  z-index: 0
   top: 0
   left: 0
   width: 100vw
   height: 100vh
-  opacity: 0
+  opacity: 1
   &.active
     opacity: 1
     z-index: 12
@@ -196,3 +196,39 @@
 
   .modal__in>ol>li
     margin-bottom: 1.5625vw //30px
+
+.modal--success
+  .modal__subtitle
+    font-size: 1.0417vw //20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 0
+    line-height: 1.3
+    +ipad-down
+      font-size: 1rem
+    +phone-down
+      font-size: 16px
+
+  .success-ic
+    margin-bottom: 6.481vh //70px
+    margin-top: 2.77vh //30px
+
+  .modal__in
+    +phone-down
+      padding: 45px 8% 74px
+
+.success-ic
+  width: 9.89583vw //190px
+  height: 9.89583vw //190px
+  display: inline-block
+  border-radius: 50%
+  background:
+    color: $accent
+    image: url(../images/icons/check.svg)
+    repeat: no-repeat
+    size: 60%
+    position: center
+  +phone-down
+    width: 190px
+    height: 190px
