@@ -11,11 +11,11 @@ jQuery(function($){
             data:data, // данные
             type:'POST', // тип запроса
             success:function(data){
-                console.log('1', data);
+                /*console.log('1', data);
                 console.log('2', max_pages);
-                console.log('3', current_page);
+                console.log('3', current_page);*/
                 if( data ) {
-                    $('#true_loadmore').text('Загрузить ещё').before(data); // вставляем новые посты
+                    $('#true_loadmore').text('Показать ещё').before(data); // вставляем новые посты
                     current_page++; // увеличиваем номер страницы на единицу
                     if (current_page == max_pages) $("#true_loadmore").remove(); // если последняя страница, удаляем кнопку
                 } else {

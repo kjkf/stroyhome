@@ -161,20 +161,13 @@ function register_keyproject_type() {
 }
 
 function true_load_posts(){
-
-    $args = unserialize( stripslashes( $_POST['query'] ) );
+    get_template_part( 'templates/post', get_post_format() );
+/*    $args = unserialize( stripslashes( $_POST['query'] ) );
     $args['paged'] = $_POST['page'] + 1; // следующая страница
     $args['post_status'] = 'publish';
     $args['category'] = 7;
 
-    /*$arg = array(
-        'numberposts' => 0,
-        'category'    => 7,
-        'orderby'     => 'date',
-        'order'       => 'DESC',
-        'post_type'   => 'post',
-        //'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-    );*/
+
     // обычно лучше использовать WP_Query, но не здесь
     query_posts( $args );
     // если посты есть
@@ -189,7 +182,7 @@ function true_load_posts(){
         endwhile;
 
     endif;
-    die();
+    die();*/
 }
 
 

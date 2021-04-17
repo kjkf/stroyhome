@@ -914,7 +914,7 @@ if ( !$isBlock06Hidden ):?>
             </section>
         <?php endif;?>
     </div>
-
+<?php $mainId = get_the_ID();?>
 <?php
 $isBlock09Hidden = get_field('isBlock09Hidden');
 if ( !$isBlock09Hidden ):?>
@@ -960,26 +960,24 @@ if ( !$isBlock09Hidden ):?>
                         </div>
                         <?php
                     }
-                    if (  $wp_query->max_num_pages > 1 ) : ?>
+
+
+                    // вернем global $wp_query
+                    wp_reset_postdata();
+                    ?>
+                </div>
+                <?php if (  $wp_query->max_num_pages > 1 ) : ?>
                     <script>
                         var ajaxurl = '<?php echo site_url() ?>/wp-admin/admin-ajax.php';
                         var true_posts = '<?php echo serialize($wp_query->query_vars); ?>';
                         var current_page = <?php echo (get_query_var('paged')) ? get_query_var('paged') : 1; ?>;
                         var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
                     </script>
-                    <div id="true_loadmore" class="btn btn-light btn-submit">Загрузить ещё</div>
-                    <?php endif;
+                    <div class="info-wrap">
+                        <button type="submit"id="true_loadmore"  class="btn btn-light btn-submit">Показать ещё</button>
+                    </div>
+                <?php endif;?>
 
-                    // пагинация
-
-                    // вернем global $wp_query
-                    wp_reset_postdata();
-                    ?>
-
-                </div>
-                <div class="form-row">
-                    <button type="submit" class="btn btn-light btn-submit">Показать еще</button>
-                </div>
                 <span class="section-index-wrapper">
             <span class="section-index section-index--dark" data-index="09"></span>
         </span>
@@ -989,18 +987,18 @@ if ( !$isBlock09Hidden ):?>
 <?php endif;?>
 
 <?php
-$isBlock10Hidden = get_field('isBlock10Hidden');
+$isBlock10Hidden = get_field('isBlock10Hidden', $mainId);
 if ( !$isBlock10Hidden ):?>
-    <section class="build bg-white">
+    <section class="build bg-white ">
         <div class="container">
             <div class="build-in">
-                <?php $block10_title = get_field('block10_title');?>
+                <?php $block10_title = get_field('block10_title', $mainId);?>
                 <h2 class="title title--shadow title-anim title--long fade_in">
                     <span class="<?php echo $block10_title['first_color']?> first" data-text="<?php echo $block10_title['first']?>"><?php echo $block10_title['first']?></span>
                     <span class="<?php echo $block10_title['second_color']?> second" data-text="<?php echo $block10_title['second']?>"><?php echo $block10_title['second']?></span>
                 </h2>
                 <p class="build-text excerpt">
-                    <?php the_field('block10_text');?>
+                    <?php the_field('block10_text', $mainId);?>
                 </p>
                 <button class="btn btn--more"></button>
             </div>
@@ -1012,7 +1010,7 @@ if ( !$isBlock10Hidden ):?>
 <?php endif;?>
 
 <?php
-$isBlock11Hidden = get_field('isBlock11Hidden');
+$isBlock11Hidden = get_field('isBlock11Hidden', $mainId);
 if ( !$isBlock10Hidden ):?>
     <section class="contacts-block">
         <div class="map" id="map">
@@ -1021,7 +1019,7 @@ if ( !$isBlock10Hidden ):?>
         <div class="wrapper">
             <div class="container">
                 <div class="map-in">
-                    <?php $block11_title = get_field('block11_title');?>
+                    <?php $block11_title = get_field('block11_title', $mainId);?>
                     <h2 class="title title--shadow title-anim fade_in">
                         <span class="<?php echo $block11_title['first_color']?> first" data-text="<?php echo $block11_title['first']?>"><?php echo $block11_title['first']?></span>
                         <span class="<?php echo $block11_title['second_color']?> second" data-text="<?php echo $block11_title['second']?>"><?php echo $block11_title['second']?></span>
@@ -1033,11 +1031,11 @@ if ( !$isBlock10Hidden ):?>
                                 прямо сейчас...
                             </h5>
                             <div class="contact-wrapper">
-                                <?php $adress = get_field('adress');?>
+                                <?php $adress = get_field('adress', $mainId);?>
                                 <p class="contact adress"><?php echo $adress['city'];?>, <?php echo $adress['street'];?></p>
-                                <a href="<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact phone"><?php the_field('phone_num');?></a>
-                                <a href="<?php the_field('insta');?>" class="contact instagram"><?php the_field('insta');?></a>
-                                <a href="t.me/saint_detailing" class="contact telegram">t.me/saint_detailing</a>
+                                <a href="<?php echo str_replace(" ","",get_field('phone_num', $mainId));?>" class="contact phone"><?php the_field('phone_num', $mainId);?></a>
+                                <a href="<?php the_field('insta', $mainId);?>" class="contact instagram"><?php the_field('insta', $mainId);?></a>
+                                <a href="<?php the_field('telegram', $mainId);?>" class="contact telegram"><?php the_field('telegram', $mainId);?></a>
                             </div>
 
 
@@ -1047,7 +1045,7 @@ if ( !$isBlock10Hidden ):?>
                             </h5>
                             <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
                         </div>
-                        <a href="<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact phone--big"><?php the_field('phone_num');?></a>
+                        <a href="<?php echo str_replace(" ","",get_field('phone_num', $mainId));?>" class="contact phone--big"><?php the_field('phone_num', $mainId);?></a>
                     </div>
                     <span class="section-index-wrapper">
                     <span class="section-index" data-index="11"></span>
