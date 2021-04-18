@@ -36,11 +36,19 @@
             <div class="header-right">
                 <a href="tel:<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact contact-phone">
                     <span class="contact__text">Звоните</span>
-                    <span class="contact-phone-btn btn-waves ">
-                                    <span class="contact-phone-ic"></span>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                </span>
+                    <div class="pulse contact-phone-btn">
+                        <span class="contact-phone-ic"></span>
+                        <svg>
+                            <defs>
+                                <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
+                                    <stop offset="50%" stop-color="#BBA182" />
+                                </linearGradient>
+                            </defs>
+                            <circle  class="circle circle-frst"/>
+                            <circle  class="circle circle-secd"/>
+                        </svg>
+                    </div>
                     <span><?php the_field('phone_num');?></span>
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=<?php echo str_replace(" ","",get_field('whatsapp_num'));?>" class="whatsapp">

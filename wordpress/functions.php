@@ -3,6 +3,24 @@
  * stroydom theme functions and definitions
  */
 
+/**
+ * Настройка SMTP
+ *
+ * @param PHPMailer $phpmailer объект мэилера
+ */
+function send_smtp_email( PHPMailer $phpmailer ) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = SMTP_HOST;
+    $phpmailer->SMTPAuth   = SMTP_AUTH;
+    $phpmailer->Port       = SMTP_PORT;
+    $phpmailer->Username   = SMTP_USER;
+    $phpmailer->Password   = SMTP_PASS;
+    $phpmailer->SMTPSecure = SMTP_SECURE;
+    $phpmailer->From       = SMTP_FROM;
+    $phpmailer->FromName   = SMTP_NAME;
+}
+add_action( 'phpmailer_init', 'send_smtp_email' );
+
 add_action('wp_enqueue_scripts', 'style_theme');
 add_action('wp_footer', 'script_theme');
 add_action('after_setup_theme', 'theme_register_nav_menu');
@@ -17,7 +35,8 @@ function style_theme() {
 function script_theme() {
     wp_enqueue_script('jquery'); // скорее всего он уже будет подключен, это на всякий случай
     wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/loadmore.js', array('jquery') );
-    wp_enqueue_script('map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOfbRY8MVrXteqJG_O8wijRsIi95akeg&map_ids=4bdebe2aef94632b&callback=initMap&libraries=&v=weekly&language=ru&region=RU');
+    wp_enqueue_script( 'sendMailAxax', get_stylesheet_directory_uri() . '/sendMailAxax.js', array('jquery') );
+    //wp_enqueue_script('map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOfbRY8MVrXteqJG_O8wijRsIi95akeg&map_ids=4bdebe2aef94632b&callback=initMap&libraries=&v=weekly&language=ru&region=RU');
 
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/main.min.js' );
 }
@@ -33,7 +52,6 @@ function theme_register_nav_menu() {
 
 function the_breadcrumb() {
     if (!is_front_page()) {
-
         echo '<a class="breadcrumb" href="';
         echo get_option('home');
         echo '"> Главная';

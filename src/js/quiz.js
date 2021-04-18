@@ -1,15 +1,10 @@
 function initQuiz() {
     const quiz = document.querySelector('.quiz');
     if (!quiz) return false;
-
-    if (!quiz) return false;
-    //console.log('initQuiz');
-
     const nextBtn = quiz.querySelector('#nextBtn');
     const prevBtn = quiz.querySelector('#prevBtn');
 
     const formIterator = formIterate(quiz);
-    //console.log(nextBtn);
 
     nextBtn.addEventListener('click', e => formIterator.next());
     prevBtn.addEventListener('click', e => formIterator.prev());
@@ -18,10 +13,10 @@ function initQuiz() {
 
     sendCalcBtn.addEventListener('click', function (e) {
        e.preventDefault();
-        console.log('sendCalcBtn 1');
+
         prepareData();
     });
-
+console.log('quiz', quiz);
     setQuizAnswersEventHandlers();
 }
 
@@ -35,7 +30,7 @@ function formIterate(quiz) {
     const footer = quiz.querySelector('.quiz-item-footer');
 
     const currentAnswer = document.querySelector('#answer');
-    const answers = quiz.querySelectorAll('.quiz-step-result');
+    const answers = document.querySelectorAll('.quiz-step-result');
 
     let step = 1;
 
@@ -141,7 +136,7 @@ function setEventHandler(elems, answer) {
 }
 
 function prepareData() {
-    console.log('prepareData 2');
+    //console.log('prepareData 2');
     const currentAnswer = document.querySelector('#answer');
     const sendResultsAns = document.getElementById('sendResults');
 
@@ -155,40 +150,43 @@ function prepareData() {
     sendResultsAns.value = currentAnswer.value;
 
     if (isValidForm()) {
-        console.log('no errors!');
+        //console.log('no errors!');
+        const form = document.getElementById('quiz-form');
+        //console.log(form);
+        form.submit();
     }
 }
 
 function isValidForm() {
-    console.log('isValidForm 3');
     const cnameAns = document.getElementById('cnameAns');
     const cphoneAns = document.getElementById('cphoneAns');
 
     const cname = document.getElementById('cname');
     const cphone = document.getElementById('cphone');
-    console.log("cname.value = ", cname.value);
-    console.log("cnameAns.value = ", cnameAns.value);
+    const sendResultsAns = document.getElementById('sendResults');
+
     if (!cnameAns.value) {
         cnameAns.style.borderColor = 'red';
         return false;
     } else {
         cnameAns.style.borderColor = '#C9C9C9';
         cname.value = cnameAns.value;
-        return true;
+        //return true;
     }
 
     if (!cnameAns.value) {
         cphoneAns.style.borderColor = 'red';
-        return false;
+        //return false;
     } else {
         cphoneAns.style.borderColor = '#C9C9C9';
         cphone.value = cphoneAns.value;
-        return true;
+        //return true;
     }
 
-    if (!sendResultsAns) {
+    if (!sendResultsAns.value) {
         return false;
     }
+    return true;
 }
 
 

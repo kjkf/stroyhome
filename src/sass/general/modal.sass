@@ -1,6 +1,6 @@
 .modal-wrap-fixed
   position: fixed
-  z-index: 0
+  z-index: -1
   top: 0
   left: 0
   width: 100vw
@@ -8,11 +8,14 @@
   opacity: 1
   &.active
     opacity: 1
-    z-index: 12
+    z-index: 2001
     transition:
       property: all
       duration: 1s
       timing-function: ease-in-out
+
+  &.scrolled
+    overflow-y: scroll
 
 .modal-wrap
   display: flex

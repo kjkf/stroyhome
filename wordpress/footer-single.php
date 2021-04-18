@@ -48,7 +48,7 @@
                 <a href="mailto:info@stroyhome.pro" class="contact">
                     <span><?php the_field('email', $mainId);?></span>
                 </a>
-                <a href="#" class="footer-link">ФЗ о персональных данных</a>
+                <a href="#" class="footer-link private-privacy">ФЗ о персональных данных</a>
                 <div class="callback-wrap">
                     <ul class="callback callback--white">
                         <li class="callback__item whatsapp-btn">
@@ -117,47 +117,17 @@
     </li>
 </ul>
 
-<template id="modalTemplate">
-    <!--<div class="modal-wrap-fixed">-->
-    <div class="modal-wrap">
-        <div class="modal modal--callback">
+<template id="modalPrivacy">
+    <div class="modal-wrap modal-wrap--privacy">
+        <div class="modal modal--privacy">
             <button class="btn btn-close" type="button"></button>
             <div class="modal__in">
-                <span class="modal__subtitle">Звоните</span>
-                <h4 class="title modal__title">
-                    <a href="tel:<?php the_field('phone_num', $mainId);?>" class="contact-phone">
-                            <span class="contact-phone-btn btn-waves ">
-                                <span class="contact-phone-ic"></span>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                            </span>
-                        <span><?php the_field('phone_num', $mainId);?></span>
-                    </a>
-                </h4>
-                <span class="modal__subtitle secd">или оставьте заявку, </span>
-                <span>и с вами свяжется наш менеджер</span>
-                <form action="#" class="form">
-                    <div class="form-row">
-                        <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
-                        <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
-                    </div>
-                    <div class="form-row">
-                        <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
-                    </div>
-                    <div class="form-row form-check-wrap">
-                        <label for="agree_cond" class="form-check">
-                            <input type="checkbox" id="agree_cond">
-                            <span class="form-check__btn"></span>
-                            <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
-                        </label>
-                    </div>
-                    <input type="hidden" id="isDownload">
-                    <a href="<?php the_field('pricelist', $mainId);?>" id="downloadLink" download style="display: none">Download</a>
-                </form>
+                <h4 class="title"><?php the_field('page_title', $mainId)?></h4>
+
+                <?php the_field('agreement', $mainId)?>
             </div>
         </div>
     </div>
-    <!--</div>-->
 </template>
 
 

@@ -1,55 +1,47 @@
-<?php $mainId = 5;
-
+<?php
+$mainId = get_option( 'page_on_front' );
 ?>
-<footer class="footer laurel-right-ic <?php echo $mainId;?>">
+<footer class="footer laurel-right-ic ">
     <div class="container">
         <div class="footer__in">
             <div class="footer-left">
                 <a href="#" class="logo">Stroy<span>Home</span></a>
             </div>
             <div class="footer-ctr">
-                <nav class="nav br-btm">
-                    <!--<ul>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">Услуги</a></li>
-                        <li><a href="#">Прайс лист</a></li>
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>-->
 
-                    <? wp_nav_menu(array(
-                        'theme_locathion' => 'menu-footer',
-                        'menu' => 'menu-footer',
-                        'container' => 'nav',
-                        'container_class' => 'nav br-btm'
-                    )); ?>
 
-                    <div class="address br-btm">
-                        <h5>Адрес офиса:</h5>
-                        <?php $address = get_field('adress', $mainId);?>
-                        <div class="address__text"><span><?php echo $address['city']?>, </span><span><?php echo $address['street']?></span></div>
-                    </div>
+                <? wp_nav_menu(array(
+                    'theme_locathion' => 'menu-footer',
+                    'menu' => 'menu-footer',
+                    'container' => 'nav',
+                    'container_class' => 'nav br-btm'
+                )); ?>
 
-                    <div class="contacts">
-                        <!--                    <a href="tel:+7 (495) 921-30-01" class="contact contact-phone">
-                                                <span class="contact-ic contact-phone-ic"></span>
-                                                <span>+7 (495) 921-30-01</span>
-                                            </a>-->
-                        <a href="tel:<?php echo str_replace(" ","",get_field('phone_num', $mainId));?>" class="contact contact-phone">
+                <div class="address br-btm">
+                    <h5>Адрес офиса:</h5>
+                    <?php $address = get_field('adress', $mainId);?>
+                    <div class="address__text"><span><?php echo $address['city']?>, </span><span><?php echo $address['street']?></span></div>
+                </div>
+
+                <div class="contacts">
+                    <!--                    <a href="tel:+7 (495) 921-30-01" class="contact contact-phone">
+                                            <span class="contact-ic contact-phone-ic"></span>
+                                            <span>+7 (495) 921-30-01</span>
+                                        </a>-->
+                    <a href="tel:<?php echo str_replace(" ","",get_field('phone_num', $mainId));?>" class="contact contact-phone">
                         <span class="contact-phone-btn cbk-phone">
                                     <div class="contact-phone-ic"></div>
                                 </span>
-                            <span><?php the_field('phone_num', $mainId);?></span>
-                        </a>
-                        <a href="mailto:info@stroyhome.pro" class="contact contact-email">
-                            <span class="contact-ic contact-email-ic"></span>
-                            <span><?php the_field('email', $mainId);?></span>
-                        </a>
-                    </div>
+                        <span><?php the_field('phone_num', $mainId);?></span>
+                    </a>
+                    <a href="mailto:info@stroyhome.pro" class="contact contact-email">
+                        <span class="contact-ic contact-email-ic"></span>
+                        <span><?php the_field('email', $mainId);?></span>
+                    </a>
+                </div>
             </div>
             <div class="footer-right">
-                <a href="#" class="footer-link">ФЗ о персональных данных</a>
+                <a href="#" class="footer-link private-privacy">ФЗ о персональных данных</a>
                 <div class="develop-name">© Разработано в <span>SEQUOIA</span></div>
             </div>
         </div>
@@ -67,7 +59,7 @@
     </li>
     <li class="callback__item whatsapp-btn">
         <span class="prompt">написать в watsapp</span>
-        <a href="#" class="btn callback__btn">
+        <a href="https://api.whatsapp.com/send?phone=<?php echo str_replace(" ","",get_field('whatsapp_num', $mainId));?>" class="btn callback__btn">
             <svg class="svg-wrap" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <use class="svg-sym" xlink:href="#wa-ic" x="0" y="0" />
             </svg>
@@ -91,6 +83,19 @@
     </li>
 </ul>
 
+<template id="modalPrivacy">
+    <div class="modal-wrap modal-wrap--privacy">
+        <div class="modal modal--privacy">
+            <button class="btn btn-close" type="button"></button>
+            <div class="modal__in">
+                <h4 class="title"><?php the_field('page_title', $mainId)?></h4>
+
+                <?php the_field('agreement', $mainId)?>
+            </div>
+        </div>
+    </div>
+</template>
+
 <template id="modalTemplate">
     <!--<div class="modal-wrap-fixed">-->
     <div class="modal-wrap">
@@ -100,11 +105,19 @@
                 <span class="modal__subtitle">Звоните</span>
                 <h4 class="title modal__title">
                     <a href="tel:<?php the_field('phone_num', $mainId);?>" class="contact-phone">
-                            <span class="contact-phone-btn btn-waves ">
-                                <span class="contact-phone-ic"></span>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                            </span>
+                        <div class="pulse contact-phone-btn">
+                            <span class="contact-phone-ic"></span>
+                            <svg>
+                                <defs>
+                                    <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
+                                        <stop offset="50%" stop-color="#BBA182" />
+                                    </linearGradient>
+                                </defs>
+                                <circle  class="circle circle-frst"/>
+                                <circle  class="circle circle-secd"/>
+                            </svg>
+                        </div>
                         <span><?php the_field('phone_num', $mainId);?></span>
                     </a>
                 </h4>
@@ -122,7 +135,7 @@
                         <label for="agree_cond" class="form-check">
                             <input type="checkbox" id="agree_cond">
                             <span class="form-check__btn"></span>
-                            <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
+                            <div>Вы соглашаетесь с условиями <a href="<?php echo get_page_link( get_page_by_title( 'Политика конфиденциальности' )->ID ); ?>" class="link">обработки персональных данных</a></div>
                         </label>
                     </div>
                     <input type="hidden" id="isDownload">
@@ -173,7 +186,7 @@
     </symbol>
 </svg>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOfbRY8MVrXteqJG_O8wijRsIi95akeg&map_ids=4bdebe2aef94632b&callback=initMap&libraries=&v=weekly&language=ru&region=RU" async defer></script>
+
 <?php wp_footer();?>
 </body>
 </html>

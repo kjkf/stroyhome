@@ -1,5 +1,6 @@
 <?php get_header();?>
 
+<?php $mainId = get_the_ID();?>
 <?php
 $isBannerHidden = get_field('isBannerHidden');
 if ( !$isBannerHidden) : ?>
@@ -32,11 +33,19 @@ if ( !$isBannerHidden) : ?>
                         <button class="btn btn-light btn-anim" id="showCalc"><?php the_field('calcBtn_title'); ?></button>
                     </div>
                     <a href="#" class="btn btn-play ">
-                     <span class="btn-round btn-waves ">
-                        <span class="btn-play-ic"></span>
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                    </span>
+                        <div class="pulse btn-round">
+                            <span class="btn-play-ic"></span>
+                            <svg>
+                                <defs>
+                                    <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
+                                        <stop offset="50%" stop-color="#BBA182" />
+                                    </linearGradient>
+                                </defs>
+                                <circle  class="circle circle-frst"/>
+                                <circle  class="circle circle-secd"/>
+                            </svg>
+                        </div>
                         <span>Смотреть видео</span>
                     </a>
                     <a href="#" class="btn btn-btm">
@@ -153,6 +162,25 @@ if ( !$isBlock03Hidden ):?>
                 <span class="<?php echo $block03_title['first_color']?> first" data-text="<?php echo $block03_title['first']?>"><?php echo $block03_title['first']?></span>
                 <span class="<?php echo $block03_title['second_color']?> second" data-text="<?php echo $block03_title['second']?>"><?php echo $block03_title['second']?></span>
             </h2>
+            <form action="" id="quiz-form">
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Site Name">
+                <input type="hidden" name="admin_email" value="my.fordevemail@gmail.com">
+                <input type="hidden" name="form_subject" value="Form Subject">
+                <!-- END Hidden Required Fields -->
+
+                <input type="text" class="" id="answer" value="">
+                <input type="text" name="Какой дом Вы хотите построить?" class="quiz-step-result" id="step01" value="">
+                <input type="text" name="Какая площадь Вам необходима?" class="quiz-step-result" id="step02" value="">
+                <input type="text" name="Есть ли у Вас уже участок в собственности?" class="quiz-step-result" id="step03" value="">
+                <input type="text" name="Есть ли у Вас проект дома?" class="quiz-step-result" id="step04" value="">
+                <input type="text" name="Какой бюджет вы планируете для постройки?" class="quiz-step-result" id="step05" value="">
+                <input type="text" name="Когда Вы хотели бы начать работы?" class="quiz-step-result" id="step06" value="">
+                <input type="text" name="Куда направить Вам расчет?" class="quiz-step-result" id="sendResults" value="">
+                <input type="text" name="Имя" class="quiz-step-result" id="cname" value="">
+                <input type="text" name="Телефон" class="quiz-step-result" id="cphone" value="">
+                <input type="submit" value="send">
+            </form>
             <div class="content">
                 <div class="quiz step-1">
                     <div class="quiz__header">
@@ -376,13 +404,7 @@ if ( !$isBlock03Hidden ):?>
                             </div>
 
                         </div>
-                        <input type="hidden" class="" id="answer" value="">
-                        <input type="hidden" class="quiz-step-result" id="step01" value="">
-                        <input type="hidden" class="quiz-step-result" id="step02" value="">
-                        <input type="hidden" class="quiz-step-result" id="step03" value="">
-                        <input type="hidden" class="quiz-step-result" id="step04" value="">
-                        <input type="hidden" class="quiz-step-result" id="step05" value="">
-                        <input type="hidden" class="quiz-step-result" id="step06" value="">
+
                     </form>
                     <div class="quiz-item-footer">
                         <button type="button" class="btn btn-dark hide" id="prevBtn">Назад</button>
@@ -433,19 +455,20 @@ if ( !$isBlock03Hidden ):?>
                                 </ul>
                             </div>
                             <div class="quiz-row">
-                                <input type="text" class="form-field name" placeholder="Ваше имя" required>
+                                <input type="text" id="cnameAns" class="form-field name" placeholder="Ваше имя" required>
                             </div>
 
                             <div class="quiz-row">
                                 <!--<input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>-->
-                                <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                                <input type="tel" id="cphoneAns" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                             </div>
 
                             <div class="quiz-row">
-                                <button type="submit" class="btn btn-light btn-submit btn-anim">Отправить расчет</button>
+                                <button type="submit"  id="sendCalc" class="btn btn-light btn-submit btn-anim">Отправить расчет</button>
                             </div>
                         </div>
                     </form>
+
                 </div>
                 <div class="descr">Мы – профессиональная строительная компания, предоставляющая услуги
                     по строительству каркасных и брусчатых домов, возведению фундамента,
@@ -729,11 +752,11 @@ if ( !$isBlock06Hidden ):?>
                 <div class="container">
                     <div class="work_stages-in">
                         <?php $block07_title = get_field('block07_title');?>
-                        <h2 class="title title--shadow title-anim">
+                        <h2 class="title title--shadow title-anim ">
                             <span class="<?php echo $block07_title['first_color']?> first" data-text="<?php echo $block07_title['first']?>"><?php echo $block07_title['first']?></span>
                             <span class="<?php echo $block07_title['second_color']?> second" data-text="<?php echo $block07_title['second']?>"><?php echo $block07_title['second']?></span>
                         </h2>
-                        <h6 class="subtitle"><?php echo the_field('$block07_subtitle')?></h6>
+                        <h6 class="subtitle">6 простых этапов</h6>
                         <div class="content">
                             <div class="slider-container">
                                 <div class="slider">
@@ -769,12 +792,19 @@ if ( !$isBlock06Hidden ):?>
                                 <span class="modal__subtitle">Звоните</span>
                                 <h4 class="title modal__title">
                                     <a href="tel:<?php the_field('phone_num', $mainId);?>" class="contact-phone">
-                            <span class="contact-phone-btn callbackkiller cbk-phone cbk-phone-waves">
-                                <div class="cbk-phone-bgr contact-phone-ic"></div>
-                                <div class="cbk-phone-circle"></div>
-                                <div class="cbk-phone-second_circle"></div>
-                                <div class="cbk-phone-third_circle"></div>
-                            </span>
+                                        <div class="pulse contact-phone-btn">
+                                            <span class="contact-phone-ic"></span>
+                                            <svg>
+                                                <defs>
+                                                    <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
+                                                        <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
+                                                        <stop offset="50%" stop-color="#BBA182" />
+                                                    </linearGradient>
+                                                </defs>
+                                                <circle  class="circle circle-frst"/>
+                                                <circle  class="circle circle-secd"/>
+                                            </svg>
+                                        </div>
                                         <span><?php the_field('phone_num', $mainId);?></span>
                                     </a>
                                 </h4>
@@ -913,7 +943,7 @@ if ( !$isBlock06Hidden ):?>
             </section>
         <?php endif;?>
     </div>
-<?php $mainId = get_the_ID();?>
+
 <?php
 $isBlock09Hidden = get_field('isBlock09Hidden');
 if ( !$isBlock09Hidden ):?>
@@ -921,7 +951,7 @@ if ( !$isBlock09Hidden ):?>
         <div class="container">
             <div class="info-in">
                 <?php $block09_title = get_field('block09_title');?>
-                <h2 class="title title--shadow title-anim">
+                <h2 class="title title--shadow title-anim title--long">
                     <span class="<?php echo $block09_title['first_color']?> first" data-text="<?php echo $block09_title['first']?>"><?php echo $block09_title['first']?></span>
                     <span class="<?php echo $block09_title['second_color']?> second" data-text="<?php echo $block09_title['second']?>"><?php echo $block09_title['second']?></span>
                 </h2>
@@ -992,7 +1022,7 @@ if ( !$isBlock10Hidden ):?>
         <div class="container">
             <div class="build-in">
                 <?php $block10_title = get_field('block10_title', $mainId);?>
-                <h2 class="title title--shadow title-anim fade_in">
+                <h2 class="title title--shadow title-anim  fade_in">
                     <span class="<?php echo $block10_title['first_color']?> first" data-text="<?php echo $block10_title['first']?>"><?php echo $block10_title['first']?></span>
                     <span class="<?php echo $block10_title['second_color']?> second" data-text="<?php echo $block10_title['second']?>"><?php echo $block10_title['second']?></span>
                 </h2>
@@ -1010,8 +1040,8 @@ if ( !$isBlock10Hidden ):?>
 
 <?php
 $isBlock11Hidden = get_field('isBlock11Hidden', $mainId);
-if ( !$isBlock11Hidden ):?>
-    <section class="contacts-block">
+if ( !$isBlock10Hidden ):?>
+    <section class="contacts-block laurel-right-ic">
         <div class="map" id="map">
 
         </div>

@@ -1,14 +1,40 @@
-function createModal(template) {
+function initModal() {
+    initCallbackModal();
+    initPrivateModal();
+}
+
+function createModal(template, addClass) { //addClass - дополнительный класс для обертки модального окна, например, чтобы можно было скроллить политику конфед.
     let modalWrapper = document.createElement('div');
     modalWrapper.classList.add('modal-wrap-fixed');
     modalWrapper.innerHTML = template;
+    if (addClass) modalWrapper.classList.add('scrolled');
 
     const closeBtn = modalWrapper.querySelector('.btn-close');
     closeBtn.addEventListener('click', function (evt) {
-        phone.classList.remove('error');
-        label.classList.remove('error');
+        const inputsWithErrors = modalWrapper.querySelectorAll('.error');
+        inputsWithErrors.forEach(input => {
+            input.classList.remove('error');
+        });
         closeModal(modalWrapper);
     });
+    return modalWrapper;
+}
+
+function showModal(modal, isDownload) {
+    document.body.append(modal);
+    modal.classList.add('active');
+    //console.log(modal);
+}
+
+function closeModal(modal) {
+    modal.remove();
+    //modal.classList.remove('active');
+}
+
+function createModalCallback(template) {
+    const modalWrapper = createModal(template);/*
+    phone.classList.remove('error');
+    label.classList.remove('error');*/
 
     const submitBtn = modalWrapper.querySelector('.btn-submit');
     const phone = modalWrapper.querySelector('.phone-num');
@@ -68,21 +94,22 @@ function createModal(template) {
     return modalWrapper;
 }
 
-function showModal(modal, isDownload) {
-    document.body.append(modal);
-    modal.classList.add('active');
-    //console.log(modal);
-}
+function initPrivateModal() {
+    const templ = document.querySelector('#modalPrivacy').innerHTML;
+    if (!templ) return false;
+    const modal = createModal(templ, 'scrolled');
 
-function closeModal(modal) {
-    modal.remove();
-    //modal.classList.remove('active');
-}
+    const showPrivacyBtn = document.querySelector('.private-privacy');
+    showPrivacyBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        showModal(modal);
+    })
+};
 
-function initModal() {
+function initCallbackModal() {
     const templ = document.querySelector('#modalTemplate').innerHTML;
     if (!templ) return false;
-    const modal = createModal(templ);
+    const modal = createModalCallback(templ);
     const isDownload = modal.querySelector('#isDownload');
 
     const callback = document.querySelector('.callback.fixed');
