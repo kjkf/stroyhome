@@ -34,9 +34,15 @@
                 <a href="tel:+7 (495) 921-30-01" class="contact contact-phone">
                     <span class="contact__text">Звоните</span>
 
-                    <div class="pulse contact-phone-btn">
-                        <span class="contact-phone-ic"></span>
-                        <svg>
+                    <div class="pulse pulse--sm">
+
+                        <span class="phoneTransp-ic">
+                            <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
+                            </svg>
+                        </span>
+
+                        <svg class="svg-pulse">
                             <defs>
                                 <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
                                     <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
@@ -94,28 +100,27 @@
                 </div>
                 <a href="#" class="btn btn-play ">
 
-                <!--    <span class="btn-round btn-waves">
-                        <span class="btn-play-ic"></span>
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                    </span>-->
+                    <div class="pulse ">
+                        <span class="play-ic">
+                            <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use class="svg-sym" xlink:href="#play-ic" x="0" y="0" />
+                            </svg>
+                        </span>
 
-                    <div class="pulse btn-round">
-                        <span class="btn-play-ic"></span>
-                        <svg>
+                        <svg class="svg-pulse">
                             <defs>
                                 <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
                                     <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
                                     <stop offset="50%" stop-color="#BBA182" />
                                 </linearGradient>
                             </defs>
+                            <circle  class="circle still "/>
                             <circle  class="circle circle-frst"/>
                             <circle  class="circle circle-secd"/>
                         </svg>
                     </div>
 
-
-                    <span>Смотреть видео</span>
+                    <span class="btn-play__text">Смотреть видео</span>
                 </a>
                 <a href="#" class="btn btn-btm">
                     <span class="mouse-ic">
@@ -950,11 +955,23 @@
                         <h4 class="title modal__title">
                             <a href="tel:+7 (495) 921-30-01" class="contact-phone">
 
-                                <span class="contact-phone-btn btn-waves ">
-                                    <span class="contact-phone-ic"></span>
-                                    <div class="circle"></div>
-                                    <div class="circle"></div>
-                                </span>
+                                <div class="pulse pulse--sm">
+                                    <span class="phoneTransp-ic">
+                                        <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
+                                        </svg>
+                                    </span>
+                                    <svg class="svg-pulse">
+                                        <defs>
+                                            <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
+                                                <stop offset="50%" stop-color="#BBA182" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle  class="circle circle-frst"/>
+                                        <circle  class="circle circle-secd"/>
+                                    </svg>
+                                </div>
 
                                 <span>+7 (495) 921-30-01</span>
                             </a>
@@ -1365,14 +1382,14 @@
                     <span class="modal__subtitle">Звоните</span>
                     <h4 class="title modal__title">
                         <a href="tel:+7 (495) 921-30-01" class="contact-phone">
-                           <!-- <span class="contact-phone-btn btn-waves ">
-                                <span class="contact-phone-ic"></span>
-                                <div class="circle"></div>
-                                <div class="circle"></div>
-                            </span>-->
-                            <div class="pulse contact-phone-btn">
-                                <span class="contact-phone-ic"></span>
-                                <svg>
+
+                            <div class="pulse pulse--sm">
+                                <span class="phoneTransp-ic">
+                                    <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
+                                    </svg>
+                                </span>
+                                <svg class="svg-pulse">
                                     <defs>
                                         <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
                                             <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
@@ -1415,17 +1432,6 @@
 
 <svg style="display: none;" class="svg-ic">
 
-<!--    <symbol id="circle-ic">
-        <defs>
-            <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#BBA182"  stop-opacity="0" />
-                <stop offset="50%" stop-color="#BBA182" />
-            </linearGradient>
-        </defs>
-        <circle cx="50" cy="50" r="40" style="stroke:url('#gradient')" stroke-width="3"/>
-
-    </symbol>-->
-
     <symbol class="" id="phone-ic">
         <path d="M22.3045 18.7181C21.1187 18.0303 19.9113 18.4584 19.412 19.1341L18.3678 20.488C17.8373 21.1757 16.8459 21.0843 16.8459 21.0843C9.61083 19.1678 7.67605 11.5833 7.67605 11.5833C7.67605 11.5833 7.58723 10.5564 8.24976 10.0058L9.55562 8.92363C10.2086 8.40421 10.6214 7.15375 9.9565 5.92493C8.18015 2.70981 6.98711 1.60123 6.37979 0.749961C5.74127 -0.0508131 4.78108 -0.231168 3.78248 0.309896H3.76088C1.68446 1.52669 -0.588785 3.80396 0.138559 6.14857C1.3796 8.62063 3.66005 16.5009 10.9287 22.455C14.3446 25.271 19.7504 28.1566 22.0453 28.8228L22.0669 28.8564C24.3281 29.6115 26.527 27.2453 27.7008 25.1026V25.0858C28.2217 24.0494 28.0489 23.0682 27.2879 22.4262C25.9389 21.1084 23.9033 19.6535 22.3045 18.7181Z"/>
     </symbol>
@@ -1465,6 +1471,12 @@
         <path d="M23.1685 0H9.83027C4.4095 0 -0.000610352 4.41011 -0.000610352 9.83088V23.1691C-0.000610352 28.5899 4.4095 33 9.83027 33H23.1685C28.5893 33 32.9994 28.5899 32.9994 23.1691V9.83088C32.9993 4.41011 28.5892 0 23.1685 0ZM29.6796 23.1691C29.6796 26.7651 26.7645 29.6802 23.1685 29.6802H9.83027C6.23433 29.6802 3.31919 26.7651 3.31919 23.1691V9.83088C3.31919 6.23488 6.23433 3.3198 9.83027 3.3198H23.1685C26.7645 3.3198 29.6796 6.23488 29.6796 9.83088V23.1691Z" />
         <path d="M16.4993 7.96509C11.7931 7.96509 7.96436 11.7939 7.96436 16.5C7.96436 21.2061 11.7931 25.035 16.4993 25.035C21.2055 25.035 25.0343 21.2062 25.0343 16.5C25.0343 11.7938 21.2055 7.96509 16.4993 7.96509ZM16.4993 21.7152C13.619 21.7152 11.2842 19.3803 11.2842 16.5001C11.2842 13.6198 13.6191 11.2849 16.4993 11.2849C19.3796 11.2849 21.7145 13.6198 21.7145 16.5001C21.7145 19.3803 19.3796 21.7152 16.4993 21.7152Z" />
         <path d="M25.0508 10.0742C26.1803 10.0742 27.096 9.15855 27.096 8.02904C27.096 6.89953 26.1803 5.98389 25.0508 5.98389C23.9213 5.98389 23.0057 6.89953 23.0057 8.02904C23.0057 9.15855 23.9213 10.0742 25.0508 10.0742Z" />
+    </symbol>
+    <symbol id="play-ic">
+        <path d="M21.2005 12.1327C21.8692 12.5172 21.8692 13.482 21.2005 13.8665L2.68896 24.5107C2.02229 24.894 1.19049 24.4128 1.19049 23.6438L1.19049 2.35549C1.19049 1.58647 2.02229 1.10525 2.68896 1.48858L21.2005 12.1327Z"/>
+    </symbol>
+    <symbol id="phoneTransp-ic">
+        <path d="M18.8661 21.0466L18.8761 21.0367L21.9176 18.0162C21.9177 18.0161 21.9179 18.0159 21.9181 18.0157C22.0672 17.8662 22.1176 17.7184 22.0979 17.536C22.0665 17.4004 21.9782 17.262 21.7602 17.1258L17.4673 14.5884H17.4425L17.3237 14.517C17.2767 14.4888 17.1711 14.451 16.9634 14.451C16.7255 14.451 16.5268 14.5246 16.3463 14.6808L15.0552 15.9955L15.0521 15.9986C14.9414 16.1093 14.8065 16.1667 14.7081 16.1995L14.7078 16.1996C14.6392 16.2225 14.5207 16.2596 14.4009 16.2596H14.3514L14.3027 16.2499L14.0172 16.1927C14.0171 16.1927 14.0169 16.1927 14.0168 16.1926C13.7549 16.1403 13.4291 16.0024 13.0639 15.8158C12.6721 15.6155 12.2018 15.3121 11.6585 14.9161L11.6584 14.916C11.0952 14.5054 10.4649 13.9402 9.769 13.2285C9.05816 12.5324 8.49655 11.9051 8.09334 11.3483C7.70524 10.8124 7.40631 10.3424 7.20618 9.9426C6.97984 9.50528 6.82161 9.0929 6.74879 8.71039L6.73997 8.66406V8.61689C6.73997 8.49553 6.76873 8.3808 6.79992 8.28717C6.83279 8.1885 6.89013 8.05359 7.0007 7.94295L8.12176 6.82116C8.24755 6.69528 8.33285 6.53979 8.37508 6.33906C8.4127 6.16023 8.38835 6.01779 8.31412 5.88573L8.30743 5.87383L8.30759 5.87374L5.86988 1.2459C5.79627 1.13388 5.71061 1.04302 5.61288 0.96968C5.55055 0.922897 5.48145 0.898071 5.3868 0.898071C5.25885 0.898071 5.13844 0.941844 5.00835 1.07202L1.96547 4.11688L1.95618 4.12618L1.94641 4.13498C1.85061 4.22126 1.7572 4.34457 1.6732 4.5187C1.59051 4.6901 1.54 4.8498 1.51587 4.9988C1.51305 5.0769 1.50495 5.22977 1.49331 5.4395C1.48097 5.66169 1.50517 5.99862 1.57942 6.46668C1.65035 6.91386 1.78754 7.45996 1.99628 8.10895C2.19883 8.73874 2.50645 9.45217 2.92428 10.251L2.92429 10.251C3.33714 11.0403 3.88717 11.9081 4.57816 12.8551C5.2604 13.7901 6.12616 14.777 7.17931 15.8158L7.18389 15.8203L7.18386 15.8204C8.50911 17.1616 9.74786 18.2049 10.8998 18.9585L10.6261 19.3769L10.8998 18.9585C12.073 19.726 13.1086 20.2928 14.0093 20.6664L13.8177 21.1283L14.0093 20.6664C14.928 21.0476 15.6797 21.2759 16.2727 21.3666C16.9191 21.4656 17.3555 21.5097 17.6042 21.5097C17.7176 21.5097 17.7985 21.506 17.8517 21.5007L18.8661 21.0466ZM18.8661 21.0466L18.8567 21.0571C18.7704 21.1531 18.6472 21.2465 18.4735 21.3303L18.4733 21.3304C18.3001 21.4141 18.139 21.4648 17.989 21.4886C17.9462 21.4913 17.8954 21.4964 17.8522 21.5007L17.8519 21.5007L18.8661 21.0466Z"/>
     </symbol>
 </svg>
 
