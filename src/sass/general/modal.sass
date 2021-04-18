@@ -5,9 +5,11 @@
   left: 0
   width: 100vw
   height: 100vh
-  opacity: 1
+  display: none
+  animation: unfoldOut 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards
   &.active
-    opacity: 1
+    animation: unfoldIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards
+    display: block
     z-index: 2001
     transition:
       property: all
@@ -127,6 +129,7 @@
 
 .modal-wrap--privacy
   height: auto
+  animation: zoomIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards
 
 .modal--privacy
   max-width: 84.375vw //1620px
