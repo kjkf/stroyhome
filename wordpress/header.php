@@ -36,9 +36,15 @@
             <div class="header-right">
                 <a href="tel:<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact contact-phone">
                     <span class="contact__text">Звоните</span>
-                    <div class="pulse contact-phone-btn">
-                        <span class="contact-phone-ic"></span>
-                        <svg>
+                    <div class="pulse pulse--sm">
+
+                        <span class="phoneTransp-ic">
+                            <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
+                            </svg>
+                        </span>
+
+                        <svg class="svg-pulse">
                             <defs>
                                 <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
                                     <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />

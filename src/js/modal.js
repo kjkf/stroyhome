@@ -1,5 +1,6 @@
 function initModal() {
     initCallbackModal();
+
     initPrivateModal();
 }
 

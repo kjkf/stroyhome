@@ -33,20 +33,26 @@ if ( !$isBannerHidden) : ?>
                         <button class="btn btn-light btn-anim" id="showCalc"><?php the_field('calcBtn_title'); ?></button>
                     </div>
                     <a href="#" class="btn btn-play ">
-                        <div class="pulse btn-round">
-                            <span class="btn-play-ic"></span>
-                            <svg>
+                        <div class="pulse ">
+                        <span class="play-ic">
+                            <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use class="svg-sym" xlink:href="#play-ic" x="0" y="0" />
+                            </svg>
+                        </span>
+
+                            <svg class="svg-pulse">
                                 <defs>
                                     <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
                                         <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
                                         <stop offset="50%" stop-color="#BBA182" />
                                     </linearGradient>
                                 </defs>
+                                <circle  class="circle still "/>
                                 <circle  class="circle circle-frst"/>
                                 <circle  class="circle circle-secd"/>
                             </svg>
                         </div>
-                        <span>Смотреть видео</span>
+                        <span class="btn-play__text">Смотреть видео</span>
                     </a>
                     <a href="#" class="btn btn-btm">
                     <span class="mouse-ic">
@@ -162,10 +168,11 @@ if ( !$isBlock03Hidden ):?>
                 <span class="<?php echo $block03_title['first_color']?> first" data-text="<?php echo $block03_title['first']?>"><?php echo $block03_title['first']?></span>
                 <span class="<?php echo $block03_title['second_color']?> second" data-text="<?php echo $block03_title['second']?>"><?php echo $block03_title['second']?></span>
             </h2>
-            <form action="" id="quiz-form">
+            <?php echo [contact-form-7 id="429" title="Контактная форма 1"]; ?>
+            <form method="POST"  id="quiz-form">
                 <!-- Hidden Required Fields -->
                 <input type="hidden" name="project_name" value="Site Name">
-                <input type="hidden" name="admin_email" value="my.fordevemail@gmail.com">
+                <input type="hidden" name="admin_email" value="yakjkf@gmail.com">
                 <input type="hidden" name="form_subject" value="Form Subject">
                 <!-- END Hidden Required Fields -->
 
@@ -792,9 +799,13 @@ if ( !$isBlock06Hidden ):?>
                                 <span class="modal__subtitle">Звоните</span>
                                 <h4 class="title modal__title">
                                     <a href="tel:<?php the_field('phone_num', $mainId);?>" class="contact-phone">
-                                        <div class="pulse contact-phone-btn">
-                                            <span class="contact-phone-ic"></span>
-                                            <svg>
+                                        <div class="pulse pulse--sm">
+                                    <span class="phoneTransp-ic">
+                                        <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
+                                        </svg>
+                                    </span>
+                                            <svg class="svg-pulse">
                                                 <defs>
                                                     <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
                                                         <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
@@ -1097,3 +1108,5 @@ if ( !$isBlock10Hidden ):?>
     </div>
 
 <?php get_footer();?>
+
+
