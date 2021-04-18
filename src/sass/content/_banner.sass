@@ -155,7 +155,7 @@
     //bottom: -80px
     //bottom: -8.4%
     position: absolute
-    bottom: 11vh
+    bottom: 1.296vh
     cursor: pointer
     z-index: 1
     +phone-down
@@ -204,6 +204,9 @@
   +ipad-down
     font-size: 1.3rem
 
+  &__text
+    margin-left: -4.0625vw
+
 $btn_round_w: 5.1vw
 .btn-round
   //display: inline-block
@@ -215,17 +218,6 @@ $btn_round_w: 5.1vw
   display: inline-flex
   justify-content: center
   align-items: center
-
-  svg
-    width: 20.833vw //400px
-    height: 20.833vw  //400px
-    top: -8.33vw //-160px
-    left: -8.33vw // -160px
-
-  circle.circle
-    cx: 13.02083vw //250px
-    cy: 13.02083vw //250px
-    r: 15.625vw //300px
 
 .btn-play-ic
   width: 100%
@@ -245,13 +237,26 @@ $btn_round_w: 5.1vw
     height: 6.25vw //120px
     top: -2.083vw //-40px
     left: -1.927083vw //-37px
+    +phone-down
+      width: 100px
+      height: 100px
+      top: -4.083vw
+      left: -3.927083vw
+
 
   circle.circle
     cx: 1.5625vw //30px
     cy: 1.5625vw //30px
     r: 6.25vw //120px
+    +phone-down
+      cx: 0
+      cy: 0
+      r: 100px
 
 
+
+.play-ic
+  display: inline-flex
 
 .modal-wrap
   .contact-phone-btn

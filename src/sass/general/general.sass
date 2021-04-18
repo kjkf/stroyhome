@@ -539,7 +539,7 @@ svg.svg-ic path
 			font-size: .6rem
 		+phone-down
 			font-size: 12px
-			top: -5px
+			top: -20px
 
 .lines-ic
 	&::before, &::after
@@ -634,3 +634,27 @@ svg.svg-ic path
 
 //.about, .calculate, .principle, .schema, .types, .background-wrapper, .info, .build, .contacts-block
 	display: none
+
+.play-ic
+	width: 1.04167vw //20px
+	height: 1.04167vw //20px
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	z-index: 1
+	stroke: $fontColorMain
+	stroke-width: 2
+	fill: none
+
+.phoneTransp-ic
+	width: 1.14583vw //22px
+	height: 1.14583vw //22px
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	z-index: 1
+	fill: none
+	stroke: $accent
+	+phone-down
+		width: 22px
+		height: 22px
