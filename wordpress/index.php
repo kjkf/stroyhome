@@ -13,19 +13,19 @@ if ( !$isBannerHidden) : ?>
                         <?php $medals = get_field('medals');?>
                         <div class="progress">
                             <div class="progress-item laurel-ic">
-                                <div class="progress-count"><?php echo $medals['completed_count']?></div>
-                                <div class="progress-title"><?php echo $medals['completed_title']?></div>
-                                <div class="progress-subtitle"><?php echo $medals['completed_subtitle']?></div>
+                                <div class="progress-count"><?php echo esc_html( $medals['completed_count'] );?></div>
+                                <div class="progress-title"><?php echo esc_html( $medals['completed_title'] );?></div>
+                                <div class="progress-subtitle"><?php echo esc_html( $medals['completed_subtitle'] ); ?></div>
                             </div>
                             <div class="progress-item laurel-ic">
-                                <div class="progress-count"><?php echo $medals['experts_count']?></div>
-                                <div class="progress-title"><?php echo $medals['experts_title']?></div>
-                                <div class="progress-subtitle"><?php echo $medals['experts_subtitle']?></div>
+                                <div class="progress-count"><?php echo esc_html( $medals['experts_count']);?></div>
+                                <div class="progress-title"><?php echo esc_html( $medals['experts_title']);?></div>
+                                <div class="progress-subtitle"><?php echo esc_html( $medals['experts_subtitle']);?></div>
                             </div>
                             <div class="progress-item laurel-ic">
-                                <div class="progress-count"><?php echo $medals['medal3_count']?></div>
-                                <div class="progress-title"><?php echo $medals['medal3_title']?></div>
-                                <div class="progress-subtitle"><?php echo $medals['medal3_subtitle']?></div>
+                                <div class="progress-count"><?php echo esc_html( $medals['medal3_count']);?></div>
+                                <div class="progress-title"><?php echo esc_html( $medals['medal3_title']);?></div>
+                                <div class="progress-subtitle"><?php echo esc_html( $medals['medal3_subtitle']);?></div>
                             </div>
                         </div>
                         <h1 class="title title-anim fade_in"><?php the_field('main_title');?></h1>
@@ -1066,7 +1066,7 @@ if ( !$isBlock10Hidden ):?>
 <?php
 $isBlock11Hidden = get_field('isBlock11Hidden', $mainId);
 if ( !$isBlock10Hidden ):?>
-    <section class="contacts-block laurel-right-ic">
+    <section class="contacts-block laurel-right-ic" id="contacts">
         <div class="map" id="map">
 
         </div>

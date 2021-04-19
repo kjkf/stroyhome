@@ -3,29 +3,55 @@
  * stroydom theme functions and definitions
  */
 
+use PHPMailer\PHPMailer\PHPMailer;
+
 /**
  * Настройка SMTP
  *
  * @param PHPMailer $phpmailer объект мэилера
  */
-function send_smtp_email( PHPMailer $phpmailer ) {
-    $phpmailer->isSMTP();
-    $phpmailer->Host       = SMTP_HOST;
-    $phpmailer->SMTPAuth   = SMTP_AUTH;
-    $phpmailer->Port       = SMTP_PORT;
-    $phpmailer->Username   = SMTP_USER;
-    $phpmailer->Password   = SMTP_PASS;
-    $phpmailer->SMTPSecure = SMTP_SECURE;
-    $phpmailer->From       = SMTP_FROM;
-    $phpmailer->FromName   = SMTP_NAME;
-}
-add_action( 'phpmailer_init', 'send_smtp_email' );
+
+//add_action( 'phpmailer_init', 'mihdan_send_smtp_email' );
 
 add_action('wp_enqueue_scripts', 'style_theme');
 add_action('wp_footer', 'script_theme');
 add_action('after_setup_theme', 'theme_register_nav_menu');
 add_action( 'init', 'register_post_types' );
+add_action( 'phpmailer_init', 'mihdan_send_smtp_email' );
 
+function mihdan_send_smtp_email( PHPMailer $phpmailer ) {
+    // $phpmailer->isSMTP();
+    // $phpmailer->Host       = SMTP_HOST;
+    // $phpmailer->SMTPAuth   = SMTP_AUTH;
+    // $phpmailer->Port       = SMTP_PORT;
+    // $phpmailer->Username   = SMTP_USER;
+    // $phpmailer->Password   = SMTP_PASS;
+    // $phpmailer->SMTPSecure = SMTP_SECURE;
+    // $phpmailer->From       = SMTP_FROM;
+    // $phpmailer->FromName   = SMTP_NAME;
+    $phpmailer->IsSMTP();
+
+    $phpmailer->CharSet    = 'UTF-8';
+
+    $phpmailer->Host       = 'mail.blu-group.site';
+    $phpmailer->Username   = 'stroihome@blu-group.site';
+    $phpmailer->Password   = 'S-567438';
+    $phpmailer->SMTPAuth   = true;
+// 	$phpmailer->SMTPSecure = 'tsl';
+
+    $phpmailer->Port       =25;
+    $phpmailer->From       = 'stroihome@blu-group.site';
+    $phpmailer->FromName   = 'MY-Megasite';
+
+    $phpmailer->isHTML( true );
+}
+add_action('wp_mail_failed', 'log_mailer_errors', 10, 1);
+function log_mailer_errors( $wp_error ){
+    $fn = ABSPATH . '/mail.log'; // say you've got a mail.log file in your server root
+    $fp = fopen($fn, 'a');
+    fputs($fp, "Mailer Error: " . $wp_error->get_error_message() ."\n");
+    fclose($fp);
+}
 function style_theme() {
     wp_enqueue_style('main_styles', get_stylesheet_uri());
     wp_enqueue_style('normalize', get_template_directory_uri() . '/assets/css/normalize.css');
@@ -36,9 +62,8 @@ function script_theme() {
     wp_enqueue_script('jquery'); // скорее всего он уже будет подключен, это на всякий случай
     wp_enqueue_script( 'true_loadmore', get_stylesheet_directory_uri() . '/loadmore.js', array('jquery') );
     wp_enqueue_script( 'sendMailAxax', get_stylesheet_directory_uri() . '/sendMailAxax.js', array('jquery') );
-    //wp_enqueue_script('map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOfbRY8MVrXteqJG_O8wijRsIi95akeg&map_ids=4bdebe2aef94632b&callback=initMap&libraries=&v=weekly&language=ru&region=RU');
-
-    wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/main.min.js' );
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/main.min.js', array('sendMailAxax')  );
+    wp_enqueue_script('map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDUOfbRY8MVrXteqJG_O8wijRsIi95akeg&map_ids=4bdebe2aef94632b&callback=initMap&libraries=&v=weekly&language=ru&region=RU', array('scripts') );
 }
 
 function theme_register_nav_menu() {

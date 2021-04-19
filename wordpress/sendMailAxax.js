@@ -3,7 +3,7 @@ jQuery(function($){
 
     $("form").submit(function() { //Change
         var th = $(this);
-        console.log(th);
+        //console.log(th);
         $.ajax({
             type: "POST",
             url: "mailform.php", //Change
@@ -22,7 +22,7 @@ jQuery(function($){
 });
 
 function createSuccessModal() {
-    console.log('createSuccessModal');
+    //console.log('createSuccessModal');
     const template = document.getElementById('successModal').innerHTML;
     let modal = document.createElement('div');
     modal.classList.add('modal-wrap-fixed');
@@ -33,11 +33,11 @@ function createSuccessModal() {
 
         closeSuccessModal(modal);
     });
-    console.log(modal);
+    //console.log(modal);
     return modal;
 }
 function showSuccessModal() {
-    console.log('showSuccessModal');
+    //console.log('showSuccessModal');
     const modal = createSuccessModal();
     document.body.append(modal);
     modal.classList.add('active');
@@ -45,4 +45,5 @@ function showSuccessModal() {
 
 function closeSuccessModal(modal) {
     modal.remove();
+    closeFormModal();
 }
