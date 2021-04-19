@@ -168,12 +168,13 @@ if ( !$isBlock03Hidden ):?>
                 <span class="<?php echo $block03_title['first_color']?> first" data-text="<?php echo $block03_title['first']?>"><?php echo $block03_title['first']?></span>
                 <span class="<?php echo $block03_title['second_color']?> second" data-text="<?php echo $block03_title['second']?>"><?php echo $block03_title['second']?></span>
             </h2>
-            <?php echo [contact-form-7 id="429" title="Контактная форма 1"]; ?>
+
             <form method="POST"  id="quiz-form">
+                <?php $settings = get_field('email_settings');?>
                 <!-- Hidden Required Fields -->
-                <input type="hidden" name="project_name" value="Site Name">
-                <input type="hidden" name="admin_email" value="yakjkf@gmail.com">
-                <input type="hidden" name="form_subject" value="Form Subject">
+                <input type="hidden" name="project_name" value="<?php echo $settings['project_name']?>">
+                <input type="hidden" name="admin_email" value="<?php echo $settings['email']?>">
+                <input type="hidden" name="form_subject" value="<?php echo $settings['subject']?>">
                 <!-- END Hidden Required Fields -->
 
                 <input type="text" class="" id="answer" value="">
@@ -186,7 +187,7 @@ if ( !$isBlock03Hidden ):?>
                 <input type="text" name="Куда направить Вам расчет?" class="quiz-step-result" id="sendResults" value="">
                 <input type="text" name="Имя" class="quiz-step-result" id="cname" value="">
                 <input type="text" name="Телефон" class="quiz-step-result" id="cphone" value="">
-                <input type="submit" value="send">
+                <input type="submit" id="quizSendBtn" value="send">
             </form>
             <div class="content">
                 <div class="quiz step-1">
@@ -821,10 +822,17 @@ if ( !$isBlock06Hidden ):?>
                                 </h4>
                                 <span class="modal__subtitle secd">или оставьте заявку, </span>
                                 <span>и с вами свяжется наш менеджер</span>
-                                <form action="#" class="form">
+                                <form method="POST" class="form">
+                                    <?php $settings = get_field('email_settings');?>
+                                    <!-- Hidden Required Fields -->
+                                    <input type="hidden" name="project_name" value="<?php echo $settings['project_name']?>">
+                                    <input type="hidden" name="admin_email" value="<?php echo $settings['email']?>">
+                                    <input type="hidden" name="form_subject" value="Обратный звонок">
+                                    <!-- END Hidden Required Fields -->
+
                                     <div class="form-row">
                                         <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
-                                        <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                                        <input type="tel" name="Номер телефона" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                                     </div>
                                     <div class="form-row form-row--submit">
                                         <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
@@ -927,14 +935,20 @@ if ( !$isBlock06Hidden ):?>
                                 <div>ОСТАЛИСЬ ВОПРОСЫ? <span class="accent">ОСТАВЬТЕ ЗАЯВКУ</span></div>
                                 <div>И МЫ ПЕРЕЗВОНИМ ВАМ ЧЕРЕЗ 10 МИНУТ!</div>
                             </h3>
-                            <form action="#" class="form form--column">
+                            <form method="POST" class="form form--column">
+                                <?php $settings = get_field('email_settings');?>
+                                <!-- Hidden Required Fields -->
+                                <input type="hidden" name="project_name" value="<?php echo $settings['project_name']?>">
+                                <input type="hidden" name="admin_email" value="<?php echo $settings['email']?>">
+                                <input type="hidden" name="form_subject" value="Обратный звонок">
+                                <!-- END Hidden Required Fields -->
                                 <div class="form-in">
                                     <div class="form-col">
                                         <!--<input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>-->
-                                        <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                                        <input type="tel" name="Номер телефона" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                                     </div>
                                     <div class="form-col">
-                                        <input type="text" class="form-field" placeholder="Ваше имя" required>
+                                        <input type="text" name="Имя" class="form-field" placeholder="Ваше имя" required>
                                     </div>
                                     <div class="form-col">
                                         <button type="submit" class="btn btn-light btn-anim btn-submit">Оставить заявку</button>
@@ -1108,5 +1122,3 @@ if ( !$isBlock10Hidden ):?>
     </div>
 
 <?php get_footer();?>
-
-

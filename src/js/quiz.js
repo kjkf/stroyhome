@@ -16,7 +16,7 @@ function initQuiz() {
 
         prepareData();
     });
-console.log('quiz', quiz);
+//console.log('quiz', quiz);
     setQuizAnswersEventHandlers();
 }
 
@@ -152,8 +152,12 @@ function prepareData() {
     if (isValidForm()) {
         //console.log('no errors!');
         const form = document.getElementById('quiz-form');
-        //console.log(form);
-        form.submit();
+        const quizSendBtn = document.getElementById('quizSendBtn');
+        /*console.log(form);
+        console.log(quizSendBtn);*/
+        //form.submit();
+        quizSendBtn.click();
+
     }
 }
 

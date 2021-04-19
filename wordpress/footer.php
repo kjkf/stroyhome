@@ -128,11 +128,17 @@ $mainId = get_option( 'page_on_front' );
                 <span class="modal__subtitle secd">или оставьте заявку, </span>
                 <span>и с вами свяжется наш менеджер</span>
                 <form action="#" class="form">
+                    <!-- Hidden Required Fields -->
+                    <input type="hidden" name="project_name" value="Site Name">
+                    <input type="hidden" name="admin_email" value="lolau@yandex.ru">
+                    <input type="hidden" name="form_subject" value="Form Subject">
+                    <!-- END Hidden Required Fields -->
                     <div class="form-row">
                         <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
                         <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                     </div>
                     <div class="form-row">
+
                         <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
                     </div>
                     <div class="form-row form-check-wrap">
@@ -151,6 +157,22 @@ $mainId = get_option( 'page_on_front' );
     <!--</div>-->
 </template>
 
+<template id="successModal">
+    <!--<div class="modal-wrap-fixed">-->
+        <div class="modal-wrap">
+            <div class="modal modal--success">
+                <button class="btn btn-close" type="button"></button>
+                <div class="modal__in">
+                    <div class="success-ic"></div>
+                    <span class="modal__subtitle">
+                    <span>Ваша заявка</span>
+                    <span>была успешно отправлена!</span>
+                </span>
+                </div>
+            </div>
+        </div>
+    <!--</div>-->
+</template>
 
 <svg style="display: none;" class="svg-ic">
     <symbol class="" id="phone-ic">
