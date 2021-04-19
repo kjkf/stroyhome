@@ -835,7 +835,7 @@ if ( !$isBlock06Hidden ):?>
                                         <input type="tel" name="Номер телефона" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                                     </div>
                                     <div class="form-row form-row--submit">
-                                        <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
+                                        <button type="submit" class="btn btn-light btn-submit sendToEmail">Оставить заявку</button>
                                     </div>
                                     <div class="form-row form-check-wrap">
                                         <label for="agree_cond2" class="form-check">
@@ -951,7 +951,7 @@ if ( !$isBlock06Hidden ):?>
                                         <input type="text" name="Имя" class="form-field" placeholder="Ваше имя" required>
                                     </div>
                                     <div class="form-col">
-                                        <button type="submit" class="btn btn-light btn-anim btn-submit">Оставить заявку</button>
+                                        <button type="submit" class="btn btn-light btn-anim btn-submit sendToEmail">Оставить заявку</button>
                                         <div class="form-check-wrap">
                                             <label for="agree_cond1" class="form-check">
                                                 <input type="checkbox" id="agree_cond1">
