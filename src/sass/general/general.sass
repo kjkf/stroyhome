@@ -573,13 +573,15 @@ svg.svg-ic path
 		top: 63vh
 		right: 0
 
-	&--principle::before
-		left: 0
-		top: 280vh
+	&--principle
+		&::before
+			display: none
+			left: 0
+			top: -7.87vh //-85px
 
-	&--principle::after
-		right: 0
-		top: 357vh
+		&::after
+			right: 4.167vw //80px
+			top: 357vh
 
 	&--about::before
 		left: 0
