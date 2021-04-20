@@ -1,5 +1,6 @@
+$map_h: 52em
 .contacts-block
-  min-height: 87vh
+  min-height: $map_h //87vh
   width: 99vw
   position: relative
   z-index: 0
@@ -18,9 +19,11 @@
 
 
   #map
-    //min-height: 87vh
-    min-height: 48.9583vw //940px
+    min-height: $map_h //87vh
+    //min-height: 48.9583vw //940px
     width: 99vw
+    +phone-down
+      min-height: 470px
 
   +phone-down
     min-height: 100vh
@@ -37,13 +40,14 @@
     //background: radial-gradient(35% 50% at 33% 43%, rgba(242, 13, 13, 0) 0%, rgba(32, 31, 36, 0.9) 95%)
     background: radial-gradient(35% 50% at 33% 43%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 95%)
     +phone-down
-      height: auto
-      position: static
-      margin-top: -87vh
+      background: radial-gradient(35% 35% at 50% 30%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 95%)
+      //height: auto
+      //position: static
+      //margin-top: - #{$map_h} //-87vh
 
   .map-in
     position: relative
-    padding-top: 9.26vh //100px
+    padding-top: 5.2083vw //9.26vh //100px
     +phone-down
       padding-top: 6.26vh
 
@@ -85,7 +89,7 @@
 
   .text-wrapper
     pointer-events: all
-    padding-top: 9.26vh //100px
+    padding-top: 5.2083vw //9.26vh //100px
     font-family: $ffAvenirNextCyr
     +phone-down
       padding-top: 34.26vh
@@ -102,7 +106,7 @@
         padding: 0 60px
         margin-bottom: 35px
       &:first-child
-        margin-bottom: 6.018vh //65px
+        margin-bottom: 3.385416vw //6.018vh //65px
         padding-right: 50%
         +phone-down
           padding: 0 54px
@@ -119,14 +123,17 @@
 
     .btn
       //padding: 24px 70px
-      padding: 2.22vh 3.65vw
+      //padding: 2.22vh 3.65vw
+      padding: 1.25vw 3.65vw
       margin-bottom: 3.7vh //40px
       +phone-down
         width: 90%
+        padding: 20px 3.65vw
+        margin-bottom: 0
 
   .contact-wrapper
     padding-left: 1.146vw //22px
-    margin-bottom: 3.52vh //38px
+    margin-bottom: 1.97916vw //3.52vh //38px
     +phone-down
       margin-bottom: 2.52vh
 
@@ -139,6 +146,8 @@
       color: $accent
       font-family: $ffNeumann
       font-weight: 400
+      width: 100%
+      text-align: center
 
   .section-index-wrapper
     right: -1.6vw
