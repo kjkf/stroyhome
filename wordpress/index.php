@@ -32,6 +32,30 @@ if ( !$isBannerHidden) : ?>
                         <p class="subtitle"><?php the_field('main_subtitle'); ?></p>
                         <button class="btn btn-light btn-anim" id="showCalc"><?php the_field('calcBtn_title'); ?></button>
                     </div>
+                    <a href="#" class="btn btn-play ">
+
+                        <div class="pulse ">
+                        <span class="play-ic">
+                            <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use class="svg-sym" xlink:href="#play-ic" x="0" y="0" />
+                            </svg>
+                        </span>
+
+                            <svg class="svg-pulse">
+                                <defs>
+                                    <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
+                                        <stop offset="50%" stop-color="#BBA182" />
+                                    </linearGradient>
+                                </defs>
+                                <circle  class="circle still" r="12.5vw" />
+                                <circle  class="circle circle-frst" r="19.79167vw"/>
+                                <circle  class="circle circle-secd" r="19.79167vw"/>
+                            </svg>
+                        </div>
+
+                        <span class="btn-play__text">Смотреть видео</span>
+                    </a>
                     <?php
                     $isVideoHidden = get_field('isHiddenVideo', $mainId);
 
@@ -44,28 +68,28 @@ if ( !$isBannerHidden) : ?>
                             $link_target = $link['target'] ? $link['target'] : '_self';
                             ?>
 
-                        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-play <?php echo esc_html( $isVideoHidden); ?>">
-                            <div class="pulse ">
+                            <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-play <?php echo esc_html( $isVideoHidden); ?>">
+                                <div class="pulse ">
                                 <span class="play-ic">
                                     <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <use class="svg-sym" xlink:href="#play-ic" x="0" y="0"/>
                                     </svg>
                                 </span>
 
-                                <svg class="svg-pulse">
-                                    <defs>
-                                        <linearGradient id="gradient" x1="95%" y1="55%" x2="0%" y2="100%">
-                                            <stop offset="0%" stop-color="#BBA182" stop-opacity="0"/>
-                                            <stop offset="50%" stop-color="#BBA182"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <circle class="circle still "/>
-                                    <circle class="circle circle-frst"/>
-                                    <circle class="circle circle-secd"/>
-                                </svg>
-                            </div>
-                            <span class="btn-play__text"><?php echo esc_html( $link_title ); ?></span>
-                        </a>
+                                    <svg class="svg-pulse">
+                                        <defs>
+                                            <linearGradient id="gradient" x1="95%" y1="55%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#BBA182" stop-opacity="0"/>
+                                                <stop offset="50%" stop-color="#BBA182"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <circle  class="circle still" r="12.5vw" />
+                                        <circle  class="circle circle-frst" r="19.79167vw"/>
+                                        <circle  class="circle circle-secd" r="19.79167vw"/>
+                                    </svg>
+                                </div>
+                                <span class="btn-play__text"><?php echo esc_html( $link_title ); ?></span>
+                            </a>
                         <?php endif; ?>
                     <?php endif;?>
                     <a href="#" class="btn btn-btm">
@@ -442,15 +466,15 @@ if ( !$isBlock03Hidden ):?>
                             <h4 class="quiz-item-title">Куда направить Вам расчет?</h4>
                             <div class="quiz-row icons">
                                 <ul class="callback">
-                                    <li class="callback__item phone-btn">
-                                        <input type="radio" name="sendTo" class="option-radio" id="sendToPhone" value="на телефон">
-                                        <label for="sendToPhone" class="btn callback__btn">
+                                    <li class="callback__item phone-btn" data-tooltip="озвучить по телефону">
+                                        <input type="radio" name="sendTo" checked class="option-radio" id="sendToPhone" value="на телефон">
+                                        <label for="sendToPhone" class="btn callback__btn" >
                                             <svg class="svg-wrap" viewBox="0 0 28 28" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                 <use class="svg-sym" xlink:href="#phone-ic" x="0" y="0"></use>
                                             </svg>
                                         </label>
                                     </li>
-                                    <li class="callback__item telegram-btn">
+                                    <li class="callback__item telegram-btn" data-tooltip="Telegram">
                                         <input type="radio" name="sendTo" class="option-radio" id="sendToTelegram" value="в telegram">
                                         <label for="sendToTelegram" class="btn callback__btn">
                                             <svg class="svg-wrap" width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -458,7 +482,7 @@ if ( !$isBlock03Hidden ):?>
                                             </svg>
                                         </label>
                                     </li>
-                                    <li class="callback__item viber-btn">
+                                    <li class="callback__item viber-btn" data-tooltip="Viber">
                                         <input type="radio" name="sendTo" class="option-radio" id="sendToViber" value="в viber">
                                         <label for="sendToViber" class="btn callback__btn">
                                             <svg class="svg-wrap" width="29" height="32" viewBox="0 0 29 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -466,7 +490,7 @@ if ( !$isBlock03Hidden ):?>
                                             </svg>
                                         </label>
                                     </li>
-                                    <li class="callback__item whatsapp-btn">
+                                    <li class="callback__item whatsapp-btn" data-tooltip="Whatsapp">
                                         <input type="radio" name="sendTo" class="option-radio" id="sendToWhatsapp" value="в whatsapp">
                                         <label for="sendToWhatsapp" class="btn callback__btn">
                                             <svg class="svg-wrap" viewBox="0 0 32 32" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -510,6 +534,7 @@ if ( !$isBlock03Hidden ):?>
 $isBlock04Hidden = get_field('isBlock04Hidden');
 if ( !$isBlock04Hidden ):?>
     <section class="principle"  id="principle">
+        <span class="lines-ic--principle lines-ic"></span>
         <div class="container">
             <div class="principle-in">
                 <?php $block04_title = get_field('block04_title');?>
@@ -756,14 +781,8 @@ if ( !$isBlock06Hidden ):?>
                                         </svg>
                                     </span>
                                             <svg class="svg-pulse">
-                                                <defs>
-                                                    <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
-                                                        <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
-                                                        <stop offset="50%" stop-color="#BBA182" />
-                                                    </linearGradient>
-                                                </defs>
-                                                <circle  class="circle circle-frst"/>
-                                                <circle  class="circle circle-secd"/>
+                                                <circle  class="circle circle-frst" r="5.2083vw"/>
+                                                <circle  class="circle circle-secd" r="5.2083vw"/>
                                             </svg>
                                         </div>
                                         <span><?php the_field('phone_num', $mainId);?></span>

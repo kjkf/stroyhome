@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     init_slider();
     initSendToEmailHandlers();
     formInputFocusEventHandler();
+    createTooltips();
 
     const btnMore = document.querySelector('.btn--more');
     const text = document.querySelector('.build .build-text');
@@ -18,6 +19,4 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     btnMore.addEventListener('click', function (e) {
         text.classList.toggle('excerpt');
     });
-
-
 });
