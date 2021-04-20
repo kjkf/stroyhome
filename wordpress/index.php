@@ -43,7 +43,7 @@ if ( !$isBannerHidden) : ?>
                         $link_target = $link['target'] ? $link['target'] : '_self';
                         ?>
 
-                        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-play <?php echo esc_html( $isVideoHidden); ?>">
+                        <a href="#" target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-play <?php echo esc_html( $isVideoHidden); ?>">
                             <div class="pulse ">
                                 <span class="play-ic">
                                     <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -65,6 +65,13 @@ if ( !$isBannerHidden) : ?>
                             </div>
                             <span class="btn-play__text"><?php echo esc_html( $link_title ); ?></span>
                         </a>
+                        <div id="light">
+                            <a class="boxclose" id="boxclose"></a>
+                            <video id="modalvideo" width="600" controls>
+                                <source src="<?php echo esc_url( $link_url ); ?>" type="video/mp4">
+                                <!--Browser does not support <video> tag -->
+                            </video>
+                        </div>
                     <?endif;;
                     //print_r($video);?>
 
@@ -216,7 +223,7 @@ if ( !$isBlock03Hidden ):?>
                             <span class="quiz-step"></span>
                         </div>
                     </div>
-                    <form action="" class="form" name="quizForm">
+                    <form class="form" name="quizForm">
                         <div class="quiz-items">
                             <?php $questions = get_field('questions');?>
                             <div class="quiz-item">
@@ -233,6 +240,7 @@ if ( !$isBlock03Hidden ):?>
                                         <span class="img-wrapper">
                                             <picture>
                                                 <source srcset="<?php echo $step1_img1_m;?>" media="(max-width: 768px)">
+                                                <source srcset="<?php echo $step1_img1;?>" media="(max-width: 1920px)">
                                                 <img src="<?php echo $step1_img1;?>" alt="<?php echo $step1_ans1;?>">
                                             </picture>
                                         </span>
@@ -253,6 +261,7 @@ if ( !$isBlock03Hidden ):?>
                                         <span class="img-wrapper">
                                             <picture>
                                                 <source srcset="<?php echo $step1_img2_m;?>" media="(max-width: 768px)">
+                                                <source srcset="<?php echo $step1_img2;?>" media="(max-width: 1920px)">
                                                 <img src="<?php echo $step1_img2;?>" alt="<?php echo $step1_ans2;?>">
                                             </picture>
                                         </span>
@@ -273,6 +282,7 @@ if ( !$isBlock03Hidden ):?>
                                         <span class="img-wrapper">
                                             <picture>
                                                 <source srcset="<?php echo $step1_img3_m;?>" media="(max-width: 768px)">
+                                                <source srcset="<?php echo $step1_img3;?>" media="(max-width: 1920px)">
                                                 <img src="<?php echo $step1_img3;?>" alt="<?php echo $step1_ans3;?>">
                                             </picture>
                                         </span>
@@ -437,7 +447,7 @@ if ( !$isBlock03Hidden ):?>
                     <div class="quiz__header">
                         <span id="quizResult">Расчет</span>
                     </div>
-                    <form action="" class="form quiz-result">
+                    <form class="form quiz-result">
                         <div class="quiz-item">
                             <h4 class="quiz-item-title">Куда направить Вам расчет?</h4>
                             <div class="quiz-row icons">

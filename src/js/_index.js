@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     initSendToEmailHandlers();
     formInputFocusEventHandler();
     createTooltips();
+    initModalVideo();
 
     const btnMore = document.querySelector('.btn--more');
     const text = document.querySelector('.build .build-text');
