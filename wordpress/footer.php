@@ -112,14 +112,14 @@ $mainId = get_option( 'page_on_front' );
                                     </svg>
                                 </span>
                             <svg class="svg-pulse">
-                                <defs>
+                                <!--<defs>
                                     <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
                                         <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
                                         <stop offset="50%" stop-color="#BBA182" />
                                     </linearGradient>
-                                </defs>
-                                <circle  class="circle circle-frst"/>
-                                <circle  class="circle circle-secd"/>
+                                </defs>-->
+                                <circle  class="circle circle-frst" r="5.2083vw"/>
+                                <circle  class="circle circle-secd" r="5.2083vw"/>
                             </svg>
                         </div>
                         <span><?php the_field('phone_num', $mainId);?></span>
@@ -174,7 +174,14 @@ $mainId = get_option( 'page_on_front' );
     </div>
     <!--</div>-->
 </template>
-
+<svg>
+    <defs>
+        <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
+            <stop offset="50%" stop-color="#BBA182" />
+        </linearGradient>
+    </defs>
+</svg>
 <svg style="display: none;" class="svg-ic">
     <symbol class="" id="phone-ic">
         <path d="M22.3045 18.7181C21.1187 18.0303 19.9113 18.4584 19.412 19.1341L18.3678 20.488C17.8373 21.1757 16.8459 21.0843 16.8459 21.0843C9.61083 19.1678 7.67605 11.5833 7.67605 11.5833C7.67605 11.5833 7.58723 10.5564 8.24976 10.0058L9.55562 8.92363C10.2086 8.40421 10.6214 7.15375 9.9565 5.92493C8.18015 2.70981 6.98711 1.60123 6.37979 0.749961C5.74127 -0.0508131 4.78108 -0.231168 3.78248 0.309896H3.76088C1.68446 1.52669 -0.588785 3.80396 0.138559 6.14857C1.3796 8.62063 3.66005 16.5009 10.9287 22.455C14.3446 25.271 19.7504 28.1566 22.0453 28.8228L22.0669 28.8564C24.3281 29.6115 26.527 27.2453 27.7008 25.1026V25.0858C28.2217 24.0494 28.0489 23.0682 27.2879 22.4262C25.9389 21.1084 23.9033 19.6535 22.3045 18.7181Z"/>

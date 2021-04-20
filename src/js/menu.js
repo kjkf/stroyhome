@@ -39,12 +39,14 @@ function init_menu(){
         const rect = header.getBoundingClientRect();
         const topBlock = document.querySelector('.top.fullscreen');
         const topIn = document.querySelector('.top.fullscreen .top-in');
+        if(!topBlock) return false;
         topBlock.style.paddingTop = `${rect.height}px`;
         //100vh - header.height
         topIn.style.height = `calc(100vh - ${rect.height}px)`;
     };
 
     const showCalc = document.getElementById('showCalc');
+    if (!showCalc) return false;
     const calcBlock = document.getElementById('calculate');
     showCalc.addEventListener('click', function (ev) {
         calcBlock.scrollIntoView();
