@@ -1,4 +1,6 @@
 .principle
+  position: relative
+  overflow: hidden
   background:
     image: url("../images/content/jan-jakub.jpg")
     repeat: no-repeat
@@ -20,6 +22,11 @@
     margin-bottom: 16.67vh //180px
     +phone-down
       margin-bottom: 20px
+
+  .lines-ic--principle::before
+    display: inline-block
+    left: 0
+    top: -7.87vh //-85px
 
   .title--shadow
     span
