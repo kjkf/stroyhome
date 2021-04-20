@@ -47,17 +47,11 @@ if ( !$isBannerHidden) : ?>
                             <div class="pulse ">
                                 <span class="play-ic">
                                     <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <use class="svg-sym" xlink:href="#play-ic" x="0" y="0"/>
+                                        <use class="svg-sym" xlink:href="#play-ic" x="0" y="0" />
                                     </svg>
                                 </span>
 
                                 <svg class="svg-pulse">
-                                    <defs>
-                                        <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
-                                            <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
-                                            <stop offset="50%" stop-color="#BBA182" />
-                                        </linearGradient>
-                                    </defs>
                                     <circle  class="circle still" r="12.5vw" />
                                     <circle  class="circle circle-frst" r="19.79167vw"/>
                                     <circle  class="circle circle-secd" r="19.79167vw"/>
@@ -236,18 +230,17 @@ if ( !$isBlock03Hidden ):?>
                                     $step1_img1_m = $step1_a['step1_img1_m'];
                                     ?>
                                     <div class="quiz-item-option mr20">
+                                        <input type="radio" name="house-projects" class="option-radio" id="karkas" value="<?php echo $step1_ans1;?>">
                                         <label for="karkas" class="form-label options__label">
-                                        <span class="img-wrapper">
-                                            <picture>
-                                                <source srcset="<?php echo $step1_img1_m;?>" media="(max-width: 768px)">
-                                                <img src="<?php echo $step1_img1;?>" alt="<?php echo $step1_ans1;?>">
-                                            </picture>
-                                        </span>
-                                            <input type="radio" name="house-projects" class="option-radio" id="karkas" value="<?php echo $step1_ans1;?>">
-                                            <label for="karkas">
-                                                <span class="option-icon"></span>
-                                                <span><?php echo $step1_ans1;?></span>
-                                            </label>
+                                            <span class="option-icon"></span>
+                                            <span class="img-wrapper">
+                                                <picture>
+                                                    <source srcset="<?php echo $step1_img1_m;?>" media="(max-width: 768px)">
+                                                    <img src="<?php echo $step1_img1;?>" alt="<?php echo $step1_ans1;?>">
+                                                </picture>
+                                            </span>
+
+                                            <span><?php echo $step1_ans1;?></span>
                                         </label>
                                     </div>
                                     <div class="quiz-item-option">
@@ -256,18 +249,16 @@ if ( !$isBlock03Hidden ):?>
                                         $step1_img2 = $step1_a['step1_img2'];
                                         $step1_img2_m = $step1_a['step1_img2_m'];
                                         ?>
+                                        <input type="radio" name="house-projects" class="option-radio" id="aerated" value="<?php echo $step1_ans2;?>">
                                         <label for="aerated" class="form-label options__label">
-                                        <span class="img-wrapper">
-                                            <picture>
-                                                <source srcset="<?php echo $step1_img2_m;?>" media="(max-width: 768px)">
-                                                <img src="<?php echo $step1_img2;?>" alt="<?php echo $step1_ans2;?>">
-                                            </picture>
-                                        </span>
-                                            <input type="radio" name="house-projects" class="option-radio" id="aerated" value="<?php echo $step1_ans2;?>">
-                                            <label for="aerated">
-                                                <span class="option-icon"></span>
-                                                <span><?php echo $step1_ans2;?></span>
-                                            </label>
+                                            <span class="option-icon"></span>
+                                            <span class="img-wrapper">
+                                                <picture>
+                                                    <source srcset="<?php echo $step1_img2_m;?>" media="(max-width: 768px)">
+                                                    <img src="<?php echo $step1_img2;?>" alt="<?php echo $step1_ans2;?>">
+                                                </picture>
+                                            </span>
+                                            <span><?php echo $step1_ans2;?></span>
                                         </label>
                                     </div>
                                     <div class="quiz-item-option">
@@ -276,18 +267,16 @@ if ( !$isBlock03Hidden ):?>
                                         $step1_img3 = $step1_a['step1_img3'];
                                         $step1_img3_m = $step1_a['step1_img3_m'];
                                         ?>
+                                        <input type="radio" name="house-projects" class="option-radio" id="brick" value="<?php echo $step1_ans3;?>">
                                         <label for="brick" class="form-label options__label">
-                                        <span class="img-wrapper">
-                                            <picture>
-                                                <source srcset="<?php echo $step1_img3_m;?>" media="(max-width: 768px)">
-                                                <img src="<?php echo $step1_img3;?>" alt="<?php echo $step1_ans3;?>">
-                                            </picture>
-                                        </span>
-                                            <input type="radio" name="house-projects" class="option-radio" id="brick" value="<?php echo $step1_ans3;?>">
-                                            <label for="brick">
-                                                <span class="option-icon"></span>
-                                                <span><?php echo $step1_ans3;?></span>
-                                            </label>
+                                            <span class="option-icon"></span>
+                                            <span class="img-wrapper">
+                                                <picture>
+                                                    <source srcset="<?php echo $step1_img3_m;?>" media="(max-width: 768px)">
+                                                    <img src="<?php echo $step1_img3;?>" alt="<?php echo $step1_ans3;?>">
+                                                </picture>
+                                            </span>
+                                            <span><?php echo $step1_ans3;?></span>
                                         </label>
                                     </div>
 
@@ -444,7 +433,7 @@ if ( !$isBlock03Hidden ):?>
                     <div class="quiz__header">
                         <span id="quizResult">Расчет</span>
                     </div>
-                    <form action="#" class="form quiz-result">
+
                     <form class="form quiz-result">
                         <div class="quiz-item">
                             <h4 class="quiz-item-title">Куда направить Вам расчет?</h4>
@@ -539,17 +528,16 @@ if ( !$isBlock04Hidden ):?>
                                 <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  preserveAspectRatio="xMinYMin slice" >
                                     <defs>
                                         <clipPath id="cut-off-bottom">
-                                            <rect class="clip_path_rect"></rect>
+                                            <rect class="clip_path_rect" width="27.6vw" height="14.8vw"></rect>
                                         </clipPath>
                                     </defs>
                                     <defs>
                                         <mask id="mask_img">
-                                            <circle  fill="white" clip-path="url(#cut-off-bottom)" class="mask_circle"></circle>
-                                            <rect fill="white" class="mask_rect"></rect>
+                                            <circle  fill="white" clip-path="url(#cut-off-bottom)" class="mask_circle" r="13.8vw"></circle>
+                                            <rect fill="white" class="mask_rect" width="27.604vw" height="21.83vw"></rect>
                                         </mask>
                                     </defs>
-                                    <image mask="url(#mask_img)" class="masked_img" xlink:href="<?php echo $chief['photo']?>" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
-                                </svg>
+                                    <image mask="url(#mask_img)" width="27.39vw" height="32.375vw" class="masked_img" xlink:href="<?php echo $chief['photo']?>" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
                                 </svg>
                             </div>
                         </div>
@@ -603,11 +591,9 @@ if ( !$isBlock05Hidden ):?>
 
                             <div class="schema-collapse-wrapper" data-top="<?php echo esc_html( $tooltip_coords['top']);?>" data-left="<?php echo esc_html( $tooltip_coords['left']);?>">
                                 <div class="schema-collapse">
-                                    <span class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
+                                    <div class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
                                         <div class="cbk-phone-circle"></div>
-                                        <div class="cbk-phone-second_circle"></div>
-                                        <div class="cbk-phone-third_circle"></div>
-                                    </span>
+                                    </div>
                                     <div class="schema-collapse__descr hide">
                                         <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5>
                                         <p class="schema-collapse__text">
@@ -636,7 +622,7 @@ $isBlock06Hidden = get_field('isBlock06Hidden');
 if ( !$isBlock06Hidden ):?>
     <?php $block06_title = get_field('block06_title');?>
     <section class="types bg-white">
-        <h2 class="title title--shadow show-mob"><span class="accent first" data-text="<?php echo $block06_title['first']?>"></span></h2>
+
         <div class="container">
             <div class="types-in">
                 <div class="types-wrap">
@@ -757,19 +743,19 @@ if ( !$isBlock06Hidden ):?>
                             <div class="form-wrapper">
                                 <span class="modal__subtitle">Звоните</span>
                                 <h4 class="title modal__title">
-                                    <a href="tel:<?php the_field('phone_num', $mainId);?>" class="contact-phone">
-                                        <div class="pulse pulse--sm">
-                                    <span class="phoneTransp-ic">
-                                        <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                            <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
-                                        </svg>
-                                    </span>
+                                    <a href="tel:<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact-phone">
+                                        <span class="pulse pulse--sm">
+                                            <span class="phoneTransp-ic">
+                                                <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
+                                                </svg>
+                                            </span>
                                             <svg class="svg-pulse">
                                                 <circle  class="circle circle-frst" r="5.2083vw"/>
                                                 <circle  class="circle circle-secd" r="5.2083vw"/>
                                             </svg>
-                                        </div>
-                                        <span><?php the_field('phone_num', $mainId);?></span>
+                                        </span>
+                                        <span><?php echo str_replace(" ","",get_field('phone_num', $mainId));?></span>
                                     </a>
                                 </h4>
                                 <span class="modal__subtitle secd">или оставьте заявку, </span>
@@ -793,7 +779,7 @@ if ( !$isBlock06Hidden ):?>
                                         <label for="agree_cond2" class="form-check">
                                             <input type="checkbox" checked id="agree_cond2">
                                             <span class="form-check__btn"></span>
-                                            <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
+                                            <span>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></span>
                                         </label>
                                     </div>
                                 </form>
@@ -884,8 +870,8 @@ if ( !$isBlock06Hidden ):?>
                         </span>
                         <div class="application">
                             <h3 class="title">
-                                <div>ОСТАЛИСЬ ВОПРОСЫ? <span class="accent">ОСТАВЬТЕ ЗАЯВКУ</span></div>
-                                <div>И МЫ ПЕРЕЗВОНИМ ВАМ ЧЕРЕЗ 10 МИНУТ!</div>
+                                <span>ОСТАЛИСЬ ВОПРОСЫ? <span class="accent">ОСТАВЬТЕ ЗАЯВКУ</span></span>
+                                <span>И МЫ ПЕРЕЗВОНИМ ВАМ ЧЕРЕЗ 10 МИНУТ!</span>
                             </h3>
                             <form method="POST" class="form form--column">
                                 <?php $settings = get_field('email_settings');?>
@@ -908,7 +894,7 @@ if ( !$isBlock06Hidden ):?>
                                             <label for="agree_cond1" class="form-check">
                                                 <input type="checkbox" checked id="agree_cond1">
                                                 <span class="form-check__btn"></span>
-                                                <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
+                                                <span>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></span>
                                             </label>
                                         </div>
                                     </div>
@@ -980,7 +966,7 @@ if ( !$isBlock09Hidden ):?>
                         var max_pages = '<?php echo $wp_query->max_num_pages; ?>';
                     </script>
                     <div class="form-row">
-                        <button type="submit"id="true_loadmore"  class="btn btn-light btn-submit">Показать ещё</button>
+                        <button type="submit" id="true_loadmore"  class="btn btn-light btn-submit">Показать ещё</button>
                     </div>
                 <?php endif;?>
 
