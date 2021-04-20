@@ -657,13 +657,16 @@ $play_ic_w: 1.04167vw
 	//display: inline-flex
 	//justify-content: center
 	//align-items: center
-	display: block
+	display: inline-block
+	vertical-align: middle
 	z-index: 1
 	fill: none
 	stroke: $accent
 	+phone-down
 		width: 22px
 		height: 22px
+	&>svg
+		display: inherit
 
 .tooltip
 	display: inline-block
