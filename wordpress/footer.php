@@ -20,7 +20,7 @@ $mainId = get_option( 'page_on_front' );
                 <div class="address br-btm">
                     <h5>Адрес офиса:</h5>
                     <?php $address = get_field('adress', $mainId);?>
-                    <div class="address__text"><span></span></div>
+                    <div class="address__text"><span><?php echo $address['city'];?>, <?php echo $address['street'];?></span></div>
                 </div>
 
                 <div class="contacts">
