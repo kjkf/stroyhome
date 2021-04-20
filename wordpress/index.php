@@ -223,7 +223,7 @@ if ( !$isBlock03Hidden ):?>
                             <span class="quiz-step"></span>
                         </div>
                     </div>
-                    <form class="form" name="quizForm">
+                    <form action="#" class="form" name="quizForm">
                         <div class="quiz-items">
                             <?php $questions = get_field('questions');?>
                             <div class="quiz-item">
@@ -240,7 +240,6 @@ if ( !$isBlock03Hidden ):?>
                                         <span class="img-wrapper">
                                             <picture>
                                                 <source srcset="<?php echo $step1_img1_m;?>" media="(max-width: 768px)">
-                                                <source srcset="<?php echo $step1_img1;?>" media="(max-width: 1920px)">
                                                 <img src="<?php echo $step1_img1;?>" alt="<?php echo $step1_ans1;?>">
                                             </picture>
                                         </span>
@@ -261,7 +260,6 @@ if ( !$isBlock03Hidden ):?>
                                         <span class="img-wrapper">
                                             <picture>
                                                 <source srcset="<?php echo $step1_img2_m;?>" media="(max-width: 768px)">
-                                                <source srcset="<?php echo $step1_img2;?>" media="(max-width: 1920px)">
                                                 <img src="<?php echo $step1_img2;?>" alt="<?php echo $step1_ans2;?>">
                                             </picture>
                                         </span>
@@ -282,7 +280,6 @@ if ( !$isBlock03Hidden ):?>
                                         <span class="img-wrapper">
                                             <picture>
                                                 <source srcset="<?php echo $step1_img3_m;?>" media="(max-width: 768px)">
-                                                <source srcset="<?php echo $step1_img3;?>" media="(max-width: 1920px)">
                                                 <img src="<?php echo $step1_img3;?>" alt="<?php echo $step1_ans3;?>">
                                             </picture>
                                         </span>
@@ -447,6 +444,7 @@ if ( !$isBlock03Hidden ):?>
                     <div class="quiz__header">
                         <span id="quizResult">Расчет</span>
                     </div>
+                    <form action="#" class="form quiz-result">
                     <form class="form quiz-result">
                         <div class="quiz-item">
                             <h4 class="quiz-item-title">Куда направить Вам расчет?</h4>
@@ -550,7 +548,7 @@ if ( !$isBlock04Hidden ):?>
                                             <rect fill="white" class="mask_rect"></rect>
                                         </mask>
                                     </defs>
-                                    <image mask="url(#mask_img)" fill="blue" class="masked_img" xlink:href="<?php echo $chief['photo']?>" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
+                                    <image mask="url(#mask_img)" class="masked_img" xlink:href="<?php echo $chief['photo']?>" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
                                 </svg>
                                 </svg>
                             </div>

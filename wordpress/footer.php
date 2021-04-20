@@ -24,7 +24,7 @@ $mainId = get_option( 'page_on_front' );
                 </div>
 
                 <div class="contacts">
-                    <!--                    <a href="tel:+7 (495) 921-30-01" class="contact contact-phone">
+                    <!--                    <a href="tel:+7(495)9213001" class="contact contact-phone">
                                             <span class="contact-ic contact-phone-ic"></span>
                                             <span>+7 (495) 921-30-01</span>
                                         </a>-->
