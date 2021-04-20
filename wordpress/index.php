@@ -32,28 +32,42 @@ if ( !$isBannerHidden) : ?>
                         <p class="subtitle"><?php the_field('main_subtitle'); ?></p>
                         <button class="btn btn-light btn-anim" id="showCalc"><?php the_field('calcBtn_title'); ?></button>
                     </div>
-                    <a href="#" class="btn btn-play ">
-                        <div class="pulse ">
-                        <span class="play-ic">
-                            <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <use class="svg-sym" xlink:href="#play-ic" x="0" y="0" />
-                            </svg>
-                        </span>
+                    <?php
+                    $isVideoHidden = get_field('isHiddenVideo', $mainId);
 
-                            <svg class="svg-pulse">
-                                <defs>
-                                    <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
-                                        <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
-                                        <stop offset="50%" stop-color="#BBA182" />
-                                    </linearGradient>
-                                </defs>
-                                <circle  class="circle still "/>
-                                <circle  class="circle circle-frst"/>
-                                <circle  class="circle circle-secd"/>
-                            </svg>
-                        </div>
-                        <span class="btn-play__text">Смотреть видео</span>
-                    </a>
+                    if ( !$isVideoHidden ):?>
+                        <?php
+                        $link = get_field('videoLink');
+                        if( $link ):
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+
+                        <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-play <?php echo esc_html( $isVideoHidden); ?>">
+                            <div class="pulse ">
+                                <span class="play-ic">
+                                    <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <use class="svg-sym" xlink:href="#play-ic" x="0" y="0"/>
+                                    </svg>
+                                </span>
+
+                                <svg class="svg-pulse">
+                                    <defs>
+                                        <linearGradient id="gradient" x1="95%" y1="55%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#BBA182" stop-opacity="0"/>
+                                            <stop offset="50%" stop-color="#BBA182"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <circle class="circle still "/>
+                                    <circle class="circle circle-frst"/>
+                                    <circle class="circle circle-secd"/>
+                                </svg>
+                            </div>
+                            <span class="btn-play__text"><?php echo esc_html( $link_title ); ?></span>
+                        </a>
+                        <?php endif; ?>
+                    <?php endif;?>
                     <a href="#" class="btn btn-btm">
                     <span class="mouse-ic">
                         <svg class="svg-wrap" viewBox="0 0 22 22" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -576,7 +590,7 @@ if ( !$isBlock05Hidden ):?>
                             //$tooltip_left = $tooltip_coords['left'];
                             //$tooltip_top = $tooltip_coords['top'];
                             $tooltip_descr = get_field('descr', $tooltip->ID);
-                        ?>
+                            ?>
 
                             <div class="schema-collapse-wrapper" data-top="<?php echo esc_html( $tooltip_coords['top']);?>" data-left="<?php echo esc_html( $tooltip_coords['left']);?>">
                                 <div class="schema-collapse">

@@ -42,7 +42,7 @@ $mainId = get_option( 'page_on_front' );
             </div>
             <div class="footer-right">
                 <a href="#" class="footer-link private-privacy">ФЗ о персональных данных</a>
-                <div class="develop-name">© Разработано в <span>SEQUOIA</span></div>
+                <div class="develop-name">© Разработано в <a href="https://sqa.agency/">SEQUOIA</a></div>
             </div>
         </div>
     </div>

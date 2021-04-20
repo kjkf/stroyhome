@@ -31,3 +31,8 @@ function formInputFocusEventHandler() {
         })
     })
 };
+
+function createTooltips() {
+    const tooltips = document.querySelectorAll('li[data-tooltip]');
+    console.log(tooltips);
+}
