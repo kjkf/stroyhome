@@ -25,14 +25,23 @@
                 </ul>
             </nav>
             <div class="header-right">
-                <a href="tel:+7 (495) 921-30-01" class="contact contact-phone">
-                                <span class="contact__text">Звоните</span>
-                                <span class="contact-phone-btn callbackkiller cbk-phone cbk-phone-waves">
-                                    <div class="cbk-phone-bgr contact-phone-ic"></div>
-                                    <div class="cbk-phone-circle"></div>
-                                    <div class="cbk-phone-second_circle"></div>
-                                    <div class="cbk-phone-third_circle"></div>
-                                </span>
+                <a href="tel:+7(495)9213001" class="contact contact-phone">
+                    <span class="contact__text">Звоните</span>
+
+                    <div class="pulse pulse--sm">
+
+                        <span class="phoneTransp-ic">
+                            <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
+                            </svg>
+                        </span>
+
+                        <svg class="svg-pulse">
+                            <circle  class="circle circle-frst" r="19.79167vw"/>
+                            <circle  class="circle circle-secd" r="19.79167vw"/>
+                        </svg>
+                    </div>
+
                     <span>+7 (495) 921-30-01</span>
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=+7(495)9213001" class="whatsapp">
@@ -295,48 +304,61 @@
     </li>
 </ul>
 
-<template type="text/x-template" id="modalTemplate">
+<div id="modalTemplate">
     <!--<div class="modal-wrap-fixed">-->
-        <div class="modal-wrap">
-            <div class="modal modal--callback">
-                <button class="btn btn-close" type="button"></button>
-                <div class="modal__in">
-                    <span class="modal__subtitle">Звоните</span>
-                    <h4 class="title modal__title">
-                        <a href="tel:+7 (495) 921-30-01" class="contact-phone">
-                            <span class="contact-phone-btn callbackkiller cbk-phone cbk-phone-waves">
-                                <div class="cbk-phone-bgr contact-phone-ic"></div>
-                                <div class="cbk-phone-circle"></div>
-                                <div class="cbk-phone-second_circle"></div>
-                                <div class="cbk-phone-third_circle"></div>
+    <div class="modal-wrap">
+        <div class="modal modal--callback">
+            <button class="btn btn-close" type="button"></button>
+            <div class="modal__in">
+                <span class="modal__subtitle">Звоните</span>
+                <h4 class="title modal__title">
+                    <a href="tel:+7(495)9213001" class="contact-phone">
+
+                            <span class="pulse pulse--sm">
+                                <span class="phoneTransp-ic">
+                                    <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
+                                    </svg>
+                                </span>
+                                <svg class="svg-pulse">
+                                    <!--<defs>
+                                        <linearGradient id="gradient" x1= "95%" y1="55%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
+                                            <stop offset="50%" stop-color="#BBA182" />
+                                        </linearGradient>
+                                    </defs>-->
+                                    <circle  class="circle circle-frst" r="5.2083vw"/>
+                                    <circle  class="circle circle-secd" r="5.2083vw"/>
+                                </svg>
                             </span>
-                            <span>+7 (495) 921-30-01</span>
-                        </a>
-                    </h4>
-                    <span class="modal__subtitle secd">или оставьте заявку, </span>
-                    <span>и с вами свяжется наш менеджер</span>
-                    <form action="#" class="form">
-                        <div class="form-row">
-                            <input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>
-                        </div>
-                        <div class="form-row">
-                            <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
-                        </div>
-                        <div class="form-row form-check-wrap">
-                            <label for="agree_cond" class="form-check">
-                                <input type="checkbox" id="agree_cond">
-                                <span class="form-check__btn"></span>
-                                <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
-                            </label>
-                        </div>
-                        <input type="hidden" id="isDownload">
-                        <a href="assets/images/content/frame.png" id="downloadLink" download style="display: none">Download</a>
-                    </form>
-                </div>
+                        <span>+7 (495) 921-30-01</span>
+                    </a>
+                </h4>
+                <span class="modal__subtitle secd">или оставьте заявку, </span>
+                <span>и с вами свяжется наш менеджер</span>
+                <form action="#" class="form">
+                    <div class="form-row">
+                        <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
+                        <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="form-row">
+                        <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>
+                    </div>
+                    <div class="form-row form-check-wrap">
+                        <label for="agree_cond" class="form-check">
+                            <input type="checkbox" checked id="agree_cond">
+                            <span class="form-check__btn"></span>
+                            <span>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></span>
+                        </label>
+                    </div>
+                    <input type="hidden" id="isDownload">
+                    <a href="assets/images/content/frame.png" id="downloadLink" download style="display: none">Download</a>
+                </form>
             </div>
         </div>
+    </div>
     <!--</div>-->
-</template>
+</div>
 
 
 <svg style="display: none;" class="svg-ic">

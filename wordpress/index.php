@@ -240,7 +240,7 @@ if ( !$isBlock03Hidden ):?>
                             <span class="quiz-step"></span>
                         </div>
                     </div>
-                    <form action="" class="form" name="quizForm">
+                    <form action="#" class="form" name="quizForm">
                         <div class="quiz-items">
                             <?php $questions = get_field('questions');?>
                             <div class="quiz-item">
@@ -461,7 +461,7 @@ if ( !$isBlock03Hidden ):?>
                     <div class="quiz__header">
                         <span id="quizResult">Расчет</span>
                     </div>
-                    <form action="" class="form quiz-result">
+                    <form action="#" class="form quiz-result">
                         <div class="quiz-item">
                             <h4 class="quiz-item-title">Куда направить Вам расчет?</h4>
                             <div class="quiz-row icons">
@@ -564,7 +564,7 @@ if ( !$isBlock04Hidden ):?>
                                             <rect fill="white" class="mask_rect"></rect>
                                         </mask>
                                     </defs>
-                                    <image mask="url(#mask_img)" fill="blue" class="masked_img" xlink:href="<?php echo $chief['photo']?>" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
+                                    <image mask="url(#mask_img)" class="masked_img" xlink:href="<?php echo $chief['photo']?>" pointer-events="fill" preserveAspectRatio="xMinYMin slice"></image>
                                 </svg>
                                 </svg>
                             </div>

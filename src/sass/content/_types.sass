@@ -42,7 +42,8 @@
 
   .title--shadow span.accent::before
     +phone-down
-      display: none
+      font-size: 48px
+      top: -65px
 
   .section-index-wrapper
     position: absolute
@@ -346,15 +347,3 @@
     +phone-down
       width: 24px
       height: 24px
-
-.show-mob //title--shadow span.accent::before
-  display: none
-  +phone-down
-    display: block
-
-  &.title--shadow span.accent
-    &::before
-      display: block
-      top: 34px
-      left: 14px
-      font-size: 50px
