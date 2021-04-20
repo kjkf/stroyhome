@@ -42,6 +42,10 @@ function formIterate(quiz) {
 
             hideForm(stepDivs[currentStep++]);
 
+            if (currentStep === 1) {
+                const quest2Answ = document.querySelector("#area");
+                currentAnswer.value = quest2Answ.value;
+            }
             if (currentStep >= stepDivs.length) {
                 showResult(quiz, quizResult);
                 return;

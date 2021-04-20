@@ -20,7 +20,7 @@ $mainId = get_option( 'page_on_front' );
                 <div class="address br-btm">
                     <h5>Адрес офиса:</h5>
                     <?php $address = get_field('adress', $mainId);?>
-                    <div class="address__text"><span><?php echo $address['city']?>, </span><span><?php echo $address['street']?></span></div>
+                    <div class="address__text"><span></span></div>
                 </div>
 
                 <div class="contacts">
@@ -74,7 +74,7 @@ $mainId = get_option( 'page_on_front' );
         </a>
     </li>
     <li class="callback__item download-btn">
-        <span class="prompt">скачать прайс-лист</span>
+        <span class="prompt">скачать каталог</span>
         <a href="#" class="btn callback__btn">
             <svg class="svg-wrap" viewBox="0 0 28 30" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <use class="svg-sym" xlink:href="#pdf-ic" x="0" y="0" />
@@ -144,7 +144,7 @@ $mainId = get_option( 'page_on_front' );
                     </div>
                     <div class="form-row form-check-wrap">
                         <label for="agree_cond" class="form-check">
-                            <input type="checkbox" id="agree_cond">
+                            <input type="checkbox" checked id="agree_cond">
                             <span class="form-check__btn"></span>
                             <div>Вы соглашаетесь с условиями <a href="#" class="link private-privacy">обработки персональных данных</a></div>
                         </label>

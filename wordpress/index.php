@@ -565,103 +565,38 @@ if ( !$isBlock05Hidden ):?>
             <div class="schema-in">
                 <div class="img-wrap">
                     <img src="<?php the_field('house_schema');?>" alt="">
+                    <?php
+                    $tooltips = get_field('tooltips');
+                    if( $tooltips ):
+                        $count = 0;
+                        $bigClassName = "types-item--big";
+                        foreach( $tooltips as $tooltip ):
+                            $tooltip_title = get_the_title($tooltip->ID);
+                            $tooltip_coords = get_field('coords', $tooltip->ID);
+                            //$tooltip_left = $tooltip_coords['left'];
+                            //$tooltip_top = $tooltip_coords['top'];
+                            $tooltip_descr = get_field('descr', $tooltip->ID);
+                        ?>
 
-                    <div class="schema-collapse-wrapper" data-top="22" data-left="67">
-                        <div class="schema-collapse">
-                    <span class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
-                        <div class="cbk-phone-circle"></div>
-                        <div class="cbk-phone-second_circle"></div>
-                        <div class="cbk-phone-third_circle"></div>
-                    </span>
-                            <div class="schema-collapse__descr hide">
-                                <h5 class="schema-collapse__title">Кирпичный</h5>
-                                <p class="schema-collapse__text">
-                                    Мы – профессиональная строительная
-                                    компания, предоставляющая услуги
-                                </p>
+                            <div class="schema-collapse-wrapper" data-top="<?php echo esc_html( $tooltip_coords['top']);?>" data-left="<?php echo esc_html( $tooltip_coords['left']);?>">
+                                <div class="schema-collapse">
+                                    <span class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
+                                        <div class="cbk-phone-circle"></div>
+                                        <div class="cbk-phone-second_circle"></div>
+                                        <div class="cbk-phone-third_circle"></div>
+                                    </span>
+                                    <div class="schema-collapse__descr hide">
+                                        <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5>
+                                        <p class="schema-collapse__text">
+                                            <?php echo $tooltip_descr;?>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="schema-collapse-wrapper" data-top="64" data-left="73">
-                        <div class="schema-collapse">
-                    <span class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
-                        <div class="cbk-phone-circle"></div>
-                        <div class="cbk-phone-second_circle"></div>
-                        <div class="cbk-phone-third_circle"></div>
-                    </span>
-                            <div class="schema-collapse__descr hide">
-                                <h5 class="schema-collapse__title">Кирпичный</h5>
-                                <p class="schema-collapse__text">
-                                    Мы – профессиональная строительная
-                                    компания, предоставляющая услуги
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="schema-collapse-wrapper" data-top="32" data-left="38">
-                        <div class="schema-collapse">
-                    <span class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
-                        <div class="cbk-phone-circle"></div>
-                        <div class="cbk-phone-second_circle"></div>
-                        <div class="cbk-phone-third_circle"></div>
-                    </span>
-                            <div class="schema-collapse__descr hide">
-                                <h5 class="schema-collapse__title">Кирпичный</h5>
-                                <p class="schema-collapse__text">
-                                    Мы – профессиональная строительная
-                                    компания, предоставляющая услуги
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="schema-collapse-wrapper" data-top="44" data-left="67">
-                        <div class="schema-collapse">
-                    <span class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
-                        <div class="cbk-phone-circle"></div>
-                        <div class="cbk-phone-second_circle"></div>
-                        <div class="cbk-phone-third_circle"></div>
-                    </span>
-                            <div class="schema-collapse__descr hide">
-                                <h5 class="schema-collapse__title">Кирпичный</h5>
-                                <p class="schema-collapse__text">
-                                    Мы – профессиональная строительная
-                                    компания, предоставляющая услуги
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="schema-collapse-wrapper" data-top="80" data-left="29">
-                        <div class="schema-collapse">
-                    <span class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
-                        <div class="cbk-phone-circle"></div>
-                        <div class="cbk-phone-second_circle"></div>
-                        <div class="cbk-phone-third_circle"></div>
-                    </span>
-                            <div class="schema-collapse__descr hide">
-                                <h5 class="schema-collapse__title">Кирпичный</h5>
-                                <p class="schema-collapse__text">
-                                    Мы – профессиональная строительная
-                                    компания, предоставляющая услуги
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="schema-collapse-wrapper" data-top="50" data-left="15">
-                        <div class="schema-collapse">
-                    <span class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
-                        <div class="cbk-phone-circle"></div>
-                        <div class="cbk-phone-second_circle"></div>
-                        <div class="cbk-phone-third_circle"></div>
-                    </span>
-                            <div class="schema-collapse__descr hide">
-                                <h5 class="schema-collapse__title">Кирпичный</h5>
-                                <p class="schema-collapse__text">
-                                    Мы – профессиональная строительная
-                                    компания, предоставляющая услуги
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+
                 </div>
 
             </div>
@@ -839,7 +774,7 @@ if ( !$isBlock06Hidden ):?>
                                     </div>
                                     <div class="form-row form-check-wrap">
                                         <label for="agree_cond2" class="form-check">
-                                            <input type="checkbox" id="agree_cond2">
+                                            <input type="checkbox" checked id="agree_cond2">
                                             <span class="form-check__btn"></span>
                                             <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
                                         </label>
@@ -954,7 +889,7 @@ if ( !$isBlock06Hidden ):?>
                                         <button type="submit" class="btn btn-light btn-anim btn-submit sendToEmail">Оставить заявку</button>
                                         <div class="form-check-wrap">
                                             <label for="agree_cond1" class="form-check">
-                                                <input type="checkbox" id="agree_cond1">
+                                                <input type="checkbox" checked id="agree_cond1">
                                                 <span class="form-check__btn"></span>
                                                 <div>Вы соглашаетесь с условиями <a href="#" class="link">обработки персональных данных</a></div>
                                             </label>
@@ -1066,7 +1001,7 @@ if ( !$isBlock10Hidden ):?>
 <?php
 $isBlock11Hidden = get_field('isBlock11Hidden', $mainId);
 if ( !$isBlock10Hidden ):?>
-    <section class="contacts-block laurel-right-ic" id="contacts">
+    <section class="contacts-block laurel-right-ic"  id="contacts">
         <div class="map" id="map">
 
         </div>

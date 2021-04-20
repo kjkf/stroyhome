@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function (evt) {
     initQuiz();
     initSchemasDescr();
     init_slider();
-    initsendToEmailHandlers();
+    initSendToEmailHandlers();
+    formInputFocusEventHandler();
 
     const btnMore = document.querySelector('.btn--more');
     const text = document.querySelector('.build .build-text');
