@@ -52,9 +52,9 @@ if ( !$isBannerHidden) : ?>
                                 </span>
 
                                 <svg class="svg-pulse">
-                                    <circle  class="circle still" r="12.5vw" />
-                                    <circle  class="circle circle-frst" r="19.79167vw"/>
-                                    <circle  class="circle circle-secd" r="19.79167vw"/>
+                                    <circle  class="circle still" r="2.5vw" />
+                                    <circle  class="circle" r="12.5vw"/>
+                                    <circle  class="circle" r="12.5vw"/>
                                 </svg>
                             </div>
                             <span class="btn-play__text"><?php echo esc_html( $link_title ); ?></span>
@@ -591,6 +591,25 @@ if ( !$isBlock05Hidden ):?>
 
                             <div class="schema-collapse-wrapper" data-top="<?php echo esc_html( $tooltip_coords['top']);?>" data-left="<?php echo esc_html( $tooltip_coords['left']);?>">
                                 <div class="schema-collapse">
+                                    <span class="pulse pulse--sm">
+                                        <span class="schema-collapse__btn"></span>
+                                        <svg class="svg-pulse">
+                                            <circle  class="circle" r="3.64583vw"/>
+                                            <circle  class="circle" r="3.64583vw"/>
+                                        </svg>
+                                    </span>
+
+                                    <div class="schema-collapse__descr hide">
+                                        <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5>
+                                        <p class="schema-collapse__text">
+                                            <?php echo $tooltip_descr;?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="schema-collapse-wrapper" data-top="<?php echo esc_html( $tooltip_coords['top']);?>" data-left="<?php echo esc_html( $tooltip_coords['left']);?>">
+                                <div class="schema-collapse">
                                     <div class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
                                         <div class="cbk-phone-circle"></div>
                                     </div>
@@ -751,8 +770,8 @@ if ( !$isBlock06Hidden ):?>
                                                 </svg>
                                             </span>
                                             <svg class="svg-pulse">
-                                                <circle  class="circle circle-frst" r="5.2083vw"/>
-                                                <circle  class="circle circle-secd" r="5.2083vw"/>
+                                                <circle  class="circle" r="3.64583vw"/>
+                                                <circle  class="circle" r="3.64583vw"/>
                                             </svg>
                                         </span>
                                         <span><?php echo str_replace(" ","",get_field('phone_num', $mainId));?></span>
