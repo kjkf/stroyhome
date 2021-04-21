@@ -51,8 +51,8 @@
 
 
     .header-right
-      //+phone-down
-        display: none
+
+
 
   &-in
     display: flex
@@ -105,6 +105,12 @@
     +phone-down
       align-self: center
       width: unset
+    .pulse.pulse--md
+      position: absolute
+      left: -3.54166vw //-68px
+      +phone-down
+        left: -70px
+        top: -40px
 
   .btn-menu
     position: absolute

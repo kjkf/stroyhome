@@ -70,16 +70,11 @@
 $pulse_w: 15.625vw //300
 //$pulse_w: 500px
 .pulse
-  //position: relative
-  width: $pulse_w
-  height: $pulse_w
   display: inline-flex
   justify-content: center
   align-items: center
 
   svg.svg-pulse
-    width: $pulse_w
-    height: $pulse_w
     display: block
     transform-origin: center
     position: absolute
@@ -93,32 +88,41 @@ $pulse_w: 15.625vw //300
     stroke: url('#gradient')
     stroke-width: 1px
     transform-origin: center
-    //transform: scale(0.2)
     animation: pulse 2s infinite
     animation-timing-function: linear
     cx: 50%
     cy: 50%
-
-    &.still
-      animation: none
-      fill: $accent
-      stroke: $accent
-      r: 2.5vw
-
     &:nth-child(2)
       animation-delay: 1s
     &:nth-child(3)
       animation-delay: 2s
+    &.still
+      animation: none
+
+
+.pulse--lg
+  width: $pulse_w
+  height: $pulse_w
+  svg.svg-pulse
+    width: $pulse_w
+    height: $pulse_w
+  circle.circle
+    r: 12.5vw
+    &.still
+      r: 2.5vw
+      fill: $accent
+      stroke: $accent
 
 //$pulse_sm_w: 5.2083vw //100
-$pulse_sm_w: 7.2916vw //140px
-$pulse_sm_w_mob: 200px
-.pulse.pulse--sm
+$pulse_sm_w: 5.2083vw //100px //140px
+$pulse_sm_w_mob: 100px
+
+.pulse--md
   width: $pulse_sm_w
   min-width: $pulse_sm_w
   height: $pulse_sm_w
+  position: relative
   position: absolute
-  left: -4.59375vw //-69px
   +phone-down
     width: $pulse_sm_w_mob
     height: $pulse_sm_w_mob
@@ -129,22 +133,47 @@ $pulse_sm_w_mob: 200px
   svg.svg-pulse
     width: $pulse_sm_w
     height: $pulse_sm_w
+    top: 50%
+    left: 50%
+    margin-top: calc(#{$pulse_sm_w} / (-2))
+    margin-left: calc(#{$pulse_sm_w} / (-2))
     +phone-down
       width: $pulse_sm_w_mob
       height: $pulse_sm_w_mob
+      margin-top: calc(#{$pulse_sm_w_mob} / (-2))
+      margin-left: calc(#{$pulse_sm_w_mob} / (-2))
 
   circle.circle
+    r: 5.2083vw //100px
     +phone-down
-      r: 100px
+      r: 23.2083vw
     &.still
       fill: transparent
       stroke: transparent
+      r: 2.083vw //40px
 
 
 .schema-collapse
-  .pulse svg.svg-pulse
-    top: calc(#{$pulse_sm_w} / (-2))
+  .pulse.pulse--md
+    margin-left: calc(5.2083vw / (-2))
+    left: 50%
+    top: 0
+  .pulse--md svg.svg-pulse
+    top: 0
 
+.modal
+  .pulse.pulse--md
+    top: -3.24vh //-35px
+    left: -4.166vw //-80px
+    +phone-down
+      display: none
+
+.work_stages
+  .pulse.pulse--md
+    top: -2.6vh
+    left: -2.6vw
+    +phone-down
+      display: none
 
 /* Pulse Animation
 @keyframes pulse
