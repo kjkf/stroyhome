@@ -101,7 +101,7 @@
                         </span>
 
                         <svg class="svg-pulse">
-                            <circle  class="circle still" r="2.5vw" />
+                            <circle  class="circle still" r="2.5vw"/>
                             <circle  class="circle" r="12.5vw"/>
                             <circle  class="circle" r="12.5vw"/>
                         </svg>
@@ -1537,6 +1537,13 @@
             <stop offset="0%" stop-color="#BBA182" stop-opacity="0" />
             <stop offset="50%" stop-color="#BBA182" />
         </linearGradient>
+
+        <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feOffset result="offOut" in="SourceGraphic" dx="0" dy="0" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="15" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+
     </defs>
 </svg>
 
