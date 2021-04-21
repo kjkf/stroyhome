@@ -6,10 +6,18 @@
   font-family: $ffAvenirNextCyrBold
   color: $fontColorMain
   text-transform: uppercase
+  width: 17.447916vw
   +ipad-down
     font-size: 1.3rem //13px
+    width: 18rem
   +phone-down
     font-size: 2rem //18px
+    width: 122px
+
+  img
+    width: 100%
+    height: auto
+
   span
     color: $accent
 
@@ -50,10 +58,6 @@
         display: none
 
 
-    .header-right
-
-
-
   &-in
     display: flex
     justify-content: space-between
@@ -65,7 +69,7 @@
     +phone-down
       flex-direction: column
       align-items: stretch
-      padding: 26px 0 40px //calc(26em/12) 0 calc(40em/12)
+      padding: 31px 0 40px //calc(26em/12) 0 calc(40em/12)
       //padding: 2.6vh 0 4vh
   .nav
     margin-left: 3.125vw
