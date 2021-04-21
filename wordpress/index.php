@@ -44,7 +44,7 @@ if ( !$isBannerHidden) : ?>
                         ?>
 
                         <a href="#" target="<?php echo esc_attr( $link_target ); ?>" class="btn btn-play <?php echo esc_html( $isVideoHidden); ?>">
-                            <div class="pulse ">
+                            <div class="pulse pulse--lg">
                                 <span class="play-ic">
                                     <svg class="" viewBox="0 0 23 26" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <use class="svg-sym" xlink:href="#play-ic" x="0" y="0" />
@@ -588,33 +588,19 @@ if ( !$isBlock05Hidden ):?>
                             //$tooltip_top = $tooltip_coords['top'];
                             $tooltip_descr = get_field('descr', $tooltip->ID);
                             ?>
-
                             <div class="schema-collapse-wrapper" data-top="<?php echo esc_html( $tooltip_coords['top']);?>" data-left="<?php echo esc_html( $tooltip_coords['left']);?>">
                                 <div class="schema-collapse">
-                                    <span class="pulse pulse--sm">
+                                    <div class="pulse pulse--md">
                                         <span class="schema-collapse__btn"></span>
                                         <svg class="svg-pulse">
-                                            <circle  class="circle" r="3.64583vw"/>
-                                            <circle  class="circle" r="3.64583vw"/>
+                                            <circle  class="circle still" r="50px"/>
+                                            <circle  class="circle" r="12.5vw"/>
+                                            <circle  class="circle" r="12.5vw"/>
                                         </svg>
-                                    </span>
+                                    </div>
 
                                     <div class="schema-collapse__descr hide">
-                                        <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5>
-                                        <p class="schema-collapse__text">
-                                            <?php echo $tooltip_descr;?>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="schema-collapse-wrapper" data-top="<?php echo esc_html( $tooltip_coords['top']);?>" data-left="<?php echo esc_html( $tooltip_coords['left']);?>">
-                                <div class="schema-collapse">
-                                    <div class="schema-collapse__btn cbk-phone-waves callbackkiller cbk-phone">
-                                        <div class="cbk-phone-circle"></div>
-                                    </div>
-                                    <div class="schema-collapse__descr hide">
-                                        <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5>
+                                        <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5></h5>
                                         <p class="schema-collapse__text">
                                             <?php echo $tooltip_descr;?>
                                         </p>
@@ -763,17 +749,18 @@ if ( !$isBlock06Hidden ):?>
                                 <span class="modal__subtitle">Звоните</span>
                                 <h4 class="title modal__title">
                                     <a href="tel:<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact-phone">
-                                        <span class="pulse pulse--sm">
+                                        <div class="pulse pulse--md">
                                             <span class="phoneTransp-ic">
                                                 <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                     <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
                                                 </svg>
                                             </span>
                                             <svg class="svg-pulse">
-                                                <circle  class="circle" r="3.64583vw"/>
-                                                <circle  class="circle" r="3.64583vw"/>
+                                                <circle  class="circle still" r="50px"/>
+                                                <circle  class="circle" r="12.5vw"/>
+                                                <circle  class="circle" r="12.5vw"/>
                                             </svg>
-                                        </span>
+                                        </div>
                                         <span><?php echo str_replace(" ","",get_field('phone_num', $mainId));?></span>
                                     </a>
                                 </h4>
