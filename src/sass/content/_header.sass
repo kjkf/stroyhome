@@ -1,4 +1,32 @@
+.logo
+  display: flex
+  justify-content: center
+  align-items: center
+  font-size: 1.35vw //26px
+  font-family: $ffAvenirNextCyrBold
+  color: $fontColorMain
+  text-transform: uppercase
+  width: 17.447916vw
+  +ipad-down
+    font-size: 1.3rem //13px
+    width: 18rem
+  +phone-down
+    font-size: 2rem //18px
+    width: 122px
 
+  img
+    width: 100%
+    height: auto
+
+  span
+    color: $accent
+
+  &-text
+    font-size: 0.73vw //14px
+    line-height: 1.2
+    display: inline-flex
+    +ipad-down
+      font-size: 0.7rem //7px
 
 .nav
   ul
