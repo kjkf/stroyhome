@@ -116,6 +116,28 @@ a
 .text-upper
 	text-transform: uppercase
 
+.logo
+	display: inline-block
+	//width: 17.447916vw
+	//max-width: 17.447916vw
+	width: 8.854vw
+	min-width: 8.854vw
+	+ipad-down
+		width: 100px
+		min-width: 100px
+	+phone-down
+		width: 122px
+	img
+		width: 100%
+		height: auto
+
+	&-text
+		font-size: 0.73vw //14px
+		line-height: 1.2
+		display: inline-flex
+		+ipad-down
+			font-size: 0.7rem //7px
+
 .btn
 	position: relative
 	font-family: $ffAvenirNextCyr
@@ -686,3 +708,4 @@ $play_ic_w: 1.04167vw
 .svg-grad
 	position: absolute
 	bottom: 0
+
