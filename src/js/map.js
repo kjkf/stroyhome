@@ -1,7 +1,19 @@
 function initMap() {
     if (!document.getElementById("map")) return false;
+    const windowInnerWidth = window.innerWidth;
+    const markerPos = { lat: 59.9138880551601,  lng: 30.276488114225632 };
+    let mapCenter = { lat: 59.91046,  lng: 30.29965 }; //windowInnerWidth > 768 ? { lat: 59.91046,  lng: 30.29965 } : markerPos;
+    let iconScale = 1;
+    if (windowInnerWidth < 576) {
+        mapCenter = { lat: 59.91262411264973,  lng: 30.276965547378175 };
+        iconScale = 0.5;
+    } else if (windowInnerWidth < 769) {
+        mapCenter = { lat: 59.910898811900985,  lng: 30.285760409090436};
+        iconScale = 0.75;
+    }
+    console.log(mapCenter, iconScale);
     let map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 59.91046,  lng: 30.29965 },
+        center: mapCenter,
         zoom: 15,
         mapId: '4bdebe2aef94632b'
     });
@@ -12,14 +24,29 @@ function initMap() {
         fillOpacity: 0.6,
         strokeWeight: 0,
         rotation: 0,
-        scale: 1,
+        scale: iconScale,
         anchor: new google.maps.Point(15, 30)
     };
 
     new google.maps.Marker({
-        position: { lat: 59.9138880551601,  lng: 30.276488114225632 },
+        position: markerPos,
         icon: svgMarker,
         map: map
     });
 
+    calcContactBlockHeight();
+}
+
+function calcContactBlockHeight() {
+    const contactsBlock = document.querySelector('.contacts-block');
+    const h2 = contactsBlock.querySelector('h2');
+    const content = contactsBlock.querySelector('.content');
+    const mapin = contactsBlock.querySelector('.map-in');
+    const mapinStyle = getComputedStyle(mapin);
+    //console.log(h2.getBoundingClientRect().height);
+    //console.log(content.getBoundingClientRect().height);
+    //console.log(mapinStyle.paddingTop);
+
+    let height = h2.getBoundingClientRect().height + content.getBoundingClientRect().height + parseFloat(mapinStyle.paddingTop);
+    contactsBlock.style.height = `${height}px`;
 }
