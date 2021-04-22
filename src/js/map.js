@@ -1,16 +1,34 @@
 function initMap() {
     if (!document.getElementById("map")) return false;
+    const latInput = document.getElementById('lat');
+    const lngInput = document.getElementById('lng');
+    if (!latInput || !lngInput) return false;
+
+    const lat = parseFloat(latInput.value);
+    const lng = parseFloat(lngInput.value);
+
     const windowInnerWidth = window.innerWidth;
-    const markerPos = { lat: 59.9138880551601,  lng: 30.276488114225632 };
-    let mapCenter = { lat: 59.91046,  lng: 30.29965 }; //windowInnerWidth > 768 ? { lat: 59.91046,  lng: 30.29965 } : markerPos;
+    const markerPos = { lat: lat,  lng: lng }; //{ lat: 59.91389,  lng: 30.27649 }
+    console.log(markerPos);
+    let latDiff = 0.00343, lngDiff = -0.02316;
+
+    //let mapCenter = { lat: 59.91046,  lng: 30.29965 };
     let iconScale = 1;
     if (windowInnerWidth < 576) {
-        mapCenter = { lat: 59.91262411264973,  lng: 30.276965547378175 };
+        //mapCenter = { lat: 59.91262,  lng: 30.27697 };
         iconScale = 0.5;
+        latDiff = 0.00127;
+        lngDiff = -0.00048;
     } else if (windowInnerWidth < 769) {
-        mapCenter = { lat: 59.910898811900985,  lng: 30.285760409090436};
+        //mapCenter = { lat: 59.910899,  lng: 30.28576 };
         iconScale = 0.75;
+        latDiff = 0.00300;
+        lngDiff = -0.00927;
     }
+    const newLat = parseFloat((markerPos.lat - latDiff).toFixed(6));
+    const newLng = parseFloat((markerPos.lng - lngDiff).toFixed(6));
+    let mapCenter = { lat: newLat, lng: newLng };
+
     console.log(mapCenter, iconScale);
     let map = new google.maps.Map(document.getElementById("map"), {
         center: mapCenter,

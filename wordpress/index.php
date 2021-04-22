@@ -590,14 +590,14 @@ if ( !$isBlock05Hidden ):?>
                             ?>
                             <div class="schema-collapse-wrapper" data-top="<?php echo esc_html( $tooltip_coords['top']);?>" data-left="<?php echo esc_html( $tooltip_coords['left']);?>">
                                 <div class="schema-collapse">
-                                    <div class="pulse pulse--md">
+                                    <span class="pulse pulse--md">
                                         <span class="schema-collapse__btn"></span>
                                         <svg class="svg-pulse">
                                             <circle  class="circle still" r="50px"/>
                                             <circle  class="circle" r="12.5vw"/>
                                             <circle  class="circle" r="12.5vw"/>
                                         </svg>
-                                    </div>
+                                    </span>
 
                                     <div class="schema-collapse__descr hide">
                                         <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5>
@@ -749,7 +749,7 @@ if ( !$isBlock06Hidden ):?>
                                 <span class="modal__subtitle">Звоните</span>
                                 <h4 class="title modal__title">
                                     <a href="tel:<?php echo str_replace(" ","",get_field('phone_num'));?>" class="contact-phone">
-                                        <div class="pulse pulse--md">
+                                        <span class="pulse pulse--md">
                                             <span class="phoneTransp-ic">
                                                 <svg class="" viewBox="0 0 23 23" xmlns:xlink="http://www.w3.org/1999/xlink">
                                                     <use class="svg-sym" xlink:href="#phoneTransp-ic" x="0" y="0" />
@@ -760,7 +760,7 @@ if ( !$isBlock06Hidden ):?>
                                                 <circle  class="circle" r="12.5vw"/>
                                                 <circle  class="circle" r="12.5vw"/>
                                             </svg>
-                                        </div>
+                                        </span>
                                         <span><?php echo str_replace(" ","",get_field('phone_num', $mainId));?></span>
                                     </a>
                                 </h4>
@@ -1011,6 +1011,15 @@ if ( !$isBlock10Hidden ):?>
 $isBlock11Hidden = get_field('isBlock11Hidden', $mainId);
 if ( !$isBlock10Hidden ):?>
     <section class="contacts-block laurel-right-ic"  id="contacts">
+        <?php
+        $adress = get_field('adress', $mainId);
+        $coords = $adress['coords'];
+        $lat = $coords['lat'];
+        $lng = $coords['lng'];
+        ?>
+
+        <input type="hidden" id="lat" value="<?php echo lat;?>">
+        <input type="hidden" id="lng" value="<?php echo lng;?>">
         <div class="map" id="map">
 
         </div>
@@ -1029,7 +1038,7 @@ if ( !$isBlock10Hidden ):?>
                                 прямо сейчас...
                             </h5>
                             <div class="contact-wrapper">
-                                <?php $adress = get_field('adress', $mainId);?>
+
                                 <p class="contact adress"><?php echo $adress['city'];?>, <?php echo $adress['street'];?></p>
                                 <a href="<?php echo str_replace(" ","",get_field('phone_num', $mainId));?>" class="contact phone"><?php the_field('phone_num', $mainId);?></a>
                                 <a href="<?php the_field('insta', $mainId);?>" class="contact instagram"><?php the_field('insta', $mainId);?></a>
