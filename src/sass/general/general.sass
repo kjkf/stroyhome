@@ -694,22 +694,23 @@ $play_ic_w: 1.04167vw
 	&>svg
 		display: inherit
 
+$tooltip_w: 11.8125vw
+$tooltip_w_mob: 35vw
 .tooltip
 	display: inline-block
-	width: 11.8125vw
+	width: $tooltip_w
 	padding: 10px
 	background: $dark
 	border-radius: 10px
 	color: #ffffff
 	position: absolute
 	top: -35px
-	left: 0
-	+ipad-down
-		width: 14vw
+	left: 50%
+	margin-left: calc(#{$tooltip_w}/(-2))
 	+phone-down
-		width: 35vw
+		width: $tooltip_w_mob
 		font-size: 10px
-		left: -50%
+		margin-left: calc(#{$tooltip_w_mob}/(-2))
 
 .svg-grad
 	position: absolute
