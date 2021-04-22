@@ -28,7 +28,7 @@ if ( !$isBannerHidden) : ?>
                                 <div class="progress-subtitle"><?php echo esc_html( $medals['medal3_subtitle']);?></div>
                             </div>
                         </div>
-                        <h1 class="title title-anim fade_in"><?php the_field('main_title');?></h1>
+                        <h2 class="title title-anim fade_in"><?php the_field('main_title');?></h2>
                         <p class="subtitle"><?php the_field('main_subtitle'); ?></p>
                         <button class="btn btn-light btn-anim" id="showCalc"><?php the_field('calcBtn_title'); ?></button>
                     </div>
@@ -600,7 +600,7 @@ if ( !$isBlock05Hidden ):?>
                                     </div>
 
                                     <div class="schema-collapse__descr hide">
-                                        <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5></h5>
+                                        <h5 class="schema-collapse__title"><?php echo $tooltip_title;?></h5>
                                         <p class="schema-collapse__text">
                                             <?php echo $tooltip_descr;?>
                                         </p>
@@ -991,13 +991,13 @@ if ( !$isBlock10Hidden ):?>
         <div class="container">
             <div class="build-in">
                 <?php $block10_title = get_field('block10_title', $mainId);?>
-                <h2 class="title title--shadow title-anim  fade_in">
+                <h1 class="title title--shadow title-anim  fade_in">
                     <span class="<?php echo $block10_title['first_color']?> first" data-text="<?php echo $block10_title['first']?>"><?php echo $block10_title['first']?></span>
                     <span class="<?php echo $block10_title['second_color']?> second" data-text="<?php echo $block10_title['second']?>"><?php echo $block10_title['second']?></span>
-                </h2>
-                <p class="build-text excerpt">
+                </h1>
+                <div class="build-text excerpt">
                     <?php the_field('block10_text', $mainId);?>
-                </p>
+                </div>
                 <button class="btn btn--more"></button>
             </div>
             <span class="section-index-wrapper">
