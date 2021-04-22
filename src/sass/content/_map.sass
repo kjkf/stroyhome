@@ -1,9 +1,13 @@
 $map_h: 52em
+$map_w: 98.3vw
+$map_w_ipad: 97vw
 .contacts-block
   min-height: $map_h //87vh
-  width: 99vw
+  width: $map_w
   position: relative
   z-index: 0
+  +ipad-down
+    width: $map_w_ipad
   //background: rgba(32, 31, 36, .9)
   &.laurel-right-ic::after
     display: none
@@ -21,7 +25,9 @@ $map_h: 52em
   #map
     min-height: $map_h //87vh
     //min-height: 48.9583vw //940px
-    width: 99vw
+    width: $map_w
+    +ipad-down
+      width: $map_w_ipad
     +phone-down
       min-height: 470px
 
@@ -35,15 +41,20 @@ $map_h: 52em
     top: 0
     right: 0
     bottom: 0
-    //background: rgba(32, 31, 36, .95)
+    width: 98.8vw
     pointer-events: none
-    //background: radial-gradient(35% 50% at 33% 43%, rgba(242, 13, 13, 0) 0%, rgba(32, 31, 36, 0.9) 95%)
     background: radial-gradient(35% 50% at 33% 43%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 95%)
+    +large-down
+      width: 98.5vw
+    +large-down
+      width: 98.3vw
+    +ipad-down
+      width: 97.8vw
+    +tablet-down
+      width: 97vw
     +phone-down
       background: radial-gradient(35% 35% at 50% 30%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 95%)
-      //height: auto
-      //position: static
-      //margin-top: - #{$map_h} //-87vh
+
 
   .map-in
     position: relative
