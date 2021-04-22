@@ -114,6 +114,8 @@
   .quiz-item
     &.max-w942
       max-width: 49vw
+      +ipad-down
+        max-width: 100%
       +phone-down
         max-width: 100%
     &.item6.mb90
@@ -205,6 +207,11 @@
       justify-content: space-between
       .options__label:nth-child(2)
         margin-bottom: 2vh
+      +ipad-down
+        padding: 0 15vw
+      +phone-down
+        padding: 0 8.4vw
+
 
   .options__label
     display: inline-block
@@ -360,6 +367,8 @@
         padding-top: 56px
     .quiz-item-title
       margin-bottom: 3.8vh
+      +ipad-down
+        margin-bottom: 4.8vh
       +phone-down
         margin-bottom: 67px
     .callback__item
