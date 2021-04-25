@@ -25,12 +25,12 @@ function showModal(modal, isDownload) {
     document.body.append(modal);
     modal.classList.add('active');
 
-    var a = modal.getElementsByClassName('masked-phone'),
+    /*var a = modal.getElementsByClassName('masked-phone'),
         b = [];
 
     for (var c = 0; c < a.length; c++) {
         b.push(new PhoneField(a[c], a[c].dataset.phonemask, a[c].dataset.placeholder));
-    }
+    }*/
 }
 
 function closeModal(modal) {

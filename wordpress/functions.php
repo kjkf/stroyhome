@@ -73,6 +73,9 @@ function theme_register_nav_menu() {
     add_theme_support('post-thumbnails', array('post', 'stages', 'key_projects'));
     add_image_size('news_thumb', 250, 250, true);
 
+    register_nav_menu('news-menu-header', 'Верхнее меню страницы');
+    register_nav_menu('news-menu-main', 'Главное меню страницы');
+    register_nav_menu('news-menu-footer', 'Меню в футере страницы');
 }
 
 function the_breadcrumb() {

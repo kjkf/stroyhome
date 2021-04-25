@@ -232,6 +232,18 @@
         </h2>
         <div class="content">
             <div class="quiz step-1">
+                <form action="#" id="quiz-form">
+                    <input type="text" class="" id="answer" value="">
+                    <input type="text" name="Какой дом Вы хотите построить?" class="quiz-step-result" id="step01" value="">
+                    <input type="text" name="Какая площадь Вам необходима?" class="quiz-step-result" id="step02" value="">
+                    <input type="text" name="Есть ли у Вас уже участок в собственности?" class="quiz-step-result" id="step03" value="">
+                    <input type="text" name="Есть ли у Вас проект дома?" class="quiz-step-result" id="step04" value="">
+                    <input type="text" name="Какой бюджет вы планируете для постройки?" class="quiz-step-result" id="step05" value="">
+                    <input type="text" name="Когда Вы хотели бы начать работы?" class="quiz-step-result" id="step06" value="">
+                    <input type="text" name="Куда направить Вам расчет?" class="quiz-step-result" id="sendResults" value="">
+                    <input type="text" name="Имя" class="quiz-step-result" id="cname" value="">
+                    <input type="text" name="Телефон" class="quiz-step-result" id="cphone" value="">
+                </form>
                 <div class="quiz__header hide">
                     <h3>Вопрос <span class="quiz-current">1</span> из <span class="quiz-all">6</span></h3>
                     <div class="steps">
@@ -245,7 +257,7 @@
                 </div>
                 <form action="#" class="form" name="quizForm">
                     <div class="quiz-items">
-                        <div class="quiz-item">
+                        <div class="quiz-item hide">
                             <h4 class="quiz-item-title">Какой дом Вы хотите построить?</h4>
                             <div class="quiz-item-options options options--flex">
                                 <div class="quiz-item-option mr20">
@@ -432,25 +444,14 @@
                     </div>
 
                 </form>
-                <form action="#" id="quiz-form">
-                    <input type="hidden" class="" id="answer" value="">
-                    <input type="hidden" name="Какой дом Вы хотите построить?" class="quiz-step-result" id="step01" value="">
-                    <input type="hidden" name="Какая площадь Вам необходима?" class="quiz-step-result" id="step02" value="">
-                    <input type="hidden" name="Есть ли у Вас уже участок в собственности?" class="quiz-step-result" id="step03" value="">
-                    <input type="hidden" name="Есть ли у Вас проект дома?" class="quiz-step-result" id="step04" value="">
-                    <input type="hidden" name="Какой бюджет вы планируете для постройки?" class="quiz-step-result" id="step05" value="">
-                    <input type="hidden" name="Когда Вы хотели бы начать работы?" class="quiz-step-result" id="step06" value="">
-                    <input type="hidden" name="Куда направить Вам расчет?" class="quiz-step-result" id="sendResults" value="">
-                    <input type="hidden" name="Имя" class="quiz-step-result" id="cname" value="">
-                    <input type="hidden" name="Телефон" class="quiz-step-result" id="cphone" value="">
-                </form>
+
 
                 <div class="quiz-item-footer">
                     <button type="button" class="btn btn-dark hide" id="prevBtn">Назад</button>
                     <button type="button" class="btn btn-light btn-anim" id="nextBtn">Далее</button>
                 </div>
             </div>
-            <div class="quiz quiz-result hide">
+            <div class="quiz quiz-result ">
                 <div class="quiz__header">
                     <span id="quizResult">Расчет</span>
                 </div>
@@ -499,7 +500,7 @@
 
                         <div class="quiz-row">
                             <!--<input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>-->
-                            <input type="tel" id="cphoneAns" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                            <input type="tel" id="cphoneAns" name="tel1" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                         </div>
 
                         <div class="quiz-row">
@@ -998,7 +999,7 @@
                         <form action="#" class="form">
                             <div class="form-row">
                                 <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
-                                <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                                <input type="tel" name="tel2" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                             </div>
                             <div class="form-row form-row--submit">
                                 <button type="submit" class="btn btn-light btn-submit sendToEmail">Оставить заявку</button>
@@ -1105,7 +1106,7 @@
                         <div class="form-in">
                             <div class="form-col">
                                 <!--<input type="tel" class="form-field phone-num" placeholder="Ваш телефон" required>-->
-                                <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                                <input type="tel" name="tel3" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                             </div>
                             <div class="form-col">
                                 <input type="text" class="form-field" placeholder="Ваше имя" required>
@@ -1515,7 +1516,7 @@
                     <form action="#" class="form">
                         <div class="form-row">
                             <!--<input type="tel" class="form-field phone-num" placeholder="+7 (777) 777-77-77" required>-->
-                            <input type="tel" name="tel[]" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
+                            <input type="tel" name="tel4" class="form-field phone-num masked-phone" data-phonemask="+7 (___)___-__-__" placeholder="Ваш телефон" required>
                         </div>
                         <div class="form-row">
                             <button type="submit" class="btn btn-light btn-submit">Оставить заявку</button>

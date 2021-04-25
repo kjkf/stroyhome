@@ -6,7 +6,8 @@
     font-size: 3rem //calc(38em/12)
   +phone-down
     font-size: 28px //calc(28em/12)
-  span 
+  span
+    display: inline-block
     position: relative
     color: #ffffff
     text-transform: uppercase
@@ -67,8 +68,8 @@
         +ipad-down
           left: 28%
         +phone-down
-          //position: absolute
-          left: -50px
+          //left: -50px
+          left: 0
       &.accent::before
         +phone-down
           text-shadow: -195px 26px 0px rgba(187,161,130, 0.1)

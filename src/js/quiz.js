@@ -151,7 +151,10 @@ function prepareData() {
     const cname = document.getElementById('cname');
     const cphone = document.getElementById('cphone');
 
-    sendResultsAns.value = currentAnswer.value;
+    const sendTo = document.querySelector('input[name=sendTo]:checked');
+    //console.log(sendTo);
+
+    sendResultsAns.value = sendTo.value; //currentAnswer.value;
 
     if (isValidForm()) {
         //console.log('no errors!');
