@@ -7,7 +7,7 @@
   .btn
     display: flex
     align-items: center
-    padding: 2.22vh 2.8125vw //24px 54px
+    padding: 1.25vw 2.8125vw //24px 54px
     +phone-down
       position: absolute
       bottom: 0
@@ -194,7 +194,8 @@
   font-family: $ffAvenirNextCyr
   margin-top: 1.11vh //10px
   +ipad-down
-    font-size: .6rem
+    font-size: .56rem
+    margin-top: 0.5vh
   +phone-down
     font-size: 10px
     line-height: 1.2
@@ -225,6 +226,7 @@
       image: url("../images/icons/area.svg")
       repeat: no-repeat
       size: contain
+      position: center
     +phone-down
       width: 7.48px
       height: 7.48px
@@ -241,6 +243,7 @@
       image: url("../images/icons/bed.svg")
       repeat: no-repeat
       size: contain
+      position: center
     +phone-down
       width: 7.48px
       height: 4.55px
