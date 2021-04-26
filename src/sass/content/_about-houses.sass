@@ -73,6 +73,8 @@
           width: 100%
           left: 0
           top: -6.48vh //-70px
+        +tablet-down
+          top: 10vh
         +phone-down
           flex-direction: row
           align-items: center
@@ -139,6 +141,8 @@
       max-height: 70vh
       //+laptop-down
         max-height: 46vh
+      +tablet-down
+        max-height: 40vh
       +phone-down
         max-height: unset
     .tabs__block
@@ -192,16 +196,28 @@
           size: 18.489vw 26.39vh //355px 285px
           position: left bottom
           repeat: no-repeat
+        +tablet-down
+          background-size: 18.489vw 16.39vh //355px 285px
+        +phone-down
+          background-size: 18.489vw 26.39vh //355px 285px
         &--concrete
           background:
             image: url("../images/content/concrete.png")
             //size: 75% 24%
             size: 20.3125vw 18.518vh //10.416vw
+          +tablet-down
+            background-size: 20.3125vw 10.518vh //10.416vw
+          +phone-down
+            background-size: 20.3125vw 18.518vh //10.416vw
         &--brick
           background:
             image: url("../images/content/bricks.png")
             //size: 72% 24% //375px 195px
             size: 19.53vw 18.05vh //10.156vw
+          +tablet-down
+            background-size: 19.53vw 10.05vh //10.156vw
+          +phone-down
+            background-size: 19.53vw 18.05vh //10.156vw
         //+laptop-down
           padding: 3.5vh 2.5vw 5.5vh 2vw
         &::before
@@ -214,6 +230,8 @@
           z-index: 1
           top: -12vh
           right: -13vw
+        +tablet-down
+          height: 40vh
         +phone-down
           //border-radius: 15px //15px
           width: 100%
@@ -222,7 +240,6 @@
           padding: 2.78vh 2.1875vw 12.59vh //30px 42px 136px
           text-align: center
           height: auto
-        +phone-down
           border-radius: 10px
           background-size: 76% 30%
           padding: 3.78vh 9.1875vw 18.5vh
@@ -238,6 +255,7 @@
             margin-bottom: 2.48vh
           +ipad-down
             font-size: 1.75rem
+            margin-bottom: 2.8vh
           +phone-down
             font-size: 23px //6.2vw //23px
             margin-bottom: 10px //1vh //10px
@@ -265,6 +283,9 @@
           width: 55.4vw //1064px //130%
           height: 85.74vh //926px 130%
           z-index: 0
+          +tablet-down
+            width: 40.4vw //1064px //130%
+            height: 50.74vh //926px 130%
         &::before
           content: ""
           display: inline-block
@@ -289,6 +310,8 @@
           width: 85%
           height: unset
           margin: 0 auto
+        +tablet-down
+          max-height: 40vh
         +phone-down
           width: 100%
           margin-bottom: 18px

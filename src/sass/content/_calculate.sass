@@ -210,8 +210,10 @@
         margin-bottom: 2vh
       +ipad-down
         padding: 0 15vw
+        justify-content: center
       +phone-down
         padding: 0 8.4vw
+        justify-content: space-between
 
 
   .options__label
@@ -220,6 +222,8 @@
     position: relative
     text-align: center
     cursor: pointer
+    +tablet-down
+      width: 180px
     +phone-down
       width: 139px
     &--btn
@@ -296,6 +300,7 @@
     border-radius: 1.04vw //20px
     overflow: hidden
     margin-bottom: 1.56vh
+    width: 100%
     +phone-down
       border-radius: 10px
       margin-bottom: 3px

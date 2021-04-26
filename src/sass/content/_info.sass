@@ -30,10 +30,14 @@
       //text-shadow: -61.52vw 7.96vw 0px rgba(187,161,130, 0.1)
   .title--shadow span.second::before
     left: 50%
+    +ipad-down
+      left: 5%
     +phone-down
       left: 0
 
-  .title--shadow.title--long span.accent::before
+  .title--shadow span.accent::before
+    +ipad-down
+      text-shadow: -0.52vw -3.5625vw 0px rgba(187,161,130, 0.1)
     +phone-down
       text-shadow: -10px -17px 0px rgba(187,161,130, 0.1)
 
