@@ -1,12 +1,12 @@
 .turnkey
   //display: none
   &-in
-    padding-bottom: 29.537037vh //29.629vh
+    padding-bottom: 16.6145vw //29.537037vh //319px
     +phone-down
       position: relative
 
   h2.title
-    margin-bottom: 7.778vh //calc(80em/60) 84px
+    margin-bottom: 4.375vw //7.778vh // 84px
     display: flex
     flex-direction: column
     +phone-down
@@ -19,23 +19,25 @@
   .title--shadow span.second::before
     +phone-down
       left: 0
-
+  .content
+    position: relative
   .tabs
     display: flex
     flex-direction: row
     justify-content: space-between
-    margin-bottom: 12.5vh //calc(135em/18)
+    //margin-bottom: 7.03125vw //12.5vh //calc(135em/18)
+    margin-bottom: 17.7083vw
     +phone-down
       flex-direction: column-reverse
-      margin-bottom: 0
+      margin-bottom: 163px
 
     &::before
       content: ""
       position: absolute
-      top: -7.407vh //calc(-85em/18)
+      top: -4.16vw //-7.407vh //80px
       left: 42.97vw
       width: 30.729vw //calc(590em/18)
-      height: 96.574vh //calc(1043em/18)
+      height: 54.3229vw //96.574vh //calc(1043em/18)
       display: inline-block
       margin-left: -15.364583vw //calc((-590em/18)/2)
       z-index: 1
@@ -44,7 +46,11 @@
         size: contain
         repeat: no-repeat
         position: center
-
+      +tablet-down
+        top: -4.16vw
+        left: 47.97vw
+        width: 22.729vw
+        height: 49.3229vw
       +phone-down
         width: 185px
         height: 328px
@@ -66,7 +72,7 @@
 
   .tabs__item
     font-family: $ffNeumann
-    margin-bottom: 5.56vh //calc(60em/30)
+    margin-bottom: 3.125vw //5.56vh //calc(60em/30)
     +phone-down
       display: inline-flex
       align-items: center
@@ -95,11 +101,17 @@
 
   .tabs__body
     position: relative
-    margin-top: -20.278vh //calc(-215em/18) -219px
+    margin-top: -11.4vw //-20.278vh //-219px
     z-index: 0
+    position: absolute
+    right: 0
+    +tablet-down
+      margin-top: -17.4vw
+
     +phone-down
       margin-top: 0
       margin-bottom: 30px
+      position: static
     &::after
       content: ""
       width: 40.10416vw //770px
@@ -127,20 +139,28 @@
 
 
     &.tab_02
+      position: absolute
+      transform: translateY(0%)
+      top: 0 //-750px
       +phone-down
         transform: translateY(0)
+        position: static
     &.tab_03
+      position: absolute
+      transform: translateY(0%)
+      top: 0  //-750px
       +phone-down
         transform: translateY(0)
+        position: static
 
   .tab
     justify-content: flex-end
   .tab__img
     width: 26.0416vw //500px
-    height: 5.48vh //440px
+    height: 3.0825vw //5.48vh //59px
 
     position: absolute
-    top: -8.33vh //-90px
+    top: -4.6875vw //-8.33vh //-90px
     right: -5.2083vw //-100px
     +phone-down
       top: unset
@@ -152,8 +172,10 @@
 
   .tab__descr
     width: 27.5vw
-    padding-top: 34.814vh //calc(376em/18)
+    padding-top: 19.58vw //34.814vh //calc(376em/18)
     //padding-top: calc(376em/18)
+    +tablet-down
+      padding-bottom: 3.5vh
     +phone-down
       width: 100%
       padding: 0
@@ -167,13 +189,13 @@
       height: 31.98vw //calc(614em/18)
       border-radius: 50%
       position: absolute
-      top: -11.574vh //calc(-125em/18)
+      top: -6.51vw //-11.574vh //calc(-125em/18)
       right: -9.895vw //calc(-190em/18)
       +phone-down
         display: none
         
     h3
-      margin-bottom: 0.926vh //calc(10em/35)
+      margin-bottom: 0.52vw //0.926vh //calc(10em/35)
       z-index: 1
       position: relative
       +phone-down
@@ -182,12 +204,14 @@
   .tab__descr-text
     z-index: 1
     position: relative
+    +tablet-down
+      font-size: .7rem
     +phone-down
       font-size: 12px
       line-height: 1.25
 
   .application
-    bottom: -4.16vh //-45px
+    bottom: -2.34375vw //-4.16vh //-45px
     position: absolute
     z-index: 2000
     +phone-down
@@ -196,7 +220,8 @@
 
   .section-index-wrapper
     right: -0.3125vw
-    top: calc(50% - 28.92vh)
+    //top: calc(50% - 28.92vh)
+    top: calc(50% - 16.2675vw)
 
   .form-check-wrap
     +phone-down
@@ -208,7 +233,7 @@
       display: none
 
   &.lines-ic::before
-    bottom: 17.59vh //190px
+    bottom: 9.89583vw //17.59vh //190px
     left: 6.51vw //125px
     +phone-down
       display: none
@@ -222,8 +247,9 @@
   flex-direction: column
   align-items: flex-end
   position: absolute
-  bottom: 315px //29.17vh
-  left: 15.885vw
+  //bottom: 16.40625vw //315px //29.17vh
+  bottom: -7.2916vw
+  left: 14.885vw
 
   +ipad-down
     font-size: 1rem
@@ -239,7 +265,11 @@
   box-shadow: 0px 0px 5.2083vw rgba(0, 0, 0, 0.25) //100
   border-radius: 1.0416vw //20px
   width: calc(100% - #{$pd_cont*2}) //84.4vw
-  padding: 3.24074vh 12.865vw 1.851vh //calc(35em/18) 15% calc(20em/18)
+  //padding: 3.24074vh 12.865vw 1.851vh //calc(35em/18) 15% calc(20em/18)
+  padding: 1.82vw 12.865vw 1.0416vw
+  +ipad-down
+    padding-left: 8.865vw
+    padding-right: 8.865vw
   +phone-down
     border-radius: 20px
     padding: 31px 21px
@@ -248,12 +278,12 @@
     font-size: 2.5vw //calc(48em/18)
     font-weight: 400
     color: $dark
-    margin-bottom: 1.851vh //calc(20em/48)
+    margin-bottom: 1.04vw //1.851vh //calc(20em/48)
     display: flex
     flex-direction: column
     align-items: center
     +ipad-down
-      font-size: 2.4rem
+      font-size: 1.6rem
     +phone-down
       font-size: 14px
       line-height: 1.2
@@ -297,7 +327,8 @@
 
 
   .btn
-    margin-bottom: 0.925vh //10px
+    //margin-bottom: 0.925vh //10px
+    margin-bottom: 0.52vw //10px
     width: 100%
   .form-check
     width: unset
