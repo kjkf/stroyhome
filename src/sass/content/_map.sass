@@ -84,6 +84,7 @@ $map_w_mob: 96vw
 
     display: grid !important
     align-items: center
+    grid-template-columns: repeat(2, 1fr)
     justify-items: end
 
     &::before
@@ -114,6 +115,7 @@ $map_w_mob: 96vw
     pointer-events: all
     padding-top: 5.2083vw //9.26vh //100px
     font-family: $ffAvenirNextCyr
+    grid-column: span 2
     +phone-down
       padding-top: 34.26vh
       text-align: center
